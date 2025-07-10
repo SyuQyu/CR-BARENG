@@ -1,0 +1,19 @@
+#layout-default {
+    @apply relative flex flex-col h-auto min-h-screen bg-white;
+    // @apply relative flex flex-col h-auto min-h-screen bg-[#FBFBFE];
+    header.header {
+        @apply z-30 flex md:flex-row flex-col justify-center items-center w-full  md:max-h-[73px];
+    }
+
+    main.main {
+        @apply flex flex-col h-full w-full;
+    }
+
+    footer.footer {
+        @apply flex flex-col justify-center items-center w-full bg-black;
+    }
+
+    footer.newFooter {
+        @apply flex flex-col justify-center items-center w-full mt-16;
+    }
+}

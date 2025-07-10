@@ -1,0 +1,131 @@
+Destination,Rank,Score,Rank Change,Country Code
+Malaysia,1,82,0,MY
+United Arab Emirates (UAE),2,75,1,AE
+Turkey,3,74,-1,TR
+Indonesia,4,71,2,ID
+Qatar,5,71,0,QA
+Saudi Arabia,6,70,-2,SA
+Oman,7,70,0,OM
+Singapore,8,68,1,SG
+Morocco,9,68,1,MA
+Jordan,10,65,-2,JO
+Bahrain,11,65,4,BH
+Brunei,12,65,-1,BN
+Kuwait,13,64,0,KW
+Tunisia,14,64,-2,TN
+Iran,15,64,-1,IR
+Kazakhstan,16,63,2,KZ
+Egypt,17,63,-1,EG
+Maldives,18,62,-1,MV
+Bangladesh,19,60,0,BD
+Thailand,20,60,0,TH
+United Kingdom (UK),21,59,4,GB
+Algeria,22,59,-1,DZ
+Azerbaijan,23,57,-1,AZ
+Pakistan,24,57,-1,PK
+Kyrgyzstan,25,56,-1,KG
+Tajikistan,26,54,2,TJ
+Lebanon,27,54,2,LB
+Uzbekistan,28,54,-1,UZ
+Senegal,29,53,-3,SN
+South Africa,30,53,0,ZA
+Hong Kong,31,53,2,HK
+France,32,52,-1,FR
+Taiwan,33,50,3,TW
+Japan,34,49,3,JP
+Sri Lanka,35,49,6,LK
+United States of America (USA),36,49,-2,US
+Spain,37,49,-2,ES
+India,38,49,2,IN
+Belgium,39,48,-7,BE
+Djibouti,40,47,New,DJ
+Somalia,41,47,New,SO
+Sudan,42,47,New,SS
+Germany,43,47,1,DE
+Australia,44,47,-5,AU
+Gambia,45,47,New,GM
+Philippines,46,46,1,PH
+Switzerland,47,46,-9,CH
+Bosnia and Herzegovina,48,45,-6,BA
+Russia,49,45,-6,RU
+China,50,45,-1,CN
+Ireland,51,44,2,IE
+Canada,52,44,0,CA
+Turkmenistan,53,44,New,TM
+South Korea,54,44,1,KR
+Tanzania,55,44,-5,TZ
+Netherlands,56,44,-10,NL
+Albania,57,44,-9,AL
+Sierra Leone,58,43,New,SL
+Comoros,59,43,New,KM
+Italy,60,43,-9,IT
+Mali,61,43,New,ML
+Nigeria,62,43,-8,NG
+New Zealand,63,42,-18,NZ
+Guinea,64,42,New,GQ
+Georgia,65,41,-7,GE
+Bulgaria,66,41,-3,BG
+Guyana,67,41,New,GY
+Niger,67,41,New,NE
+Austria,69,40,-9,AT
+Fiji,70,40,-13,FJ
+Cyprus,71,40,-15,CY
+Denmark,72,40,-11,DK
+Mauritius,73,39,-6,MU
+Greece,74,39,-10,GR
+Kenya,75,39,-13,KE
+Sweden,75,39,-4,SE
+Norway,77,38,-7,NO
+Croatia,78,38,-19,HR
+Guinea-Bissau,79,38,New,GW
+Cameroon,80,38,New,CM
+Cote d'Ivoire,80,38,New,CI
+Portugal,82,38,-17,PT
+Vietnam,83,36,-17,VN
+Gabon,84,36,New,GA
+Togo,85,35,New,TG
+Argentina,86,35,-14,AR
+Benin,87,35,New,BJ
+Suriname,88,35,New,SR
+Luxembourg,89,35,-12,LU
+Mozambique,90,35,-22,MZ
+Uganda,91,34,-9,UG
+Romania,92,34,-18,RO
+Lithuania,93,34,-15,LT
+Poland,94,34,-21,PL
+Cambodia,95,34,-19,KH
+Brazil,96,34,-10,BR
+Finland,97,34,-17,FI
+Slovenia,98,34,-29,SI
+Hungary,99,33,-20,HU
+Chile,100,33,-25,CL
+Czechia,101,33,-17,CZ
+Aruba,102,32,New,AW
+Slovakia,103,32,-12,SK
+Puerto Rico,104,32,-23,PR
+Burkina Faso,105,32,New,BF
+Malta,106,32,-19,MT
+Laos,107,31,-13,LA
+Jamaica,108,31,-19,JM
+Estonia,109,31,-24,EE
+Eswatini (formerly Swaziland),110,31,-27,SZ
+Ukraine,111,31,New,UA
+Bahamas,112,31,New,BS
+Panama,113,31,New,PA
+Latvia,114,31,-26,LV
+Chad,115,31,New,TD
+Mexico,116,30,-24,MX
+Ecuador,117,30,New,EC
+Peru,118,29,-28,PE
+Cuba,119,29,-24,CU
+Zimbabwe,120,29,-27,ZW
+Andorra,121,29,-23,AD
+Guam,122,29,New,GU
+Dominican Republic,123,28,-26,DO
+Uruguay,124,28,-28,UY
+Colombia,125,27,-26,CO
+Guatemala,126,27,New,GT
+Nicaragua,127,27,New,NI
+Bolivia,128,27,New,BO
+Costa Rica,129,27,-29,CR
+El Salvador,130,26,New,SV

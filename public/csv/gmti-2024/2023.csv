@@ -1,0 +1,139 @@
+Destination,Rank,Score,Rank Change,Country Code
+Indonesia,1,73,1,ID
+Malaysia,1,73,0,MY
+Saudi Arabia,3,72,-1,SA
+United Arab Emirates (UAE),4,71,1,AE
+Turkey,5,70,-3,TR
+Qatar,6,69,0,QA
+Iran,7,66,0,IR
+Jordan,7,66,0,JO
+Bahrain,9,65,0,BH
+Egypt,9,65,3,EG
+Kuwait,11,64,1,KW
+Singapore,11,64,-2,SG
+Oman,13,63,-1,OM
+Uzbekistan,13,63,-4,UZ
+Brunei,15,62,-3,BN
+Tunisia,15,62,2,TN
+Morocco,17,60,-5,MA
+Pakistan,17,60,0,PK
+Lebanon,19,59,0,LB
+Kazakhstan,20,58,2,KZ
+Kyrgyzstan,20,58,2,KG
+United Kingdom (UK),20,58,8,GB
+Maldives,23,57,-4,MV
+Algeria,24,56,-3,DZ
+Azerbaijan,25,55,-3,AZ
+Bangladesh,26,54,-4,BD
+Sudan,26,54,-4,SS
+Taiwan,28,53,-1,TW
+Thailand,29,52,-1,TH
+Hong Kong,30,50,0,HK
+Tajikistan,30,50,2,TJ
+Japan,32,48,2,JP
+Senegal,32,48,-1,SN
+Nigeria,34,47,9,NG
+Sierra Leone,34,47,-1,SL
+Germany,36,46,7,DE
+Philippines,36,46,1,PH
+South Africa,36,46,-2,ZA
+Spain,36,46,4,ES
+Australia,40,45,0,AU
+Gambia,40,45,-3,GM
+United States of America (USA),40,45,-3,US
+Albania,43,44,-7,AL
+Bosnia and Herzegovina,43,44,3,BA
+France,43,44,0,FR
+Georgia,43,44,6,GE
+Mali,47,43,-7,ML
+South Korea,47,43,2,KR
+Chad,49,42,-3,TD
+Ireland,49,42,-3,IE
+Kenya,49,42,4,KE
+Canada,52,41,2,CA
+Italy,52,41,-3,IT
+Tanzania,52,41,-3,TZ
+Cote d'Ivoire,55,39,2,CI
+Mauritius,55,39,-1,MU
+Netherlands,55,39,2,NL
+Sri Lanka,55,39,2,LK
+Switzerland,55,39,6,CH
+Belgium,60,38,1,BE
+Cameroon,60,38,1,CM
+New Zealand,60,38,-6,NZ
+Benin,63,37,5,BJ
+Croatia,63,37,-2,HR
+Fiji,63,37,5,FJ
+Guinea-Bissau,63,37,3,GW
+Uganda,63,37,5,UG
+Vietnam,63,37,5,VN
+Cyprus,69,36,-8,CY
+India,69,36,-12,IN
+Malta,69,36,-1,MT
+Mozambique,69,36,-1,MZ
+Portugal,69,36,-1,PT
+Austria,74,35,2,AT
+Burkina Faso,74,35,-8,BF
+Cambodia,74,35,2,KH
+Ghana,74,35,2,GH
+Greece,74,35,7,GR
+North Macedonia (formerly Macedonia),74,35,-6,MK
+Togo,74,35,2,TG
+Czechia,81,34,6,CZ
+Ethiopia,81,34,12,ET
+Finland,81,34,0,FI
+Guam,81,34,6,GU
+Rwanda,81,34,0,RW
+Suriname,81,34,-5,SR
+Sweden,81,34,6,SE
+Bahamas,88,33,-1,BS
+Bulgaria,88,33,5,BG
+Dominican Republic,88,33,-1,DO
+Iceland,88,33,5,IS
+Jamaica,88,33,-7,JM
+Luxembourg,88,33,-7,LU
+Mongolia,88,33,5,MN
+Serbia,88,33,-7,RS
+Aruba,96,32,-3,AW
+Brazil,96,32,-3,BR
+Estonia,96,32,-3,EE
+Lithuania,96,32,-3,LT
+Malawi,96,32,-3,MW
+Montenegro,96,32,-9,ME
+Poland,96,32,13,PL
+Andorra,103,31,-10,AD
+Armenia,103,31,-10,AM
+Chile,103,31,-10,CL
+China,103,31,6,CN
+Ecuador,103,31,6,EC
+Hungary,103,31,20,HU
+Latvia,103,31,-10,LV
+Mexico,103,31,14,MX
+Norway,103,31,-10,NO
+Romania,103,31,6,RO
+Slovenia,103,31,6,SI
+Zimbabwe,103,31,-10,ZW
+Botswana,115,30,-22,BW
+Guatemala,115,30,2,GT
+Nepal,115,30,-6,NP
+Puerto Rico,115,30,-6,PR
+Argentina,119,29,-2,AR
+Colombia,119,29,4,CO
+Costa Rica,119,29,-2,CR
+Cuba,119,29,4,CU
+Denmark,119,29,-10,DK
+Panama,119,29,-2,PA
+Peru,119,29,4,PE
+Slovakia,119,29,-2,SK
+Uruguay,119,29,10,UY
+Zambia,119,29,4,ZM
+Eswatini (formerly Swaziland),129,28,0,SZ
+Laos,129,28,0,LA
+Namibia,129,28,-6,NA
+Nicaragua,129,28,0,NI
+Bolivia,133,27,2,BO
+Cabo Verde,133,27,2,CV
+El Salvador,133,27,-4,SV
+Lesotho,133,27,2,LS
+Honduras,137,26,-8,HN
+Paraguay,137,26,-2,PY

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'schdn';
+@import 'layouts/defaultLayouts.scss';
+@import 'components/button.scss';
+@import 'components/richTextEditor.scss';
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+// GMTI 2024
+.gmti-2024 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.gmti-top-carousel .gmti-top-carousel-card.carousel-active {
+    width: 400px; 
+    height: 568px;
+    opacity: 1.0;
+}
+
+.gmti-2024 .gmti-top-carousel-button svg,
+.gmti-2024 .gmti-journey-button svg{
+    stroke-width: 1.5px;
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .gmti-2024 .gmti-top-carousel .gmti-top-carousel-card.carousel-active {
+        width: 300px;
+        height: 426px;
+    }
+
+    .gmti-2024 .gmti-top-carousel-button svg,
+    .gmti-2024 .gmti-journey-button svg{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width:767px) {
+    .gmti-2024 .gmti-top-carousel .gmti-top-carousel-card.carousel-active {
+        width: 196px;
+        height: 278px;
+    }
+    
+}
+
+
+
