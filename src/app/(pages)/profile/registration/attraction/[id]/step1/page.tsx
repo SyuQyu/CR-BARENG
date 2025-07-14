@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Input, OpenStreetMap, RichTextEditor } from "@/components/common";
 import { useFormState } from 'react-dom';
-import { createHotelAction, updateHotelAction, getHotelAction } from "@/app/(pages)/profile/registration/hotel/action";
+import { createAttractionAction, updateAttractionAction, getAttractionAction } from "@/app/(pages)/profile/registration/attraction/action";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
@@ -23,7 +23,7 @@ const initialFormState = {
 };
 
 const defaultFormData = {
-    hotelName: "",
+    attractionName: "",
     address: "",
     zipCode: "",
     countryCity: "",
@@ -32,14 +32,14 @@ const defaultFormData = {
     website: "",
     contactPerson: "",
     contactNumber: "",
-    accommodationType: "Hotel",
+    accommodationType: "Attraction",
     starRating: "3 Star",
     numberOfRooms: "",
     description: "",
     email: "",
 };
 
-export default function HotelRegistrationPage({ params }: { params?: { id: string } }) {
+export default function AttractionRegistrationPage({ params }: { params?: { id: string } }) {
     const router = useRouter();
     const formRef = useRef<HTMLFormElement>(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -48,8 +48,8 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
     // Memoize action to prevent unnecessary re-renders
     const action = useMemo(() =>
         params?.id
-            ? (prevState: any, formData: FormData) => updateHotelAction(formData, prevState)
-            : (prevState: any, formData: FormData) => createHotelAction(formData),
+            ? (prevState: any, formData: FormData) => updateAttractionAction(formData, prevState)
+            : (prevState: any, formData: FormData) => createAttractionAction(formData),
         [params?.id]
     );
 
@@ -60,10 +60,10 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
     useEffect(() => {
         if (!params?.id) return;
 
-        const fetchHotel = async () => {
+        const fetchAttraction = async () => {
             setIsLoading(true);
             try {
-                const response = await getHotelAction(params.id);
+                const response = await getAttractionAction(params.id);
                 if (response.success && response.data) {
                     setFormData({
                         ...defaultFormData,
@@ -81,7 +81,7 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
             }
         };
 
-        fetchHotel();
+        fetchAttraction();
     }, [params?.id]);
 
     // Handle form submission response
@@ -90,7 +90,7 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
 
         if (state.data) {
             toast.success('Success', {
-                description: params?.id ? 'Hotel updated successfully' : 'Hotel created successfully',
+                description: params?.id ? 'Attraction updated successfully' : 'Attraction created successfully',
             });
             router.push(`/profile/registration/hotel/${params?.id}/step2`);
         } else if (state.error) {
@@ -123,16 +123,16 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
         e.preventDefault();
 
         // Basic validation
-        if (!formData.hotelName || !formData.address) {
+        if (!formData.attractionName || !formData.address) {
             toast.error('Validation Error', {
-                description: 'Hotel name and address are required',
+                description: 'Attraction name and address are required',
             });
             return;
         }
 
         // Submit hidden form
         formRef.current?.requestSubmit();
-    }, [formData.hotelName, formData.address]);
+    }, [formData.attractionName, formData.address]);
 
     // Loading state
     if (isLoading) {
@@ -159,10 +159,10 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
                 <section className="space-y-6">
                     <Input
                         label="Attraction Name"
-                        name="hotelName"
-                        value={formData.hotelName}
+                        name="attractionName"
+                        value={formData.attractionName}
                         onChange={handleInputChange}
-                        placeholder="Enter hotel name"
+                        placeholder="Enter Attraction name"
                         className="w-full"
                         labelStyle="font-bold"
                         required
@@ -247,16 +247,6 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
                 <section>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <Input
-                            label="Website"
-                            name="website"
-                            value={formData.website}
-                            onChange={handleInputChange}
-                            placeholder="e.g. www.example.com"
-                            className="w-full"
-                            labelStyle="font-bold"
-                        />
-
-                        <Input
                             label="Contact Person"
                             name="contactPerson"
                             value={formData.contactPerson}
@@ -265,9 +255,7 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
                             className="w-full"
                             labelStyle="font-bold"
                         />
-                    </div>
 
-                    <div className="space-y-6">
                         <Input
                             label="Contact Number"
                             name="contactNumber"
@@ -277,20 +265,10 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
                             className="w-full"
                             labelStyle="font-bold"
                         />
-
-                        <Input
-                            label="Email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            placeholder="Input your email"
-                            className="w-full"
-                            labelStyle="font-bold"
-                        />
                     </div>
                 </section>
 
-                {/* Hotel Details Section */}
+                {/* Attraction Details Section */}
                 <section className="space-y-6">
                     {/* Accommodation Type */}
                     <div className="border p-4">
@@ -302,17 +280,17 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
                         >
                             {[
                                 { value: "Private Accommodation", id: "private", label: "Private Accommodation" },
-                                { value: "Hotel", id: "hotel", label: "Hotel" },
+                                { value: "Attraction", id: "hotel", label: "Attraction" },
                                 { value: "Serviced Apartment", id: "apartment", label: "Serviced Apartment" },
                                 { value: "Resort", id: "resort", label: "Resort" },
-                                { value: "Boutique Hotel", id: "boutique", label: "Boutique Hotel" },
+                                { value: "Boutique Attraction", id: "boutique", label: "Boutique Attraction" },
                                 { value: "Beach Resort", id: "beach", label: "Beach Resort" },
                                 { value: "Seaside Resort", id: "seaside", label: "Seaside Resort" },
                                 { value: "Spa Resort", id: "spa", label: "Spa Resort" },
                                 { value: "Golf Resort", id: "golf", label: "Golf Resort" },
                                 { value: "Ski Resort", id: "ski", label: "Ski Resort" },
                                 { value: "Mountain Resort", id: "mountain", label: "Mountain Resort" },
-                                { value: "Budget Hotel", id: "budget", label: "Budget Hotel" },
+                                { value: "Budget Attraction", id: "budget", label: "Budget Attraction" },
                                 { value: "Bed & Breakfast", id: "bnb", label: "Bed & Breakfast" }
                             ].map(option => (
                                 <div key={option.id} className="flex items-center space-x-2">
@@ -361,10 +339,10 @@ export default function HotelRegistrationPage({ params }: { params?: { id: strin
                         labelStyle="font-bold"
                     />
 
-                    {/* Hotel Description */}
+                    {/* Attraction Description */}
                     <div className="border">
                         <label className="font-bold block p-4 border-b">
-                            Hotel or Accommodation Description
+                            Attraction or Accommodation Description
                         </label>
                         <RichTextEditor
                             content={formData.description}
