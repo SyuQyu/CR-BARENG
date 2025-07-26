@@ -6,6 +6,56 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 export default function RatingAndAccreditation() {
 
+function Roadmap() {
+  const firstSteps = [
+    { label: "Sign Up", dot: "border-yellow-900", bg: "bg-yellow-100" },
+    { label: "Apply", dot: "border-yellow-900", bg: "bg-yellow-100" },
+    { label: "Review", dot: "border-indigo-800", bg: "bg-indigo-100" },
+    { label: "Audit", dot: "border-indigo-800", bg: "bg-indigo-100" },
+  ];
+
+  const secondSteps = [
+    { label: "Pay", dot: "border-yellow-900", bg: "bg-yellow-100" },
+    { label: "Display", dot: "border-yellow-900", bg: "bg-yellow-100" },
+    { label: "Publish", dot: "border-indigo-800", bg: "bg-indigo-100" },
+    { label: "Confirm", dot: "border-indigo-800", bg: "bg-indigo-100" },
+  ];
+
+  const thirdSteps = { label: "Promote", dot: "border-green-800", bg: "bg-green-100" }
+  
+
+  return (
+    <div className="relative w-full">
+        <div className="flex justify-between -mb-1.5">
+            {firstSteps.map((step, i) => (
+            <div key={i} className="flex flex-col items-center">
+                <Button className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+                <p className="text-lg">{step.label}</p>
+                </Button>
+                <div className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`} />
+            </div>
+            ))}
+        </div>
+        <div className="w-full rounded-tr-[5rem] rounded-br-[5rem] h-[15rem] border-r-2 border-t-2 border-b relative translate-x-9"/>
+        <div className="flex justify-between -mb-1.5">
+            {secondSteps.map((step, i) => (
+            <div key={i} className="flex flex-col items-center">
+                <Button className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+                <p className="text-lg">{step.label}</p>
+                </Button>
+                
+            </div>
+            ))}
+        </div>
+        <div className="w-1/2 rounded-bl-[5rem] rounded-tl-[5rem] h-[15rem] border-dashed border-l-2 border-t border-b-2 relative -translate-x-9"/>  
+        <div className={`w-3 h-3 mt-1 rounded-full border-2 ${thirdSteps.dot}`} />
+        <Button className={`text-lg w-32 h-7 rounded ${thirdSteps.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+            <p className="text-lg">{thirdSteps.label}</p>
+        </Button>
+    </div>
+  );
+}
+
     return (
         <div className="w-full flex flex-col justify-center items-center">
             <section
@@ -81,8 +131,9 @@ export default function RatingAndAccreditation() {
                                 <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">HalalTrip</p>
                             </div>
                         </div>
-                        <div className="w-full overflow-y-auto flex justify-center items-center">
-                            <ImageWithFallback
+                            <Roadmap />
+
+                            {/* <ImageWithFallback
                                 width={0}
                                 height={0}
                                 sizes="100vw"
@@ -90,17 +141,7 @@ export default function RatingAndAccreditation() {
                                 priority={false}
                                 src={"/image/rating-accreditation/roadmap.svg"}
                                 alt={"roadmap"}
-                            />
-                            <ImageWithFallback
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full object-contain md:hidden block"
-                                priority={false}
-                                src={"/image/rating-accreditation/roadmap-phone.svg"}
-                                alt={"roadmap"}
-                            />
-                        </div>
+                            /> */}
                     </div>
                 </section>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
