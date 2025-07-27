@@ -6,55 +6,88 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 export default function RatingAndAccreditation() {
 
-function Roadmap() {
-  const firstSteps = [
-    { label: "Sign Up", dot: "border-yellow-900", bg: "bg-yellow-100" },
-    { label: "Apply", dot: "border-yellow-900", bg: "bg-yellow-100" },
-    { label: "Review", dot: "border-indigo-800", bg: "bg-indigo-100" },
-    { label: "Audit", dot: "border-indigo-800", bg: "bg-indigo-100" },
-  ];
 
-  const secondSteps = [
-    { label: "Pay", dot: "border-yellow-900", bg: "bg-yellow-100" },
-    { label: "Display", dot: "border-yellow-900", bg: "bg-yellow-100" },
-    { label: "Publish", dot: "border-indigo-800", bg: "bg-indigo-100" },
-    { label: "Confirm", dot: "border-indigo-800", bg: "bg-indigo-100" },
-  ];
+    function Roadmap() {
+    const firstSteps = [
+        { label: "Sign Up", description: "Register & create an account on CrescentRating", dot: "border-yellow-900", bg: "bg-yellow-100" },
+        { label: "Apply", description: "Submit Application Online", dot: "border-yellow-900", bg: "bg-yellow-100" },
+        { label: "Review", description: "CrescentRating will review the application & issue a tentative rating", dot: "border-indigo-800", bg: "bg-indigo-100" },
+        { label: "Audit", description: "Conduct in-person/virtual audit of the establishment", dot: "border-indigo-800", bg: "bg-indigo-100" },
+    ];
 
-  const thirdSteps = { label: "Promote", dot: "border-green-800", bg: "bg-green-100" }
-  
+    const secondSteps = [
+        { label: "Pay", description: "Make payment for the annual rating services", dot: "border-yellow-900", bg: "bg-yellow-100" },
+        { label: "Display", description: "Download the rating collaterals and display them in the marketing channels", dot: "border-yellow-900", bg: "bg-yellow-100" },
+        { label: "Publish", description: (
+      <>
+        The establishment will be published and listed on:<br />
+        1. CrescentRating Member Directory Listing<br />
+        2. HalalTrip Member Directory Listing
+      </>
+    ), dot: "border-indigo-800", bg: "bg-indigo-100" },
+        { label: "Confirm", description: "CrescentRating will review audit report & award the final rating", dot: "border-indigo-800", bg: "bg-indigo-100" },
+    ];
 
-  return (
-    <div className="relative w-full">
-        <div className="flex justify-between -mb-1.5">
+    const thirdStep = { label: "Promote", description: "HalalTrip will begin the promotion campaigns", dot: "border-green-800", bg: "bg-green-100" };
+
+    return (
+        <div className="w-full">
+        {/* Desktop */}
+        <div className="hidden lg:block relative w-full">
+            <div className="flex justify-between -mb-1.5 z-10 relative">
             {firstSteps.map((step, i) => (
-            <div key={i} className="flex flex-col items-center">
+                <div key={i} className="flex flex-col items-center">
                 <Button className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}>
-                <p className="text-lg">{step.label}</p>
+                    <p className="text-lg">{step.label}</p>
                 </Button>
                 <div className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`} />
-            </div>
+                </div>
             ))}
-        </div>
-        <div className="w-full rounded-tr-[5rem] rounded-br-[5rem] h-[15rem] border-r-2 border-t-2 border-b relative translate-x-9"/>
-        <div className="flex justify-between -mb-1.5">
+            </div>
+
+            <div className="w-[85rem] rounded-tr-[5rem] rounded-br-[5rem] h-[15rem] border-r-2 border-t-2 border-b relative translate-x-14" />
+
+            <div className="absolute top-[15rem] left-0 w-full flex justify-between z-10">
             {secondSteps.map((step, i) => (
-            <div key={i} className="flex flex-col items-center">
+                <div key={i} className="flex flex-col items-center">
                 <Button className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}>
-                <p className="text-lg">{step.label}</p>
+                    <p className="text-lg">{step.label}</p>
                 </Button>
-                
-            </div>
+                <div className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`} />
+                </div>
             ))}
+            </div>
+
+            <div className="w-[46.5rem] rounded-bl-[5rem] rounded-tl-[5rem] h-[15rem] border-dashed border-l-2 border-t border-b-2 relative -translate-x-14" />
+
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex flex-col items-center z-10">
+            <Button className={`text-lg w-32 h-7 rounded ${thirdStep.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+                <p className="text-lg">{thirdStep.label}</p>
+            </Button>
+            <div className={`w-3 h-3 mb-1 rounded-full border-2 ${thirdStep.dot}`} />
+            </div>
         </div>
-        <div className="w-1/2 rounded-bl-[5rem] rounded-tl-[5rem] h-[15rem] border-dashed border-l-2 border-t border-b-2 relative -translate-x-9"/>  
-        <div className={`w-3 h-3 mt-1 rounded-full border-2 ${thirdSteps.dot}`} />
-        <Button className={`text-lg w-32 h-7 rounded ${thirdSteps.bg} text-[0.75rem] text-center flex items-center justify-center`}>
-            <p className="text-lg">{thirdSteps.label}</p>
-        </Button>
-    </div>
-  );
-}
+
+        <div className="lg:hidden flex flex-col items-start relative pl-6 mt-6">
+        {[...firstSteps, ...secondSteps, thirdStep].map((step, i, arr) => (
+            <div key={i} className="relative flex items-center mb-6">
+            {i < arr.length - 1 && (
+                <div className="absolute left-[0.3rem] top-[5rem] h-full w-px bg-gray-300 z-0" />
+            )}
+            <div className={`w-3 h-3 rounded-full border-2 ${step.dot} bg-white z-10`} />
+            <div className={`flex ml-4 text-sm w-20 h-8 rounded items-center justify-center ${step.bg} font-semibold`}>
+                {step.label}
+            </div>
+            <div className={`flex ml-4 text-sm w-52 min-h-[10rem] px-4 rounded items-center justify-center ${step.bg} font-semibold`}>
+                {step.description}
+            </div>
+            </div>
+        ))}
+        </div>
+
+        </div>
+    );
+    }
 
     return (
         <div className="w-full flex flex-col justify-center items-center">
@@ -139,14 +172,14 @@ function Roadmap() {
                                 sizes="100vw"
                                 className="w-full object-contain min-w-[1173px] md:block hidden"
                                 priority={false}
-                                src={"/image/rating-accreditation/roadmap.svg"}
+                                src={"/image/rating-accreditation/roadmap-phone.svg"}
                                 alt={"roadmap"}
                             /> */}
                     </div>
                 </section>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+                {/* <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[30%]">Get your Establishment Crescent Rated</p>
-                    <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[40%]">Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbiid curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.</p>
+                    <p className="sm:text-desktop-body-2 text-mobile-body-1 text-center text-gray-500 w-[90%] lg:w-[50%]">Become a Crescent Rated establishment to gain a competitive edge and demonstrate your commitment to inclusivity.</p>
                     <div className="w-full flex flex-col justify-center items-center gap-8 mt-10">
                         <Tabs
                             defaultValue="hotel"
@@ -156,7 +189,6 @@ function Roadmap() {
                             desktopTabPosition="left"
                             mobileMode="select"
                         >
-                            {/* Tabs List */}
                             <TabsList className="!border-none w-[20%]">
                                 {tabsDataRatingAndAccreditation.map((tab) => (
                                     <TabsTrigger
@@ -170,7 +202,6 @@ function Roadmap() {
                                 ))}
                             </TabsList>
 
-                            {/* Tabs Content */}
                             {tabsDataRatingAndAccreditation.map((tab) => (
                                 <TabsContent
                                     key={tab.value}
@@ -214,7 +245,7 @@ function Roadmap() {
                         </Tabs>
 
                     </div>
-                </section>
+                </section> */}
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">Trusted by Many Establishments Around the World</p>
                     <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Years of Experience, Countless Mentions Across Industries, and a Reputation Built on Global Trust and Reliability</p>
@@ -242,7 +273,7 @@ function Roadmap() {
                 </section>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full">
                     <div className="w-full flex flex-col justify-center items-center gap-12">
-                        <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">Clients</p>
+                        <p className="lg:text-desktop-body-1 text-mobile-body-2 font-bold text-[#434343]">Clients</p>
                         <Carousel className="w-full">
                             <CarouselContent>
                                 {medpart.map((item, index) => (
