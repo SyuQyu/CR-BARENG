@@ -117,7 +117,7 @@ export default function RatingAndAccreditation() {
                             Why you Should Become a Member of the Crescent Rated Services
                         </p>
                         <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 sm:w-[45%] w-full">
-                            Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.
+                            Gain global recognition, trust, and strategic insights to attract Muslim travelers while upholding high industry standards.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 w-full mt-10 ">
