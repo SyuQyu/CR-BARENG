@@ -1,13 +1,15 @@
+"use client";
 import { BasicCard, Button, ImageWithFallback } from "@/components/common";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/defaultCarousel";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { medpart, cardData, tabsDataRatingAndAccreditation } from "@/constants/dummyData";
+import { medpart, cardData } from "@/constants/dummyData";
 import { MoveRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+
 export default function RatingAndAccreditation() {
 
-
-    function Roadmap() {
+function Roadmap() {
     const firstSteps = [
         { label: "Sign Up", description: "Register & create an account on CrescentRating", dot: "border-yellow-900", bg: "bg-yellow-100" },
         { label: "Apply", description: "Submit Application Online", dot: "border-yellow-900", bg: "bg-yellow-100" },
@@ -32,7 +34,6 @@ export default function RatingAndAccreditation() {
 
     return (
         <div className="w-full">
-        {/* Desktop */}
         <div className="hidden lg:block relative w-full">
             <div className="flex justify-between -mb-1.5 z-10 relative">
             {firstSteps.map((step, i) => (
@@ -68,7 +69,7 @@ export default function RatingAndAccreditation() {
             </div>
         </div>
 
-        <div className="lg:hidden flex flex-col items-start relative pl-6 mt-6">
+        <div className="lg:hidden flex flex-col mt-6 justify-center items-center">
         {[...firstSteps, ...secondSteps, thirdStep].map((step, i, arr) => (
             <div key={i} className="relative flex items-center mb-6">
             {i < arr.length - 1 && (
@@ -87,7 +88,168 @@ export default function RatingAndAccreditation() {
 
         </div>
     );
-    }
+}
+
+
+const ratingItems = [
+  {
+    key: "hotel",
+    title: "Hotel Rating",
+    description: "Halal-friendly rating for hotels to meet Muslim travelers' needs.",
+    image: "/image/rating-accreditation/new/hotel-rating.jpg",
+  },
+  {
+    key: "restaurant",
+    title: "Restaurant Rating",
+    description: "CrescentRating for halal-compliant restaurants.",
+    image: "/image/rating-accreditation/new/restaurant-rating.jpg",
+  },
+  {
+    key: "shoppingMall",
+    title: "Shopping Mall Rating",
+    description: "Rating system for malls based on halal amenities.",
+    image: "/image/rating-accreditation/new/shopping-malls-rating.jpg",
+  },
+  {
+    key: "attraction",
+    title: "Attractions Rating",
+    description: "Assessing tourism attractions for Muslim-friendly criteria.",
+    image: "/image/rating-accreditation/new/attraction-rating.jpg",
+  },
+  {
+    key: "miceVenue",
+    title: "MICE Venues Rating",
+    description: "Rating for venues hosting Muslim-friendly meetings & events.",
+    image: "/image/rating-accreditation/new/mice-venue-rating.jpg",
+  },
+  {
+    key: "activity",
+    title: "Activity Rating",
+    description: "Rating for recreational Muslim-friendly activities.",
+    image: "/image/rating-accreditation/new/activity-rating.jpg",
+  },
+  {
+    key: "airport",
+    title: "Airport Terminal Rating",
+    description: "Evaluates airports for Muslim traveler facilities.",
+    image: "/image/rating-accreditation/new/airport-terminal-rating.jpg",
+  },
+  {
+    key: "beach",
+    title: "Beach Rating",
+    description: "Halal-friendly assessment for beach facilities.",
+    image: "/image/rating-accreditation/new/beach-rating.jpg",
+  },
+  {
+    key: "cruise",
+    title: "Cruise Rating",
+    description: "Muslim-friendly rating for cruise experiences.",
+    image: "/image/rating-accreditation/new/cruise-rating.jpg",
+  },
+  {
+    key: "hospital",
+    title: "Hospitals Rating",
+    description: "Rating hospitals that meet Muslim-friendly needs.",
+    image: "/image/rating-accreditation/new/hospital-rating.jpg",
+  },
+  {
+    key: "travelAgent",
+    title: "Travel Agent Rating",
+    description: "Accrediting travel agents for Muslim-friendly offerings.",
+    image: "/image/rating-accreditation/new/travel-agent-rating.jpg",
+  },
+];
+
+function RatingAndAccreditationSection() {
+  const [activeTab, setActiveTab] = useState<string>("hotel");
+  const selectedItem = ratingItems.find((item) => item.key === activeTab);
+
+  return (
+    <section className="w-full max-w-[1440px] px-6 lg:px-8 flex flex-col justify-center items-center mt-16">
+      <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 text-black text-center w-[90%] lg:w-[50%]">
+        Get your Establishment Crescent Rated
+      </p>
+      <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 text-center mb-10 w-[90%] lg:w-[60%]">
+        Become a Crescent Rated establishment to gain a competitive edge and demonstrate your commitment to inclusivity.
+      </p>
+
+      <div className="block md:hidden mb-6 w-full">
+        <select
+          value={activeTab}
+          onChange={(e) => setActiveTab(e.target.value)}
+          className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700"
+        >
+          {ratingItems.slice(0, 5).map((item) => (
+            <option key={item.key} value={item.key}>
+              {item.title.split(" ")[0]}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="hidden md:flex lg:hidden flex-wrap gap-4 overflow-x-auto px-2 mb-6 w-full justify-center">
+        {ratingItems.slice(0, 5).map((item) => (
+          <button
+            key={item.key}
+            onClick={() => setActiveTab(item.key)}
+            className={`px-4 py-2 whitespace-nowrap rounded transition-all duration-200 text-sm font-medium ${
+              activeTab === item.key
+                ? "bg-indigo-50 text-indigo-600"
+                : "text-gray-500 hover:text-indigo-600"
+            }`}
+          >
+            {item.title.split(" ")[0]}
+          </button>
+        ))}
+      </div>
+
+      <div className="block lg:hidden w-full max-w-xl">
+        {selectedItem && (
+          <div className="flex flex-col shadow-md rounded overflow-hidden bg-white">
+            <Image
+              src={selectedItem.image}
+              alt={selectedItem.title}
+              width={600}
+              height={300}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <p className="font-semibold text-black mb-2">{selectedItem.title}</p>
+              <p className="text-sm text-gray-600 mb-2">{selectedItem.description}</p>
+              <Link href="#" className="text-primary-cr-700 text-sm flex items-center">
+                Learn More <MoveRight className="ml-1 size-4" />
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="mt-12 hidden lg:grid lg:grid-cols-4 gap-6 w-full">
+        {ratingItems.map((item) => (
+          <div
+            key={item.key}
+            className="flex flex-col shadow-md hover:shadow-lg transition rounded-md overflow-hidden bg-white"
+          >
+            <Image
+              src={item.image}
+              alt={item.title}
+              width={280}
+              height={190}
+              className="w-full h-40 object-cover"
+            />
+            <div className="flex flex-col p-4 justify-between h-full">
+              <p className="font-semibold text-black mb-2">{item.title}</p>
+              <Link href="#" className="text-primary-cr-700 text-sm flex items-center">
+                Learn More <MoveRight className="ml-1 size-4" />
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 
     return (
         <div className="w-full flex flex-col justify-center items-center">
@@ -164,88 +326,11 @@ export default function RatingAndAccreditation() {
                                 <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">HalalTrip</p>
                             </div>
                         </div>
-                            <Roadmap />
-
-                            {/* <ImageWithFallback
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full object-contain min-w-[1173px] md:block hidden"
-                                priority={false}
-                                src={"/image/rating-accreditation/roadmap-phone.svg"}
-                                alt={"roadmap"}
-                            /> */}
+                        <Roadmap />
                     </div>
                 </section>
-                {/* <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[30%]">Get your Establishment Crescent Rated</p>
-                    <p className="sm:text-desktop-body-2 text-mobile-body-1 text-center text-gray-500 w-[90%] lg:w-[50%]">Become a Crescent Rated establishment to gain a competitive edge and demonstrate your commitment to inclusivity.</p>
-                    <div className="w-full flex flex-col justify-center items-center gap-8 mt-10">
-                        <Tabs
-                            defaultValue="hotel"
-                            align="start"
-                            className=" w-full z-10"
-                            responsiveTabPosition="top"
-                            desktopTabPosition="left"
-                            mobileMode="select"
-                        >
-                            <TabsList className="!border-none w-[20%]">
-                                {tabsDataRatingAndAccreditation.map((tab) => (
-                                    <TabsTrigger
-                                        key={tab.value}
-                                        className="w-full !bg-none !justify-start !items-start !border-none px-4 py-2"
-                                        customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                                        value={tab.value}
-                                    >
-                                        {tab.label}
-                                    </TabsTrigger>
-                                ))}
-                            </TabsList>
+                <RatingAndAccreditationSection/>
 
-                            {tabsDataRatingAndAccreditation.map((tab) => (
-                                <TabsContent
-                                    key={tab.value}
-                                    value={tab.value}
-                                    activeValue={tab.value}
-                                    className="w-full flex flex-col gap-4 px-6"
-                                >
-                                    <div className="flex sm:flex-row flex-col justify-start items-center gap-8">
-                                        <ImageWithFallback
-                                            width={0}
-                                            height={0}
-                                            sizes="100vw"
-                                            className="sm:w-[40%] w-full object-contain"
-                                            priority={false}
-                                            src={tab.image}
-                                            alt={`img-${tab.value}`}
-                                        />
-                                        <div className="flex md:gap-4 gap-2 flex-col justify-start">
-                                            <p className="md:text-desktop-heading-6 font-bold text-mobile-heading-5">
-                                                {tab.title}
-                                            </p>
-                                            <p className="md:text-desktop-body-2 text-mobile-body-2 text-gray-500">
-                                                {tab.description}
-                                            </p>
-                                            <Link href={tab.url} className="!px-0 text-primary-cr-700 justify-start flex flex-row !border-none items-center">
-                                                View More <MoveRight className="ml-2 mt-1 size-5" />
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    {
-                                        tab.value === "hotel" && (
-                                            <div className="bg-[linear-gradient(118deg,_#F1F3FF_15.36%,_#CED2FF_84.64%)] p-6 flex flex-col justify-start items-start gap-2">
-                                                <p className="md:text-desktop-heading-6 font-bold text-mobile-heading-5">Do you have what it takes to be CrescentRated?</p>
-                                                <p className="md:text-desktop-body-2 text-mobile-body-2 text-gray-500">Before you register your hotel and unlock the official Halal-Friendly rating, we offer you a unique opportunity to self-diagnose your hotel&apos;s Halal-Friendly status. Our self-diagnostic tool allows you to assess and elevate your establishment&apos;s Halal-Friendly practices to ensure a delightful experience for our discerning Muslim travelers.</p>
-                                                <Button className="!py-5 !px-6 bg-white text-primary-cr-700">Take the Test</Button>
-                                            </div>
-                                        )
-                                    }
-                                </TabsContent>
-                            ))}
-                        </Tabs>
-
-                    </div>
-                </section> */}
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">Trusted by Many Establishments Around the World</p>
                     <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Years of Experience, Countless Mentions Across Industries, and a Reputation Built on Global Trust and Reliability</p>
