@@ -1,6 +1,6 @@
 import { BasicCard, Button, CrRatingBanner, ImageWithFallback, PricingCard, RatingCard } from "@/components/common";
 import { cardData, membershipTiers } from "@/constants/dummyData";
-export default function TravelAgentsPage() {
+export default function BeachPage() {
 
     return (
         <div className="w-full flex flex-col justify-center items-center">

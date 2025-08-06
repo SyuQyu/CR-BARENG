@@ -1,5 +1,8 @@
 import { BasicCard, Button, CrRatingBanner, ImageWithFallback, PricingCard2, RatingCard } from "@/components/common";
+import PricingCard from "@/components/common/card/pricingCard";
+import { AlertCircle, Check } from "lucide-react";
 import { cardData, pricingPlans, ratingData } from "@/constants/dummyData";
+import { hotelBenefits } from "@/constants/dummyData";
 import clsx from "clsx";
 export default function RatingAndAccreditationHotels() {
     return (
@@ -82,7 +85,7 @@ export default function RatingAndAccreditationHotels() {
                     </div>
                 </section>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <div className="w-full flex flex-col justify-center items-center gap-8">
+                    <div className="w-full flex flex-col justify-center items-center">
                         <div className="w-full overflow-y-auto flex justify-center items-center">
                             <ImageWithFallback
                                 width={0}
@@ -93,6 +96,36 @@ export default function RatingAndAccreditationHotels() {
                                 src={"/image/rating-accreditation/accrediations.svg"}
                                 alt={"accrediations"}
                             />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 px-8 pb-5 text-center bg-[#FAF9FA]">
+                        <div>
+                            <h3 className="text-xl font-semibold text-primary-cr-500 mb-3">Helpful</h3>
+                            <p className="text-md leading-8">
+                            Essential Muslim-friendly features available at concierge support,
+                            such as helping with qibla direction or locating nearby Halal restaurants.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold text-primary-cr-500 mb-3">Accommodates</h3>
+                            <p className="text-md leading-8">
+                            Hotels in this range offer added comfort, such as Halal food, Qibla
+                            direction in rooms with prayer amenities. From Rating 4, water-friendly
+                            toilets (e.g., bidet) are available. From Rating 5, Ramadan support,
+                            such as iftar and sahoor arrangements are available.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold text-primary-cr-500 mb-3">Specialized</h3>
+                            <p className="text-md leading-8">
+                            Tailored for Muslim guests with high-level amenities like separate
+                            pool/gym timings or facilities for male and female. Include all
+                            facilities provided in the lower ratings.
+                            </p>
+                        </div>
+                        </div>
+
+                        <div className="w-full overflow-y-auto flex justify-center items-center">
                             <ImageWithFallback
                                 width={0}
                                 height={0}
@@ -105,8 +138,30 @@ export default function RatingAndAccreditationHotels() {
                         </div>
                     </div>
                 </section>
-                <section className="w-full flex flex-col justify-center items-center gap-8 bg-[#FAF9FA] py-20">
-                    <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+
+                <section className="bg-[#FAF9FA] py-10 md:py-20 w-full flex flex-col justify-center items-center">
+                    <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full">What&apos;s Included in the Subscription Plan</p>
+                    <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Our comprehensive subscription plan provides you with the tools and recognition you need to effectively reach the growing Muslim travel market.</p>
+                    <div className="max-w-[1440px] px-6 lg:px-8 w-full flex md:flex-row flex-col-reverse justify-center items-start md:gap-24 gap-12 mt-12 mb-12">
+                        <div className="w-[80%] grid gap-6 justify-start items-start">
+                            {hotelBenefits.map((item: any, index: number) => (
+                                <div key={index} className="flex flex-row gap-6 justify-start items-start">
+                                    <div><Check className="text-white bg-primary-cr-700 p-1 rounded-full size-7 font-bold" /></div> <p className="sm:text-desktop-body-2 text-mobile-body-2">{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <ImageWithFallback
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-full object-cover max-h-[310px] rounded-lg"
+                            priority={false}
+                            src={"/image/rating-accreditation/new/hotel-rating.jpg"}
+                            alt={"restaurants"}
+                        />
+                    </div>
+                
+                    <div className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                         <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full">Our Rates and Features</p>
                         <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Choose the right plan based on your property size and needs.</p>
                         <div className="w-full grid md:grid-cols-4 grid-cols-1 gap-10 my-12">
@@ -122,52 +177,6 @@ export default function RatingAndAccreditationHotels() {
                         </div>
                         <p className="sm:text-desktop-body-2 text-mobile-body-2">For more pricing information, contact us:</p>
                         <Button className="!py-5 !px-6 bg-primary-cr-700 min-w-[280px] text-white mt-4">Contact Us</Button>
-                    </section>
-                </section>
-                <section className="max-w-[1440px] w-full px-6 lg:px-8 ">
-                    <CrRatingBanner buttonNameWhite="Register Now" />
-                </section>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[30%]">Rating Criteria</p>
-                    <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">To ensure transparency, our rating criteria provide clear, consistent standards and detail the benefits of each level.</p>
-                    <div className="w-full overflow-y-auto mt-10 pb-10">
-                        <div className="w-full min-w-[1216px] grid grid-cols-4 justify-center items-center gap-8">
-                            {
-                                ratingData.map((rating, index) => (
-                                    <RatingCard key={index} title={rating.title} desc={rating.desc}>
-                                        {rating?.items.map((text, idx) => (
-                                            <div key={idx} className="flex flex-row w-full items-start h-full gap-5 px-6">
-                                                {/* Kolom angka & garis */}
-                                                <div className="relative flex flex-col items-center h-full w-10">
-                                                    {/* Garis penuh */}
-                                                    {idx !== rating?.items.length - 1 && (
-                                                        <div
-                                                            className={clsx(
-                                                                "absolute left-1/2 top-0 -translate-x-1/2",
-                                                                "h-full w-0.5 border-l-2 border-dashed border-[#A6ABFF]/50 z-0",
-                                                                idx === 0 ? 'h-full' : idx === rating.items.length - 1 ? 'h-1/2' : ''
-                                                            )}
-                                                            style={{
-                                                                top: idx === 0 ? '40%' : 0,
-                                                                height: idx === 0 || idx === rating.items.length - 1 ? '100%' : '100%',
-                                                            }}
-                                                        />
-                                                    )}
-                                                    {/* Lingkaran angka */}
-                                                    <div className="size-10 flex justify-center items-center bg-neutral-100 p-4 rounded-full z-10">
-                                                        <p className="text-primary-cr-700 font-bold text-desktop-heading-6">
-                                                            {idx + 1}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                {/* Kolom teks */}
-                                                <p className="w-[70%] text-desktop-body-2 mt-2 mb-8">{text}</p>
-                                            </div>
-                                        ))}
-                                    </RatingCard>
-                                ))
-                            }
-                        </div>
                     </div>
                 </section>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
@@ -197,6 +206,26 @@ export default function RatingAndAccreditationHotels() {
                                 </div>
                             </BasicCard>
                         ))}
+                    </div>
+                </section>
+                <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+                    <div className="w-full">
+                        <div className="rounded-lg border border-neutral-200 bg-[#FAF9FA] p-6 md:p-8 shadow-sm">
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0">
+                            <div className="w-10 h-10 rounded-full bg-[#F3F2FF] flex items-center justify-center border border-[#E6E6FA]">
+                                <AlertCircle className="w-5 h-5 text-primary-cr-700" />
+                            </div>
+                            </div>
+
+                            <div className="flex-1">
+                            <h4 className="text-base md:text-lg font-semibold text-gray-800 mb-2">Disclaimer</h4>
+                            <p className="text-sm md:text-[15px] text-gray-600 leading-6">
+                                The scope of our evaluation is strictly limited to the availability and quality of Muslim-specific facilities and services offered by the establishments. This includes, but is not limited to, prayer rooms, halal food options, ablution facilities, and any other amenities designed to cater to the needs of Muslim individuals. It is crucial to understand that our assessment does not extend to, nor should it be interpreted as, an endorsement or approval of the establishment’s broader perspectives or philosophies. Our focus is exclusively on the facilities provided to Muslim travelers, ensuring they can observe their religious duties and preferences comfortably within the establishment’s premises.
+                            </p>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </section>
             </div>
