@@ -175,10 +175,12 @@ export default function RatingAndAccreditationHotels() {
                                 />
                             ))}
                         </div>
-                        <p className="sm:text-desktop-body-2 text-mobile-body-2">For more pricing information, contact us:</p>
-                        <Button className="!py-5 !px-6 bg-primary-cr-700 min-w-[280px] text-white mt-4">Contact Us</Button>
                     </div>
                 </section>
+                <section className="max-w-[1440px] w-full px-6 lg:px-8 ">
+                    <CrRatingBanner buttonNameWhite="Register Now" />
+                </section>
+
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <div className="flex flex-col w-full gap-4 justify-center items-center">
                         <p className="sm:text-desktop-heading-4 text-center text-mobile-heading-4 font-bold sm:w-[45%] w-full">
