@@ -1,5 +1,6 @@
 import { BasicCard, Button, CrRatingBanner, ImageWithFallback, PricingCard, RatingCard } from "@/components/common";
-import { cardData, membershipTiersAttraction } from "@/constants/dummyData";
+import { cardData, hotelBenefits, membershipTiersAttraction } from "@/constants/dummyData";
+import { Check } from "lucide-react";
 export default function RatingAndAccreditationAttractions() {
 
     return (
@@ -21,67 +22,6 @@ export default function RatingAndAccreditationAttractions() {
                 </div>
             </section>
             <div className='mt-24 w-full flex flex-col gap-24 justify-center items-center'>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <div className="grid sm:grid-cols-3 grid-cols-1 items-center justify-center gap-6 w-[50%]">
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[200px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/mice/bronze-2024.svg"}
-                            alt={"bronze"}
-                        />
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[200px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/mice/silver-2024.svg"}
-                            alt={"silver"}
-                        />
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[200px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/mice/gold-2024.svg"}
-                            alt={"gold"}
-                        />
-                    </div>
-                </section>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[30%]">Rating Criteria</p>
-                    <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">To ensure transparency, our rating criteria provide clear, consistent standards and detail the benefits of each level.</p>
-                    <div className="w-full overflow-y-auto mt-10 pb-10">
-                        <div className="w-full min-w-[1216px] grid grid-cols-3 justify-center items-center gap-8">
-                            {
-                                membershipTiersAttraction.map((tiers, index) => (
-                                    <RatingCard key={index} title={tiers.name} className="bg-[#3B3660] py-8">
-                                        <ImageWithFallback
-                                            width={0}
-                                            height={0}
-                                            sizes="100vw"
-                                            className="w-full h-[150px] object-contain rounded-lg"
-                                            priority={false}
-                                            src={tiers.image}
-                                            alt={tiers.name}
-                                        />
-                                        <div className="flex flex-col w-full items-center gap-6 px-9">
-                                            {
-                                                tiers.benefits.map((benefit, index) => (
-                                                    <PricingCard key={index} title={benefit?.title} price={benefit?.description} />
-                                                ))
-                                            }
-                                        </div>
-                                    </RatingCard>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </section>
                 <section className="max-w-[1440px] w-full px-6 lg:px-8 ">
                     <div className="p-5 md:p-10 w-full flex flex-col justify-center items-center bg-[#F1F3FF]">
                         <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full">Annual Membership Rates</p>
