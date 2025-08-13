@@ -44,7 +44,7 @@ export default function HalalMusimTravelMarketReports() {
       <section className="w-full bg-custom-white-cr px-6 lg:px-8 flex justify-center items-center flex-col gap-5 my-10">
         <div className="max-w-[1440px] w-full flex flex-col gap-5">
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500">
-            CrescentRating's consultants and industry experts continue to
+            CrescentRating&apos;s consultants and industry experts continue to
             partner with destinations and services to unlock their potential and
             deliver solutions for long-term growth. Our extensive analysis and
             support will help you better understand your unique business needs,

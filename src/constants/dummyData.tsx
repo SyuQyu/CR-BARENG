@@ -85,6 +85,82 @@ export const pricingPlans = [
   },
 ];
 
+
+export const faqData = [
+  {
+    value: "item-1",
+    question: "When was CrescentRating founded and what are it's objectives?",
+    answer: {
+      type: "paragraphs",
+      content: [
+        "CrescentRating was founded in December 2008 with the vision to help both the Muslim travelers as well as the travel and Hospitality industry.",
+        "CrescentRating's aim is to bring awareness of the fast growing Halal travel (Muslim travel) market to destinations and travel services and also enable them to attract the Muslim travellers through capability and capacity building.",
+        "For Muslim travellers, CrescentRating's objective is to help them explore the world with peace of mind."
+      ]
+    }
+  },
+  {
+    value: "item-2",
+    question: "What are the services offered by CrescentRating?",
+    answer: {
+      type: "text",
+      content: "CrescentRating offers a wide range of services to help destinations and travel services understand the Halal travel market, build capability and capacity as well as destination marketing to reach out to the Muslim travellers. The services include research & consultancy, staff training and certification, product development, Crescent Rating of services & facilities, destination marketing and event management."
+    }
+  },
+  {
+    value: "item-3",
+    question: "What is Crescent Rating?",
+    answer: {
+      type: "text",
+      content: "Crescent Rating is a globally recognized independent rating standard to rate travel and hospitality services based on their Halal friendly travel services. The world first hotel Crescent Rating system was launched in 2008. Now the rating has been expanded to cover other services such as holiday packages, restaurants, spas, theme parks etc."
+    }
+  },
+  {
+    value: "item-4",
+    question: "How are Hotels Crescent Rated?",
+    answer: {
+      type: "paragraphs",
+      content: [
+        "Hotels are rated based on the services and facilities that they provide, catering to the needs of Halal-conscious travellers. The Crescent Rating system rates overall Halal (Muslim) friendliness of on a scale of one to seven, with seven being the highest rating.",
+        "The service ratings are separated into four different areas; Halal food facilities, Salaath (prayer) facilities, services during Ramadan, and level of non-Halal activities in the hotel and additional Halal-friendly recreational facilities.",
+        "For more information on Hotel Crescent Rating please visit Hotel Crescent Rating page."
+      ]
+    }
+  },
+  {
+    value: "item-5",
+    question: "Why should a Hotel get Crescent Rated?",
+    answer: {
+      type: "text",
+      content: "Crescent Rating provides the Hotel an independent verification and audit of its services and facilities. This allows Hotels to confidently market the property to Muslim consumers. For Muslim consumers, it gives a peace of mind that the hotel's Muslim-friendly services have independently verified. For more information on the benefits of getting Crescent Rated, click here."
+    }
+  },
+  {
+    value: "item-6",
+    question: "What is the Hotel Crescent Rating process?",
+    answer: {
+      type: "list",
+      content: {
+        intro: "The main steps of Hotel Crescent Rating process is as follows:",
+        items: [
+          "Hotel registers to get a Crescent Rating here.",
+          "Once the registration process is complete, the hotel will submit all the required information online.",
+          "Crescent Rating will verify the information provided",
+          "Once the information is verified, the Hotel will be granted a Crescent Rating."
+        ]
+      }
+    }
+  },
+  {
+    value: "item-7",
+    question: "Can rental Homes, Apartments, Villas and Bungalows get a Crescent Rating?",
+    answer: {
+      type: "text",
+      content: "Yes, such facilities can also obtain a Crescent Rating based on the services and facilities it provides"
+    }
+  }
+];
+
 export const DUMMY_DATA_GLOSSARY = [
   {
     id: 1,
