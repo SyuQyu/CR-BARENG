@@ -23,66 +23,6 @@ export default function RatingAndAccreditationRestaurant() {
             </section>
             <div className='mt-24 w-full flex flex-col gap-24 justify-center items-center'>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <div className="grid sm:grid-cols-4 grid-cols-2 gap-6 w-full">
-                        <div className="w-full relative lg:h-[286px] md:h-[200px] h-[150px]">
-                            <ImageWithFallback
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full object-cover rounded-lg h-full"
-                                priority={false}
-                                src={"/image/rating-accreditation/restaurant-img1.webp"}
-                                alt={"restaurant-img1"}
-                            />
-                            <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
-                                <p className="text-desktop-body-2 font-semibold">NAN N KABAB RESTAURANT</p>
-                            </div>
-                        </div>
-                        <div className="w-full relative lg:h-[286px] md:h-[200px] h-[150px]">
-                            <ImageWithFallback
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full object-cover rounded-lg h-full"
-                                priority={false}
-                                src={"/image/rating-accreditation/restaurant-img2.webp"}
-                                alt={"restaurant-img2"}
-                            />
-                            <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
-                                <p className="text-desktop-body-2 font-semibold">Shashleek Eco Park</p>
-                            </div>
-                        </div>
-                        <div className="w-full relative lg:h-[286px] md:h-[200px] h-[150px]">
-                            <ImageWithFallback
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full object-cover rounded-lg h-full"
-                                priority={false}
-                                src={"/image/rating-accreditation/restaurant-img3.webp"}
-                                alt={"restaurant-img3"}
-                            />
-                            <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
-                                <p className="text-desktop-body-2 font-semibold">Maidah Cuisine Restaurant</p>
-                            </div>
-                        </div>
-                        <div className="w-full relative lg:h-[286px] md:h-[200px] h-[150px]">
-                            <ImageWithFallback
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full object-cover rounded-lg h-full"
-                                priority={false}
-                                src={"/image/rating-accreditation/restaurant-img4.webp"}
-                                alt={"restaurant-img4"}
-                            />
-                            <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
-                                <p className="text-desktop-body-2 font-semibold">Village Cafe & Resto</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <div className="grid sm:grid-cols-5 w-[70%] grid-cols-1 items-center justify-center gap-6">
                         <ImageWithFallback
                             width={0}

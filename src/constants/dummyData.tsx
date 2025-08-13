@@ -991,14 +991,12 @@ export const membershipTiersAttraction = [
 ];
 
 export const hotelBenefits = [
-  "Onsite Audit",
-  "Award a Crescent Rating",
-  "Listed on Crescentrating as an onsite-audited Hotel",
-  "Hotel able to promote as a Crescent Rated Hotel",
-  "Promoted on CrescentRating newsletter and Social Media",
-  "Listed on HalalTrip",
-  "Muslim friendly amenities filters applied for the Hotel on HalalTrip",
-  "Promoted on HalalTrip Newsletter and Social Media",
+  "Recognised as a CrescentRating Certified establishment",
+  "Soft copies of marketing collaterals provided - CrescentRating Certificate, CrescentRating Icon, CrescentRating Decal, HalalTrip Decal",
+  "Featured as a Crescent Rated Member on the CrescentRating website",
+  "Listed as a Muslim-friendly Member on HalalTrip",
+  "Dedicated blog article on HalalTrip",
+  "Featured newsletter segment on HalalTrip",
 ];
 
 export const hotelBenefitsRestaurant = [

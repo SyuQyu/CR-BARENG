@@ -93,71 +93,75 @@ function Roadmap() {
 
 const ratingItems = [
   {
-    key: "hotel",
-    title: "Hotel Rating",
-    description: "Halal-friendly rating for hotels to meet Muslim travelers' needs.",
-    image: "/image/rating-accreditation/new/hotel-rating.jpg",
-  },
-  {
-    key: "restaurant",
-    title: "Restaurant Rating",
-    description: "CrescentRating for halal-compliant restaurants.",
-    image: "/image/rating-accreditation/new/restaurant-rating.jpg",
-  },
-  {
-    key: "shoppingMall",
-    title: "Shopping Mall Rating",
-    description: "Rating system for malls based on halal amenities.",
-    image: "/image/rating-accreditation/new/shopping-malls-rating.jpg",
+    key: "activity",
+    title: "Activity Rating",
+    description: "Rating for recreational Muslim-friendly activities.",
+    image: "/image/rating-accreditation/new/activity-rating.jpg",
+    url: "/services/rating-and-accreditation/activities",
   },
   {
     key: "attraction",
     title: "Attractions Rating",
     description: "Assessing tourism attractions for Muslim-friendly criteria.",
     image: "/image/rating-accreditation/new/attraction-rating.jpg",
-  },
-  {
-    key: "miceVenue",
-    title: "MICE Venues Rating",
-    description: "Rating for venues hosting Muslim-friendly meetings & events.",
-    image: "/image/rating-accreditation/new/mice-venue-rating.jpg",
-  },
-  {
-    key: "activity",
-    title: "Activity Rating",
-    description: "Rating for recreational Muslim-friendly activities.",
-    image: "/image/rating-accreditation/new/activity-rating.jpg",
+    url: "/services/rating-and-accreditation/attractions",
   },
   {
     key: "airport",
     title: "Airport Terminal Rating",
     description: "Evaluates airports for Muslim traveler facilities.",
     image: "/image/rating-accreditation/new/airport-terminal-rating.jpg",
+    url: "/services/rating-and-accreditation/hotels",
   },
   {
     key: "beach",
     title: "Beach Rating",
     description: "Halal-friendly assessment for beach facilities.",
     image: "/image/rating-accreditation/new/beach-rating.jpg",
+    url: "/services/rating-and-accreditation/beach",
   },
   {
     key: "cruise",
     title: "Cruise Rating",
     description: "Muslim-friendly rating for cruise experiences.",
     image: "/image/rating-accreditation/new/cruise-rating.jpg",
+    url: "/services/rating-and-accreditation/cruise-ship",
   },
   {
     key: "hospital",
     title: "Hospitals Rating",
     description: "Rating hospitals that meet Muslim-friendly needs.",
     image: "/image/rating-accreditation/new/hospital-rating.jpg",
+    url: "/services/rating-and-accreditation/hospital",
   },
   {
-    key: "travelAgent",
-    title: "Travel Agent Rating",
-    description: "Accrediting travel agents for Muslim-friendly offerings.",
-    image: "/image/rating-accreditation/new/travel-agent-rating.jpg",
+    key: "hotel",
+    title: "Hotel Rating",
+    description: "Halal-friendly rating for hotels to meet Muslim travelers' needs.",
+    image: "/image/rating-accreditation/new/hotel-rating.jpg",
+    url: "/services/rating-and-accreditation/hotels",
   },
+  {
+    key: "miceVenue",
+    title: "MICE Venues Rating",
+    description: "Rating for venues hosting Muslim-friendly meetings & events.",
+    image: "/image/rating-accreditation/new/mice-venue-rating.jpg",
+    url: "/services/rating-and-accreditation/mice",
+  },
+  {
+    key: "restaurant",
+    title: "Restaurant Rating",
+    description: "CrescentRating for halal-compliant restaurants.",
+    image: "/image/rating-accreditation/new/restaurant-rating.jpg",
+    url: "/services/rating-and-accreditation/restaurants",
+  },
+  {
+    key: "shoppingMall",
+    title: "Shopping Mall Rating",
+    description: "Rating system for malls based on halal amenities.",
+    image: "/image/rating-accreditation/new/shopping-malls-rating.jpg",
+    url: "/services/rating-and-accreditation/shopping-mall",
+  }
 ];
 
 function RatingAndAccreditationSection() {
@@ -239,7 +243,7 @@ function RatingAndAccreditationSection() {
             />
             <div className="flex flex-col p-4 justify-between h-full">
               <p className="font-semibold text-black mb-2">{item.title}</p>
-              <Link href="#" className="text-primary-cr-700 text-sm flex items-center">
+              <Link href={item.url} className="text-primary-cr-700 text-sm flex items-center">
                 Learn More <MoveRight className="ml-1 size-4" />
               </Link>
             </div>
