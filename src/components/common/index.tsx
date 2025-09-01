@@ -18,6 +18,7 @@ const CardInsights = dynamic(() => import("@/components/common/card/cardInsights
 const CardProfile = dynamic(() => import("@/components/common/card/cardProfile"))
 const CardPodcasts = dynamic(() => import("@/components/common/card/cardPodcasts"))
 const CardTestimonials = dynamic(() => import("@/components/common/card/cardTestimonials"))
+const CardAcademyPrograms = dynamic(() => import("@/components/common/card/cardAcademyPrograms"))
 const HeroCard = dynamic(() => import("@/components/common/card/heroCard"))
 const CardLandingPage = dynamic(() => import("@/components/common/card/cardLandingPage"))
 const HITGSCard = dynamic(() => import("@/components/common/card/hitgsCard"))
@@ -26,6 +27,7 @@ const PricingCard = dynamic(() => import("@/components/common/card/pricingCard")
 const RatingCard = dynamic(() => import("@/components/common/card/ratingCard"))
 const HitAwardCard = dynamic(() => import("@/components/common/card/hitCardAward"))
 const HeadSection = dynamic(() => import("@/components/common/headSection/headSection"))
+const PageHero = dynamic(() => import("@/components/common/pageHero/pageHero"))
 const ProfileCard2 = dynamic(() => import("@/components/common/card/profileCard2"))
 const CheckBox = dynamic(() => import("@/components/common/checkBox/checkBox"))
 const HotelCard = dynamic(() => import("@/components/common/card/hotelCard"))
@@ -34,7 +36,9 @@ const PricingCard2 = dynamic(() => import("@/components/common/card/pricingCard2
 const OpenStreetMap = dynamic(() => import("@/components/common/maps/OpenStreetMap"), { ssr: false })
 const RichTextEditor = dynamic(() => import("@/components/common/richTextEditor/richTextEditor"), { ssr: false })
 const FileUpload = dynamic(() => import("@/components/common/uploadFIle/uploadFile"))
+const TestimonialCard = dynamic(() => import("@/components/common/testimonialCard/testimonialCard"))
 export {
+  TestimonialCard,
   CheckBox,
   FileUpload,
   OpenStreetMap,
@@ -67,6 +71,8 @@ export {
   CardProfile,
   CardPodcasts,
   CardTestimonials,
+  CardAcademyPrograms,
   HeroCard,
-  HITGSCard
+  HITGSCard,
+  PageHero
 }

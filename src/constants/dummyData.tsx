@@ -377,7 +377,7 @@ export const menuItems = [
         href: "/insights/halal-muslim-travel-market-reports",
         description: "",
       },
-      { title: "CR MAPS", href: "#", description: "" },
+      { title: "CR MAPS", href: "/insights/cr-maps", description: "" },
       { title: "Glossary", href: "/insights/glossary", description: "" },
       { title: "Blogs", href: "/insights/blogs", description: "" },
     ],
@@ -446,6 +446,106 @@ export const menuItems = [
       { title: "Career", href: "/about-us/career", description: "" },
     ],
   },
+];
+
+export const dataRegisteredHotelUser = [
+  {
+    id: 1,
+    name: "Hotel A",
+    location: "Location A",
+    email: "contact@hotela.com",
+    phone: "+1234567890",
+    hotelImg: "/image/hotel.webp",
+  },
+  {
+    id: 2,
+    name: "Hotel B",
+    location: "Location B",
+    email: "contact@hotelb.com",
+    phone: "+0987654321",
+    hotelImg: "/image/hotel.webp",
+  },
+  {
+    id: 3,
+    name: "Hotel C",
+    location: "Location C",
+    email: "contact@hotelc.com",
+    phone: "+1122334455",
+    hotelImg: "/image/hotel.webp",
+  },
+];
+
+export const ratingItemsSubPages = [
+  {
+    key: "activity",
+    title: "Activity Rating",
+    description: "Rating for recreational Muslim-friendly activities.",
+    image: "/image/rating-accreditation/new/activity-rating.jpg",
+    url: "/services/rating-and-accreditation/activities",
+  },
+  {
+    key: "attraction",
+    title: "Attractions Rating",
+    description: "Assessing tourism attractions for Muslim-friendly criteria.",
+    image: "/image/rating-accreditation/new/attraction-rating.jpg",
+    url: "/services/rating-and-accreditation/attractions",
+  },
+  {
+    key: "airport",
+    title: "Airport Terminal Rating",
+    description: "Evaluates airports for Muslim traveler facilities.",
+    image: "/image/rating-accreditation/new/airport-terminal-rating.jpg",
+    url: "/services/rating-and-accreditation/hotels",
+  },
+  {
+    key: "beach",
+    title: "Beach Rating",
+    description: "Halal-friendly assessment for beach facilities.",
+    image: "/image/rating-accreditation/new/beach-rating.jpg",
+    url: "/services/rating-and-accreditation/beach",
+  },
+  {
+    key: "cruise",
+    title: "Cruise Rating",
+    description: "Muslim-friendly rating for cruise experiences.",
+    image: "/image/rating-accreditation/new/cruise-rating.jpg",
+    url: "/services/rating-and-accreditation/cruise-ship",
+  },
+  {
+    key: "hospital",
+    title: "Hospitals Rating",
+    description: "Rating hospitals that meet Muslim-friendly needs.",
+    image: "/image/rating-accreditation/new/hospital-rating.jpg",
+    url: "/services/rating-and-accreditation/hospital",
+  },
+  {
+    key: "hotel",
+    title: "Hotel Rating",
+    description: "Halal-friendly rating for hotels to meet Muslim travelers' needs.",
+    image: "/image/rating-accreditation/new/hotel-rating.jpg",
+    url: "/services/rating-and-accreditation/hotels",
+  },
+  {
+    key: "miceVenue",
+    title: "MICE Venues Rating",
+    description: "Rating for venues hosting Muslim-friendly meetings & events.",
+    image: "/image/rating-accreditation/new/mice-venue-rating.jpg",
+    url: "/services/rating-and-accreditation/mice",
+  },
+  {
+    key: "restaurant",
+    title: "Restaurant Rating",
+    description: "CrescentRating for halal-compliant restaurants.",
+    image: "/image/rating-accreditation/new/restaurant-rating.jpg",
+    url: "/services/rating-and-accreditation/restaurants",
+  },
+  {
+    key: "shoppingMall",
+    title: "Shopping Mall Rating",
+    description: "Rating system for malls based on halal amenities.",
+    image: "/image/rating-accreditation/new/shopping-malls-rating.jpg",
+    url: "/services/rating-and-accreditation/shopping-mall",
+  }
 ];
 
 export const tabsDataRatingAndAccreditation = [
@@ -3056,6 +3156,216 @@ export const testimonialsAboutUs = [
   },
 ];
 
+export const testimonialLogoRatingAndAccreditation = [
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/kingsford.png",
+    imageAlt: "kingsford",
+    name: "Kingsford Hotel",
+    location: "Manila",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/savoy.png",
+    imageAlt: "savoy",
+    name: "Savoy Hotel",
+    location: "Mactan Newtown",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/kowloon.png",
+    imageAlt: "kowloon",
+    name: "Kowloon Shangri-La",
+    location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/belmont.png",
+    imageAlt: "belmont",
+    name: "Belmont Hotel",
+    location: "Mactan",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/westside.png",
+    imageAlt: "westside",
+    name: "Grand Westside Hotel",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/marriott.png",
+    imageAlt: "marriott",
+    name: "JW Marriott",
+    location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/four-seasons.png",
+    imageAlt: "four-seasons",
+    name: "Four Seasons",
+    location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/hlc.png",
+    imageAlt: "hlc",
+    name: "Hotel Lucky Chinatown",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/anvar.png",
+    imageAlt: "anvar",
+    name: "Anvar Hotel",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/the-peninsula.png",
+    imageAlt: "the-peninsula",
+    name: "The Peninsula",
+    location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/hyatt.png",
+    imageAlt: "hyatt",
+    name: "Grand Hyatt",
+    location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/megaworld.png",
+    imageAlt: "megaworld",
+    name: "Megaworld",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/marriott-hk.png",
+    imageAlt: "marriott-hk",
+    name: "Marriott",
+    location: "Hong Kong Ocean Park",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/ping.png",
+    imageAlt: "ping",
+    name: "Ngong Ping 360",
+    location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/ocean-park.png",
+    imageAlt: "ocean-park",
+    name: "Ocean Park",
+    location: "Hong Kong",
+  },
+]
+
+export const faqsRatingAndAccreditation = [
+  {
+    id: "apply",
+    question: "How can I apply?",
+    answer:
+      "You can apply by creating an account for your establishment at www.crescentrating.com and submitting the application form. Once reviewed, our team will contact you with a tentative rating and the next steps.",
+  },
+  {
+    id: "timeline",
+    question: "How long does the process take?",
+    answer:
+      "Our team typically completes the review within 2–4 weeks, depending on the completeness of your submission and scheduling availability.",
+  },
+  {
+    id: "charges",
+    question: "Are there any charges for this rating service?",
+    answer:
+      "Yes. Fees vary by establishment type and scope. We’ll share a quotation after the initial review of your application.",
+  },
+  {
+    id: "benefits",
+    question: "What are the benefits of being Crescent Rated?",
+    answer:
+      "Benefits include increased visibility to Muslim travelers, marketing support, and access to best-practice resources.",
+  },
+  {
+    id: "types",
+    question: "What types of establishments have been Crescent Rated?",
+    answer:
+      "Hotels, resorts, F&B outlets, attractions, airports, and destinations across multiple regions.",
+  },
+  {
+    id: "validity",
+    question: "How long is the Crescent Rating valid once issued?",
+    answer:
+      "The rating is typically valid for 12 months, subject to compliance with ongoing criteria.",
+  },
+  {
+    id: "upgrade",
+    question: "Can we upgrade our rating during the validity period?",
+    answer:
+      "Yes. You may request a reassessment after implementing improvements that meet the higher rating criteria.",
+  },
+  {
+    id: "renew",
+    question: "How do I renew my Crescent Rating?",
+    answer:
+      "Submit a renewal request 30–60 days before expiry so we can schedule a timely reassessment.",
+  },
+  {
+    id: "contact",
+    question: "How can I get in touch if I have inquiries?",
+    answer:
+      "Reach us via the contact form on our website or email support@crescentrating.com. Our team will respond promptly.",
+  },
+]
+
+
+export const testimonialsRatingAndAccreditation = [
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "wts",
+    name: "Aksu Restaurant",
+    location: "Uzbekistan",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "prof",
+    name: "Prof. Claudio Visentin",
+    location: "Università della Svizzera Italiana",
+  },
+];
+
 export const availablePositions = [
   {
     id: 1,
@@ -3355,4 +3665,65 @@ export const crAcademyTestimonials = [
 
   },
 
+];
+export const crAcademySectorImmersionPrograms = [
+  {
+    key: 1,
+    program: "Customer Service Training",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/customer-service-training.webp",
+    market: "For Managers And Service Staff Looking For Ready Training Programs",
+    description:
+      "Get certified in one day on Halal travel, focusing on market awareness and customer service for Muslim travelers.",
+    role: "Hotels, Restaurant, Attractions, Tour agencies and operators",
+    pricing: "USD / EUR 250 per person"
+  },
+  {
+    key: 2,
+    program: "Customized Training Program",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/customized-training-program.webp",
+    market: "For Managers And Service Staff With Unique Training Requirements",
+    description:
+      "Require a customized training program for your service sector?\nLet us know what you need and our expert trainers and course consultants will be glad to design a learning package and experience that fits your specific requirements.",
+  },
+  {
+    key: 3,
+    program: "HalalChefWorld Training Program",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/halalchefworld-training-program.webp",
+    market: "For Managers And Service Staff Looking For Ready Training Programs",
+    description:
+      "First launched in South Africa with Cape Town Tourism, HalalChefWorld consists of a 2-day Halal gourmet competency training and cook-off with professional Chefs from various industries. Chefs who excel in the competency program are awarded the CrescentRating Accredited Chef title at the end of the training.",
+  },
+]
+
+export const crAcademySectorImmersionProgramsCardProfile = [
+  {
+    id: 1,
+    title: "Dr. Nisha Abu Bakar",
+    description: "Tourism consultant and academic with 25+ years’ experience.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/nisha-abu-bakar.webp",
+  },
+  {
+    id: 2,
+    title: "Fazal Bahardeen",
+    description: "Founder of CrescentRating and HalalTrip, pioneer in the Muslim lifestyle and halal travel space.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/fazal-bahardeen.webp",
+  },
+  {
+    id: 3,
+    title: "Muhammad Kamal Khamis",
+    description: "President of Singapore Halal Culinary Federation.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/muhammad-kamal-khamis.webp",
+  },
+  {
+    id: 4,
+    title: "Nurhafihz Noor",
+    description: "Marketing expert and director at CrescentRating Academy.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/nurhafihz-noor.webp",
+  },
+  {
+    id: 5,
+    title: "Zuraimi Jumaat",
+    description: "Executive director and Halal business consultant with 15+ years’ experience.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/zuraimi-jumaat.webp",
+  }
 ];

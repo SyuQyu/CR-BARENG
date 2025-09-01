@@ -1,4 +1,4 @@
-import { BasicCard, Button, CheckBox, HeroCard, ImageWithFallback, Input } from "@/components/common";
+import { BasicCard, Button, CheckBox, HeroCard, ImageWithFallback, Input, PageHero } from "@/components/common";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/defaultCarousel";
 import { CircleCheck, Link } from "lucide-react";
@@ -8,24 +8,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 export default function ContactUs() {
     return (
         <div className="w-full flex flex-col justify-center items-center">
-            <section
-                className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-                style={{ backgroundImage: "url('/image/contact-us/hero.jpg')", backgroundSize: "cover" }}
-            >
-                <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-                    <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10 text-white">
-                        <p className=" text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-                            Our Service
-                        </p>
-                        <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 text-left w-full sm:w-[70%]">
-                            Get in Touch with Our Team
-                        </h1>
-                        <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full">
-                            Have questions about halal accreditation or partnership opportunities? Fill out the form and our team will respond shortly.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <PageHero
+                title="Get in Touch with Our Team"
+                description="Have questions about halal accreditation or partnership opportunities? Fill out the form and our team will respond shortly."
+                subtitle="Our Service"
+                backgroundImage="/image/contact-us/hero.jpg"
+                alignment="left"
+                variant="image"
+            />
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center gap-10">
                     <div className="w-full flex md:flex-row flex-col justify-between items-start gap-12">

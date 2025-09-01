@@ -1,6 +1,6 @@
 import { BasicCard, Button, CrRatingBanner, ImageWithFallback, PricingCard } from "@/components/common";
-import { Check } from "lucide-react";
-import { cardData, hotelBenefitsRestaurant } from "@/constants/dummyData";
+import { AlertCircle, Check } from "lucide-react";
+import { cardData, hotelBenefits, hotelBenefitsRestaurant } from "@/constants/dummyData";
 export default function RatingAndAccreditationRestaurant() {
 
     return (
@@ -22,62 +22,82 @@ export default function RatingAndAccreditationRestaurant() {
                 </div>
             </section>
             <div className='mt-24 w-full flex flex-col gap-24 justify-center items-center'>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <div className="grid sm:grid-cols-5 w-[70%] grid-cols-1 items-center justify-center gap-6">
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[150px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/restaurant/aa.svg"}
-                            alt={"bronze"}
-                        />
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[150px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/restaurant/aaa.svg"}
-                            alt={"silver"}
-                        />
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[150px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/restaurant/a.svg"}
-                            alt={"gold"}
-                        />
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[150px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/restaurant/b.svg"}
-                            alt={"silver"}
-                        />
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full h-[150px] object-contain rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/restaurant/c.svg"}
-                            alt={"gold"}
-                        />
+                <section className="w-full flex justify-center px-6 lg:px-8">
+                    <div className="max-w-[1440px] w-full bg-[#FAF9FA] rounded-sm py-12 px-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start text-center">
+                            <div className="flex flex-col items-center">
+                                <ImageWithFallback
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="w-full h-[150px] object-contain rounded-lg"
+                                    priority={false}
+                                    src={"/image/rating-accreditation/restaurant/a.svg"}
+                                    alt={"rating-a"}
+                                />
+                                <h3 className="text-primary-cr-700 font-bold text-desktop-body-1 mt-4 mb-2">Rating A</h3>
+                                <p className="text-sm text-neutral-500 leading-6 max-w-[260px]">
+                                    Serve only Halal food and beverages.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col items-center">
+                                <ImageWithFallback
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="w-full h-[150px] object-contain rounded-lg"
+                                    priority={false}
+                                    src={"/image/rating-accreditation/restaurant/b.svg"}
+                                    alt={"rating-b"}
+                                />
+                                <h3 className="text-primary-cr-700 font-bold text-desktop-body-1 mt-4 mb-2">Rating B</h3>
+                                <p className="text-sm text-neutral-500 leading-6 max-w-[260px]">
+                                    Serve only Halal food prepared in a dedicated Halal kitchen using separate equipment and utensils for Halal preparation. May include alcoholic beverages in the serving area.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col items-center">
+                                <ImageWithFallback
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="w-full h-[150px] object-contain rounded-lg"
+                                    priority={false}
+                                    src={"/image/rating-accreditation/restaurant/c.svg"}
+                                    alt={"rating-c"}
+                                />
+                                <h3 className="text-primary-cr-700 font-bold text-desktop-body-1 mt-4 mb-2">Rating C</h3>
+                                <p className="text-sm text-neutral-500 leading-6 max-w-[260px]">
+                                    Offer Halal food prepared in a dedicated Halal kitchen with separate equipment and utensils for Halal preparation. May include non-Halal food and alcoholic beverages in the serving area.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col items-center">
+                                <ImageWithFallback
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="w-full h-[150px] object-contain rounded-lg"
+                                    priority={false}
+                                    src={"/image/rating-accreditation/restaurant/cdouble.svg"}
+                                    alt={"rating-cc"}
+                                />
+                                <h3 className="text-primary-cr-700 font-bold text-desktop-body-1 mt-4 mb-2">Rating CC</h3>
+                                <p className="text-sm text-neutral-500 leading-6 max-w-[260px]">
+                                    Offer Halal food prepared in a separate Halal section within the main kitchen, with separate equipment and utensils for Halal preparation. May include non-Halal food and alcoholic beverages in the serving area.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section className="w-full flex flex-col justify-center items-center gap-8 md:gap-20 bg-[#FAF9FA] py-10 md:py-20">
-                    <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                        <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full">What&apos;s Included in the Subscription Plan</p>
-                        <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Our comprehensive subscription plan provides you with the tools and recognition you need to effectively reach the growing Muslim travel market.</p>
-                        <div className="w-full flex md:flex-row flex-col-reverse justify-center items-start md:gap-24 gap-12 mt-12">
-                            <div className="w-[80%] grid min-[450px]:grid-cols-2 grid-cols-1 gap-6 justify-start items-start">
-                                {hotelBenefitsRestaurant.map((item: any, index: number) => (
+                <section className="bg-[#FAF9FA] py-10 md:py-20 w-full flex flex-col justify-center items-center">
+                    <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full">What&apos;s Included in the Subscription Plan</p>
+                    <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Our comprehensive subscription plan provides you with the tools and recognition you need to effectively reach the growing Muslim travel market.</p>
+                    <div className="max-w-[1440px] px-6 lg:px-8 w-full flex md:gap-24 gap-12 flex-col mt-12 mb-12">
+                        <div className="flex md:flex-row flex-col-reverse justify-center items-start md:gap-24 gap-12">
+                            <div className="w-[80%] grid gap-6 justify-start items-start">
+                                {hotelBenefits.map((item: any, index: number) => (
                                     <div key={index} className="flex flex-row gap-6 justify-start items-start">
                                         <div><Check className="text-white bg-primary-cr-700 p-1 rounded-full size-7 font-bold" /></div> <p className="sm:text-desktop-body-2 text-mobile-body-2">{item}</p>
                                     </div>
@@ -93,9 +113,7 @@ export default function RatingAndAccreditationRestaurant() {
                                 alt={"restaurants"}
                             />
                         </div>
-                    </section>
-                    <div className="w-full px-5 md:px-0 flex flex-col justify-center items-center">
-                        <section className="max-w-[1440px] px-6 lg:px-8 py-5 md:py-10 w-full flex flex-col justify-center items-center bg-[#F1F3FF]">
+                        <section className="w-full flex flex-col justify-center items-center  bg-[#F1F3FF] py-20">
                             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full">Annual Membership Rates</p>
                             <div className="w-full max-w-[500px] flex justify-center items-center gap-10 my-12">
                                 <PricingCard title="Restaurant" price={350} />
@@ -107,27 +125,6 @@ export default function RatingAndAccreditationRestaurant() {
                 </section>
                 <section className="max-w-[1440px] w-full px-6 lg:px-8 ">
                     <CrRatingBanner buttonNameWhite="Register Now" />
-                </section>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-                    <div className="flex flex-col w-full gap-4 justify-center items-center">
-                        <p className="sm:text-desktop-heading-4 text-center text-mobile-heading-4 font-bold w-full">
-                            Crescent Rating Standards Overview
-                        </p>
-                        <p className="sm:text-desktop-body-2 text-center text-mobile-body-2 text-gray-500 w-full">
-                            Restaurants that are CrescentRated offer an indication of the level of services and facilities it offers to Muslims. In addition to the availability of Halal food, several other factors are taken into consideration when determining a restaurant&apos;s rating, giving Muslim diners an idea on how well it can caters to them. CrescentRated restaurants are also be listed on our Halal Food Directory together with their facilities and services and which is visited by a large audience of Muslims from around the world.The restaurants are rated AAA, AA, A, B, C. AAA being the highest rating.
-                        </p>
-                    </div>
-                    <div className=" gap-8 w-full mt-10 overflow-y-auto">
-                        <ImageWithFallback
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="w-full object-contain min-w-[1216px] rounded-lg"
-                            priority={false}
-                            src={"/image/rating-accreditation/restaurant-img-rated.jpg"}
-                            alt={"restaurant-img-rated"}
-                        />
-                    </div>
                 </section>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <div className="flex flex-col w-full gap-4 justify-center items-center">
@@ -156,6 +153,26 @@ export default function RatingAndAccreditationRestaurant() {
                                 </div>
                             </BasicCard>
                         ))}
+                    </div>
+                </section>
+                <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+                    <div className="w-full">
+                        <div className="rounded-lg border border-neutral-200 bg-[#FAF9FA] p-6 md:p-8 shadow-sm">
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0">
+                                    <div className="w-10 h-10 rounded-full bg-[#F3F2FF] flex items-center justify-center border border-[#E6E6FA]">
+                                        <AlertCircle className="w-5 h-5 text-primary-cr-700" />
+                                    </div>
+                                </div>
+
+                                <div className="flex-1">
+                                    <h4 className="text-mobile-body-1 md:text-desktop-body-1 font-semibold text-gray-800 mb-2">Disclaimer</h4>
+                                    <p className="text-mobile-body-2 md:text-desktop-body-2 text-gray-600 leading-6">
+                                        The scope of our evaluation is strictly limited to the availability and quality of Muslim-specific facilities and services offered by the establishments. This includes, but is not limited to, prayer rooms, halal food options, ablution facilities, and any other amenities designed to cater to the needs of Muslim individuals. It is crucial to understand that our assessment does not extend to, nor should it be interpreted as, an endorsement or approval of the establishment’s broader perspectives or philosophies. Our focus is exclusively on the facilities provided to Muslim travelers, ensuring they can observe their religious duties and preferences comfortably within the establishment’s premises.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div >

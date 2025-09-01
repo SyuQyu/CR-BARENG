@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import { PageHero } from "@/components/common";
 import { faqData as rawFaqData } from "@/constants/dummyData";
 
 // Convert the imported data to match our type definitions
@@ -72,20 +73,10 @@ const FaqAnswer = ({ answer }: { answer: AnswerType }) => {
 export default function FaqPageOptimal() {
     return (
         <div className="w-full flex flex-col justify-center items-center">
-            <section
-                className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-gradient-to-br from-blue-800 to-blue-600"
-            >
-                <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-                    <div className="flex w-full flex-col gap-5 justify-center items-center sm:mt-20 mt-10 text-white">
-                        <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative text-center z-20 w-full sm:w-[70%]">
-                            Frequently Asked Questions
-                        </h1>
-                        <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full text-center">
-                            Explore our most frequently asked questions to better understand CrescentRating’s mission, processes, and the value we bring to the halal travel world.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <PageHero
+                title="Frequently Asked Questions"
+                description="Explore our most frequently asked questions to better understand CrescentRating's mission, processes, and the value we bring to the halal travel world."
+            />
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
                 <div className="max-w-[1440px] w-full px-6 lg:px-8">
                     <Accordion type="single" collapsible className="w-full space-y-1">

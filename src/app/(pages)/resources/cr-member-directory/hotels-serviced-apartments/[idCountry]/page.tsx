@@ -1,5 +1,5 @@
 'use client';
-import { BasicCard, Button, HotelCard, ImageWithFallback, Input } from "@/components/common";
+import { BasicCard, Button, HotelCard, ImageWithFallback, Input, PageHero } from "@/components/common";
 import { cardData, crMemberDirectoryCategories } from "@/constants/dummyData";
 import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItem as CarouselItem2, CarouselNextCustom as CarouselNext2, CarouselPreviousCustom as CarouselPrevious2, CarouselDots as CarouselDots2 } from "@/components/ui/carouselCustom2";
 import Link from "next/link";

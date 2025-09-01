@@ -1,5 +1,5 @@
 "use client";
-import { CardBlogs, ImageWithFallback, Pagination } from "@/components/common";
+import { CardBlogs, ImageWithFallback, Pagination, PageHero } from "@/components/common";
 import {
   Carousel as Carousel2,
   CarouselContent as CarouselContent2,
@@ -24,27 +24,14 @@ export default function HalalMusimTravelMarketReports() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-        style={{
-          backgroundImage: "url('/image/destination-marketing/hero.webp')",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-          <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10 text-white">
-            <p className=" text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-              Our Service
-            </p>
-            <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 text-left w-full sm:w-[70%]">
-              Destination Marketing
-            </h1>
-            <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full">
-              Connecting you to Muslims globally
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Destination Marketing"
+        subtitle="Our Service"
+        description="Connecting you to Muslims globally"
+        backgroundImage="/image/destination-marketing/hero.webp"
+        variant="image"
+        alignment="left"
+      />
       <section className="w-full bg-custom-white-cr px-6 py-10 lg:px-8 flex justify-center items-center flex-col mb-10">
         <div className="max-w-[1440px] w-full flex flex-col gap-5">
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-neutral-500">
@@ -358,7 +345,7 @@ export default function HalalMusimTravelMarketReports() {
               <p className="text-black sm:text-desktop-body-2 text-mobile-body-2">
                 Advertising on HalalTrip is a unique opportunity to reach the
                 global Muslim audience. The HalalTrip featured decal increases
-                your brand's awareness to consumers while connecting them to
+                your brand&apos;s awareness to consumers while connecting them to
                 your profile listing on HalalTrip.
               </p>
             </div>
@@ -390,7 +377,7 @@ export default function HalalMusimTravelMarketReports() {
                 sizes="30px"
                 className="h-7 w-7"
                 priority={false}
-                src="/image/destination-marketing/logo-spotify.webp" 
+                src="/image/destination-marketing/logo-spotify.webp"
                 alt="Spotify Logo"
               />
               <ImageWithFallback
@@ -399,7 +386,7 @@ export default function HalalMusimTravelMarketReports() {
                 sizes="80px"
                 className="h-11 w-20"
                 priority={false}
-                src="/image/destination-marketing/logo-apple-podcast.webp" 
+                src="/image/destination-marketing/logo-apple-podcast.webp"
                 alt="Apple Podcast Logo"
               />
               <ImageWithFallback
@@ -408,7 +395,7 @@ export default function HalalMusimTravelMarketReports() {
                 sizes="44px"
                 className="h-11 w-9"
                 priority={false}
-                src="/image/destination-marketing/logo-google-podcasts.webp" 
+                src="/image/destination-marketing/logo-google-podcasts.webp"
                 alt="Google Podcasts Logo"
               />
               <ImageWithFallback
@@ -417,7 +404,7 @@ export default function HalalMusimTravelMarketReports() {
                 sizes="96px"
                 className="h-7 w-24"
                 priority={false}
-                src="/image/destination-marketing/logo-anchor-podcast.webp" 
+                src="/image/destination-marketing/logo-anchor-podcast.webp"
                 alt="Anchor Podcast Logo"
               />
               <ImageWithFallback
@@ -426,7 +413,7 @@ export default function HalalMusimTravelMarketReports() {
                 sizes="44px"
                 className="h-11 w-11"
                 priority={false}
-                src="/image/destination-marketing/logo-youtube.webp" 
+                src="/image/destination-marketing/logo-youtube.webp"
                 alt="Youtube Logo"
               />
             </div>

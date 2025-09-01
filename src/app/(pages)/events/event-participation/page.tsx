@@ -2,14 +2,7 @@
 import { ImageWithFallback, Button, Pagination, PageHero } from "@/components/common";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Calendar, MapPin, Search } from "lucide-react";
-import {
-    Dialog,
-    DialogContent,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import { eventsData, professionalsData } from "@/constants/dummyData";
+import { eventsData } from "@/constants/dummyData";
 import { useState } from "react";
 export default function OurEvents() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -22,9 +15,9 @@ export default function OurEvents() {
     return (
         <div className="w-full flex flex-col justify-center items-center ">
             <PageHero
-                title="Meet Us at Events"
+                title="Event Participation"
                 description="Meet CrescentRating and Halaltrip at Exhibitions, Conferences, Workshops and other Events."
-                subtitle="Resources"
+                subtitle="About Us"
                 backgroundImage="/image/our-events/hero.jpg"
                 alignment="left"
                 variant="image"

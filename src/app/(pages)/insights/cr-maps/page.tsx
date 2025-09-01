@@ -1,31 +1,15 @@
-import { BasicCard, Button, CheckBox, HeroCard, ImageWithFallback, Input } from "@/components/common";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/defaultCarousel";
-import { CircleCheck, Link } from "lucide-react";
-import { medpart, cardData, categoriesServices, servicesData } from "@/constants/dummyData";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ImageWithFallback, PageHero } from "@/components/common";
 export default function ContactUs() {
     return (
         <div className="w-full flex flex-col justify-center items-center">
-            <section
-                className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-                style={{ backgroundImage: "url('/image/cr-maps/hero.jpg')", backgroundSize: "cover" }}
-            >
-                <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-                    <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10 text-white">
-                        <p className=" text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-                            Our Service
-                        </p>
-                        <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 text-left w-full sm:w-[70%]">
-                            CR MAPS
-                        </h1>
-                        <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full">
-                            Your essential data intelligence platform for navigating and excelling in the global Muslim market.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <PageHero
+                title="CR MAPS"
+                description="Your essential data intelligence platform for navigating and excelling in the global Muslim market."
+                subtitle="Our Service"
+                backgroundImage="/image/cr-maps/hero.jpg"
+                alignment="left"
+                variant="image"
+            />
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center gap-10">
                     <div className="flex md:flex-row flex-col justify-between items-center w-full px-8 py-10 bg-[#FAF9FA] gap-6">

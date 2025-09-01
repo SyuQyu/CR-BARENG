@@ -3,6 +3,7 @@ import {
   CardResearch,
   ImageWithFallback,
   Pagination,
+  PageHero,
 } from "@/components/common";
 import { Download } from "lucide-react";
 import { useState } from "react";
@@ -20,27 +21,14 @@ export default function HalalMusimTravelMarketReports() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-        style={{
-          backgroundImage: "url('/image/research-and-consultancy/hero.webp')",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-          <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10 text-white">
-            <p className=" text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-              Our Service
-            </p>
-            <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 text-left w-full sm:w-[70%]">
-              Research and Consultancy
-            </h1>
-            <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full">
-              Develop your Halal travel market with our leading experts
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Research and Consultancy"
+        description="Develop your Halal travel market with our leading experts"
+        subtitle="Our Service"
+        backgroundImage="/image/research-and-consultancy/hero.webp"
+        alignment="left"
+        variant="image"
+      />
       <section className="w-full bg-custom-white-cr px-6 lg:px-8 flex justify-center items-center flex-col gap-5 my-10">
         <div className="max-w-[1440px] w-full flex flex-col gap-5">
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500">
@@ -177,8 +165,8 @@ export default function HalalMusimTravelMarketReports() {
               Consultancy
             </p>
             <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500">
-              Don't leave your project success to chance. Get ongoing
-              consultancy and insights on the Muslim market from the World's
+              Don&apos;t leave your project success to chance. Get ongoing
+              consultancy and insights on the Muslim market from the World&apos;s
               leading authority on Halal travel.
             </p>
             <div className="mt-10 mb-10 flex justify-center items-center w-full">

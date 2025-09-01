@@ -29,7 +29,7 @@ export default function HalalMusimTravelGlobalSummit() {
     return (
         <div className="w-full gap-24 flex flex-col justify-center items-center">
             <section
-                className="relative w-full px-6 lg:px-8 flex justify-center  pb-24 items-center flex-row bg-center"
+                className="relative w-full px-6 lg:px-8 flex justify-center pb-24 items-center flex-row bg-center"
                 style={{ backgroundImage: "url('/image/hitgs/main.webp')", backgroundSize: "cover" }}
             >
                 <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center ">

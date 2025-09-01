@@ -1,5 +1,5 @@
 'use client';
-import { Button, ImageWithFallback } from "@/components/common";
+import { Button, ImageWithFallback, TestimonialCard, PageHero } from "@/components/common";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/defaultCarousel";
 import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItemCustom as CarouselItem2, CarouselNext as CarouselNext2, CarouselPrevious as CarouselPrevious2 } from "@/components/ui/carouselCustom2";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -73,21 +73,14 @@ export default function AboutUs() {
 
     return (
         <div className="w-full flex flex-col justify-center items-center">
-            <section
-                className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-                style={{ backgroundImage: "url('/image/about-us/hero.webp')", backgroundSize: "cover" }}
-            >
-                <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-                    <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10">
-                        <p className="text-white text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-                            About Us
-                        </p>
-                        <h1 className="text-mobile-heading-3 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text text-white relative z-20 text-left w-full sm:w-[70%]">
-                            The world&apos;s leading authority on halal-friendly travel.
-                        </h1>
-                    </div>
-                </div>
-            </section>
+            <PageHero
+                title="The world's leading authority on halal-friendly travel."
+                description=""
+                subtitle="About Us"
+                backgroundImage="/image/about-us/hero.webp"
+                alignment="left"
+                variant="image"
+            />
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
                 <div className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
                     <p className="lg:text-desktop-body-1 text-mobile-body-1 text-left w-full text-neutral-500">CrescentRating is the world&apos;s leading authority on halal-friendly travel. The company uses insight, industry intelligence, lifestyle, behavior, and research on the needs of the Muslim traveler to deliver authoritative guidance on all aspects of halal-friendly travel to organizations across the globe. The primary aim of CrescentRating is to enable Muslim travelers to explore the world with peace of mind so that it can benefit Travelers, Travel Service providers, our Stakeholders, and the Community as a whole. Our Commitment is to be the Credible, Knowledgeable, and Globally Trusted brand for Halal/Muslim friendly Travel.</p>
@@ -183,7 +176,7 @@ export default function AboutUs() {
                                                                 className="flex flex-row justify-between items-center gap-2 mt-4 px-4 py-2 text-primary-cr-600 font-semibold md:text-desktop-body-2 text-mobile-body-2 hover:bg-gray-100 border"
                                                             >
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                                                    <g clip-path="url(#clip0_3908_1216)">
+                                                                    <g clipPath="url(#clip0_3908_1216)">
                                                                         <path d="M18.5195 0.5H1.47656C0.660156 0.5 0 1.14453 0 1.94141V19.0547C0 19.8516 0.660156 20.5 1.47656 20.5H18.5195C19.3359 20.5 20 19.8516 20 19.0586V1.94141C20 1.14453 19.3359 0.5 18.5195 0.5ZM5.93359 17.543H2.96484V7.99609H5.93359V17.543ZM4.44922 6.69531C3.49609 6.69531 2.72656 5.92578 2.72656 4.97656C2.72656 4.02734 3.49609 3.25781 4.44922 3.25781C5.39844 3.25781 6.16797 4.02734 6.16797 4.97656C6.16797 5.92188 5.39844 6.69531 4.44922 6.69531ZM17.043 17.543H14.0781V12.9023C14.0781 11.7969 14.0586 10.3711 12.5352 10.3711C10.9922 10.3711 10.7578 11.5781 10.7578 12.8242V17.543H7.79688V7.99609H10.6406V9.30078H10.6797C11.0742 8.55078 12.043 7.75781 13.4844 7.75781C16.4883 7.75781 17.043 9.73438 17.043 12.3047V17.543Z" fill="#453CFF" />
                                                                     </g>
                                                                     <defs>
@@ -305,31 +298,14 @@ export default function AboutUs() {
                             <p className="lg:text-desktop-heading-6 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-left w-full">What They Say</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {testimonialsAboutUs.map((testimonial, index) => (
-                                    <div
+                                    <TestimonialCard
                                         key={index}
-                                        className="border md:px-8 px-6 py-4 flex flex-col justify-between items-start gap-4"
-                                    >
-                                        <p className="lg:text-desktop-body-2 text-mobile-body-2 text-left">
-                                            {testimonial.text}
-                                        </p>
-                                        <div className="flex flex-row w-full justify-start items-center gap-4">
-                                            <ImageWithFallback
-                                                width={0}
-                                                height={0}
-                                                sizes="1000vw"
-                                                className="w-[48px] object-contain"
-                                                priority={false}
-                                                src={testimonial.imageSrc}
-                                                alt={testimonial.imageAlt}
-                                            />
-                                            <div className="flex flex-col justify-between items-start gap-1">
-                                                <p className="text-desktop-body-2">{testimonial.name}</p>
-                                                <p className="text-neutral-500 text-desktop-caption-l">
-                                                    {testimonial.location}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        text={testimonial.text}
+                                        name={testimonial.name}
+                                        location={testimonial.location}
+                                        imageSrc={testimonial.imageSrc}
+                                        imageAlt={testimonial.imageAlt}
+                                    />
                                 ))}
                             </div>
                             {/* <div className="w-full flex justify-center mt-6">

@@ -1,5 +1,5 @@
 "use client";
-import { Button, CardReports, Input, Pagination } from "@/components/common";
+import { Button, CardReports, Input, Pagination, PageHero } from "@/components/common";
 import { pressRelease } from "@/constants/dummyData";
 import { Search } from "lucide-react";
 import { useState } from "react";
@@ -13,28 +13,14 @@ export default function PressReleasePage() {
   };
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-        style={{
-          backgroundImage:
-            "url('/image/press-release/hero.jpg')",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-          <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10 text-white">
-            <p className=" text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-              Insights
-            </p>
-            <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 text-left w-full sm:w-[70%]">
-              Press Releases
-            </h1>
-            <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full">
-              Get the latest updates, partnerships, and announcements from CrescentRating and HalalTrip.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Press Releases"
+        description="Get the latest updates, partnerships, and announcements from CrescentRating and HalalTrip."
+        subtitle="Insights"
+        backgroundImage="/image/press-release/hero.jpg"
+        alignment="left"
+        variant="image"
+      />
       <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full">
           <div className="flex sm:flex-row flex-col justify-between sm:items-center items-start w-full">

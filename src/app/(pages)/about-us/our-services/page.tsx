@@ -1,4 +1,4 @@
-import { BasicCard, Button, CheckBox, HeroCard, ImageWithFallback } from "@/components/common";
+import { BasicCard, Button, CheckBox, HeroCard, ImageWithFallback, PageHero } from "@/components/common";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/defaultCarousel";
 import { CircleCheck } from "lucide-react";
@@ -6,25 +6,14 @@ import { medpart, cardData, categoriesServices, servicesData } from "@/constants
 export default function OurServices() {
     return (
         <div className="w-full flex flex-col justify-center items-center">
-            <section
-                className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-                style={{ backgroundImage: "url('/image/rating-accreditation/main.webp')", backgroundSize: "cover" }}
-            >
-                <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
-                    <div className="flex w-full flex-col gap-5 justify-start items-start sm:mt-20 mt-10 text-white">
-                        <p className=" text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
-                            Our Service
-                        </p>
-                        <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 text-left w-full sm:w-[70%]">
-                            Rating and Accreditation
-                        </h1>
-                        <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full">
-                            Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci pulvinar vitae. Ultrices tempor interdum
-                            non consectetur nec platea gravida ac.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <PageHero
+                title="Rating and Accreditation"
+                description="Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci pulvinar vitae. Ultrices tempor interdum non consectetur nec platea gravida ac."
+                subtitle="Our Service"
+                backgroundImage="/image/rating-accreditation/main.webp"
+                alignment="left"
+                variant="image"
+            />
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center gap-10">
                     <div className="flex flex-col w-full gap-4 justify-start items-start">
