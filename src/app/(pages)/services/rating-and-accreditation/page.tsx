@@ -1,39 +1,110 @@
 "use client";
-import { BasicCard, Button, ImageWithFallback, TestimonialCard, PageHero } from "@/components/common";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Carousel, CarouselContent, CarouselItem, CarouselPreviousCustom, CarouselNextCustom } from "@/components/ui/defaultCarousel";
-import { cardData, ratingItemsSubPages, testimonialsRatingAndAccreditation, testimonialLogoRatingAndAccreditation, faqsRatingAndAccreditation } from "@/constants/dummyData";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function RatingAndAccreditation() {
+import {
+  BasicCard,
+  Button,
+  ImageWithFallback,
+  PageHero,
+  TestimonialCard,
+} from "@/components/common";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNextCustom,
+  CarouselPreviousCustom,
+} from "@/components/ui/defaultCarousel";
+import {
+  cardData,
+  faqsRatingAndAccreditation,
+  ratingItemsSubPages,
+  testimonialLogoRatingAndAccreditation,
+  testimonialsRatingAndAccreditation,
+} from "@/constants/dummyData";
 
+export default function RatingAndAccreditation() {
   function Roadmap() {
     const firstSteps = [
-      { label: "Sign Up", description: "Register & create an account on CrescentRating", dot: "border-yellow-900", bg: "bg-yellow-100" },
-      { label: "Apply", description: "Submit Application Online", dot: "border-yellow-900", bg: "bg-yellow-100" },
-      { label: "Review", description: "CrescentRating will review the application & issue a tentative rating", dot: "border-indigo-800", bg: "bg-indigo-100" },
-      { label: "Audit", description: "Conduct in-person/virtual audit of the establishment", dot: "border-indigo-800", bg: "bg-indigo-100" },
+      {
+        label: "Sign Up",
+        description: "Register & create an account on CrescentRating",
+        dot: "border-yellow-900",
+        bg: "bg-yellow-100",
+      },
+      {
+        label: "Apply",
+        description: "Submit Application Online",
+        dot: "border-yellow-900",
+        bg: "bg-yellow-100",
+      },
+      {
+        label: "Review",
+        description:
+          "CrescentRating will review the application & issue a tentative rating",
+        dot: "border-indigo-800",
+        bg: "bg-indigo-100",
+      },
+      {
+        label: "Audit",
+        description: "Conduct in-person/virtual audit of the establishment",
+        dot: "border-indigo-800",
+        bg: "bg-indigo-100",
+      },
     ];
 
     const secondSteps = [
-      { label: "Pay", description: "Make payment for the annual rating services", dot: "border-yellow-900", bg: "bg-yellow-100" },
-      { label: "Display", description: "Download the rating collaterals and display them in the marketing channels", dot: "border-yellow-900", bg: "bg-yellow-100" },
       {
-        label: "Publish", description: (
+        label: "Pay",
+        description: "Make payment for the annual rating services",
+        dot: "border-yellow-900",
+        bg: "bg-yellow-100",
+      },
+      {
+        label: "Display",
+        description:
+          "Download the rating collaterals and display them in the marketing channels",
+        dot: "border-yellow-900",
+        bg: "bg-yellow-100",
+      },
+      {
+        label: "Publish",
+        description: (
           <>
-            The establishment will be published and listed on:<br />
-            1. CrescentRating Member Directory Listing<br />
+            The establishment will be published and listed on:
+            <br />
+            1. CrescentRating Member Directory Listing
+            <br />
             2. HalalTrip Member Directory Listing
           </>
-        ), dot: "border-indigo-800", bg: "bg-indigo-100"
+        ),
+        dot: "border-indigo-800",
+        bg: "bg-indigo-100",
       },
-      { label: "Confirm", description: "CrescentRating will review audit report & award the final rating", dot: "border-indigo-800", bg: "bg-indigo-100" },
+      {
+        label: "Confirm",
+        description:
+          "CrescentRating will review audit report & award the final rating",
+        dot: "border-indigo-800",
+        bg: "bg-indigo-100",
+      },
     ];
 
-    const thirdStep = { label: "Promote", description: "HalalTrip will begin the promotion campaigns", dot: "border-green-800", bg: "bg-green-100" };
+    const thirdStep = {
+      label: "Promote",
+      description: "HalalTrip will begin the promotion campaigns",
+      dot: "border-green-800",
+      bg: "bg-green-100",
+    };
 
     return (
       <div className="w-full">
@@ -41,10 +112,14 @@ export default function RatingAndAccreditation() {
           <div className="flex justify-between -mb-1.5 z-10 relative">
             {firstSteps.map((step, i) => (
               <div key={i} className="flex flex-col items-center">
-                <Button className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+                <Button
+                  className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}
+                >
                   <p className="text-lg">{step.label}</p>
                 </Button>
-                <div className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`} />
+                <div
+                  className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`}
+                />
               </div>
             ))}
           </div>
@@ -54,10 +129,14 @@ export default function RatingAndAccreditation() {
           <div className="absolute top-[15rem] left-0 w-full flex justify-between z-10">
             {secondSteps.map((step, i) => (
               <div key={i} className="flex flex-col items-center">
-                <Button className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+                <Button
+                  className={`text-lg w-32 h-7 rounded ${step.bg} text-[0.75rem] text-center flex items-center justify-center`}
+                >
                   <p className="text-lg">{step.label}</p>
                 </Button>
-                <div className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`} />
+                <div
+                  className={`w-3 h-3 mt-1 rounded-full border-2 ${step.dot}`}
+                />
               </div>
             ))}
           </div>
@@ -65,10 +144,14 @@ export default function RatingAndAccreditation() {
           <div className="w-[46.5rem] rounded-bl-[5rem] rounded-tl-[5rem] h-[15rem] border-dashed border-l-2 border-t border-b-2 relative -translate-x-14" />
 
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex flex-col items-center z-10">
-            <Button className={`text-lg w-32 h-7 rounded ${thirdStep.bg} text-[0.75rem] text-center flex items-center justify-center`}>
+            <Button
+              className={`text-lg w-32 h-7 rounded ${thirdStep.bg} text-[0.75rem] text-center flex items-center justify-center`}
+            >
               <p className="text-lg">{thirdStep.label}</p>
             </Button>
-            <div className={`w-3 h-3 mb-1 rounded-full border-2 ${thirdStep.dot}`} />
+            <div
+              className={`w-3 h-3 mb-1 rounded-full border-2 ${thirdStep.dot}`}
+            />
           </div>
         </div>
 
@@ -78,24 +161,31 @@ export default function RatingAndAccreditation() {
               {i < arr.length - 1 && (
                 <div className="absolute left-[0.3rem] top-[5rem] h-full w-px bg-gray-300 z-0" />
               )}
-              <div className={`w-3 h-3 rounded-full border-2 ${step.dot} bg-white z-10`} />
-              <div className={`flex ml-4 text-sm w-20 h-8 rounded items-center justify-center ${step.bg} font-semibold`}>
+              <div
+                className={`w-3 h-3 rounded-full border-2 ${step.dot} bg-white z-10`}
+              />
+              <div
+                className={`flex ml-4 text-sm w-20 h-8 rounded items-center justify-center ${step.bg} font-semibold`}
+              >
                 {step.label}
               </div>
-              <div className={`flex ml-4 text-sm w-52 min-h-[10rem] px-4 rounded items-center justify-center ${step.bg} font-semibold`}>
+              <div
+                className={`flex ml-4 text-sm w-52 min-h-[10rem] px-4 rounded items-center justify-center ${step.bg} font-semibold`}
+              >
                 {step.description}
               </div>
             </div>
           ))}
         </div>
-
       </div>
     );
   }
 
   function RatingAndAccreditationSection() {
     const [activeTab, setActiveTab] = useState<string>("hotel");
-    const selectedItem = ratingItemsSubPages.find((item) => item.key === activeTab);
+    const selectedItem = ratingItemsSubPages.find(
+      (item) => item.key === activeTab,
+    );
 
     return (
       <section className="w-full max-w-[1440px] px-6 lg:px-8 flex flex-col justify-center items-center mt-16">
@@ -103,7 +193,8 @@ export default function RatingAndAccreditation() {
           Get your Establishment Crescent Rated
         </p>
         <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 text-center mb-10 w-[90%] lg:w-[60%]">
-          Become a Crescent Rated establishment to gain a competitive edge and demonstrate your commitment to inclusivity.
+          Become a Crescent Rated establishment to gain a competitive edge and
+          demonstrate your commitment to inclusivity.
         </p>
 
         <div className="block md:hidden mb-6 w-full">
@@ -125,10 +216,11 @@ export default function RatingAndAccreditation() {
             <button
               key={item.key}
               onClick={() => setActiveTab(item.key)}
-              className={`px-4 py-2 whitespace-nowrap rounded transition-all duration-200 text-sm font-medium ${activeTab === item.key
-                ? "bg-indigo-50 text-indigo-600"
-                : "text-gray-500 hover:text-indigo-600"
-                }`}
+              className={`px-4 py-2 whitespace-nowrap rounded transition-all duration-200 text-sm font-medium ${
+                activeTab === item.key
+                  ? "bg-indigo-50 text-indigo-600"
+                  : "text-gray-500 hover:text-indigo-600"
+              }`}
             >
               {item.title.split(" ")[0]}
             </button>
@@ -146,9 +238,16 @@ export default function RatingAndAccreditation() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <p className="font-semibold text-black mb-2">{selectedItem.title}</p>
-                <p className="text-sm text-gray-600 mb-2">{selectedItem.description}</p>
-                <Link href="#" className="text-primary-cr-700 text-sm flex items-center">
+                <p className="font-semibold text-black mb-2">
+                  {selectedItem.title}
+                </p>
+                <p className="text-sm text-gray-600 mb-2">
+                  {selectedItem.description}
+                </p>
+                <Link
+                  href="#"
+                  className="text-primary-cr-700 text-sm flex items-center"
+                >
                   Learn More <MoveRight className="ml-1 size-4" />
                 </Link>
               </div>
@@ -171,7 +270,10 @@ export default function RatingAndAccreditation() {
               />
               <div className="flex flex-col p-4 justify-between h-full">
                 <p className="font-semibold text-black mb-2">{item.title}</p>
-                <Link href={item.url} className="text-primary-cr-700 text-sm flex items-center">
+                <Link
+                  href={item.url}
+                  className="text-primary-cr-700 text-sm flex items-center"
+                >
                   Learn More <MoveRight className="ml-1 size-4" />
                 </Link>
               </div>
@@ -181,7 +283,6 @@ export default function RatingAndAccreditation() {
       </section>
     );
   }
-
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
@@ -193,23 +294,26 @@ export default function RatingAndAccreditation() {
         alignment="left"
         variant="image"
       />
-      <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
+      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">
               Why you Should Become a Member of the Crescent Rated Services
             </p>
             <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 sm:w-[45%] w-full">
-              Gain global recognition, trust, and strategic insights to attract Muslim travelers while upholding high industry standards.
+              Gain global recognition, trust, and strategic insights to attract
+              Muslim travelers while upholding high industry standards.
             </p>
           </div>
           <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 w-full mt-10 ">
             {cardData.map((card, index) => (
-              <BasicCard key={index} useButton={false} className="bg-neutral-100">
+              <BasicCard
+                key={index}
+                useButton={false}
+                className="bg-neutral-100"
+              >
                 <div className="w-full flex flex-col gap-4 justify-start items-start">
-                  <div className="bg-[#F1F3FF] p-2">
-                    {card.icon}
-                  </div>
+                  <div className="bg-[#F1F3FF] p-2">{card.icon}</div>
                   <div className="flex flex-col gap-1">
                     <p className="lg:text-desktop-body-1 text-mobile-body-1 font-bold text-black">
                       {card.title}
@@ -224,27 +328,76 @@ export default function RatingAndAccreditation() {
           </div>
         </section>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-          <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">How to get Crescent Rated</p>
-          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Step-by-step guide to achieving CrescentRating&apos;s accreditation</p>
+          <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">
+            How to get Crescent Rated
+          </p>
+          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">
+            Step-by-step guide to achieving CrescentRating&apos;s accreditation
+          </p>
           <div className="w-full flex flex-col justify-center items-center gap-8">
             <div className="w-auto flex min-[400px]:flex-row flex-col justify-center items-center  gap-4 mt-12">
               <div className="bg-neutral-100 p-4 flex flex-row justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                  <circle cx="4.5" cy="4.5" r="3" fill="#FFFAC6" stroke="#7A3F0D" stroke-width="2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                  fill="none"
+                >
+                  <circle
+                    cx="4.5"
+                    cy="4.5"
+                    r="3"
+                    fill="#FFFAC6"
+                    stroke="#7A3F0D"
+                    stroke-width="2"
+                  />
                 </svg>
-                <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">Establishment</p>
+                <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">
+                  Establishment
+                </p>
               </div>
               <div className="bg-neutral-100 p-4 flex flex-row justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                  <circle cx="4.5" cy="4.5" r="3" fill="#F1F3FF" stroke="#1504AE" stroke-width="2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                  fill="none"
+                >
+                  <circle
+                    cx="4.5"
+                    cy="4.5"
+                    r="3"
+                    fill="#F1F3FF"
+                    stroke="#1504AE"
+                    stroke-width="2"
+                  />
                 </svg>
-                <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">CrescentRating</p>
+                <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">
+                  CrescentRating
+                </p>
               </div>
               <div className="bg-neutral-100 p-4 flex flex-row justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                  <circle cx="4.5" cy="4.5" r="3" fill="#EDFCF3" stroke="#094B31" stroke-width="2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                  fill="none"
+                >
+                  <circle
+                    cx="4.5"
+                    cy="4.5"
+                    r="3"
+                    fill="#EDFCF3"
+                    stroke="#094B31"
+                    stroke-width="2"
+                  />
                 </svg>
-                <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">HalalTrip</p>
+                <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">
+                  HalalTrip
+                </p>
               </div>
             </div>
             <Roadmap />
@@ -252,8 +405,13 @@ export default function RatingAndAccreditation() {
         </section>
         <RatingAndAccreditationSection />
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-          <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">Trusted by Many Establishments Around the World</p>
-          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">Years of Experience, Countless Mentions Across Industries, and a Reputation Built on Global Trust and Reliability</p>
+          <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">
+            Trusted by Many Establishments Around the World
+          </p>
+          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-gray-500 w-[80%] lg:w-[50%]">
+            Years of Experience, Countless Mentions Across Industries, and a
+            Reputation Built on Global Trust and Reliability
+          </p>
           <div className="mt-10 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 justify-center items-start md:p-8 p-6 w-full gap-10">
             {testimonialLogoRatingAndAccreditation.map((item, index) => (
               <ImageWithFallback
@@ -271,13 +429,22 @@ export default function RatingAndAccreditation() {
         </section>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-start w-full">
-            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left w-[80%] lg:w-[40%]">Accredited with Purpose, Recognized for Results</p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500 w-[80%] lg:w-[50%]">Discover how CrescentRating’s trusted standards are empowering businesses—from attractions to accommodations—to better serve Muslim travelers and grow with confidence.</p>
+            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left w-[80%] lg:w-[40%]">
+              Accredited with Purpose, Recognized for Results
+            </p>
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500 w-[80%] lg:w-[50%]">
+              Discover how CrescentRating’s trusted standards are empowering
+              businesses—from attractions to accommodations—to better serve
+              Muslim travelers and grow with confidence.
+            </p>
           </div>
           <Carousel className="w-full mt-12">
             <CarouselContent>
               {testimonialsRatingAndAccreditation.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/3 flex justify-center items-center gap-12">
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/3 flex justify-center items-center gap-12"
+                >
                   <TestimonialCard
                     key={index}
                     text={testimonial.text}
@@ -297,8 +464,14 @@ export default function RatingAndAccreditation() {
         </section>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col gap-12 justify-start items-start">
           <div className="w-full flex flex-col gap-1 justify-center items-center">
-            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">Frequently Asked Questions</p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500">Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.</p>
+            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">
+              Frequently Asked Questions
+            </p>
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500">
+              Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo
+              morbi id curabitur. Luctus varius ipsum nisl enim tempor
+              suspendisse fusce.
+            </p>
           </div>
           <div className="w-full md:px-24">
             <Accordion type="single" collapsible className="w-full">
@@ -322,6 +495,6 @@ export default function RatingAndAccreditation() {
           </div>
         </section>
       </div>
-    </div >
-  )
+    </div>
+  );
 }

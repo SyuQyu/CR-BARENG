@@ -35,9 +35,17 @@
     "no-console": ["warn", { "allow": ["warn", "error"] }],
 
     "@typescript-eslint/no-unused-vars": "off",
+
+    "unused-imports/no-unused-imports": "error",
+
     "unused-imports/no-unused-vars": [
-      "warn",
-      { "vars": "all", "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
     ],
 
     "simple-import-sort/imports": "warn",
