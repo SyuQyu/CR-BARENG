@@ -18,36 +18,34 @@
     "unused-imports"
   ],
   "settings": {
-  "import/resolver": {
-    "typescript": {
-      "alwaysTryTypes": true
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
       },
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src/"]
+        "moduleDirectory": ["node_modules", "src"]
       }
-    }
+    } 
   },
   "rules": {
     "@next/next/no-img-element": "off",
 
     "no-console": ["warn", { "allow": ["warn", "error"] }],
 
-    /* TypeScript */
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-vars": [
       "warn",
       { "vars": "all", "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
     ],
 
-    /* Import rules */
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn",
     "import/first": "error",
     "import/newline-after-import": "warn",
     "import/no-duplicates": "error",
 
-    /* Prettier */
     "prettier/prettier": "warn"
   }
 }

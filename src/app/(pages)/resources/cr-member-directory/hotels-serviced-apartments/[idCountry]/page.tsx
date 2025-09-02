@@ -1,26 +1,26 @@
-"use client"
-import { Search } from "lucide-react"
-import { useParams } from "next/navigation"
-import { useState } from "react"
+"use client";
+import { Search } from "lucide-react";
+import { useParams } from "next/navigation";
+import { useState } from "react";
 
-import { Button, HotelCard, Input } from "@/components/common"
+import { Button, HotelCard, Input } from "@/components/common";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { formatParams } from "@/utils"
+} from "@/components/ui/select";
+import { formatParams } from "@/utils";
 
 export default function CertifiedProfessionalsDirectoryPage() {
-  const [searchQuery, setSearchQuery] = useState<string>("")
-  const params = useParams<{ idCountry: string }>()
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const params = useParams<{ idCountry: string }>();
 
   const handleSearch = () => {
     // Implement search functionality here
-    console.log("Search query:", searchQuery)
-  }
+    console.log("Search query:", searchQuery);
+  };
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
@@ -139,5 +139,5 @@ export default function CertifiedProfessionalsDirectoryPage() {
         </section>
       </section>
     </div>
-  )
+  );
 }
