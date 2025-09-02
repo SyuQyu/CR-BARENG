@@ -6,10 +6,10 @@ const Footer = dynamic(() => import('./footer/footer'));
 export default function AuthLayout({ children }: Props) {
 
     return (
-        <div id='layout-default'>
-            <Header className='header' />
-            <main className='main'>{children}</main>
-        </div>
+                <div id='layout-default'>
+                    <Header className='header' />
+                    <main className='main'>{children}</main>
+                </div>
     );
 }
 

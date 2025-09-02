@@ -40,13 +40,13 @@ export default function Gmti() {
         const text = await response.text();
 
         // Parse CSV menggunakan PapaParse
-        Papa.parse(text, {
-          header: true, // Menganggap baris pertama sebagai header
-          skipEmptyLines: true,
-          complete: (results: any) => {
-            setData(results?.data);
-          },
-        });
+            Papa.parse(text, {
+              header: true, // Menganggap baris pertama sebagai header
+              skipEmptyLines: true,
+              complete: (results: any) => {
+                setData(results?.data);
+              },
+            });
       } catch (error) {
         console.error("Error fetching CSV file:", error);
       }
@@ -259,13 +259,11 @@ export default function Gmti() {
       const newDescription =
         reportSlides[api.selectedScrollSnap()]?.description;
       if (!newDescription) {
-        console.log("Description not found");
         return;
       }
       const newDownloadUrl =
         reportSlides[api.selectedScrollSnap()]?.downloadUrl;
       if (!newDownloadUrl) {
-        console.log("Description not found");
         return;
       }
       setActiveDescription(newDescription);

@@ -7,7 +7,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNextCustom, CarouselPr
 import { heroCardsData, testimonials, medpart, servicesDataHomePage } from "@/constants/dummyData";
 export default function Home() {
   const [selectedService, setSelectedService] = useState<keyof typeof servicesDataHomePage>("rating");
-  console.log("selectedService", servicesDataHomePage[selectedService], servicesDataHomePage[selectedService].tabs[0].key);
   return (
     <div className="w-full gap-24 flex flex-col justify-center items-center">
       <section className="max-w-[1440px] px-6 lg:px-8 w-full">
