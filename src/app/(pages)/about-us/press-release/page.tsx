@@ -1,8 +1,16 @@
 "use client";
-import { Button, CardReports, Input, Pagination, PageHero } from "@/components/common";
-import { pressRelease } from "@/constants/dummyData";
 import { Search } from "lucide-react";
 import { useState } from "react";
+
+import {
+  Button,
+  CardReports,
+  Input,
+  PageHero,
+  Pagination,
+} from "@/components/common";
+import { pressRelease } from "@/constants/dummyData";
+
 export default function PressReleasePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;
@@ -21,11 +29,13 @@ export default function PressReleasePage() {
         alignment="left"
         variant="image"
       />
-      <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
+      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full">
           <div className="flex sm:flex-row flex-col justify-between sm:items-center items-start w-full">
             <div className="flex flex-col justify-start items-start">
-              <p className="lg:text-desktop-heading-6 text-mobile-heading-4 font-bold bg-clip-text text-black text-start">All Releases</p>
+              <p className="lg:text-desktop-heading-6 text-mobile-heading-4 font-bold bg-clip-text text-black text-start">
+                All Releases
+              </p>
             </div>
             <div className="flex md:flex-row flex-col-reverse justify-end items-center gap-4 w-full sm:w-[50%]">
               <div className="flex flex-row justify-start items-center w-full">
@@ -34,8 +44,8 @@ export default function PressReleasePage() {
                   containerInputClasses="rounded-none !border-r-0 h-12"
                   className="w-full h-12"
                   iconLeft={<Search className="size-4 text-gray-500" />}
-                // value={searchQuery}
-                // onChange={(e) => setSearchQuery(e.target.value)}
+                  // value={searchQuery}
+                  // onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <Button className="flex flex-row justify-center items-center gap-2 text-white bg-[#453CFF] h-12 px-4">
                   Search
