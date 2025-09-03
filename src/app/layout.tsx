@@ -1,11 +1,8 @@
-import '@/styles/index.scss';
-
 import clsx from 'clsx';
-
-import { NProgress } from '@/components/common';
-import { Toaster } from "@/components/ui/sonner"
+import '@/styles/index.scss';
 import { INTER } from '@/constants/fonts';
-
+import { NProgress, Input } from '@/components/common';
+import { Toaster } from "@/components/ui/sonner"
 export const metadata = {
     title: {
         default: 'CRHT WEB TEST',
