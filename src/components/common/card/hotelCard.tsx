@@ -1,6 +1,7 @@
 'use client';
-import { Button, ImageWithFallback } from "..";
 import Link from "next/link";
+
+import { Button, ImageWithFallback } from "..";
 
 type HotelCardProps = {
     mainImage: string;

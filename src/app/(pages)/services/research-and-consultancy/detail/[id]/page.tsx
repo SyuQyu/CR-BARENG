@@ -1,18 +1,19 @@
-import { CardReports, ImageWithFallback, Input } from "@/components/common";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover"
 import {
     Download,
 } from "lucide-react";
+
+import { CardReports, ImageWithFallback, Input } from "@/components/common";
+import { Checkbox } from "@/components/ui/checkbox"
 import {
     Dialog,
     DialogContent,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { Checkbox } from "@/components/ui/checkbox"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
 import {
     Select,
     SelectContent,
@@ -21,6 +22,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { reports } from "@/constants/dummyData"
+
 export default function HalalMusimTravelMarketReportsDetail() {
 
 

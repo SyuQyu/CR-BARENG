@@ -1,17 +1,14 @@
 'use client';
-import { BasicCard, Button, HeroCard, HotelCard, ImageWithFallback, Input } from "@/components/common";
-import { blogsTabsData, cardData, crMemberDirectoryCategories, detailCrMemberDirectoryHotelsImg, halalFriendlyFacilitiesCrMemberDirectory } from "@/constants/dummyData";
-import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItem as CarouselItem2, CarouselNextCustom as CarouselNext2, CarouselPreviousCustom as CarouselPrevious2, CarouselDots as CarouselDots2 } from "@/components/ui/carouselCustom2";
+import clsx from "clsx";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { formatParams } from "@/utils";
-import { Search, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/defaultCarousel";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
-import clsx from "clsx";
+
+import { Button, ImageWithFallback } from "@/components/common";
+import { Carousel, type CarouselApi,CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/defaultCarousel";
+import { Dialog,DialogContent } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { detailCrMemberDirectoryHotelsImg, halalFriendlyFacilitiesCrMemberDirectory } from "@/constants/dummyData";
 
 export default function CertifiedProfessionalsDirectoryPage() {
     const params = useParams<{ detailId: string }>();

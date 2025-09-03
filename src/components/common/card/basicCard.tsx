@@ -1,7 +1,8 @@
-import React, { Children } from "react";
-import { Button, Card, Pagination } from "..";
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
+import React from "react";
+
+import { Button, Card } from "..";
 
 interface GlossaryItem {
     title?: React.ReactNode;

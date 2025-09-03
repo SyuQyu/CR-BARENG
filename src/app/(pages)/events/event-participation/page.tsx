@@ -1,9 +1,11 @@
 'use client'
-import { ImageWithFallback, Button, Pagination, PageHero } from "@/components/common";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Calendar, MapPin, Search } from "lucide-react";
-import { eventsData } from "@/constants/dummyData";
+import { Calendar, MapPin } from "lucide-react";
 import { useState } from "react";
+
+import { Button, ImageWithFallback, PageHero,Pagination } from "@/components/common";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { eventsData } from "@/constants/dummyData";
+
 export default function OurEvents() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 10;

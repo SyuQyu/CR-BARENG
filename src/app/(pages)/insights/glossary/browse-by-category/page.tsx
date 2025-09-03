@@ -1,8 +1,10 @@
 "use client"
-import { Pagination, BreadCrumb } from "@/components/common";
-import { DUMMY_DATA_CATEGORY } from "@/constants/dummyData";
-import React, { useState } from "react";
 import Link from "next/link";
+import React, { useState } from "react";
+
+import { BreadCrumb,Pagination } from "@/components/common";
+import { DUMMY_DATA_CATEGORY } from "@/constants/dummyData";
+
 export default function GlossaryCategoriesMain() {
     const [selectedLetter, setSelectedLetter] = useState('');
     const [currentPage, setCurrentPage] = useState(1);

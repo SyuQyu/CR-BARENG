@@ -1,10 +1,12 @@
 'use client'
-import { CardReports, CardReports2, ImageWithFallback, Input, Pagination } from "@/components/common";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Download } from "lucide-react";
-import { useState } from "react";
-import { reports } from "@/constants/dummyData"
 import Link from "next/link";
+import { useState } from "react";
+
+import { CardReports, CardReports2, ImageWithFallback, Pagination } from "@/components/common";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { reports } from "@/constants/dummyData"
+
 export default function HalalMusimTravelMarketReports() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 10;

@@ -1,40 +1,31 @@
+import {
+    TOGGLE_LINK_COMMAND
+} from '@lexical/link';
+import {
+    INSERT_ORDERED_LIST_COMMAND,
+    INSERT_UNORDERED_LIST_COMMAND} from '@lexical/list';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
-import {
-    $getSelection,
-    $isRangeSelection,
-    FORMAT_TEXT_COMMAND,
-    $createParagraphNode
-} from 'lexical';
-import {
-    $setBlocksType
-} from '@lexical/selection';
 import {
     $createHeadingNode,
     HeadingTagType
 } from '@lexical/rich-text';
 import {
-    $isListNode,
-    INSERT_ORDERED_LIST_COMMAND,
-    INSERT_UNORDERED_LIST_COMMAND,
-    REMOVE_LIST_COMMAND,
-    ListNode
-} from '@lexical/list';
+    $setBlocksType
+} from '@lexical/selection';
 import {
-    TOGGLE_LINK_COMMAND
-} from '@lexical/link';
+    $createParagraphNode,
+    $getSelection,
+    $isRangeSelection,
+    FORMAT_TEXT_COMMAND} from 'lexical';
 import {
     Bold,
-    Italic,
-    Underline,
-    List,
-    ListOrdered,
-    AlignLeft,
-    AlignCenter,
-    AlignRight,
     Heading1,
     Heading2,
-    Link
-} from 'lucide-react';
+    Italic,
+    Link,
+    List,
+    ListOrdered,
+    Underline} from 'lucide-react';
 
 export default function ToolbarPlugin() {
     const [editor] = useLexicalComposerContext();

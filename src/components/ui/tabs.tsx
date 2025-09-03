@@ -1,11 +1,12 @@
 "use client";
 
-import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
+import clsx from "clsx";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
+
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
-import clsx from "clsx";
 
 interface TabsProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root> {
   defaultValue?: string;
@@ -177,4 +178,4 @@ const TabsContent = ({
   );
 };
 
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs, TabsContent,TabsList, TabsTrigger };

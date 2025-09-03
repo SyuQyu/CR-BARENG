@@ -1,14 +1,14 @@
 "use client";
+import Link from "next/link";
+import { useState } from "react";
+
 import {
   CardResearch,
-  ImageWithFallback,
-  Pagination,
   PageHero,
+  Pagination,
 } from "@/components/common";
-import { Download } from "lucide-react";
-import { useState } from "react";
 import { crResearchAndConsultancy } from "@/constants/dummyData";
-import Link from "next/link";
+
 export default function HalalMusimTravelMarketReports() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;

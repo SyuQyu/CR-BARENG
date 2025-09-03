@@ -1,9 +1,11 @@
 'use client'
-import { CardInsights, CardProfile, CardReports, ImageWithFallback, Pagination } from "@/components/common";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { cardDataInsightSeries, reportsInsightSeries, CardProfile1InsightSeries, CardProfile2InsightSeries } from "@/constants/dummyData";
+
+import { CardInsights, CardProfile, CardReports, ImageWithFallback, Pagination } from "@/components/common";
+import { cardDataInsightSeries, CardProfile1InsightSeries, CardProfile2InsightSeries,reportsInsightSeries } from "@/constants/dummyData";
+
 export default function CardInsightsSeries() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 10;

@@ -1,6 +1,7 @@
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { Button, ImageWithFallback } from "..";
 import Link from "next/link";
+
+import { Button, ImageWithFallback } from "..";
 
 const HitCardAward: React.FC<{ number: string; title: string; description: string; imgSrc: string; reverse: boolean }> = ({ number, title, description, imgSrc, reverse }) => {
     return (

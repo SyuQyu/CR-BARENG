@@ -1,8 +1,9 @@
 'use client'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import clsx from "clsx";
 import { CheckIcon } from "lucide-react";
 import { useState } from "react";
+
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // Define price option interface
 interface PriceOption {

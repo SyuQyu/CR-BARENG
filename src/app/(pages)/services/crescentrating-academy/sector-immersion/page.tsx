@@ -1,10 +1,11 @@
 "use client";
-import {
-  ImageWithFallback,
-  CardProfile,
-  CardAcademyPrograms,
-} from "@/components/common";
+import Link from "next/link";
 
+import {
+  CardAcademyPrograms,
+  CardProfile,
+  ImageWithFallback,
+} from "@/components/common";
 import {
   Accordion,
   AccordionContent,
@@ -15,7 +16,6 @@ import {
   crAcademySectorImmersionPrograms,
   crAcademySectorImmersionProgramsCardProfile,
 } from "@/constants/dummyData";
-import Link from "next/link";
 
 export default function sectorImmersion() {
   return (

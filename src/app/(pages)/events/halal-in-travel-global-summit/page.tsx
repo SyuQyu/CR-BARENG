@@ -1,11 +1,13 @@
 'use client'
-import { Button, HeroCard, HITGSCard, ImageWithFallback, Input, Pagination } from "@/components/common";
+import React from "react";
+
+import { Button, HeroCard, HITGSCard, ImageWithFallback, Input } from "@/components/common";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItem as CarouselItem2, CarouselNext as CarouselNext2, CarouselPrevious as CarouselPrevious2 } from "@/components/ui/carouselCustom2";
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi, } from "@/components/ui/defaultCarousel";
 import { Checkbox } from "@/components/ui/checkbox";
-import React from "react";
-import { hitgsData, mediaHITGSData, carouselDataHITGS } from "@/constants/dummyData";
+import { Carousel, type CarouselApi,CarouselContent, CarouselItem,  } from "@/components/ui/defaultCarousel";
+import { carouselDataHITGS,hitgsData, mediaHITGSData } from "@/constants/dummyData";
+
 export default function HalalMusimTravelGlobalSummit() {
 
     const [api, setApi] = React.useState<CarouselApi>()

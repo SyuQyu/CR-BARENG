@@ -1,7 +1,8 @@
-import React from "react";
-import { ImageWithFallback } from "..";
 import clsx from "clsx";
 import Link from "next/link";
+import React from "react";
+
+import { ImageWithFallback } from "..";
 
 interface HeroCardProps {
     imageUrl: string;

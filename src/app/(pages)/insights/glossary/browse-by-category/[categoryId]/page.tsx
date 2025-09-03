@@ -1,10 +1,12 @@
 "use client"
-import { BasicCard, Button, Pagination, BreadCrumb } from "@/components/common";
-import { DUMMY_DATA_GLOSSARY, alfabet } from "@/constants/dummyData";
-import React, { useState } from "react";
 import clsx from "clsx";
 import { useParams } from "next/navigation";
+import React, { useState } from "react";
+
+import { BasicCard, BreadCrumb,Button, Pagination } from "@/components/common";
+import { alfabet,DUMMY_DATA_GLOSSARY } from "@/constants/dummyData";
 import { formatParams } from "@/utils";
+
 export default function GlossaryCategories() {
   const params = useParams<{ categoryId: string }>();
   const [selectedLetter, setSelectedLetter] = useState('');

@@ -1,11 +1,12 @@
 'use server';
 
+import { revalidatePath } from "next/cache";
+
 import {
     createMiceAction as createMice,
-    updateMiceAction as updateMice,
     getMiceAction as getMice,
+    updateMiceAction as updateMice,
 } from "@/app/data-access/miceUserRegistration";
-import { revalidatePath } from "next/cache";
 
 export type ActionResponse = {
     success: boolean;

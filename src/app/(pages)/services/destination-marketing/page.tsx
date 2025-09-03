@@ -1,17 +1,17 @@
 "use client";
-import { CardBlogs, ImageWithFallback, Pagination, PageHero } from "@/components/common";
+import Link from "next/link";
+import { useState } from "react";
+
+import { CardBlogs, ImageWithFallback, PageHero } from "@/components/common";
 import {
   Carousel as Carousel2,
   CarouselContent as CarouselContent2,
   CarouselItemBlogs as CarouselItem2,
   CarouselNextCustom as CarouselNext2,
   CarouselPreviousCustom as CarouselPrevious2,
-  CarouselDots as CarouselDots2,
 } from "@/components/ui/carouselCustom2";
-import { Car, Download } from "lucide-react";
-import { useState } from "react";
 import { crDestinationMarketingBlogs } from "@/constants/dummyData";
-import Link from "next/link";
+
 export default function HalalMusimTravelMarketReports() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;

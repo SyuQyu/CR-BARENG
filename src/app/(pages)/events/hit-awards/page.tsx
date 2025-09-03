@@ -1,8 +1,9 @@
+import { X } from "lucide-react";
+
 import { Button, HitAwardCard, ImageWithFallback } from "@/components/common";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/defaultCarousel";
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { X } from "lucide-react";
 
 
 export default function HitAwardsPage() {

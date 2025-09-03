@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { truncate } from "@/utils";
-import { Button, ImageWithFallback } from "..";
+import clsx from "clsx";
 import { Download } from "lucide-react";
 import Link from "next/link";
-import clsx from "clsx";
+import React from "react";
+
+import { truncate } from "@/utils";
+
+import { ImageWithFallback } from "..";
 
 interface CardPodcastsProps {
   id: number;

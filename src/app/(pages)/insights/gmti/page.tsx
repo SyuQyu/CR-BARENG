@@ -1,22 +1,21 @@
 "use client";
+import { ArrowLeft, ArrowRight,CalendarDays,ChevronDown, ChevronUp, Equal  } from "lucide-react"
+import Papa from "papaparse";
+import { useEffect, useMemo, useState } from "react";
+
 import { Button, GmtiCard, ImageWithFallback } from "@/components/common";
-import { ChevronUp, ChevronDown, Equal, CalendarDays } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-  CarouselTextLinks,
-  CarouselApi,
   CarouselNextCustom,
+  CarouselPrevious,
   CarouselPreviousCustom,
+  CarouselTextLinks,
 } from "@/components/ui/carouselCustom";
-import Stepper from "@/components/ui/stepper";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
-import Papa from "papaparse";
 import {
   Select,
   SelectContent,
@@ -24,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import Stepper from "@/components/ui/stepper";
 
 export default function Gmti() {
   const csv2015 = "/csv/gmti-2024/2015.csv"

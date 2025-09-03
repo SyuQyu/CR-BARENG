@@ -1,7 +1,8 @@
 'use client'
-import { useState } from "react";
-import { Button, ImageWithFallback } from "..";
 import clsx from "clsx";
+import { useState } from "react";
+
+import { Button, ImageWithFallback } from "..";
 
 export default function ProfileCard({
     name,

@@ -1,10 +1,11 @@
 "use client"
-import { BreadCrumb, ImageWithFallback, YouTubeCard, Card, CarouselGlossaryPage } from "@/components/common";
-import { Badge } from "@/components/ui/badge"
-import { DUMMY_DATA_GLOSSARY, DUMMY_TAG, DUMMY_IMG } from "@/constants/dummyData"
-import React, { useState } from "react";
-import { useParams, useRouter } from 'next/navigation';
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useParams, useRouter } from 'next/navigation';
+import React, { useState } from "react";
+
+import { BreadCrumb, CarouselGlossaryPage,ImageWithFallback, YouTubeCard } from "@/components/common";
+import { Badge } from "@/components/ui/badge"
+import { DUMMY_DATA_GLOSSARY, DUMMY_IMG,DUMMY_TAG } from "@/constants/dummyData"
 
 const ReadMore = ({ text, maxLength }: { text: string, maxLength: number }) => {
     const [isExpanded, setIsExpanded] = useState(false);

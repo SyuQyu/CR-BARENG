@@ -1,10 +1,12 @@
 'use client'
-import { Button, HeroCard, ImageWithFallback, Input, Pagination, PageHero } from "@/components/common";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { blogsTabsData, heroCardsData, authorsBlogs } from "@/constants/dummyData";
 import { ArrowRight, Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+
+import { Button, HeroCard, ImageWithFallback, Input, PageHero,Pagination } from "@/components/common";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { authorsBlogs,blogsTabsData, heroCardsData } from "@/constants/dummyData";
+
 export default function BlogsPage() {
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredData, setFilteredData] = useState<any[]>(blogsTabsData);

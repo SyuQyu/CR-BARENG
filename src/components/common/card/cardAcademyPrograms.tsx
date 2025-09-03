@@ -1,17 +1,14 @@
 "use client";
 
+import { Separator } from "@radix-ui/react-dropdown-menu";
+import clsx from "clsx";
+import { CalendarIcon, ChevronDownIcon } from "lucide-react";
 import React, { useState } from "react";
-import { truncate } from "@/utils";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -23,15 +20,19 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
   DropdownMenuShortcut,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Calendar } from "@/components/ui/calendar";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { truncate } from "@/utils";
+
 import { Button, ImageWithFallback } from "..";
-import { CalendarIcon, ChevronDownIcon } from "lucide-react";
-import clsx from "clsx";
-import { Separator } from "@radix-ui/react-dropdown-menu";
 
 interface cardAcademyProgramsProps {
   key: number;

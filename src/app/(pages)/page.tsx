@@ -1,10 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import { Button, CardLandingPage, HeroCard, ImageWithFallback } from "@/components/common";
 import { Award, CircleCheckBig, Globe, Map, Search } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useState } from "react";
+
+import { Button, CardLandingPage, HeroCard, ImageWithFallback } from "@/components/common";
 import { Carousel, CarouselContent, CarouselItem, CarouselNextCustom, CarouselPreviousCustom } from "@/components/ui/defaultCarousel";
-import { heroCardsData, testimonials, medpart, servicesDataHomePage } from "@/constants/dummyData";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { heroCardsData, medpart, servicesDataHomePage,testimonials } from "@/constants/dummyData";
+
 export default function Home() {
   const [selectedService, setSelectedService] = useState<keyof typeof servicesDataHomePage>("rating");
   return (

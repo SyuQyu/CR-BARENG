@@ -2,6 +2,7 @@
 import { Button, ImageWithFallback, Input } from "@/components/common";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { dataRegisteredHotelUser } from "@/constants/dummyData";
+
 export default function Profile() {
     return (
         <div className="w-full flex flex-col justify-center items-center">

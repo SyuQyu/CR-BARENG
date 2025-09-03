@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { truncate } from "@/utils";
-import { Button, ImageWithFallback } from "..";
-import { Download } from "lucide-react";
-import Link from "next/link";
 import clsx from "clsx";
+import { Download } from "lucide-react";
+import React from "react";
+
+import { truncate } from "@/utils";
+
+import { ImageWithFallback } from "..";
 
 interface cardTestimonialsProps {
   id: number;

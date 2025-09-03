@@ -1,11 +1,12 @@
 'use server';
 
+import { revalidatePath } from "next/cache";
+
 import {
     createRestaurantAction as createRestaurant,
-    updateRestaurantAction as updateRestaurant,
     getRestaurantAction as getRestaurant,
+    updateRestaurantAction as updateRestaurant,
 } from "@/app/data-access/RestaurantUserRegistration";
-import { revalidatePath } from "next/cache";
 
 export type ActionResponse = {
     success: boolean;

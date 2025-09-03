@@ -1,8 +1,10 @@
 'use client';
-import { BasicCard, HotelCard, ImageWithFallback, PageHero } from "@/components/common";
-import { cardData, crMemberDirectoryCategories } from "@/constants/dummyData";
-import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItem as CarouselItem2, CarouselNextCustom as CarouselNext2, CarouselPreviousCustom as CarouselPrevious2, CarouselDots as CarouselDots2 } from "@/components/ui/carouselCustom2";
 import Link from "next/link";
+
+import { BasicCard, HotelCard, ImageWithFallback, PageHero } from "@/components/common";
+import { Carousel as Carousel2, CarouselContent as CarouselContent2,CarouselItem as CarouselItem2, CarouselNextCustom as CarouselNext2, CarouselPreviousCustom as CarouselPrevious2 } from "@/components/ui/carouselCustom2";
+import { cardData, crMemberDirectoryCategories } from "@/constants/dummyData";
+
 export default function CertifiedProfessionalsDirectoryPage() {
   return (
     <div className="w-full flex flex-col justify-center items-center">

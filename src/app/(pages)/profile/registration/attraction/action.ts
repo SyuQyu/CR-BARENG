@@ -1,11 +1,12 @@
 'use server';
 
+import { revalidatePath } from "next/cache";
+
 import {
     createAttractionAction as createAttraction,
-    updateAttractionAction as updateAttraction,
     getAttractionAction as getAttraction,
+    updateAttractionAction as updateAttraction,
 } from "@/app/data-access/attractionUserRegistration";
-import { revalidatePath } from "next/cache";
 
 export type ActionResponse = {
     success: boolean;

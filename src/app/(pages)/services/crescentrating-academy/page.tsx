@@ -1,25 +1,19 @@
 "use client";
+import { MoveRight } from "lucide-react";
+import Link from "next/link";
+
 import {
-  ImageWithFallback,
   Button,
   CardPodcasts,
   CardTestimonials,
+  ImageWithFallback,
 } from "@/components/common";
-import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  crAcademyPodcasts,
-  crAcademyTestimonials,
-  tabsDataCrescentRatingAcademy,
-} from "@/constants/dummyData";
-import Link from "next/link";
-import { MoveRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -28,7 +22,12 @@ import {
   CarouselNextCustom,
   CarouselPreviousCustom,
 } from "@/components/ui/carouselCustom2";
-import { CarouselItem } from "@/components/ui/defaultCarousel";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  crAcademyPodcasts,
+  crAcademyTestimonials,
+  tabsDataCrescentRatingAcademy,
+} from "@/constants/dummyData";
 // If the path is different, adjust it to the correct location of Carousel2 in your project.
 export default function HalalMusimTravelMarketReports() {
   return (

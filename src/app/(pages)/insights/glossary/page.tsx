@@ -1,9 +1,11 @@
 "use client"
-import { BasicCard, Button, Pagination } from "@/components/common";
-import { DUMMY_DATA_CATEGORY, DUMMY_DATA_GLOSSARY, alfabet } from "@/constants/dummyData";
-import React, { useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
+import React, { useState } from "react";
+
+import { BasicCard, Button, Pagination } from "@/components/common";
+import { alfabet,DUMMY_DATA_CATEGORY, DUMMY_DATA_GLOSSARY } from "@/constants/dummyData";
+
 export default function Glossary() {
   const [selectedLetter, setSelectedLetter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { truncateTo100Chars } from "@/utils";
-import { Button, ImageWithFallback } from "..";
+import clsx from "clsx";
 import { Download } from "lucide-react";
 import Link from "next/link";
-import clsx from "clsx";
+import React from "react";
+
+import { truncateTo100Chars } from "@/utils";
+
 
 interface CardBlogsProps {
   id: number;

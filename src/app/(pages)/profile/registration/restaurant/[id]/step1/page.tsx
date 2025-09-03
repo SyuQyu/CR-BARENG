@@ -1,7 +1,12 @@
 "use client";
-import { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import { useRouter } from "next/navigation";
+import { useCallback,useEffect, useMemo, useRef, useState } from "react";
+import { useFormState } from 'react-dom';
+import { toast } from "sonner";
+
+import { createRestaurantAction, getRestaurantAction,updateRestaurantAction } from "@/app/(pages)/profile/registration/restaurant/action";
+import { Input, OpenStreetMap } from "@/components/common";
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
     Select,
     SelectContent,
@@ -9,11 +14,6 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { Input, OpenStreetMap, RichTextEditor } from "@/components/common";
-import { useFormState } from 'react-dom';
-import { createRestaurantAction, updateRestaurantAction, getRestaurantAction } from "@/app/(pages)/profile/registration/restaurant/action";
-import { useRouter } from "next/navigation";
-import { toast } from "sonner";
 
 // Initial states
 const initialFormState = {

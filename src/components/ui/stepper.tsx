@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
-import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+import React, { useRef } from "react";
+
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { cn } from "@/lib/utils";
 
 interface Step {
   number: number;

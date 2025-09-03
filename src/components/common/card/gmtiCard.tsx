@@ -1,6 +1,9 @@
 import clsx from "clsx"
-import { ImageWithFallback } from ".."
+
 import { truncateTo100Chars } from "@/utils"
+
+import { ImageWithFallback } from ".."
+
 interface CardProps {
     className?: string
     title?: string

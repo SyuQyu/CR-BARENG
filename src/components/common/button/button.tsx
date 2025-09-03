@@ -1,6 +1,7 @@
-import Link from "next/link"
-import { Button as UIButton } from "@/components/ui/button"
 import clsx from "clsx"
+import Link from "next/link"
+
+import { Button as UIButton } from "@/components/ui/button"
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "outline" | "ghost" | "destructive" | "success" | "warning" | "info" | "dark" | "light" | "default" | null | undefined

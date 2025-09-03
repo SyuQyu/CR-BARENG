@@ -1,7 +1,7 @@
-import { Input, ProfileCard2, CheckBox, PageHero } from "@/components/common";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search } from "lucide-react";
+
+import { CheckBox, Input, PageHero,ProfileCard2 } from "@/components/common";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
     Dialog,
     DialogContent,
@@ -9,7 +9,9 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { professionalsData } from "@/constants/dummyData";
+
 export default function CertifiedProfessionalsDirectoryPage() {
     return (
         <div className="w-full flex flex-col justify-center items-center">

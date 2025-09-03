@@ -1,9 +1,11 @@
 "use client";
-import { CardReports, Input, Pagination, PageHero } from "@/components/common";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { halalCertificationBodies } from "@/constants/dummyData";
 import { Search } from "lucide-react";
 import { useState } from "react";
+
+import { CardReports, Input, PageHero,Pagination } from "@/components/common";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { halalCertificationBodies } from "@/constants/dummyData";
+
 export default function HalalCertificationBodiesPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;

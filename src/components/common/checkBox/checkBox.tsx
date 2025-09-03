@@ -1,4 +1,5 @@
 import { Checkbox } from "@/components/ui/checkbox";
+
 interface CustomCheckboxProps {
     id: string;
     label: string | React.ReactNode;

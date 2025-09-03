@@ -1,9 +1,11 @@
 'use client';
-import { BasicCard, Button, HotelCard, ImageWithFallback, Pagination, PageHero } from "@/components/common";
-import { cardData, crCountryData, crMemberDirectoryCategories } from "@/constants/dummyData";
-import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItem as CarouselItem2, CarouselNextCustom as CarouselNext2, CarouselPreviousCustom as CarouselPrevious2, CarouselDots as CarouselDots2 } from "@/components/ui/carouselCustom2";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
+
+import { Button, HotelCard, ImageWithFallback, PageHero,Pagination } from "@/components/common";
+import { Carousel as Carousel2, CarouselContent as CarouselContent2,CarouselItem as CarouselItem2, CarouselNextCustom as CarouselNext2, CarouselPreviousCustom as CarouselPrevious2 } from "@/components/ui/carouselCustom2";
+import { crCountryData } from "@/constants/dummyData";
+
 export default function CertifiedProfessionalsDirectoryPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;

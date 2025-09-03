@@ -1,8 +1,6 @@
-import { truncateTo100Chars } from "@/utils";
-import { ImageWithFallback } from "..";
-import { Linkedin } from "lucide-react";
-
 import Link from "next/link";
+
+import { ImageWithFallback } from "..";
 
 interface CardReportsProps {
   id: number;

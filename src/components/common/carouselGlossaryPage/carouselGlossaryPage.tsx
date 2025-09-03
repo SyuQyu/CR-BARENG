@@ -1,7 +1,9 @@
-import React from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselPreviousCustom, CarouselNextCustom } from "@/components/ui/defaultCarousel";
-import { BasicCard, ImageWithFallback } from "..";
 import clsx from "clsx";
+import React from "react";
+
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselNextCustom,CarouselPrevious, CarouselPreviousCustom } from "@/components/ui/defaultCarousel";
+
+import { BasicCard, ImageWithFallback } from "..";
 
 // Wrapper to place the buttons side by side
 const CarouselControlsWrapper = ({ children }: { children: React.ReactNode }) => {

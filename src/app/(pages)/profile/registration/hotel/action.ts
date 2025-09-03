@@ -1,11 +1,12 @@
 'use server';
 
+import { revalidatePath } from "next/cache";
+
 import {
     createHotelAction as createHotel,
-    updateHotelAction as updateHotel,
     getHotelAction as getHotel,
+    updateHotelAction as updateHotel,
 } from "@/app/data-access/hotelUserRegistration";
-import { revalidatePath } from "next/cache";
 
 export type ActionResponse = {
     success: boolean;

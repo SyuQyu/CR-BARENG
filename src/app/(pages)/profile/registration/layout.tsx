@@ -1,8 +1,10 @@
 'use client'
-import { ReactNode, useState } from 'react';
 import { Menu, X } from 'lucide-react'; // Import icons
-import { ImageWithFallback } from '@/components/common';
 import { usePathname } from 'next/navigation';
+import { ReactNode, useState } from 'react';
+
+import { ImageWithFallback } from '@/components/common';
+
 interface Props {
     children: ReactNode;
 }

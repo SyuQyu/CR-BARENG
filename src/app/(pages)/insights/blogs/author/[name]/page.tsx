@@ -1,8 +1,9 @@
 "use client"
-import { Pagination, ImageWithFallback, HeroCard } from "@/components/common";
-import { blogsTabsData } from "@/constants/dummyData";
-import React, { useState } from "react";
 import { useParams } from "next/navigation";
+import React, { useState } from "react";
+
+import { HeroCard,ImageWithFallback, Pagination } from "@/components/common";
+import { blogsTabsData } from "@/constants/dummyData";
 import { formatParams } from "@/utils";
 
 export default function BlogsProfile() {

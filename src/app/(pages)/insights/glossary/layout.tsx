@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import { Input } from "@/components/common";
 
 export const metadata = {
