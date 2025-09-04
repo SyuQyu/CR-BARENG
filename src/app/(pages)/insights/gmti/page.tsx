@@ -27,7 +27,7 @@ import Stepper from "@/components/ui/stepper";
 
 export default function Gmti() {
   const csv2015 = "/csv/gmti-2024/2015.csv"
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+   
 
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2024");
@@ -344,7 +344,7 @@ export default function Gmti() {
               <a
                 className="w-[max-content] h-[max-content] md:px-0 px-6"
                 target="_blank"
-                href={`${activeDownloadUrl}`}
+                href={`${activeDownloadUrl}`} rel="noreferrer"
               >
                 <Button className="flex flex-row w-full text-lg gap-2 hover:bg-custom-blue mt-6 border-custom-blue text-custom-blue font-bold rounded-full max-w-[250px] md:p-8 p-6 hover:text-white ">
                   <svg

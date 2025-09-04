@@ -80,7 +80,7 @@ export default function Glossary() {
           <p className="text-body-1 text-center">Explore our glossary&apos;s clear and concise definitions by browsing through various categories, making it easy to find the information you need.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full mt-10">
             {DUMMY_DATA_CATEGORY.slice(0, 5).map((item, index) => (
-              <Link href={`/insights/glossary/browse-by-category/[letter]`} as={`/insights/glossary/browse-by-category/${item.categories.toLowerCase()}`} key={index}>
+              <Link href={`/resources/glossary/browse-by-category/[letter]`} as={`/resources/glossary/browse-by-category/${item.categories.toLowerCase()}`} key={index}>
                 <div key={index} className="relative w-full max-h-[266px] bg-blue-100 md:p-32 p-4 flex justify-center items-center flex-col bg-center !rounded-lg" style={{ backgroundImage: "url('/image/book.jpg')", backgroundSize: "cover" }}>
                   <div className="absolute inset-0 bg-black opacity-80 z-10 rounded-lg"></div>
                   <h1 className="text-desktop-heading-6 font-bold bg-clip-text text-white relative z-20 text-center">
@@ -89,7 +89,7 @@ export default function Glossary() {
                 </div>
               </Link>
             ))}
-            <Link href={`/insights/glossary/browse-by-category`} as={`/insights/glossary/browse-by-category`}>
+            <Link href={`/resources/glossary/browse-by-category`} as={`/resources/glossary/browse-by-category`}>
               <div className="relative w-full max-h-[266px] bg-blue-100 md:p-32 p-4 flex justify-center items-center flex-col bg-center !rounded-lg" style={{ backgroundImage: "url('/image/book.jpg')", backgroundSize: "cover" }}>
                 <div className="absolute inset-0 bg-black opacity-80 z-10 rounded-lg"></div>
                 <h1 className="text-desktop-heading-6 font-bold bg-clip-text text-white relative z-20 text-center">

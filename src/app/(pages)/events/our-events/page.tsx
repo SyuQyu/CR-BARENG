@@ -17,9 +17,9 @@ export default function OurEvents() {
     return (
         <div className="w-full flex flex-col justify-center items-center ">
             <PageHero
-                title="Meet Us at Events"
+                title="Event Participation"
                 description="Meet CrescentRating and Halaltrip at Exhibitions, Conferences, Workshops and other Events."
-                subtitle="Resources"
+                subtitle="About Us"
                 backgroundImage="/image/our-events/hero.jpg"
                 alignment="left"
                 variant="image"

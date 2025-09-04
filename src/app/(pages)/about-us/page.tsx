@@ -101,7 +101,7 @@ export default function AboutUs() {
         setActiveMember(member.name);
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [openTeam]);
 
   return (

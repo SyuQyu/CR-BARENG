@@ -1,4 +1,7 @@
 "use client";
+
+
+
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,6 +34,7 @@ import {
   testimonialLogoRatingAndAccreditation,
   testimonialsRatingAndAccreditation,
 } from "@/constants/dummyData";
+
 
 export default function RatingAndAccreditation() {
   function Roadmap() {
@@ -197,69 +201,11 @@ export default function RatingAndAccreditation() {
           demonstrate your commitment to inclusivity.
         </p>
 
-        <div className="block md:hidden mb-6 w-full">
-          <select
-            value={activeTab}
-            onChange={(e) => setActiveTab(e.target.value)}
-            className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700"
-          >
-            {ratingItemsSubPages.slice(0, 5).map((item) => (
-              <option key={item.key} value={item.key}>
-                {item.title.split(" ")[0]}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="hidden md:flex lg:hidden flex-wrap gap-4 overflow-x-auto px-2 mb-6 w-full justify-center">
-          {ratingItemsSubPages.slice(0, 5).map((item) => (
-            <button
-              key={item.key}
-              onClick={() => setActiveTab(item.key)}
-              className={`px-4 py-2 whitespace-nowrap rounded transition-all duration-200 text-sm font-medium ${
-                activeTab === item.key
-                  ? "bg-indigo-50 text-indigo-600"
-                  : "text-gray-500 hover:text-indigo-600"
-              }`}
-            >
-              {item.title.split(" ")[0]}
-            </button>
-          ))}
-        </div>
-
-        <div className="block lg:hidden w-full max-w-xl">
-          {selectedItem && (
-            <div className="flex flex-col shadow-md rounded overflow-hidden bg-white">
-              <Image
-                src={selectedItem.image}
-                alt={selectedItem.title}
-                width={600}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <p className="font-semibold text-black mb-2">
-                  {selectedItem.title}
-                </p>
-                <p className="text-sm text-gray-600 mb-2">
-                  {selectedItem.description}
-                </p>
-                <Link
-                  href="#"
-                  className="text-primary-cr-700 text-sm flex items-center"
-                >
-                  Learn More <MoveRight className="ml-1 size-4" />
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-
-        <div className="mt-12 hidden lg:grid lg:grid-cols-4 gap-6 w-full">
+        <div className="mt-12 lg:grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 w-full">
           {ratingItemsSubPages.map((item) => (
             <div
               key={item.key}
-              className="flex flex-col shadow-md hover:shadow-lg transition rounded-md overflow-hidden bg-white"
+              className="flex flex-col hover:shadow-lg transition rounded-md overflow-hidden"
             >
               <Image
                 src={item.image}
@@ -350,7 +296,7 @@ export default function RatingAndAccreditation() {
                     r="3"
                     fill="#FFFAC6"
                     stroke="#7A3F0D"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                 </svg>
                 <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">
@@ -371,7 +317,7 @@ export default function RatingAndAccreditation() {
                     r="3"
                     fill="#F1F3FF"
                     stroke="#1504AE"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                 </svg>
                 <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">
@@ -392,7 +338,7 @@ export default function RatingAndAccreditation() {
                     r="3"
                     fill="#EDFCF3"
                     stroke="#094B31"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                 </svg>
                 <p className="pl-2 lg:text-desktop-body-2 font-semibold text-mobile-body-2 text-black">

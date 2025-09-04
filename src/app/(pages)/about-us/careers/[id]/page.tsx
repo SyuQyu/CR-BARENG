@@ -25,7 +25,7 @@ export default function GlossaryCategories() {
                   Remote
                 </span>
               </div>
-              <Link href={`/about-us/career/form/${params.id}`}>
+              <Link href={`/about-us/careers/form/${params.id}`}>
                 <Button className="lg:text-mobile-body-1 text-mobile-body-3 flex flex-row justify-center items-center gap-2 bg-primary-cr-500 text-white border p-3 sm:p-4">
                   Apply Now
                 </Button>

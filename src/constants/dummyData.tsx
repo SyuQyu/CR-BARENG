@@ -378,7 +378,6 @@ export const menuItems = [
         description: "",
       },
       { title: "CR MAPS", href: "/insights/cr-maps", description: "" },
-      { title: "Glossary", href: "/insights/glossary", description: "" },
       { title: "Blogs", href: "/insights/blogs", description: "" },
     ],
   },
@@ -400,6 +399,7 @@ export const menuItems = [
         href: "/resources/certified-professionals-directory",
         description: "",
       },
+      { title: "Glossary", href: "/resources/glossary", description: "" },
     ],
   },
 
@@ -417,8 +417,8 @@ export const menuItems = [
         description: "",
       },
       {
-        title: "Event Participation",
-        href: "/events/event-participation",
+        title: "Our Events",
+        href: "/events/our-events",
         description: "",
       },
     ],
@@ -439,11 +439,12 @@ export const menuItems = [
         description: "",
       },
       {
-        title: "Press Releases",
-        href: "/about-us/press-release",
+        title: "Newsroom",
+        href: "/about-us/newsroom",
         description: "",
       },
-      { title: "Career", href: "/about-us/career", description: "" },
+      { title: "Careers", href: "/about-us/careers", description: "" },
+      { title: "Contact Us", href: "/about-us/contact-us", description: "" }
     ],
   },
 ];
@@ -2904,8 +2905,8 @@ export const halalFriendlyFacilitiesCrMemberDirectory = [
         fill="none"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M20 3.75C11.0254 3.75 3.75 11.0254 3.75 20C3.75 28.9746 11.0254 36.25 20 36.25C28.9746 36.25 36.25 28.9746 36.25 20C36.25 11.0254 28.9746 3.75 20 3.75ZM1.25 20C1.25 9.64466 9.64466 1.25 20 1.25C30.3553 1.25 38.75 9.64466 38.75 20C38.75 30.3553 30.3553 38.75 20 38.75C9.64466 38.75 1.25 30.3553 1.25 20ZM20 5C20.4274 5 20.8251 5.21834 21.0546 5.5789L25.4296 12.4539C25.724 12.9164 25.6826 13.5168 25.3275 13.9345C24.9724 14.3523 24.3866 14.4899 23.8827 14.2739L20 12.61L16.1175 14.2739C15.6135 14.4899 15.0277 14.3523 14.6726 13.9346C14.3175 13.5168 14.2761 12.9165 14.5705 12.4539L18.9454 5.57891C19.1749 5.21835 19.5726 5 20 5ZM20 8.57829L18.8522 10.3819L19.5076 10.1011C19.822 9.96631 20.178 9.96631 20.4924 10.1011L21.1478 10.382L20 8.57829ZM13.6723 21.3467V22.5074L19.5235 20.0944C19.8287 19.9685 20.1714 19.9685 20.4766 20.0944L26.3277 22.5074V21.3467L20 17.6934L13.6723 21.3467ZM26.3277 25.2116L20.0001 22.6021L13.6723 25.2117V28.6533L20 32.3066L26.3277 28.6533V25.2116ZM19.375 15.1675C19.7618 14.9442 20.2382 14.9442 20.625 15.1675L28.2027 19.5425C28.5895 19.7658 28.8277 20.1784 28.8277 20.625V29.375C28.8277 29.8216 28.5895 30.2342 28.2027 30.4575L20.625 34.8325C20.2382 35.0558 19.7618 35.0558 19.375 34.8325L11.7973 30.4575C11.4105 30.2342 11.1723 29.8216 11.1723 29.375V20.625C11.1723 20.1784 11.4105 19.7658 11.7973 19.5425L19.375 15.1675Z"
           fill="#453CFF"
         />
@@ -2936,8 +2937,8 @@ export const halalFriendlyFacilitiesCrMemberDirectory = [
         fill="none"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M20 3.75C11.0254 3.75 3.75 11.0254 3.75 20C3.75 28.9746 11.0254 36.25 20 36.25C28.9746 36.25 36.25 28.9746 36.25 20C36.25 11.0254 28.9746 3.75 20 3.75ZM1.25 20C1.25 9.64466 9.64466 1.25 20 1.25C30.3553 1.25 38.75 9.64466 38.75 20C38.75 30.3553 30.3553 38.75 20 38.75C9.64466 38.75 1.25 30.3553 1.25 20ZM18.75 8.18105C11.7419 8.81259 6.25 14.7024 6.25 21.875H8.75C8.75 15.6618 13.7868 10.625 20 10.625C26.2132 10.625 31.25 15.6618 31.25 21.875H33.75C33.75 14.7024 28.2581 8.81259 21.25 8.18105V6.875H18.75V8.18105ZM23.3288 15.0167C23.8904 15.1095 24.3183 15.57 24.3699 16.1368L24.698 19.7459C24.7727 20.5676 25.6091 21.0928 26.3817 20.8031L26.9504 20.5899C26.617 20.2198 26.1377 20 25.625 20V17.5C27.2476 17.5 28.7309 18.4167 29.4566 19.868L29.868 20.691C30.0265 21.0079 30.043 21.3771 29.9135 21.7069C29.784 22.0367 29.5206 22.296 29.1889 22.4204L27.2595 23.1439C25.2547 23.8958 23.1066 22.8186 22.418 20.9186L22.3137 21.1533C21.8427 22.213 21.0179 23.0761 19.9807 23.5947L18.684 24.243L17.566 22.007L18.8626 21.3586C19.3813 21.0993 19.7936 20.6678 20.0291 20.1379L20.918 18.138L18.9599 19.4434L18.4852 18.7312C18.0978 18.1502 17.5656 17.6803 16.941 17.368L18.059 15.132C19.0727 15.6388 19.9366 16.4014 20.5653 17.3445L20.9885 17.9793L21.9827 15.7423C22.2139 15.2222 22.7673 14.9239 23.3288 15.0167ZM14.1995 20.6267L13.7551 15.7382L16.2449 15.5118L16.6893 20.4003C16.849 22.1573 15.7046 23.7686 13.993 24.1965C13.4215 24.3394 12.8222 24.3378 12.254 24.1957C10.5034 23.7581 9.57532 21.8043 10.3929 20.1691L10.757 19.441L12.993 20.559L12.629 21.2871C12.5373 21.4706 12.6383 21.7148 12.8603 21.7704C13.0338 21.8137 13.2165 21.8136 13.3867 21.7711C13.9027 21.6421 14.2477 21.1563 14.1995 20.6267ZM32.5 25.625V28.125H7.5V25.625H32.5Z"
           fill="#453CFF"
         />
@@ -2967,8 +2968,8 @@ export const halalFriendlyFacilitiesCrMemberDirectory = [
         fill="none"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M20 3.75C11.0254 3.75 3.75 11.0254 3.75 20C3.75 28.9746 11.0254 36.25 20 36.25C28.9746 36.25 36.25 28.9746 36.25 20C36.25 11.0254 28.9746 3.75 20 3.75ZM1.25 20C1.25 9.64466 9.64466 1.25 20 1.25C30.3553 1.25 38.75 9.64466 38.75 20C38.75 30.3553 30.3553 38.75 20 38.75C9.64466 38.75 1.25 30.3553 1.25 20ZM21.875 10C19.4588 10 17.5 11.9588 17.5 14.375V15.125C19.9489 15.6221 21.8779 17.5511 22.375 20H23.75V22.5H8.75V20H10.125C10.6221 17.5511 12.5511 15.6221 15 15.125V14.375C15 10.578 18.078 7.5 21.875 7.5C25.672 7.5 28.75 10.578 28.75 14.375V31.25H26.25V14.375C26.25 11.9588 24.2912 10 21.875 10ZM12.7134 20H19.7866C19.2718 18.5435 17.8828 17.5 16.25 17.5C14.6172 17.5 13.2282 18.5435 12.7134 20ZM8.95994 28.0566L11.4599 24.3066L13.5401 25.6934L11.0401 29.4434L8.95994 28.0566ZM21.4599 29.4434L18.9599 25.6934L21.0401 24.3066L23.5401 28.0566L21.4599 29.4434ZM15 31.875V26.875H17.5V31.875H15Z"
           fill="#453CFF"
         />
@@ -3158,51 +3159,9 @@ export const testimonialsAboutUs = [
 
 export const testimonialLogoRatingAndAccreditation = [
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/kingsford.png",
-    imageAlt: "kingsford",
-    name: "Kingsford Hotel",
-    location: "Manila",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/savoy.png",
-    imageAlt: "savoy",
-    name: "Savoy Hotel",
-    location: "Mactan Newtown",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/kowloon.png",
-    imageAlt: "kowloon",
-    name: "Kowloon Shangri-La",
-    location: "Hong Kong",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/belmont.png",
-    imageAlt: "belmont",
-    name: "Belmont Hotel",
-    location: "Mactan",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/westside.png",
-    imageAlt: "westside",
-    name: "Grand Westside Hotel",
-    location: "",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/marriott.png",
-    imageAlt: "marriott",
-    name: "JW Marriott",
-    location: "Hong Kong",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/four-seasons.png",
-    imageAlt: "four-seasons",
-    name: "Four Seasons",
-    location: "Hong Kong",
-  },
-  {
-    imageSrc: "/image/rating-accreditation/list-establishments/hlc.png",
-    imageAlt: "hlc",
-    name: "Hotel Lucky Chinatown",
+    imageSrc: "/image/rating-accreditation/list-establishments/a.svg",
+    imageAlt: "a",
+    name: "Hotel A",
     location: "",
   },
   {
@@ -3212,40 +3171,82 @@ export const testimonialLogoRatingAndAccreditation = [
     location: "",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/the-peninsula.png",
-    imageAlt: "the-peninsula",
-    name: "The Peninsula",
+    imageSrc: "/image/rating-accreditation/list-establishments/b.svg",
+    imageAlt: "b",
+    name: "Hotel B",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/c.svg",
+    imageAlt: "c",
+    name: "Hotel C",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/d.svg",
+    imageAlt: "d",
+    name: "Hotel D",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/four-seasons.png",
+    imageAlt: "four-seasons",
+    name: "Four Seasons",
     location: "Hong Kong",
   },
   {
     imageSrc: "/image/rating-accreditation/list-establishments/hyatt.png",
-    imageAlt: "hyatt",
+    imageAlt: "grand-hyatt",
     name: "Grand Hyatt",
     location: "Hong Kong",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/megaworld.png",
-    imageAlt: "megaworld",
-    name: "Megaworld",
+    imageSrc: "/image/rating-accreditation/list-establishments/intercontinental.png",
+    imageAlt: "intercontinental",
+    name: "InterContinental",
     location: "",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/marriott-hk.png",
-    imageAlt: "marriott-hk",
-    name: "Marriott",
-    location: "Hong Kong Ocean Park",
+    imageSrc: "/image/rating-accreditation/list-establishments/marriott.png",
+    imageAlt: "jw-marriott",
+    name: "JW Marriott",
+    location: "Hong Kong",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/ping.png",
-    imageAlt: "ping",
-    name: "Ngong Ping 360",
+    imageSrc: "/image/rating-accreditation/list-establishments/kowloon.png",
+    imageAlt: "kowloon",
+    name: "Kowloon Shangri-La",
     location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/langham.png",
+    imageAlt: "langham",
+    name: "The Langham",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/mandarin.jpg",
+    imageAlt: "mandarin",
+    name: "Mandarin Oriental",
+    location: "",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/meridien.png",
+    imageAlt: "meridien",
+    name: "Le Meridien",
+    location: "",
   },
   {
     imageSrc: "/image/rating-accreditation/list-establishments/ocean-park.png",
     imageAlt: "ocean-park",
     name: "Ocean Park",
     location: "Hong Kong",
+  },
+  {
+    imageSrc: "/image/rating-accreditation/list-establishments/sheraton.jpg",
+    imageAlt: "sheraton",
+    name: "Sheraton",
+    location: "",
   },
 ]
 

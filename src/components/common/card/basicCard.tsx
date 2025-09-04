@@ -12,7 +12,7 @@ interface GlossaryItem {
     children?: React.ReactNode;
     className?: string;
 }
-const BasicCard: React.FC<GlossaryItem> = ({ className = "bg-white", title, description, useButton = true, urlButton = "/insights/glossary/term-detail/", children }) => (
+const BasicCard: React.FC<GlossaryItem> = ({ className = "bg-white", title, description, useButton = true, urlButton = "/resources/glossary/term-detail/", children }) => (
     <Card className={clsx("gap-2 min-h-[213px] w-full h-full", className)} title={title} titlePostion="text-left">
         <div className="flex flex-col justify-between items-center w-full h-full">
             {description ? (<p className="text-desktop-body-3">{description}</p>) : children}

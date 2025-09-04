@@ -25,7 +25,7 @@ const extractAttractionData = (formData: FormData) => {
     // Helper for parsing file fields
     const parseFiles = (name: string): string[] => {
         const files = formData.getAll(name);
-        return files.filter(f => f instanceof File).map(f => (f as File).name);
+        return files.filter(f => f instanceof File).map(f => (f).name);
     };
 
     return {
