@@ -35,7 +35,6 @@ import { truncate } from "@/utils";
 import { Button, ImageWithFallback } from "..";
 
 interface cardAcademyProgramsProps {
-  key: number;
   program: string;
   description: string;
   market: string;
@@ -51,8 +50,7 @@ interface cardAcademyProgramsProps {
   imageBorder?: true | false; // e.g. "rounded-lg"
 }
 
-export default function cardAcademyPrograms({
-  key,
+export default function CardAcademyPrograms({
   program,
   description,
   market,
@@ -179,7 +177,7 @@ export default function cardAcademyPrograms({
                             "w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 hover:bg-white hover:text-primary-cr-600 border-gray-500/20 rounded-none"
                           )}
                         >
-                          I'm Interested
+                          I&apos;m Interested
                         </Button>
                       </a>
                     ) : (
@@ -188,7 +186,7 @@ export default function cardAcademyPrograms({
                           "w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 hover:bg-white hover:text-primary-cr-600 border-gray-500/20 rounded-none"
                         )}
                       >
-                        I'm Interested
+                        I&apos;m Interested
                       </Button>
                     )}
                    
