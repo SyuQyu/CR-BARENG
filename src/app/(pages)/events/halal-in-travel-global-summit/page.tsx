@@ -1,6 +1,5 @@
 'use client'
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import { Button, HeroCard, HITGSCard, ImageWithFallback, Input } from "@/components/common";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel as Carousel2, CarouselContent as CarouselContent2, CarouselItem as CarouselItem2, CarouselNext as CarouselNext2, CarouselPrevious as CarouselPrevious2 } from "@/components/ui/carouselCustom2";
@@ -10,16 +9,13 @@ import { carouselDataHITGS,hitgsData, mediaHITGSData } from "@/constants/dummyDa
 
 export default function HalalMusimTravelGlobalSummit() {
 
-    const [api, setApi] = React.useState<CarouselApi>()
-    const [current, setCurrent] = React.useState(0)
-    const [count, setCount] = React.useState(0)
+    const [api, setApi] = useState<CarouselApi>()
+    const [current, setCurrent] = useState(0)
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!api) {
             return
         }
-
-        setCount(api.scrollSnapList().length)
         setCurrent(api.selectedScrollSnap() + 1)
 
         api.on("select", () => {

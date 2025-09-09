@@ -38,7 +38,6 @@ export default function ContactUs() {
             </div>
             <div className="w-full flex flex-col justify-start items-start bg-[#FAF9FA]">
               <form className="w-full gap-8 flex flex-col p-8">
-                {/* Full Name & Company */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input
                     label="Full Name"
@@ -53,7 +52,6 @@ export default function ContactUs() {
                     labelStyle="font-bold"
                   />
                 </div>
-                {/* Country & City */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input
                     label="Country"
@@ -68,7 +66,6 @@ export default function ContactUs() {
                     labelStyle="font-bold"
                   />
                 </div>
-                {/* Email & Nature of Your Business */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input
                     label="Email"
@@ -93,7 +90,6 @@ export default function ContactUs() {
                     </Select>
                   </div>
                 </div>
-                {/* Phone Number & Inquiring on */}
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
                   <Input
                     label="Phone Number"
@@ -119,7 +115,6 @@ export default function ContactUs() {
                     </Select>
                   </div>
                 </div>
-                {/* Message */}
                 <div className="w-full">
                   <Input
                     label="Message"
@@ -132,7 +127,6 @@ export default function ContactUs() {
                   />
                 </div>
                 <div className="flex flex-col gap-3">
-                  {/* Checkbox 1 */}
                   <div className="flex flex-row justify-start items-center space-x-2">
                     <Checkbox
                       id="terms1"
@@ -159,7 +153,6 @@ export default function ContactUs() {
                     </label>
                   </div>
 
-                  {/* Checkbox 2 */}
                   <div className="flex flex-row justify-start items-center space-x-2">
                     <Checkbox
                       id="terms2"
@@ -174,7 +167,6 @@ export default function ContactUs() {
                     </label>
                   </div>
                 </div>
-                {/* Submit Button */}
                 <Button className="w-full md:text-desktop-body-2 text-mobile-body-2 bg-primary-cr-700 hover:bg-primary-cr-800 hover:text-white font-semibold text-white md:h-[49px] h-[41px] mt-2">
                   Send
                 </Button>

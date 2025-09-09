@@ -10,11 +10,9 @@ import { reports } from "@/constants/dummyData"
 export default function HalalMusimTravelMarketReports() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 10;
-    // Function to handle letter button click
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-        // Fetch data or update UI based on the new page
     };
 
     return (

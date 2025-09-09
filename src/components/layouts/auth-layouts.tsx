@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 
 const Header = dynamic(() => import("./header/header"));
-// const Footer = dynamic(() => import("./footer/footer"));
 
 export default function AuthLayout({ children }: Props) {
   return (

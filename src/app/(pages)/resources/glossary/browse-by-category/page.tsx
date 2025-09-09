@@ -6,17 +6,11 @@ import { BreadCrumb,Pagination } from "@/components/common";
 import { DUMMY_DATA_CATEGORY } from "@/constants/dummyData";
 
 export default function GlossaryCategoriesMain() {
-    const [selectedLetter, setSelectedLetter] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 10;
-    // Function to handle letter button click
-    const handleLetterClick = (letter: string) => {
-        setSelectedLetter(letter);
-    };
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-        // Fetch data or update UI based on the new page
     };
 
     return (

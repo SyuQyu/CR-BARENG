@@ -13,27 +13,26 @@ import {
 
 interface BreadcrumbData {
     label: string;
-    href?: string;
+    href: string;
 }
 
 const generateBreadcrumbsFromPath = (pathname: string, excludeSegment?: string): BreadcrumbData[] => {
     const pathSegments = pathname
         .split('/')
         .filter(Boolean)
-        .map(decodeURIComponent); // Decode URL components to handle %20 as spaces
+        .map(decodeURIComponent);
 
     return pathSegments
-        .filter(segment => segment.toLowerCase() !== excludeSegment?.toLowerCase()) // Exclude the specified segment
+        .filter(segment => segment.toLowerCase() !== excludeSegment?.toLowerCase())
         .map((segment, index) => {
-            const href = `/${pathSegments.slice(0, index + 1).join('/')}`; // Construct href for each segment
+            const href = `/${pathSegments.slice(0, index + 1).join('/')}`
 
-            // Capitalize the segment and replace hyphens with spaces (Term-Detail -> Term Detail)
             const label = segment
                 .split('-')
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ');
+                .join(' ')
 
-            return { label, href };
+            return { label, href }
         });
 };
 
@@ -48,13 +47,12 @@ export default function BreadCrumb({ excludeSegment }: BreadCrumbProps) {
     return (
         <Breadcrumb>
             <BreadcrumbList>
-                {/* First breadcrumb item: Home */}
                 <BreadcrumbItem>
                     <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
                 </BreadcrumbItem>
 
                 {breadcrumbs.map((breadcrumb, index) => {
-                    const isLast = index === breadcrumbs.length - 1; // Check if it's the last item
+                    const isLast = index === breadcrumbs.length - 1;
 
                     return (
                         <React.Fragment key={breadcrumb.href}>

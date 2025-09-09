@@ -2,7 +2,6 @@
 import { MapPin } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-
 import { Button } from "@/components/common";
 
 export default function GlossaryCategories() {

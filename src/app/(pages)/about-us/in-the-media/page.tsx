@@ -1,8 +1,7 @@
 "use client";
-import { useState } from "react";
-
 import { CardReports, PageHero, Pagination } from "@/components/common";
 import { inTheMedia } from "@/constants/dummyData";
+import { useState } from "react";
 
 export default function InTheMediaPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,7 +9,6 @@ export default function InTheMediaPage() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    // Fetch data or update UI based on the new page
   };
   return (
     <div className="w-full flex flex-col justify-center items-center">

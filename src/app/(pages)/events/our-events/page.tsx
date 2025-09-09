@@ -12,7 +12,6 @@ export default function OurEvents() {
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-        // Fetch data or update UI based on the new page
     };
     return (
         <div className="w-full flex flex-col justify-center items-center ">

@@ -10,7 +10,6 @@ import { FileUpload, RichTextEditor } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
-// Checkbox options
 const recreationalFacilitiesOptions = [
     "Hotel has a gym pool for females with privacy",
     "Hotel has a gym pool for males with privacy",

@@ -1,8 +1,6 @@
-// eslint.config.mjs
 import path from 'path'
 import { fileURLToPath } from 'url'
 import js from '@eslint/js'
-import tseslint from 'typescript-eslint'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import react from 'eslint-plugin-react'

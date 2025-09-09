@@ -46,7 +46,6 @@ export default function AttractionRegistrationPage({ params }: { params?: { id: 
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState(defaultFormData);
 
-    // Memoize action to prevent unnecessary re-renders
     const action = useMemo(() =>
         params?.id
             ? (prevState: any, formData: FormData) => updateAttractionAction(formData, prevState)
@@ -54,10 +53,8 @@ export default function AttractionRegistrationPage({ params }: { params?: { id: 
         [params?.id]
     );
 
-    // Form state
     const [state, formAction] = useFormState(action, initialFormState);
 
-    // Fetch hotel data
     useEffect(() => {
         if (!params?.id) return;
 
@@ -85,7 +82,6 @@ export default function AttractionRegistrationPage({ params }: { params?: { id: 
         fetchAttraction();
     }, [params?.id]);
 
-    // Handle form submission response
     useEffect(() => {
         if (!state.success) return;
 
@@ -244,7 +240,6 @@ export default function AttractionRegistrationPage({ params }: { params?: { id: 
                     />
                 </section>
 
-                {/* Contact Section */}
                 <section>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <Input

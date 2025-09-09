@@ -186,51 +186,6 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg>
-
-          {/* {
-            selectedService == "rating" && (
-              <>
-                <p className="sm:text-desktop-heading-3 text-mobile-heading-2 text-primary-cr-600 font-bold">Rating and Accreditation</p>
-                <div className="w-full flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-44 gap-10">
-                  <Tabs defaultValue="hotel" className="lg:w-[70%] w-full z-10">
-                    <TabsList className="w-full">
-                      <TabsTrigger className="w-full border !bg-white !shadow-xl !rounded-lg p-4 m-2" value="hotel">HOTEL</TabsTrigger>
-                      <TabsTrigger className="w-full border !bg-white !shadow-xl !rounded-lg p-4 m-2" value="restaurants">RESTAURANTS</TabsTrigger>
-                      <TabsTrigger className="w-full border !bg-white !shadow-xl !rounded-lg p-4 m-2" value="more">MORE</TabsTrigger>
-                    </TabsList>
-                    <TabsContent key={'hotel'} value={'hotel'} activeValue={'hotel'} className="flex gap-6 flex-col p-0 sm:pt-0 pt-4 sm:p-6">
-                      <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
-                        <p>Give your Hotel guests the Halal assurance they need; independent onsite audit/verification of your Halal/Muslim friendly services and facilities. Get your Hotel Crescent Rated!</p>
-                        <strong>Trusted By Travelers : Globally Recognized, Independent, High Standards</strong>
-                        <Button className="!rounded-full sm:!text-desktop-body-2 !text-mobile-body-3 !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">FIND OUT HOW</Button>
-                      </div>
-                    </TabsContent>
-                    <TabsContent key={'restaurants'} value={'restaurants'} activeValue={'restaurants'} className="flex gap-6 flex-col p-6">
-                      <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
-                        <p>Give your Restaurant guests a better and uniform understanding of your Halal assurance; <strong> independent onsite audit/verification of your Halal/Muslim friendly services and facilities. </strong> Get your Restaurant Crescent Rated!</p>
-                        <Button className="!rounded-full sm:!text-desktop-body-2 !text-mobile-body-3 !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">FIND OUT HOW</Button>
-                      </div>
-                    </TabsContent>
-                    <TabsContent key={'more'} value={'more'} activeValue={'more'} className="flex gap-6 flex-col p-6">
-                      <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
-                        <p>Get your Shopping Malls, Spas, Travel Agencies, Airports, Theme Parks, Attractions etc. an <strong> Independent onsite audit/verification of the Halal/Muslim friendly services and facilities. </strong> Get your establishment Crescent Rated!&quot;</p>
-                        <Button className="!rounded-full sm:!text-desktop-body-2 !text-mobile-body-3 !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">FIND OUT HOW</Button>
-                      </div>
-                    </TabsContent>
-                  </Tabs>
-                  <ImageWithFallback
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-full max-h-[200px] lg:max-h-[500px] lg:w-[500px] xl:max-w-[500px] object-cover border-r-[15px] border-r-primary-cr-700 rounded-2xl"
-                    priority={false}
-                    src={"/image/landing-page/img2.jpeg"}
-                    alt={"hero"}
-                  />
-                </div>
-              </>
-            )
-          } */}
           {selectedService && (
             <>
               <p className="sm:text-desktop-heading-3 text-mobile-heading-2 text-primary-cr-600 font-bold">

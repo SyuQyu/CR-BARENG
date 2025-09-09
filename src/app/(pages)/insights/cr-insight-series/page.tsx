@@ -12,7 +12,6 @@ export default function CardInsightsSeries() {
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-        // Fetch data or update UI based on the new page
     };
 
     return (

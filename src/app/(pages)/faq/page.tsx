@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 import { faqData as rawFaqData } from "@/constants/dummyData";
 
-// Convert the imported data to match our type definitions
 const faqData = rawFaqData.map((faq) => {
   const answer = faq.answer;
   let typedAnswer: AnswerType;

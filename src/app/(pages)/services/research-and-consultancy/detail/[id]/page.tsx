@@ -24,8 +24,7 @@ import {
 import { reports } from "@/constants/dummyData"
 
 export default function HalalMusimTravelMarketReportsDetail() {
-
-
+    
     return (
         <div className="w-full flex flex-col justify-center items-center">
             <section

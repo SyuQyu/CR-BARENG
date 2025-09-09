@@ -1,7 +1,6 @@
 "use client";
 import clsx from "clsx";
 import Link from "next/link";
-
 import { Button, ImageWithFallback, Input } from "@/components/common";
 import {
   Accordion,
@@ -12,16 +11,10 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { footerData } from "@/constants/dummyData";
 
-// interface ProductSection {
-//   title: string;
-//   links: string[];
-// }
-
 export default function Footer({ className }: Props) {
   return (
     <footer className={clsx(className)}>
       <div className="w-full mb-10 flex flex-col justify-start items-start max-w-[1440px] gap-8 px-6 lg:px-8">
-        {/* Newsletter Section */}
         <div className="w-full lg:px-0 flex md:flex-row flex-col justify-start md:justify-between items-start md:items-start md:gap-0 gap-4">
           <div className="flex flex-col md:justify-start justify-center md:items-start items-center gap-2">
             <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold md:text-left text-center">
@@ -73,7 +66,6 @@ export default function Footer({ className }: Props) {
           </div>
         </div>
 
-        {/* Links Section */}
         <div className="w-full flex sm:flex-row flex-col-reverse justify-between items-start border-t border-b border-slate-500/20 py-8 gap-6 sm:gap-20">
           <div className="w-full sm:max-w-[320px] flex flex-col sm:justify-start justify-center items-start gap-8">
             <ImageWithFallback
@@ -249,7 +241,6 @@ export default function Footer({ className }: Props) {
             ))}
           </div>
 
-          {/* Accordion for mobile */}
           <div className="w-full flex flex-col gap-2 sm:hidden">
             <Accordion type="single" collapsible className="w-full">
               {footerData?.map((product: any, index: number) => (
