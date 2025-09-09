@@ -92,7 +92,7 @@ type Hotel = {
 } as Hotel;
 
 // Function to get hotel data
-export async function getHotelAction(hotelId: string): Promise<Hotel> {
+export async function getHotelAction(): Promise<Hotel> {
     return (global as any).hotel as Hotel;
 }
 

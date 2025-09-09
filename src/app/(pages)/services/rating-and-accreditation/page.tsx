@@ -5,7 +5,6 @@
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 import {
   BasicCard,
@@ -186,11 +185,6 @@ export default function RatingAndAccreditation() {
   }
 
   function RatingAndAccreditationSection() {
-    const [activeTab, setActiveTab] = useState<string>("hotel");
-    const selectedItem = ratingItemsSubPages.find(
-      (item) => item.key === activeTab,
-    );
-
     return (
       <section className="w-full max-w-[1440px] px-6 lg:px-8 flex flex-col justify-center items-center mt-16">
         <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 text-black text-center w-[90%] lg:w-[50%]">

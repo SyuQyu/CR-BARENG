@@ -10,7 +10,6 @@ export default function ProfileCard({
     description,
     image,
     tags,
-    linkedin,
     className = "shadow-md rounded-lg"
 }: {
     name: string,
@@ -18,7 +17,6 @@ export default function ProfileCard({
     description: string,
     image: string,
     tags: string[],
-    linkedin: string
     className?: string
 }) {
     const [expanded, setExpanded] = useState(false);

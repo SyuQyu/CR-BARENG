@@ -15,12 +15,10 @@ interface CardProps {
 
 export default function GmtiCard(
     {
-        image,
         date = 'Oct 08, 2024',
         className,
         title = 'Muslim Women Shaping Global Travel Trends | GMTI 2024 Report',
         desc = "Muslim Women's Growing Influence in Global Travel The global travel industry is undergoing a growing shift with the emergence of Muslim women, like Gen Zs, as vacation travel decision-makers in family travel. The 2024 Global Muslim...",
-        style,
     }: CardProps
 ) {
     return (

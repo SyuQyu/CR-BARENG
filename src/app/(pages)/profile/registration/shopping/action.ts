@@ -88,7 +88,7 @@ export async function createShoppingAction(formData: FormData): Promise<ActionRe
 }
 
 // Update an existing shopping (all steps)
-export async function updateShoppingAction(formData: FormData, state: any): Promise<ActionResponse> {
+export async function updateShoppingAction(formData: FormData): Promise<ActionResponse> {
     try {
         const id = formData.get('id') as string;
         const data = extractShoppingData(formData);
@@ -116,7 +116,7 @@ export async function getShoppingAction(id: string): Promise<ActionResponse> {
         if (!id) {
             return { success: false, error: 'Shopping ID is required', data: null };
         }
-        const shopping = await getShopping(id);
+        const shopping = await getShopping();
         return { success: true, error: null, data: shopping };
     } catch (error: any) {
         console.error('Failed to fetch shopping:', error);

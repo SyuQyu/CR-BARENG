@@ -14,7 +14,6 @@ import { truncateTo100Chars } from "@/utils";
 import { Button, ImageWithFallback } from "..";
 
 interface CardReportsProps {
-    id: number;
     title: string;
     date?: string;
     description?: string;
@@ -33,15 +32,14 @@ interface CardReportsProps {
 }
 
 
-function countryCodeToFlagEmoji(code?: string) {
-    if (!code) return "";
-    return code
-        .toUpperCase()
-        .replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt(0)));
-}
+// function countryCodeToFlagEmoji(code?: string) {
+//     if (!code) return "";
+//     return code
+//         .toUpperCase()
+//         .replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt(0)));
+// }
 
 export default function CardReports({
-    id,
     title,
     date,
     description,

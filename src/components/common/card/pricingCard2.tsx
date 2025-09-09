@@ -22,7 +22,6 @@ interface PricingCardProps {
 
 export default function PricingCard2({
     title,
-    price,
     priceOptions = [
         { roomCount: "Up to 20 rooms", price: 250 },
         { roomCount: "21-50 rooms", price: 500 },

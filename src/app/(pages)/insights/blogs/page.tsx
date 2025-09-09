@@ -28,8 +28,6 @@ export default function BlogsPage() {
             }))
             .filter(tab => tab.media.length > 0);
 
-        console.log(filteredResults, searchQuery);
-
         setFilteredData(filteredResults);
 
     };

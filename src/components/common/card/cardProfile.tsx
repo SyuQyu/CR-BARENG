@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ImageWithFallback } from "..";
 
 interface CardReportsProps {
-  id: number;
   title: string;
   description: string;
   imageUrl: string;
@@ -12,7 +11,6 @@ interface CardReportsProps {
 }
 
 export default function CardProfile({
-  id,
   title,
   description,
   imageUrl,

@@ -85,7 +85,7 @@ type Attraction = {
 } as Attraction;
 
 // Function to get attraction data
-export async function getAttractionAction(attractionId: string): Promise<Attraction> {
+export async function getAttractionAction(): Promise<Attraction> {
     return (global as any).attraction as Attraction;
 }
 

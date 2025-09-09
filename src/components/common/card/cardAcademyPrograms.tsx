@@ -49,7 +49,6 @@ interface cardAcademyProgramsProps {
   badgeLabel?: string; // e.g. "JPNN"
   badgeDate?: string; // e.g. "Jan 2025"
   imageBorder?: true | false; // e.g. "rounded-lg"
-  imgType?: "1" | "2"; // e.g. "1" for image, "2" for video
 }
 
 export default function cardAcademyPrograms({
@@ -61,7 +60,6 @@ export default function cardAcademyPrograms({
   pricing,
   imageUrl,
   imageBorder = true,
-  imgType = "1",
 }: cardAcademyProgramsProps) {
   let truncateddescription;
 
@@ -75,18 +73,17 @@ export default function cardAcademyPrograms({
     truncateddescription = truncate(description, 100);
   }
 
-  const [openFrom, setOpenFrom] = React.useState(false);
-  const [openTo, setOpenTo] = React.useState(false);
+  const [openFrom, setOpenFrom] = useState(false);
+  const [openTo, setOpenTo] = useState(false);
 
-  const [dateFrom, setDateFrom] = React.useState<Date | undefined>(undefined);
-  const [dateTo, setDateTo] = React.useState<Date | undefined>(undefined);
+  const [dateFrom, setDateFrom] = useState<Date | undefined>(undefined);
+  const [dateTo, setDateTo] = useState<Date | undefined>(undefined);
 
   return (
     <div
       className="lg:w-full w-fit group flex flex-col self-stretch"
       rel="noopener noreferrer"
     >
-      {/* Image container */}
       <div
         className={clsx(
           "h-full flex overflow-hidden relative border-2 border-gray-500/20 content-stretch flex-wrap p-1.5 lg:max-w-[839px] md:max-w-[593px] max-w-fit",

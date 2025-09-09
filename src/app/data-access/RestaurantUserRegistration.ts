@@ -101,7 +101,7 @@ export type Restaurant = {
 } as Restaurant;
 
 // Function to get restaurant data
-export async function getRestaurantAction(restaurantId: string): Promise<Restaurant> {
+export async function getRestaurantAction(): Promise<Restaurant> {
     return (global as any).restaurant as Restaurant;
 }
 

@@ -172,7 +172,6 @@ const CarouselItem = React.forwardRef<
     // ambil visibleSlides dari context/props, fallback ke 3
     const { selectedIndex, visibleSlides: contextVisibleSlides } = useCarousel()
     const isActive = index === selectedIndex
-    console.log("isActive", isActive, index, selectedIndex)
     const isMobile = useIsMobile(900);
     const count = visibleSlides ?? contextVisibleSlides ?? 3
 
@@ -315,7 +314,6 @@ const CarouselItemBlogs = React.forwardRef<
     // ambil visibleSlides dari context/props, fallback ke 3
     const { selectedIndex, visibleSlides: contextVisibleSlides } = useCarousel()
     const isActive = index === selectedIndex
-    console.log("isActive", isActive, index, selectedIndex)
     const isMobile = useIsMobile(900);
     const count = visibleSlides ?? contextVisibleSlides ?? 3
 
@@ -388,7 +386,6 @@ const CarouselItemPodcasts = React.forwardRef<
     // ambil visibleSlides dari context/props, fallback ke 3
     const { selectedIndex, visibleSlides: contextVisibleSlides } = useCarousel()
     const isActive = index === selectedIndex
-    console.log("isActive", isActive, index, selectedIndex)
     const isMobile = useIsMobile(900);
     const count = visibleSlides ?? contextVisibleSlides ?? 3
 
@@ -456,7 +453,6 @@ const CarouselItemTestimonials = React.forwardRef<
     // ambil visibleSlides dari context/props, fallback ke 3
     const { selectedIndex, visibleSlides: contextVisibleSlides } = useCarousel()
     const isActive = index === selectedIndex
-    console.log("isActive", isActive, index, selectedIndex)
     const isMobile = useIsMobile(900);
     const count = visibleSlides ?? contextVisibleSlides ?? 3
 

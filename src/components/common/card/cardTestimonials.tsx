@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { Download } from "lucide-react";
 import React from "react";
 
 import { truncate } from "@/utils";
@@ -32,20 +31,12 @@ export default function cardTestimonials({
   company,
   event,
   imageUrl,
-  downloadWithDialog = false, // Default: download langsung
-  buttonType = "outline",
-  buttonContent = (
-    <>
-      <Download /> Download PDF
-    </>
-  ),
   imageBorder = true,
-  imgType = "1",
 }: cardTestimonialsProps) {
-  let truncatedtestimonials;
-  if (testimonials) {
-    truncatedtestimonials = truncate(testimonials, 100);
-  }
+  // let truncatedtestimonials;
+  // if (testimonials) {
+  //   truncatedtestimonials = truncate(testimonials, 100);
+  // }
 
   return (
     <div

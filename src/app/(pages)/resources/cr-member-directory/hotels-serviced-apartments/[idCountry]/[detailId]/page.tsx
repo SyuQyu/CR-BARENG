@@ -1,7 +1,6 @@
 'use client';
 import clsx from "clsx";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Button, ImageWithFallback } from "@/components/common";
@@ -11,7 +10,6 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { detailCrMemberDirectoryHotelsImg, halalFriendlyFacilitiesCrMemberDirectory } from "@/constants/dummyData";
 
 export default function CertifiedProfessionalsDirectoryPage() {
-    const params = useParams<{ detailId: string }>();
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [api, setApi] = useState<CarouselApi | null>(null);

@@ -1,6 +1,5 @@
 "use client"
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { useParams, useRouter } from 'next/navigation';
 import React, { useState } from "react";
 
 import { BreadCrumb, CarouselGlossaryPage,ImageWithFallback, YouTubeCard } from "@/components/common";
@@ -31,13 +30,11 @@ const ReadMore = ({ text, maxLength }: { text: string, maxLength: number }) => {
 };
 
 export default function GlossaryDetail() {
-    const params = useParams<{ termDetailId: string }>();
     const definitionText = `
         The public call to Salah which is delivered from a Mosque. It is recited aloud five times a day to announce the prayer timings of the five obligatory prayers. It praises Allah – God Almighty – and requests Muslims to gather for Salah. In some mosques, specially when they are located in predominantly Muslim communities, the Athan is transmitted via a public address system. The words of the Adzan are deeply symbolic and meaningful, beginning with the proclamation "Allahu Akbar" (God is Greatest), repeated four times. This is followed by the Shahada, the Islamic declaration of faith, affirming the oneness of God and the prophethood of Muhammad. The Adzan continues with invitations to prayer and success, emphasizing that true success lies in worship and remembrance of God. The final part of the Adzan reiterates the greatness of God and the essential nature of prayer in a Muslim’s life. In many communities, the Adzan is broadcasted through loudspeakers, allowing the call to permeate the surrounding areas, thus ensuring that all Muslims within earshot are reminded of the prayer times. In predominantly Muslim regions, the Adzan contributes to the cultural and spiritual atmosphere, blending with the daily life rhythms. Its melodious cadence not only serves as a call to worship but also provides a moment of reflection and spiritual pause for the community, underscoring the collective and individual importance of prayer in Islam.
     `;
     const layout = true;
-    const [carousel, setCarousel] = useState(false);
-    const router = useRouter();
+    const carousel = false
     const videoUrl = 'https://youtu.be/7u6-hMqBoWo?si=i0DO1hegI1Tv2RXm'
     return (
         <div className="w-full gap-10 sm:gap-32 flex flex-col justify-center items-center">

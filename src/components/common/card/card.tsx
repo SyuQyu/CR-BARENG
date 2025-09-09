@@ -13,7 +13,6 @@ export default function Card(
         className,
         title,
         children,
-        style,
         titlePostion = 'text-left'
     }: CardProps
 ) {

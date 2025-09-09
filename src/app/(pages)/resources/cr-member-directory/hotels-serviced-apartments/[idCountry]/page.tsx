@@ -17,11 +17,6 @@ export default function CertifiedProfessionalsDirectoryPage() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const params = useParams<{ idCountry: string }>();
 
-  const handleSearch = () => {
-    // Implement search functionality here
-    console.log("Search query:", searchQuery);
-  };
-
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <section

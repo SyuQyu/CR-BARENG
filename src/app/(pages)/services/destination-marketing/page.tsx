@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 
 import { CardBlogs, ImageWithFallback, PageHero } from "@/components/common";
 import {
@@ -13,14 +12,6 @@ import {
 import { crDestinationMarketingBlogs } from "@/constants/dummyData";
 
 export default function HalalMusimTravelMarketReports() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 10;
-  // Function to handle letter button click
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    // Fetch data or update UI based on the new page
-  };
 
   return (
     <div className="w-full flex flex-col justify-center items-center">

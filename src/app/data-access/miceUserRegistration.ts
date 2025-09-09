@@ -85,7 +85,7 @@ type Mice = {
 } as Mice;
 
 // Function to get mice data
-export async function getMiceAction(miceId: string): Promise<Mice> {
+export async function getMiceAction(): Promise<Mice> {
     return (global as any).mice as Mice;
 }
 

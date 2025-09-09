@@ -89,9 +89,6 @@ const TabsList = React.forwardRef<
   TabsListProps
 >(({ className, children, value, onValueChange, isMobile, tabPosition, mobileMode, ...props }, ref) => {
   if (isMobile && mobileMode === "select") {
-    console.group("TabsList");
-    console.log("isMobile", isMobile);
-    console.log("mobileMode", mobileMode);
     return (
       <div className="relative w-full">
         <Select value={value} onValueChange={onValueChange}>

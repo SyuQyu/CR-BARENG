@@ -114,7 +114,7 @@ export default function Profile() {
                                                         const file = e.target.files?.[0];
                                                         if (file) {
                                                             // Preview image or upload to server
-                                                            console.log("Selected file:", file.name);
+                                                            // console.log("Selected file:", file.name);
 
                                                             // You can add code here to:
                                                             // 1. Show a preview of the uploaded image

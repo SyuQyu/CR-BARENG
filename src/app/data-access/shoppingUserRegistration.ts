@@ -85,7 +85,7 @@ type Shopping = {
 } as Shopping;
 
 // Function to get shopping data
-export async function getShoppingAction(shoppingId: string): Promise<Shopping> {
+export async function getShoppingAction(): Promise<Shopping> {
     return (global as any).shopping as Shopping;
 }
 

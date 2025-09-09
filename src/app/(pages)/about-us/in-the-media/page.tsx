@@ -1,7 +1,8 @@
 "use client";
+import { useState } from "react";
+
 import { CardReports, PageHero, Pagination } from "@/components/common";
 import { inTheMedia } from "@/constants/dummyData";
-import { useState } from "react";
 
 export default function InTheMediaPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,7 +27,6 @@ export default function InTheMediaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
               {inTheMedia.map((report, index) => (
                 <CardReports
-                  id={report.id}
                   key={index}
                   title={report.title}
                   description={report.description}

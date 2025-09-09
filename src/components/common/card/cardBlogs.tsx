@@ -1,10 +1,6 @@
 import clsx from "clsx";
-import { Download } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-
-import { truncateTo100Chars } from "@/utils";
-
 
 interface CardBlogsProps {
   id: number;
@@ -26,25 +22,16 @@ interface CardBlogsProps {
 }
 
 export default function CardBlogs({
-  id,
   title,
-  description,
   imageUrl,
   blogUrl,
-  downloadWithDialog = false, // Default: download langsung
-  buttonType = "outline",
-  buttonContent = (
-    <>
-      <Download /> Download PDF
-    </>
-  ),
   imageBorder = true,
   imgType = "1",
 }: CardBlogsProps) {
-  let truncatedDescription;
-  if (description) {
-    truncatedDescription = truncateTo100Chars(description);
-  }
+  // let truncatedDescription;
+  // if (description) {
+  //   truncatedDescription = truncateTo100Chars(description);
+  // }
 
   return (
     <Link 

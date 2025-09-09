@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { Download } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -27,26 +26,16 @@ interface CardPodcastsProps {
 }
 
 export default function CardPodcasts({
-  id,
   date,
   title,
-  description,
   imageUrl,
   podcastUrl,
-  downloadWithDialog = false, // Default: download langsung
-  buttonType = "outline",
-  buttonContent = (
-    <>
-      <Download /> Download PDF
-    </>
-  ),
   imageBorder = true,
-  imgType = "1",
 }: CardPodcastsProps) {
-  let truncatedDescription;
-  if (description) {
-    truncatedDescription = truncate(description, 100);
-  }
+  // let truncatedDescription;
+  // if (description) {
+  //   truncatedDescription = truncate(description, 100);
+  // }
 
   return (
     <Link
