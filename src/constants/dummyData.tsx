@@ -3568,7 +3568,7 @@ export const tabsDataCrescentRatingAcademy = [
     value: "market-readiness",
     label: "Level 1: Market Readiness",
     title: "Market Readiness",
-    url: "/services/crescentrating-academy/market-readiness",
+    url: "https://www.skillsgo.co/#/allcourses",
     description:
       "Gain a fundamental understanding of the Halal Travel market with our comprehensive online learning program and certification.",
     image: "/image/crescentrating-academy/step-1-market-readiness.webp",
@@ -3728,3 +3728,49 @@ export const crAcademySectorImmersionProgramsCardProfile = [
     imageUrl: "/image/crescentrating-academy/sector-immersion/zuraimi-jumaat.webp",
   }
 ];
+
+export const crAcademyExecutiveEducationCardProfile = [
+  {
+    id: 1,
+    title: "Dr. Nisha Abu Bakar",
+    description: "Tourism consultant and academic with 25+ years’ experience.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/nisha-abu-bakar.webp",
+  },
+  {
+    id: 2,
+    title: "Fazal Bahardeen",
+    description: "Founder of CrescentRating and HalalTrip, pioneer in the Muslim lifestyle and halal travel space.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/fazal-bahardeen.webp",
+  },
+  {
+    id: 3,
+    title: "Cédomir Nestorovic",
+    description: "Professor of International Marketing and Geopolitics at ESSEC.",
+    imageUrl: "/image/crescentrating-academy/executive-education/cedomir-nestorovic.webp",
+  },
+  {
+    id: 4,
+    title: "Nurhafihz Noor",
+    description: "Marketing expert and director at CrescentRating Academy.",
+    imageUrl: "/image/crescentrating-academy/sector-immersion/nurhafihz-noor.webp",
+  },
+  {
+    id: 5,
+    title: "Firdaus Yahya",
+    description: "Scholar in Islamic sciences and a Fatwa Committee member, with degrees from Al-Azhar, IIUM, and ISTAC.",
+    imageUrl: "/image/crescentrating-academy/executive-education/firdaus-yahya.webp",
+  },
+  {
+    id: 6,
+    title: "Ali Akbar Sahiwala",
+    description: "Founder of Rehla Design, specializing in branding for the Islamic Economy.",
+    imageUrl: "/image/crescentrating-academy/executive-education/ali-akbar-sahiwala.webp",
+  },
+  {
+    id: 7,
+    title: "Raudha Zaini",
+    description: "Marketing Manager of HalalTrip – a leading global community platform for Muslim travelers.",
+    imageUrl: "/image/crescentrating-academy/executive-education/raudha-zaini.webp",
+  }
+];
+
