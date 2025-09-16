@@ -1,8 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/common';
 
 export default function NotFound() {
   const router = useRouter();
@@ -27,14 +26,11 @@ export default function NotFound() {
         </p>
         <div className="mt-8 flex justify-center gap-6">
           <Button
-            className='border !font-semibold !rounded-none !text-primary-cr-700'
-            onClick={() => router.back()} variant="ghost" size="lg">
+            onClick={() => router.back()} variant="outline" size="lg">
             Go back
           </Button>
           <Button
-            className="w-full !font-semibold text-desktop-body-3 sm:text-desktop-body-2 bg-primary-cr-700 hover:bg-primary-cr-800 text-white !py-2 !px-4 !rounded-none"
             onClick={() => router.push('/')}
-            variant="default"
             size="lg"
           >
             Return to Home

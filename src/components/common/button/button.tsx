@@ -1,76 +1,38 @@
 import clsx from "clsx"
 import Link from "next/link"
-
 import { Button as UIButton } from "@/components/ui/button"
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "destructive" | "success" | "warning" | "info" | "dark" | "light" | "default" | null | undefined
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "soft" | "destructive"
   children: React.ReactNode
-  size?: "xs" | "sm" | "default" | "lg" | "xl" | "icon" | null | undefined
+  size?: "xs" | "sm" | "default" | "lg" | "xl" | "icon"
   className?: string
-  type?: "button" | "submit" | "reset" | undefined
+  type?: "button" | "submit" | "reset"
   disabled?: boolean
-  link?: any
-  onClick?: any
+  link?: string
+  onClick?: () => void
   fullWidth?: boolean
   loading?: boolean
-  id?: string
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
 }
 
-const mapToShadcnVariant = (variant: string) => {
-  switch (variant) {
-    case "primary":
-    case "success":
-    case "warning":
-    case "info":
-    case "dark":
-      return "default"
-    case "destructive":
-      return "destructive"
-    case "secondary":
-      return "secondary"
-    case "outline":
-      return "outline"
-    case "ghost":
-    case "light":
-      return "ghost"
-    default:
-      return "default"
-  }
+const variantClasses: Record<string, string> = {
+  primary: "bg-primary-cr-700 text-white hover:bg-primary-cr-800 disabled:bg-primary-cr-300",
+  secondary: "bg-white text-primary-cr-700 border border-primary-cr-700 hover:bg-primary-cr-50 disabled:opacity-50",
+  outline: "bg-transparent border border-primary-cr-700 text-primary-cr-700 hover:bg-primary-cr-50 disabled:border-gray-200 disabled:text-gray-300",
+  ghost: "text-primary-cr-700 hover:bg-primary-cr-50 disabled:text-gray-300",
+  soft: "bg-primary-cr-100 text-primary-cr-700 hover:bg-primary-cr-200 disabled:bg-primary-cr-50",
+  destructive: "bg-red-600 text-white hover:bg-red-700 disabled:bg-red-200"
 }
 
-const getCustomVariantClasses = (variant: string, disabled?: boolean) => {
-  if (disabled) {
-    return ""
-  }
-
-  switch (variant) {
-    case "primary":
-      return "bg-blue-600 text-white hover:bg-blue-700 border-blue-600"
-    case "success":
-      return "bg-green-600 text-white hover:bg-green-700 border-green-600"
-    case "warning":
-      return "bg-yellow-500 text-white hover:bg-yellow-600 border-yellow-500"
-    case "info":
-      return "bg-cyan-600 text-white hover:bg-cyan-700 border-cyan-600"
-    case "dark":
-      return "bg-gray-900 text-white hover:bg-gray-800 border-gray-900"
-    case "light":
-      return "bg-gray-100 text-gray-900 hover:bg-gray-200 border-gray-100"
-    default:
-      return ""
-  }
-}
-
-const getCustomSizeClasses = (size: string) => {
-  switch (size) {
-    case "xs":
-      return "h-7 px-2 text-xs"
-    case "xl":
-      return "h-12 px-6 text-lg"
-    default:
-      return ""
-  }
+const sizeClasses: Record<string, string> = {
+  xs: "h-7 px-2 text-xs",
+  sm: "h-9 px-3 text-sm",
+  default: "h-10 px-4 text-sm",
+  lg: "h-11 px-5 text-base",
+  xl: "h-12 px-6 text-base",
+  icon: "h-10 w-10 p-0 flex items-center justify-center"
 }
 
 export default function ButtonCustom({
@@ -84,18 +46,15 @@ export default function ButtonCustom({
   onClick,
   fullWidth = false,
   loading = false,
+  leftIcon,
+  rightIcon,
 }: ButtonProps) {
-  const shadcnVariant = mapToShadcnVariant(variant || "primary")
-
-  const customVariantClasses = getCustomVariantClasses(variant || "primary", disabled || loading)
-  const customSizeClasses = getCustomSizeClasses(size || "default")
-  const widthClass = fullWidth ? "w-full" : ""
-
   const buttonClasses = clsx(
-    customVariantClasses,
-    customSizeClasses,
-    widthClass,
-    "text-ellipsis overflow-hidden whitespace-nowrap",
+    "inline-flex items-center justify-center gap-2 font-medium transition-colors rounded-none",
+    variantClasses[variant],
+    sizeClasses[size],
+    fullWidth && "w-full",
+    disabled && "opacity-50 pointer-events-none",
     className
   )
 
@@ -123,36 +82,26 @@ export default function ButtonCustom({
           />
         </svg>
       )}
+      {leftIcon && <span className="mr-1">{leftIcon}</span>}
       {children}
+      {rightIcon && <span className="ml-1">{rightIcon}</span>}
     </>
   )
 
-  return (
-    link && !disabled && !loading
-      ? (
-        <Link className={fullWidth ? "w-full" : ""} href={link} onClick={onClick}>
-          <UIButton
-            type={type}
-            className={buttonClasses}
-            variant={shadcnVariant as any}
-            size={size === "xs" || size === "xl" ? "default" : size as any}
-            disabled={disabled || loading}
-          >
-            {buttonContent}
-          </UIButton>
-        </Link>
-      )
-      : (
-        <UIButton
-          onClick={onClick}
-          type={type}
-          className={buttonClasses}
-          variant={shadcnVariant as any}
-          size={size === "xs" || size === "xl" ? "default" : size as any}
-          disabled={disabled || loading}
-        >
-          {buttonContent}
-        </UIButton>
-      )
+  return link && !disabled && !loading ? (
+    <Link href={link} className={clsx(fullWidth && "w-full")}>
+      <UIButton type={type} className={buttonClasses} disabled={disabled}>
+        {buttonContent}
+      </UIButton>
+    </Link>
+  ) : (
+    <UIButton
+      onClick={onClick}
+      type={type}
+      className={buttonClasses}
+      disabled={disabled || loading}
+    >
+      {buttonContent}
+    </UIButton>
   )
 }

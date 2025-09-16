@@ -44,7 +44,11 @@ export default function Login() {
                 >
                   Forgot your password?
                 </Link>
-                <Button className="w-full md:text-desktop-body-2 text-mobile-body-2 bg-primary-cr-700 hover:bg-primary-cr-800 hover:text-white font-semibold text-white md:h-[49px] h-[41px]">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-full md:text-desktop-body-2 text-mobile-body-2 font-semibold"
+                >
                   Login
                 </Button>
                 <p className="md:text-desktop-body-2 text-mobile-body-2 font-semibold text-center">

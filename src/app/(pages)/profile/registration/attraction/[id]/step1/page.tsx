@@ -5,8 +5,7 @@ import { useFormState } from 'react-dom';
 import { toast } from "sonner";
 
 import { createAttractionAction, getAttractionAction,updateAttractionAction } from "@/app/(pages)/profile/registration/attraction/action";
-import { Input, OpenStreetMap, RichTextEditor } from "@/components/common";
-import { Button } from "@/components/ui/button";
+import { Button, Input, OpenStreetMap, RichTextEditor } from "@/components/common";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
     Select,
@@ -347,7 +346,6 @@ export default function AttractionRegistrationPage({ params }: { params?: { id: 
                     </div>
                 </section>
 
-                {/* Submit Button */}
                 <div className="flex justify-center pt-4">
                     <Button
                         type="submit"
@@ -357,7 +355,6 @@ export default function AttractionRegistrationPage({ params }: { params?: { id: 
                     </Button>
                 </div>
 
-                {/* Error display */}
                 {state.error && (
                     <div className="p-4 bg-red-50 border border-red-200 text-red-600 rounded-md">
                         {state.error}

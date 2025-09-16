@@ -46,12 +46,12 @@ export default function HalalMusimTravelGlobalSummit() {
                             Empowering the Future of Travel: Unlocking the Billion-Dollar Halal Market
                         </p>
                         <div className="flex flex-row justify-center items-center md:gap-16 gap-6 sm:mt-12 mt-8">
-                            <button className="font-semibold text-mobile-body-2 text-custom-blue bg-white py-2 sm:py-3 px-4 sm:px-5">
+                            <Button variant="secondary" size="lg">
                                 Learn More
-                            </button>
-                            <button className="font-semibold text-mobile-body-2 bg-custom-blue text-white py-2 sm:py-3 px-4 sm:px-5">
+                            </Button>
+                            <Button className="bg-custom-blue" variant="primary" size="lg">
                                 Register Now
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

@@ -238,7 +238,6 @@ export default function HalalMusimTravelMarketReportsDetail() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 mt-10">
                         {reports.slice(0, 3).map((report, index) => (
                             <CardReports
-                                id={report.id}
                                 key={index}
                                 title={report.title}
                                 date={report.date}
