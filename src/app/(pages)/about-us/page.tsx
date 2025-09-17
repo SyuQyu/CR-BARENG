@@ -153,52 +153,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
-          <p className="lg:text-desktop-heading-5 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
-            A Journey of Innovation in Halal Tourism
-          </p>
-          <div className="mt-10 flex flex-row justify-center items-start w-full gap-6">
-            <Carousel2
-              years={[2020, 2021, 2022, 2023, 2024]} // Daftar tahun
-              className="w-full"
-            >
-              <CarouselContent2>
-                {[...Array(5)].map((_, index) => (
-                  <CarouselItem2
-                    key={index}
-                    index={index}
-                    image={
-                      <ImageWithFallback
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        // className="md:max-w-[410px] w-full max-h-[300px] sm:max-h-[400px] md:max-h-[400px] lg:max-h-[510px] lg:w-[510px] xl:max-w-[510px] object-cover"
-                        className="w-full object-cover"
-                        priority={false}
-                        src={"/image/about-us/testpic.webp"}
-                        alt={"testpic"}
-                      />
-                    }
-                  >
-                    <div className="w-full flex flex-col gap-2 justify-center items-center">
-                      <p className="font-bold text-desktop-heading-6">
-                        Lorem Ipsum
-                      </p>
-                      <p className="text-desktop-body-2 text-gray-600 text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magnam incidunt repellendus at iure eum in. Excepturi
-                        eum autem provident assumenda exercitationem deleniti
-                        sunt laboriosam. Non neque sed at perferendis delectus.
-                      </p>
-                    </div>
-                  </CarouselItem2>
-                ))}
-              </CarouselContent2>
-              <CarouselPrevious2 />
-              <CarouselNext2 />
-            </Carousel2>
-          </div>
-        </div>
+        
         <div className="max-w-[1440px] px-6 lg:px-8 w-full">
           {openTeam ? (
             <>
@@ -307,10 +262,10 @@ export default function AboutUs() {
                       Executive Management
                     </TabsTrigger>
                     <TabsTrigger className="w-full" value="creative-experience">
-                      Creative & Experience
+                      Brand & Creative
                     </TabsTrigger>
                     <TabsTrigger className="w-full" value="service-technology">
-                      Service & Technology
+                      Design & Development
                     </TabsTrigger>
                     <TabsTrigger className="w-full" value="data-research">
                       Data & Research
@@ -374,37 +329,37 @@ export default function AboutUs() {
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start md:p-8 p-6 w-full gap-1 bg-neutral-100">
             <div className="w-full flex flex-col justify-center items-center  gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                35+
+                20k+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Global partners & clients
+                Media mentions and features
               </p>
             </div>
             <div className="md:border-l border-b border-neutral-300 md:h-28 md:w-auto w-full my-2"></div>
             <div className="w-full flex flex-col justify-center items-center gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                10k+
+                300+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Media Mentions
+                CrescentRatings awarded globally
               </p>
             </div>
             <div className="md:border-l border-b border-neutral-300 md:h-28 md:w-auto w-full my-2"></div>
             <div className="w-full flex flex-col justify-center items-center gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                15+
+                70k+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Years of experience
+                Industry partners worldwide
               </p>
             </div>
             <div className="md:border-l border-b border-neutral-300 md:h-28 md:w-auto w-full my-2"></div>
             <div className="w-full flex flex-col justify-center items-center gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                25+
+                20+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Destinations services provided
+                Tourism agencies collaborations
               </p>
             </div>
           </div>

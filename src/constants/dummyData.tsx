@@ -2984,138 +2984,149 @@ export const teamDataAboutUs: any = {
     {
       name: "Fazal Bahardeen",
       role: "CEO",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Fazal-Bahardeen.png",
     },
     {
       name: "Raudha Zaini",
       role: "Head of Strategic Partnerships & Projects",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Raudha-Zaini.png",
     },
     {
-      name: "Moiz Mustafa",
-      role: "Head of Product Innovation & Digitalisation",
-      image: "/image/about-us/team/template.webp",
+      name: "Aayesha Fazal",
+      role: "Head of Brand & People Experience",
+      image: "/image/about-us/team/Aayesha-Fazal.png",
     },
     {
       name: "Tawfiq Ikhtianto",
       role: "Head of Research and Capacity Building",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Tawfiq-Ikhtianto.png",
     },
     {
       name: "Daniswara Nugroho",
       role: "Head of Business Development & Events",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Daniswara-Nugroho.png",
     },
     {
-      name: "Muhammad Jodi Pratama",
-      role: "Performance & Growth Lead",
-      image: "/image/about-us/team/template.webp",
+      name: "Muhammad Ridhwan",
+      role: "Head of Product Design & Development",
+      image: "/image/about-us/team/Muhammad-Ridhwan.png",
     },
   ],
   "creative-experience": [
     {
-      name: "Raudha Zaini",
-      role: "Head of Strategic Partnerships & Projects",
-      image: "/image/about-us/team/template.webp",
-    },
-    {
-      name: "Nur Hazirah Jamaludin",
-      role: "Brand & Communications Lead",
-      image: "/image/about-us/team/template.webp",
-    },
-    {
-      name: "Muhammad Ridwan",
-      role: "Digital Marketing & Content Lead",
-      image: "/image/about-us/team/template.webp",
-    },
-    {
-      name: "Adila Ilma",
-      role: "Product Designer (UI/UX)",
-      image: "/image/about-us/team/template.webp",
+      name: "Aayesha Fazal",
+      role: "Head of Brand & People Experience",
+      image: "/image/about-us/team/Aayesha-Fazal.png",
     },
     {
       name: "Humaira Khairunnisa",
       role: "Brand Creative Designer",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Humaira-Khairunnisa.png",
     },
     {
-      name: "Hasna Zahidahni Hamidah",
-      role: "Marketing & Communications Executive",
-      image: "/image/about-us/team/template.webp",
+      name: "Lala Haszna Salsabila",
+      role: "Social Media",
+      image: "/image/about-us/team/Lala-Haszna-Salsabila.png",
     },
     {
-      name: "Muhammad Ananda Faris H.",
-      role: "Product Designer (UI/UX)",
-      image: "/image/about-us/team/template.webp",
-    },
-    {
-      name: "Zafira Khairani",
-      role: "Product Designer (UI/UX)",
-      image: "/image/about-us/team/template.webp",
+      name: "Farah Fauziah Arditami",
+      role: "Growth Performance Marketing",
+      image: "/image/about-us/team/Farah-Fauziah-Arditami.png",
     },
   ],
   "service-technology": [
     {
-      name: "Moiz Mustafa",
-      role: "Head of Product Innovation & Digitalisation",
-      image: "/image/about-us/team/template.webp",
+      name: "Muhammad Ridhwan",
+      role: "Head of Product Design & Development",
+      image: "/image/about-us/team/Muhammad-Ridhwan.png",
     },
     {
       name: "Nadine Haninta",
       role: "Developer Lead",
-      image: "/image/about-us/team/template.webp",
-    },
-    {
-      name: "Bimo Wicaksono",
-      role: "Travel Product Development Executive",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Nadine-Haninta.png",
     },
     {
       name: "Pandu Utomo",
       role: "Front-End Developer",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Pandu-Utomo.png",
+    },
+    {
+      name: "Muhammad Ananda Faris H.",
+      role: "Product Designer (UI/UX)",
+      image: "/image/about-us/team/Muhammad-Ananda-Faris-H.png",
+    },
+    {
+      name: "Zafira Khairani",
+      role: "Product Designer (UI/UX)",
+      image: "/image/about-us/team/Zafira-Khairani.png",
     },
   ],
   "data-research": [
     {
       name: "Tawfiq Ikhtianto",
       role: "Head of Research and Capacity Building",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Tawfiq-Ikhtianto.png",
     },
     {
       name: "Maryam Binte Mohammad",
       role: "Product Development Strategist",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Maryam-Binte-Mohammad.png",
     },
     {
       name: "Denny Andriana Wahyu",
       role: "Data Analyst Lead",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Denny-Andriana-Wahyu.png",
     },
     {
       name: "Ditra Bulan Ramadini",
       role: "Research Analyst Lead",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Ditra-Bulan-Ramadini.png",
+    },
+    {
+      name: "Dena Conchita Panuntun",
+      role: "Stakeholder Coordinator",
+      image: "/image/about-us/team/Dena-Conchita-Panuntun.png",
+    },
+    {
+      name: "Miranda Khairunnisa",
+      role: "Research Assistant",
+      image: "/image/about-us/team/Miranda-Khairunnisa.png",
+    },
+    {
+      name: "Rista Tristanti Krisdina",
+      role: "Data Collector",
+      image: "/image/about-us/team/Rista-Tristanti-Krisdina.png",
+    },
+    {
+      name: "Hidayatul Nabila",
+      role: "Stakeholder Coordinator CR Academy",
+      image: "/image/about-us/team/Hidayatul-Nabila.png",
+    },
+    {
+      name: "Shafa Dewi Nugroho",
+      role: "Product Development - Rating & Accreditation",
+      image: "/image/about-us/team/Shafa-Dewi-Nugroho.png",
     },
   ],
   "business-events": [
     {
       name: "Daniswara Nugroho",
       role: "Head of Business Development & Events",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Daniswara-Nugroho.png",
     },
     {
       name: "Ersya Fadilla Rachmat",
       role: "Events Management Lead",
-      image: "/image/about-us/team/template.webp",
+      image: "/image/about-us/team/Ersya-Fadilla-Rachmat.png",
     },
     {
-      name: "Farah Fauziah Arditami",
-      role: "Business Development Executive",
-      image: "/image/about-us/team/template.webp",
+      name: "Nur Aliya Nadhira Binti Azman",
+      role: "Event Management",
+      image: "/image/about-us/team/Nur-Aliya-Nadhira-Binti-Azman.png",
     },
   ],
 };
+
 
 export const awardsAboutUs = [
   {
