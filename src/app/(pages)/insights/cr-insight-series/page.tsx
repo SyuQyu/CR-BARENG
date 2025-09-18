@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { CardInsights, CardProfile, CardReports, ImageWithFallback, Pagination } from "@/components/common";
+import { Button, CardInsights, CardProfile, CardReports, ImageWithFallback, Pagination } from "@/components/common";
 import { cardDataInsightSeries, CardProfile1InsightSeries, CardProfile2InsightSeries,reportsInsightSeries } from "@/constants/dummyData";
 
 export default function CardInsightsSeries() {
@@ -31,9 +31,9 @@ export default function CardInsightsSeries() {
                         <p className="text-white text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
                             The Mastercard-CrescentRating Muslim-Friendly Cruise Report 2024 offers a comprehensive analysis aimed at enhancing the Halal Tourism experience and meeting the evolving needs of Muslim travelers. This report reflects a commitment to inclusivity, diversity, and responsible cruising, drawing on extensive research and analysis of Muslim consumer preferences. It addresses the cruise industry’s imperative for diversity, inclusivity, and sustainability, providing insights and recommendations based on CrescentRating’s RIDA framework to help cruise operators cater to Muslim travelers and promote a respectful and culturally diverse environment.
                         </p>
-                        <button className="flex flex-row gap-2 lg:text-mobile-body-1 text-mobile-body-3 text-white">
-                            <Download className="lg:size-6 size-5" /> Download PDF
-                        </button>
+                        <Button variant="ghost" className="text-white">
+                            <Download className="lg:size-6 size-5" />Download PDF
+                        </Button>
                     </div>
                     <ImageWithFallback
                         width={0}
@@ -75,7 +75,6 @@ export default function CardInsightsSeries() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
                             {reportsInsightSeries.map((report, index) => (
                                 <CardReports
-                                    id={report.id}
                                     key={index}
                                     title={report.title}
                                     date={report.date}
@@ -130,7 +129,6 @@ export default function CardInsightsSeries() {
                         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
                             {CardProfile1InsightSeries.map((data, index) => (
                                 <CardProfile
-                                    id={data.id}
                                     key={index}
                                     title={data.title}
                                     linkedinUrl={data.linkedinUrl}
@@ -149,7 +147,6 @@ export default function CardInsightsSeries() {
                         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
                             {CardProfile2InsightSeries.map((data, index) => (
                                 <CardProfile
-                                    id={data.id}
                                     key={index}
                                     title={data.title}
                                     linkedinUrl={data.linkedinUrl}

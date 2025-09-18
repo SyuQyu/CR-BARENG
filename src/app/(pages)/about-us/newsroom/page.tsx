@@ -56,7 +56,6 @@ export default function PressReleasePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-9">
               {pressRelease.map((report, index) => (
                 <CardReports
-                  id={report.id}
                   key={index}
                   title={report.title}
                   description={report.description}

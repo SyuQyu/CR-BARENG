@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react'; // Import icons
 import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
 
-import { ImageWithFallback } from '@/components/common';
+import { Button, ImageWithFallback } from '@/components/common';
 
 interface Props {
     children: ReactNode;
@@ -36,13 +36,14 @@ export default function UserRegistrationLayout({ children }: Props) {
     return (
         <div className="w-full flex md:flex-row md:gap-10 relative ">
             {/* Mobile toggle button - only visible on small screens */}
-            <button
+            <Button
+                variant='primary'
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="fixed top-4 right-4 z-50 md:hidden bg-[#1502cd] text-white p-2 rounded-full shadow-lg"
+                className="fixed top-4 right-4 z-50 md:hidden shadow-lg"
                 aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
             >
                 {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </Button>
 
             {/* Sidebar - hidden by default on mobile, shown when toggled */}
             <div
@@ -100,12 +101,12 @@ export default function UserRegistrationLayout({ children }: Props) {
 
                 {/* Save and Continue Button */}
                 <div className="mt-auto">
-                    <button
-                        className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 px-6 rounded"
+                    <Button
+                        className="bg-yellow-400 hover:bg-yellow-500 text-black rounded"
                         onClick={() => setIsSidebarOpen(false)} // Close sidebar on mobile when clicked
                     >
                         Save and Continue Later
-                    </button>
+                    </Button>
                 </div>
             </div>
 

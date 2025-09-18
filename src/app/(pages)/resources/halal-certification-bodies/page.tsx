@@ -49,7 +49,6 @@ export default function HalalCertificationBodiesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
               {halalCertificationBodies.map((report, index) => (
                 <CardReports
-                  id={report.id}
                   key={index}
                   title={report.title}
                   description={report.description}

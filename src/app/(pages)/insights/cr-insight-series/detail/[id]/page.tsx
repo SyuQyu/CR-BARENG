@@ -2,7 +2,7 @@ import {
     Download,
 } from "lucide-react";
 
-import { CardReports, ImageWithFallback, Input } from "@/components/common";
+import { Button, CardReports, ImageWithFallback, Input } from "@/components/common";
 import { Checkbox } from "@/components/ui/checkbox"
 import {
     Dialog,
@@ -114,9 +114,9 @@ export default function CRInsightSeriesDetail() {
                                                 </label>
                                             </div>
                                         </div>
-                                        <button className="flex flex-row justify-center items-center gap-2 text-white bg-custom-purple-cr p-4 w-full">
+                                        <Button variant="primary" className="bg-custom-purple-cr w-full">
                                             Download Publication
-                                        </button>
+                                        </Button>
                                     </div>
                                 </div>
                                 <ImageWithFallback
@@ -238,7 +238,6 @@ export default function CRInsightSeriesDetail() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 mt-10">
                         {reportsInsightSeries.slice(0, 3).map((report, index) => (
                             <CardReports
-                                id={report.id}
                                 key={index}
                                 title={report.title}
                                 date={report.date}

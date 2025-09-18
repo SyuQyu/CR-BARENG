@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { CardReports, CardReports2, ImageWithFallback, Pagination } from "@/components/common";
+import { Button, CardReports, CardReports2, ImageWithFallback, Pagination } from "@/components/common";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { reports } from "@/constants/dummyData"
 
@@ -32,9 +32,9 @@ export default function HalalMusimTravelMarketReports() {
                         <p className="text-white text-left text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl">
                             The Mastercard-CrescentRating Muslim-Friendly Cruise Report 2024 offers a comprehensive analysis aimed at enhancing the Halal Tourism experience and meeting the evolving needs of Muslim travelers. This report reflects a commitment to inclusivity, diversity, and responsible cruising, drawing on extensive research and analysis of Muslim consumer preferences. It addresses the cruise industry’s imperative for diversity, inclusivity, and sustainability, providing insights and recommendations based on CrescentRating’s RIDA framework to help cruise operators cater to Muslim travelers and promote a respectful and culturally diverse environment.
                         </p>
-                        <button className="flex flex-row gap-2 lg:text-mobile-body-1 text-mobile-body-3 text-white">
+                        <Button variant="ghost" className="text-white">
                             <Download className="lg:size-6 size-5" /> Download PDF
-                        </button>
+                        </Button>
                     </div>
                     <ImageWithFallback
                         width={0}
@@ -62,7 +62,6 @@ export default function HalalMusimTravelMarketReports() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 pt-10">
                                     {reports.map((report, index) => (
                                         <CardReports
-                                            id={report.id}
                                             key={index}
                                             title={report.title}
                                             date={report.date}
@@ -82,7 +81,6 @@ export default function HalalMusimTravelMarketReports() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 pt-10">
                                     {reports.map((report, index) => (
                                         <CardReports
-                                            id={report.id}
                                             key={index}
                                             title={report.title}
                                             date={report.date}
@@ -102,7 +100,6 @@ export default function HalalMusimTravelMarketReports() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 pt-10">
                                     {reports.map((report, index) => (
                                         <CardReports
-                                            id={report.id}
                                             key={index}
                                             title={report.title}
                                             date={report.date}

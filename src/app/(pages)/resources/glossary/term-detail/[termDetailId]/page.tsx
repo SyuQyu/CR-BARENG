@@ -2,7 +2,7 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
 
-import { BreadCrumb, CarouselGlossaryPage,ImageWithFallback, YouTubeCard } from "@/components/common";
+import { BreadCrumb, Button, CarouselGlossaryPage,ImageWithFallback, YouTubeCard } from "@/components/common";
 import { Badge } from "@/components/ui/badge"
 import { DUMMY_DATA_GLOSSARY, DUMMY_IMG,DUMMY_TAG } from "@/constants/dummyData"
 
@@ -18,12 +18,13 @@ const ReadMore = ({ text, maxLength }: { text: string, maxLength: number }) => {
                 {shouldTruncate ? `${text.slice(0, maxLength)}...` : text}
             </p>
             {text.length > maxLength && (
-                <button
-                    className="text-blue-500 font-semibold mt-2 text-center flex flex-row justify-center items-center w-full"
+                <Button
+                    variant="primary"
+                    className="w-full"
                     onClick={() => setIsExpanded(!isExpanded)}
                 >
                     {isExpanded ? <p className="flex flex-row text-mobile-body-2">Read Less <ChevronUp /></p> : <p className="flex flex-row text-mobile-body-2">Read More <ChevronDown /></p>}
-                </button>
+                </Button>
             )}
         </div>
     );

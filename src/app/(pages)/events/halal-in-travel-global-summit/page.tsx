@@ -399,9 +399,9 @@ export default function HalalMusimTravelGlobalSummit() {
                                     <Checkbox id="terms" className="border-white" />
                                     <label htmlFor="terms" className="font-semibold text-desktop-label-l">I Accept the Terms and Conditions</label>
                                 </div>
-                                <button className="w-full font-semibold text-mobile-body-2 text-custom-blue bg-white py-3 px-5">
+                                <Button variant="secondary" className="w-full">
                                     Submit
-                                </button>
+                                </Button>
                             </div>
                             <ImageWithFallback
                                 width={0}

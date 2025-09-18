@@ -216,7 +216,6 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
                 {reportsInsightSeries.slice(0, 3).map((report, index) => (
                   <CardReports
-                    id={report.id}
                     key={index}
                     title={report.title}
                     imageUrl={report.imageUrl}
@@ -247,7 +246,6 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
                 {reportsInsightSeries.slice(0, 3).map((report, index) => (
                   <CardReports
-                    id={report.id}
                     key={index}
                     title={report.title}
                     imageUrl={report.imageUrl}
@@ -347,7 +345,6 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-9">
                 {reportsInsightSeries.slice(0, 4).map((report, index) => (
                   <CardReports
-                    id={report.id}
                     key={index}
                     title={"Global Labor Market Conference 2025"}
                     imageUrl={report.imageUrl}
@@ -379,7 +376,6 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
                 {reportsInsightSeries.slice(0, 3).map((report, index) => (
                   <CardReports
-                    id={report.id}
                     key={index}
                     title={"Global Labor Market Conference 2025"}
                     imageUrl={report.imageUrl}

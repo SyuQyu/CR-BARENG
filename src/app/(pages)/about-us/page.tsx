@@ -411,11 +411,6 @@ export default function AboutUs() {
                   />
                 ))}
               </div>
-              {/* <div className="w-full flex justify-center mt-6">
-                                <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 text-blue-600 border-gray-600/20 border p-3 sm:p-4">
-                                    View More
-                                </Button>
-                            </div> */}
             </div>
           </div>
         </div>
@@ -453,11 +448,6 @@ export default function AboutUs() {
               </div>
             ))}
           </div>
-          {/* <div className="w-full flex justify-center mt-6">
-                        <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 text-blue-600 border-gray-600/20 border p-3 sm:p-4">
-                            View More
-                        </Button>
-                    </div> */}
         </div>
       </div>
     </div>

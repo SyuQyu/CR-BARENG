@@ -21,7 +21,7 @@ const variantClasses: Record<string, string> = {
   primary: "bg-primary-cr-700 text-white hover:bg-primary-cr-800 disabled:bg-primary-cr-300",
   secondary: "bg-white text-primary-cr-700 border border-primary-cr-700 hover:bg-primary-cr-50 disabled:opacity-50",
   outline: "bg-transparent border border-primary-cr-700 text-primary-cr-700 hover:bg-primary-cr-50 disabled:border-gray-200 disabled:text-gray-300",
-  ghost: "text-primary-cr-700 hover:bg-primary-cr-50 disabled:text-gray-300",
+  ghost: "text-primary-cr-700 disabled:text-gray-300",
   soft: "bg-primary-cr-100 text-primary-cr-700 hover:bg-primary-cr-200 disabled:bg-primary-cr-50",
   destructive: "bg-red-600 text-white hover:bg-red-700 disabled:bg-red-200"
 }
