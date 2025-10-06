@@ -85,7 +85,6 @@ export const pricingPlans = [
   },
 ];
 
-
 export const faqData = [
   {
     value: "item-1",
@@ -95,25 +94,27 @@ export const faqData = [
       content: [
         "CrescentRating was founded in December 2008 with the vision to help both the Muslim travelers as well as the travel and Hospitality industry.",
         "CrescentRating's aim is to bring awareness of the fast growing Halal travel (Muslim travel) market to destinations and travel services and also enable them to attract the Muslim travellers through capability and capacity building.",
-        "For Muslim travellers, CrescentRating's objective is to help them explore the world with peace of mind."
-      ]
-    }
+        "For Muslim travellers, CrescentRating's objective is to help them explore the world with peace of mind.",
+      ],
+    },
   },
   {
     value: "item-2",
     question: "What are the services offered by CrescentRating?",
     answer: {
       type: "text",
-      content: "CrescentRating offers a wide range of services to help destinations and travel services understand the Halal travel market, build capability and capacity as well as destination marketing to reach out to the Muslim travellers. The services include research & consultancy, staff training and certification, product development, Crescent Rating of services & facilities, destination marketing and event management."
-    }
+      content:
+        "CrescentRating offers a wide range of services to help destinations and travel services understand the Halal travel market, build capability and capacity as well as destination marketing to reach out to the Muslim travellers. The services include research & consultancy, staff training and certification, product development, Crescent Rating of services & facilities, destination marketing and event management.",
+    },
   },
   {
     value: "item-3",
     question: "What is Crescent Rating?",
     answer: {
       type: "text",
-      content: "Crescent Rating is a globally recognized independent rating standard to rate travel and hospitality services based on their Halal friendly travel services. The world first hotel Crescent Rating system was launched in 2008. Now the rating has been expanded to cover other services such as holiday packages, restaurants, spas, theme parks etc."
-    }
+      content:
+        "Crescent Rating is a globally recognized independent rating standard to rate travel and hospitality services based on their Halal friendly travel services. The world first hotel Crescent Rating system was launched in 2008. Now the rating has been expanded to cover other services such as holiday packages, restaurants, spas, theme parks etc.",
+    },
   },
   {
     value: "item-4",
@@ -123,17 +124,18 @@ export const faqData = [
       content: [
         "Hotels are rated based on the services and facilities that they provide, catering to the needs of Halal-conscious travellers. The Crescent Rating system rates overall Halal (Muslim) friendliness of on a scale of one to seven, with seven being the highest rating.",
         "The service ratings are separated into four different areas; Halal food facilities, Salaath (prayer) facilities, services during Ramadan, and level of non-Halal activities in the hotel and additional Halal-friendly recreational facilities.",
-        "For more information on Hotel Crescent Rating please visit Hotel Crescent Rating page."
-      ]
-    }
+        "For more information on Hotel Crescent Rating please visit Hotel Crescent Rating page.",
+      ],
+    },
   },
   {
     value: "item-5",
     question: "Why should a Hotel get Crescent Rated?",
     answer: {
       type: "text",
-      content: "Crescent Rating provides the Hotel an independent verification and audit of its services and facilities. This allows Hotels to confidently market the property to Muslim consumers. For Muslim consumers, it gives a peace of mind that the hotel's Muslim-friendly services have independently verified. For more information on the benefits of getting Crescent Rated, click here."
-    }
+      content:
+        "Crescent Rating provides the Hotel an independent verification and audit of its services and facilities. This allows Hotels to confidently market the property to Muslim consumers. For Muslim consumers, it gives a peace of mind that the hotel's Muslim-friendly services have independently verified. For more information on the benefits of getting Crescent Rated, click here.",
+    },
   },
   {
     value: "item-6",
@@ -146,19 +148,21 @@ export const faqData = [
           "Hotel registers to get a Crescent Rating here.",
           "Once the registration process is complete, the hotel will submit all the required information online.",
           "Crescent Rating will verify the information provided",
-          "Once the information is verified, the Hotel will be granted a Crescent Rating."
-        ]
-      }
-    }
+          "Once the information is verified, the Hotel will be granted a Crescent Rating.",
+        ],
+      },
+    },
   },
   {
     value: "item-7",
-    question: "Can rental Homes, Apartments, Villas and Bungalows get a Crescent Rating?",
+    question:
+      "Can rental Homes, Apartments, Villas and Bungalows get a Crescent Rating?",
     answer: {
       type: "text",
-      content: "Yes, such facilities can also obtain a Crescent Rating based on the services and facilities it provides"
-    }
-  }
+      content:
+        "Yes, such facilities can also obtain a Crescent Rating based on the services and facilities it provides",
+    },
+  },
 ];
 
 export const DUMMY_DATA_GLOSSARY = [
@@ -444,7 +448,7 @@ export const menuItems = [
         description: "",
       },
       { title: "Careers", href: "/about-us/careers", description: "" },
-      { title: "Contact Us", href: "/about-us/contact-us", description: "" }
+      { title: "Contact Us", href: "/about-us/contact-us", description: "" },
     ],
   },
 ];
@@ -522,7 +526,8 @@ export const ratingItemsSubPages = [
   {
     key: "hotel",
     title: "Hotel Rating",
-    description: "Halal-friendly rating for hotels to meet Muslim travelers' needs.",
+    description:
+      "Halal-friendly rating for hotels to meet Muslim travelers' needs.",
     image: "/image/rating-accreditation/new/hotel-rating.jpg",
     url: "/services/rating-and-accreditation/hotels",
   },
@@ -546,7 +551,7 @@ export const ratingItemsSubPages = [
     description: "Rating system for malls based on halal amenities.",
     image: "/image/rating-accreditation/new/shopping-malls-rating.jpg",
     url: "/services/rating-and-accreditation/shopping-mall",
-  }
+  },
 ];
 
 export const tabsDataRatingAndAccreditation = [
@@ -879,41 +884,20 @@ export const medpart = [
 
 export const cardData = [
   {
-    title: "Globally Recognised",
+    title: "Expert Market Understanding",
     description:
-      "CrescentRating is a globally recognized independent rating and accreditation service",
+      "Gain deep insights into the Halal/Muslim travel industry to better cater to your target audience.",
     icon: (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-      >
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C11.4853 3 10.9806 3.04321 10.4895 3.12621L12.7398 4.25137C14.1255 4.94421 15.0008 6.36048 15.0008 7.90973V7.9999C15.0008 10.209 13.2099 11.9999 11.0008 11.9999H10.0856C9.09383 11.9999 8.4212 13.0088 8.80266 13.9243C9.62541 15.899 8.43598 18.1327 6.33835 18.5522L5.92001 18.6359C7.32291 19.9219 9.13488 20.769 11.1383 20.9593L11.3588 19.4152C11.5111 18.3491 12.3487 17.5115 13.4148 17.3592C14.3242 17.2293 14.9997 16.4504 14.9997 15.5318V15.2996C14.9997 13.4907 16.8266 12.2538 18.5061 12.9256L20.8102 13.8473C20.9346 13.251 21 12.6332 21 12C21 7.02944 16.9706 3 12 3ZM20.1836 15.7507L17.7634 14.7826C17.3976 14.6363 16.9997 14.9057 16.9997 15.2996V15.5318C16.9997 17.4457 15.5924 19.0684 13.6976 19.3391C13.5115 19.3657 13.3653 19.5119 13.3387 19.698L13.1634 20.9255C16.2912 20.5218 18.9158 18.5124 20.1836 15.7507ZM3 12C3 8.53829 4.9544 5.53306 7.81999 4.02752L11.8454 6.04022C12.5535 6.39428 13.0008 7.11803 13.0008 7.90973V7.9999C13.0008 9.10447 12.1054 9.9999 11.0008 9.9999H10.0856C7.66668 9.9999 6.02614 12.4607 6.9565 14.6936C7.29384 15.5032 6.80616 16.419 5.94612 16.591L4.44402 16.8914C3.53052 15.4832 3 13.8036 3 12Z"
-          fill="#2D15FF"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Trusted",
-    description:
-      "Our ratings and accreditations are trusted by a growing community of Halal conscious leisure and business travelers who rely on our expertise to make informed decisions.",
-    icon: (
-      <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
       >
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
           d="M19 3V1H21V3H23V5H21V7H19V5H17V3H19ZM3 4.5V3H5V4.5H6.5V6.5H5V8H3V6.5H1.5V4.5H3ZM9.63296 5.09732C10.1644 3.92054 11.8356 3.92054 12.367 5.09732L14.556 9.94398L19.4027 12.133C20.5795 12.6644 20.5795 14.3356 19.4027 14.867L14.556 17.056L12.367 21.9027C11.8356 23.0795 10.1644 23.0795 9.63296 21.9027L7.44398 17.056L2.59732 14.867C1.42054 14.3356 1.42054 12.6644 2.59732 12.133L7.44398 9.94398L9.63296 5.09732ZM11 6.92947L9.18896 10.9393C9.03866 11.2721 8.77213 11.5387 8.43934 11.689L4.42947 13.5L8.43934 15.311C8.77213 15.4613 9.03866 15.7279 9.18896 16.0607L11 20.0705L12.811 16.0607C12.9613 15.7279 13.2279 15.4613 13.5607 15.311L17.5705 13.5L13.5607 11.689C13.2279 11.5387 12.9613 11.2721 12.811 10.9393L11 6.92947Z"
           fill="#2D15FF"
         />
@@ -921,42 +905,100 @@ export const cardData = [
     ),
   },
   {
-    title: "Autonomous",
+    title: "Strategic Business Growth",
     description:
-      "We evaluate your current offerings and provide unbiased, strategic recommendations to help you enhance your services and attract Halal conscious Muslim travelers to your establishments.",
+      "Evaluate your offerings and develop a tailored strategy to attract Muslim travelers.",
     icon: (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
         viewBox="0 0 24 24"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M9 5.5C9 4.39543 9.89543 3.5 11 3.5H13C14.1046 3.5 15 4.39543 15 5.5V18.5C15 19.6046 14.1046 20.5 13 20.5H11C9.89543 20.5 9 19.6046 9 18.5V5.5ZM13 5.5H11V18.5H13V5.5ZM17 9.5C17 8.39543 17.8954 7.5 19 7.5H21C22.1046 7.5 23 8.39543 23 9.5V18.5C23 19.6046 22.1046 20.5 21 20.5H19C17.8954 20.5 17 19.6046 17 18.5V9.5ZM21 9.5L19 9.5V18.5H21V9.5ZM1 14C1 12.8954 1.89543 12 3 12H5C6.10457 12 7 12.8954 7 14V18.5C7 19.6046 6.10457 20.5 5 20.5H3C1.89543 20.5 1 19.6046 1 18.5V14ZM5 14H3V18.5H5V14Z"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.92684 1H14.0732C15.8966 0.999973 17.3664 0.999951 18.5223 1.15537C19.7225 1.31672 20.733 1.66191 21.5355 2.46447C22.3381 3.26702 22.6833 4.27752 22.8446 5.47767C23.0001 6.63363 23 8.1034 23 9.92686V14.0731C23 15.8966 23.0001 17.3664 22.8446 18.5223C22.6833 19.7225 22.3381 20.733 21.5355 21.5355C20.733 22.3381 19.7225 22.6833 18.5223 22.8446C17.3664 23.0001 15.8966 23 14.0731 23H9.92686C8.1034 23 6.63363 23.0001 5.47767 22.8446C4.27752 22.6833 3.26702 22.3381 2.46447 21.5355C1.66191 20.733 1.31672 19.7225 1.15537 18.5223C0.999951 17.3664 0.999973 15.8966 1 14.0732V9.92684C0.999973 8.10338 0.999951 6.63362 1.15537 5.47767C1.31672 4.27752 1.66191 3.26702 2.46447 2.46447C3.26702 1.66191 4.27752 1.31672 5.47767 1.15537C6.63362 0.999951 8.10338 0.999973 9.92684 1ZM5.74416 3.13753C4.76579 3.26907 4.2477 3.50966 3.87868 3.87868C3.50966 4.2477 3.26907 4.76579 3.13753 5.74416C3.00213 6.7513 3 8.08611 3 10V14C3 15.9139 3.00213 17.2487 3.13753 18.2558C3.26907 19.2342 3.50966 19.7523 3.87868 20.1213C4.2477 20.4903 4.76579 20.7309 5.74416 20.8625C6.7513 20.9979 8.08611 21 10 21H14C15.9139 21 17.2487 20.9979 18.2558 20.8625C19.2342 20.7309 19.7523 20.4903 20.1213 20.1213C20.4903 19.7523 20.7309 19.2342 20.8625 18.2558C20.9979 17.2487 21 15.9139 21 14V10C21 8.08611 20.9979 6.7513 20.8625 5.74416C20.7309 4.76579 20.4903 4.2477 20.1213 3.87868C19.7523 3.50966 19.2342 3.26907 18.2558 3.13753C17.2487 3.00213 15.9139 3 14 3H10C8.08611 3 6.7513 3.00213 5.74416 3.13753ZM15.0858 10H13.5V8H17.5C18.0523 8 18.5 8.44772 18.5 9V13H16.5V11.4142L13.9142 14C13.1332 14.7811 11.8668 14.781 11.0858 14L9.5 12.4142L6.20711 15.7071L4.79289 14.2929L8.08579 11C8.86684 10.219 10.1332 10.219 10.9142 11L12.5 12.5858L15.0858 10Z"
           fill="#2D15FF"
         />
       </svg>
     ),
   },
   {
-    title: "High Standards",
+    title: "Optimized Products & Services",
     description:
-      "Our policies adhere to the highest standards, offering comprehensive rating services for hotels, restaurants, attractions, shopping malls, MICE venues, tour packages, and more.",
+      "Build, adapt, and benchmark your services to align with industry standards and customer needs.",
+
     icon: (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
         viewBox="0 0 24 24"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M5.33722 0.99975C5.36644 0.999863 5.395 0.999972 5.42279 0.999972H18.5772C18.6049 0.999972 18.6335 0.999863 18.6627 0.99975C18.9606 0.998604 19.3271 0.997193 19.652 1.10924C20.2334 1.30973 20.6902 1.76656 20.8907 2.34795C21.0028 2.67287 21.0013 3.03939 21.0002 3.33722C21.0001 3.36644 21 3.395 21 3.42279C21 3.44921 21 3.4754 21 3.50137C21.0003 3.87915 21.0006 4.2107 20.9315 4.52855C20.8066 5.10354 20.5153 5.6291 20.0939 6.0398C19.861 6.26684 19.5797 6.44231 19.2592 6.64227C19.2371 6.65601 19.2149 6.66987 19.1925 6.68388L13.8394 10.0296C13.857 10.0583 13.8741 10.0877 13.8906 10.1177L14.9907 12.1122C15.0136 12.1538 15.0521 12.1821 15.0953 12.192L17.3193 12.7005C18.904 13.0629 19.5313 14.9772 18.4863 16.2122L16.9103 18.075C16.8815 18.109 16.8671 18.1541 16.8715 18.2L17.1041 20.6256C17.263 22.2832 15.5658 23.505 14.0439 22.7968L12.0659 21.8763C12.024 21.8568 11.976 21.8568 11.9341 21.8763L9.95601 22.7968C8.43412 23.505 6.73695 22.2832 6.89587 20.6256L7.12843 18.2C7.13283 18.1541 7.11841 18.1089 7.08967 18.075L5.5136 16.2122C4.4686 14.9771 5.09598 13.0629 6.68067 12.7005L8.9046 12.192C8.94784 12.1821 8.98637 12.1538 9.00928 12.1122L10.1093 10.1177C10.1259 10.0877 10.1429 10.0583 10.1605 10.0296L4.80742 6.68388C4.78502 6.66987 4.7628 6.65601 4.74076 6.64227C4.42023 6.44231 4.13893 6.26684 3.906 6.0398C3.48464 5.6291 3.19335 5.10354 3.0684 4.52855C2.99932 4.2107 2.99961 3.87916 2.99993 3.50138C2.99995 3.4754 2.99997 3.44921 2.99997 3.42279C2.99997 3.395 2.99986 3.36644 2.99975 3.33722C2.9986 3.03938 2.99719 2.67287 3.10924 2.34795C3.30973 1.76656 3.76656 1.30973 4.34795 1.10924C4.67287 0.997193 5.03938 0.998604 5.33722 0.99975ZM12 8.82072L18.1325 4.98788C18.557 4.72256 18.6393 4.66481 18.698 4.60759C18.8384 4.47068 18.9355 4.2955 18.9772 4.10383C18.9946 4.02372 19 3.9234 19 3.42279C19 3.21446 18.9996 3.10054 18.9948 3.01786C18.9946 3.01359 18.9943 3.0096 18.9941 3.00589C18.9903 3.00563 18.9864 3.00538 18.9821 3.00514C18.8994 3.00036 18.7855 2.99997 18.5772 2.99997H5.42279C5.21446 2.99997 5.10054 3.00036 5.01786 3.00514C5.01359 3.00538 5.0096 3.00563 5.00589 3.00589C5.00563 3.0096 5.00538 3.01359 5.00514 3.01786C5.00036 3.10054 4.99997 3.21446 4.99997 3.42279C4.99997 3.9234 5.00537 4.02372 5.02278 4.10383C5.06443 4.2955 5.16153 4.47068 5.30198 4.60759C5.36069 4.66481 5.4429 4.72256 5.86742 4.98788L12 8.82072ZM11.8606 11.0836L10.7606 13.0781C10.4635 13.6168 9.95109 14.0043 9.35046 14.1416L7.12653 14.6502C7.01244 14.6763 6.95721 14.8221 7.04042 14.9204L8.61648 16.7831C8.9941 17.2295 9.17505 17.8094 9.1193 18.3909L8.88674 20.8165C8.87381 20.9514 9.00728 21.0323 9.11218 20.9835L11.0902 20.063C11.6672 19.7945 12.3328 19.7945 12.9097 20.063L14.8878 20.9835C14.9927 21.0323 15.1261 20.9514 15.1132 20.8165L14.8806 18.3909C14.8249 17.8094 15.0058 17.2295 15.3835 16.7831L16.9595 14.9204C17.0427 14.8221 16.9875 14.6763 16.8734 14.6502L14.6495 14.1416C14.0489 14.0043 13.5365 13.6168 13.2394 13.0781L12.1393 11.0836C12.0778 10.9721 11.9221 10.9721 11.8606 11.0836Z"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M7 3C4.79086 3 3 4.79086 3 7C3 9.20914 4.79086 11 7 11C9.20914 11 11 9.20914 11 7C11 4.79086 9.20914 3 7 3ZM1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7Z"
+          fill="#2D15FF"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M19.5858 8.00003L16.0904 8.00008L16.0903 6.00008L22 6C22.2652 6 22.5196 6.10535 22.7071 6.29289C22.8946 6.48042 23 6.73478 23 7V12.4117H21V9.41421L20.4735 9.94067C20.0366 10.3776 19.8047 10.6095 19.5745 10.8287C14.8991 15.2809 8.73445 17.8344 2.28022 17.9922C1.96245 18 1.63445 18 1.01646 18H1V16C1.63837 16 1.94088 15.9999 2.23133 15.9928C8.18908 15.8471 13.8795 13.4901 18.1953 9.38033C18.4057 9.17997 18.6197 8.96612 19.0711 8.51472L19.5858 8.00003Z"
+          fill="#2D15FF"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M5 20V23H3V20H5Z"
+          fill="#2D15FF"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M11 19V23H9V19H11Z"
+          fill="#2D15FF"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M17 17V23H15V17H17Z"
+          fill="#2D15FF"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M23 14V23H21V14H23Z"
+          fill="#2D15FF"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M6 7V4H8V6H10V8H7C6.44772 8 6 7.55228 6 7Z"
+          fill="#2D15FF"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Targeted Marketing Solutions",
+    description:
+      "Implement effective marketing campaigns to engage and connect with Muslim travelers globally.",
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9C5.55228 9 6 8.55228 6 8C6 7.44772 5.55228 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5C6.65685 5 8 6.34315 8 8C8 9.65685 6.65685 11 5 11C3.34315 11 2 9.65685 2 8ZM12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7ZM9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8ZM16 8C16 6.34315 17.3431 5 19 5C20.6569 5 22 6.34315 22 8C22 9.65685 20.6569 11 19 11C17.3431 11 16 9.65685 16 8ZM19 7C18.4477 7 18 7.44772 18 8C18 8.55228 18.4477 9 19 9C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7ZM1 15.7C1 13.6565 2.65655 12 4.7 12H6V14H4.7C3.76112 14 3 14.7611 3 15.7C3 16.1418 3.35817 16.5 3.8 16.5H6V18.5H3.8C2.2536 18.5 1 17.2464 1 15.7ZM7.5 15.7C7.5 13.6565 9.15655 12 11.2 12H12.8C14.8435 12 16.5 13.6565 16.5 15.7C16.5 17.2464 15.2464 18.5 13.7 18.5H10.3C8.7536 18.5 7.5 17.2464 7.5 15.7ZM11.2 14C10.2611 14 9.5 14.7611 9.5 15.7C9.5 16.1418 9.85817 16.5 10.3 16.5H13.7C14.1418 16.5 14.5 16.1418 14.5 15.7C14.5 14.7611 13.7389 14 12.8 14H11.2ZM18 12H19.3C21.3435 12 23 13.6565 23 15.7C23 17.2464 21.7464 18.5 20.2 18.5H18V16.5H20.2C20.6418 16.5 21 16.1418 21 15.7C21 14.7611 20.2389 14 19.3 14H18V12Z"
           fill="#2D15FF"
         />
       </svg>
@@ -1312,41 +1354,158 @@ export const templateCarrers = [
   },
 ];
 
+export const servicesTabsConfig = [
+  {
+    value: "education_and_certification",
+    label: "Education & Certification",
+  },
+  {
+    value: "capability_and_capacity_building",
+    label: "Capability & Capacity Building",
+  },
+  {
+    value: "targeted_marketing_campaigns",
+    label: "Targeted Marketing Campaign",
+  },
+];
+
 export const servicesData = [
+  // Education & Certification Tabs
   {
-    imageUrl: "/image/our-services/img1-min.jpg",
-    imageAlt: "Rating & Accreditation",
+    tabs: "education_and_certification",
+    label: "Education & Certification",
+    imageUrl: "/image/our-services/training-academy.jpg",
+    imageAlt: "Training Academy (CR Academy / SkillsGo)",
+    title: "Training Academy (CR Academy / SkillsGo)",
+    cta_title: "Learn More",
+    cta_link: "/services/crescentrating-academy",
+    description:
+      "Equip your teams with essential knowledge of Halal travel through structured learning programs.",
+  },
+  {
+    tabs: "education_and_certification",
+    label: "Education & Certification",
+    imageUrl: "/image/our-services/market-intelligence.jpg",
+    imageAlt: "Market Intelligence Research Reports",
+    title: "Market Intelligence Research Reports",
+    cta_title: "Learn More",
+    cta_link: "/insights/halal-muslim-travel-market-reports", 
+    description:
+      "Stay ahead with in-depth, data-backed reports on the global Muslim travel market.",
+  },
+  {
+    tabs: "education_and_certification",
+    label: "Education & Certification",
+    imageUrl: "/image/our-services/data_insight.jpg",
+    imageAlt: "Data & Insights Platform (CR MAPS)",
+    title: "Data & Insights Platform (CR MAPS)",
+    cta_title: "Learn More",
+    cta_link: "/insights/cr-maps",
+    description:
+      "Access real-time data and analytics tailored for the Halal travel segment.",
+  },
+
+  // Capability & Capacity Building Tabs
+  {
+    tabs: "capability_and_capacity_building",
+    label: "Capability & Capacity Building",
+    imageUrl: "/image/our-services/source_market_research.jpg",
+    imageAlt: "Source Market Research",
+    title: "Source Market Research",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
+    description:
+      "Understand key Muslim travel markets through localized research.",
+  },
+  {
+    tabs: "capability_and_capacity_building",
+    label: "Capability & Capacity Building",
+    imageUrl: "/image/our-services/destination_research.jpg",
+    imageAlt: "Destination Research",
+    title: "Destination Research",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
+    description:
+      "Assess and enhance your destination’s readiness to attract Muslim travellers.",
+  },
+  {
+    tabs: "capability_and_capacity_building",
+    label: "Capability & Capacity Building",
+    imageUrl: "/image/our-services/rating_accreditation.jpg",
+    imageAlt: "Advisory & Consultancy",
     title: "Rating & Accreditation",
+    cta_title: "Learn More",
+    cta_link: "/services/rating-and-accreditation",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+      "Gain global recognition with CrescentRating’s trusted rating system.",
   },
   {
-    imageUrl: "/image/our-services/img2-min.jpg",
-    imageAlt: "Training & Certification",
-    title: "Training & Certification",
+    tabs: "capability_and_capacity_building",
+    label: "Capability & Capacity Building",
+
+    imageUrl: "/image/our-services/advisory_consultancy.jpg",
+    imageAlt: "Advisory & Consultancy",
+    title: "Advisory & Consultancy",
+    cta_title: "Learn More",
+    cta_link: "/services/research-and-consultancy",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+      "Partner with our experts to develop effective strategies for the Muslim travel segment.",
+  },
+  // Targeted Marketing Campaigns Tabs
+  {
+    tabs: "targeted_marketing_campaigns",
+    label: "Targeted Marketing Campaigns",
+    imageUrl: "/image/our-services/source_market_development.jpg",
+    imageAlt: "Source Market Development",
+    title: "Source Market Development",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
+    description:
+      "Tap into specific Muslim traveller segments through tailored campaigns.",
   },
   {
-    imageUrl: "/image/our-services/img3-min.jpg",
-    imageAlt: "Research & Consultancy",
-    title: "Research & Consultancy",
+    tabs: "targeted_marketing_campaigns",
+    label: "Targeted Marketing Campaigns",
+    imageUrl: "/image/our-services/market_asset_development.jpg",
+    imageAlt: "Marketing Assets Development",
+    title: "Marketing Assets Development",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+      "Stand out with culturally relevant and professionally crafted marketing materials.",
   },
   {
-    imageUrl: "/image/our-services/img4-min.jpg",
-    imageAlt: "Product Development",
-    title: "Product Development",
+    tabs: "targeted_marketing_campaigns",
+    label: "Targeted Marketing Campaigns",
+    imageUrl: "/image/our-services/content_distribution_promotions.jpg",
+    imageAlt: "Content Distribution & Promotions",
+    title: "Content Distribution & Promotions",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+      "Amplify your reach through strategic content partnerships and distribution channels trusted by Muslim audiences globally.",
   },
   {
-    imageUrl: "/image/our-services/img5-min.jpg",
-    imageAlt: "Destination Marketing",
-    title: "Destination Marketing",
+    tabs: "targeted_marketing_campaigns",
+    label: "Targeted Marketing Campaigns",
+    imageUrl: "/image/our-services/destination_marketing_webinars.jpg",
+    imageAlt: "Destination Marketing Webinars",
+    title: "Destination Marketing Webinars",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+      "Access key trends and updates in the Muslim travel and lifestyle market.",
+  },
+  {
+    tabs: "targeted_marketing_campaigns",
+    label: "Targeted Marketing Campaigns",
+    imageUrl: "/image/our-services/travel_packages.jpg",
+    imageAlt: "Travel Packages",
+    title: "Travel Packages",
+    cta_title: "Enquire Now",
+    cta_link: "/about-us/contact-us",
+    description:
+      "Promote Halal-friendly travel packages designed for Muslim travellers.",
   },
 ];
 
@@ -3127,7 +3286,6 @@ export const teamDataAboutUs: any = {
   ],
 };
 
-
 export const awardsAboutUs = [
   {
     image: "/image/about-us/CGML.png",
@@ -3200,7 +3358,8 @@ export const testimonialLogoRatingAndAccreditation = [
     location: "",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/four-seasons.png",
+    imageSrc:
+      "/image/rating-accreditation/list-establishments/four-seasons.png",
     imageAlt: "four-seasons",
     name: "Four Seasons",
     location: "Hong Kong",
@@ -3212,7 +3371,8 @@ export const testimonialLogoRatingAndAccreditation = [
     location: "Hong Kong",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/intercontinental.png",
+    imageSrc:
+      "/image/rating-accreditation/list-establishments/intercontinental.png",
     imageAlt: "intercontinental",
     name: "InterContinental",
     location: "",
@@ -3259,7 +3419,7 @@ export const testimonialLogoRatingAndAccreditation = [
     name: "Sheraton",
     location: "",
   },
-]
+];
 
 export const faqsRatingAndAccreditation = [
   {
@@ -3316,8 +3476,7 @@ export const faqsRatingAndAccreditation = [
     answer:
       "Reach us via the contact form on our website or email support@crescentrating.com. Our team will respond promptly.",
   },
-]
-
+];
 
 export const testimonialsRatingAndAccreditation = [
   {
@@ -3654,45 +3813,51 @@ export const crAcademyTestimonials = [
     id: 1,
     person: "Prof. Claudio Visentin",
     company: "Università della Svizzera italiana",
-    testimonials: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations",
+    testimonials:
+      "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations",
     event: "Halal Tourism Seminar for USI",
     imageUrl: "/image/crescentrating-academy/usi-logo.webp",
   },
   {
     id: 2,
     person: "The Kowloon Hotel",
-    company: "Elaborated from: Learned a lot about what are importance to the Muslim travelers.",
-    testimonials: "Great introduction with relevant information in the seminar. Thank you!",
+    company:
+      "Elaborated from: Learned a lot about what are importance to the Muslim travelers.",
+    testimonials:
+      "Great introduction with relevant information in the seminar. Thank you!",
     event: "HKTB Trade Seminar",
     imageUrl: "/image/crescentrating-academy/kowloon-logo.webp",
   },
   {
     id: 3,
     person: "Island Shang-ri La",
-    company: "Elaborated from: Learned a lot about what are importance to the Muslim travelers.",
-    testimonials: "Through the webinar, we learned a lot about what is important to Muslim travelers. It was incredibly valuable and informative. ",
+    company:
+      "Elaborated from: Learned a lot about what are importance to the Muslim travelers.",
+    testimonials:
+      "Through the webinar, we learned a lot about what is important to Muslim travelers. It was incredibly valuable and informative. ",
     event: "HKTB Trade Seminar",
     imageUrl: "/image/crescentrating-academy/island-shangrila-logo.webp",
     podcastUrl: "#",
-
   },
-
 ];
 export const crAcademySectorImmersionPrograms = [
   {
     key: 1,
     program: "Customer Service Training",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/customer-service-training.webp",
-    market: "For Managers And Service Staff Looking For Ready Training Programs",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/customer-service-training.webp",
+    market:
+      "For Managers And Service Staff Looking For Ready Training Programs",
     description:
       "Get certified in one day on Halal travel, focusing on market awareness and customer service for Muslim travelers.",
     role: "Hotels, Restaurant, Attractions, Tour agencies and operators",
-    pricing: "USD / EUR 250 per person"
+    pricing: "USD / EUR 250 per person",
   },
   {
     key: 2,
     program: "Customized Training Program",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/customized-training-program.webp",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/customized-training-program.webp",
     market: "For Managers And Service Staff With Unique Training Requirements",
     description:
       "Require a customized training program for your service sector?\nLet us know what you need and our expert trainers and course consultants will be glad to design a learning package and experience that fits your specific requirements.",
@@ -3700,44 +3865,53 @@ export const crAcademySectorImmersionPrograms = [
   {
     key: 3,
     program: "HalalChefWorld Training Program",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/halalchefworld-training-program.webp",
-    market: "For Managers And Service Staff Looking For Ready Training Programs",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/halalchefworld-training-program.webp",
+    market:
+      "For Managers And Service Staff Looking For Ready Training Programs",
     description:
       "First launched in South Africa with Cape Town Tourism, HalalChefWorld consists of a 2-day Halal gourmet competency training and cook-off with professional Chefs from various industries. Chefs who excel in the competency program are awarded the CrescentRating Accredited Chef title at the end of the training.",
   },
-]
+];
 
 export const crAcademySectorImmersionProgramsCardProfile = [
   {
     id: 1,
     title: "Dr. Nisha Abu Bakar",
     description: "Tourism consultant and academic with 25+ years’ experience.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/nisha-abu-bakar.webp",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/nisha-abu-bakar.webp",
   },
   {
     id: 2,
     title: "Fazal Bahardeen",
-    description: "Founder of CrescentRating and HalalTrip, pioneer in the Muslim lifestyle and halal travel space.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/fazal-bahardeen.webp",
+    description:
+      "Founder of CrescentRating and HalalTrip, pioneer in the Muslim lifestyle and halal travel space.",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/fazal-bahardeen.webp",
   },
   {
     id: 3,
     title: "Muhammad Kamal Khamis",
     description: "President of Singapore Halal Culinary Federation.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/muhammad-kamal-khamis.webp",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/muhammad-kamal-khamis.webp",
   },
   {
     id: 4,
     title: "Nurhafihz Noor",
     description: "Marketing expert and director at CrescentRating Academy.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/nurhafihz-noor.webp",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/nurhafihz-noor.webp",
   },
   {
     id: 5,
     title: "Zuraimi Jumaat",
-    description: "Executive director and Halal business consultant with 15+ years’ experience.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/zuraimi-jumaat.webp",
-  }
+    description:
+      "Executive director and Halal business consultant with 15+ years’ experience.",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/zuraimi-jumaat.webp",
+  },
 ];
 
 export const crAcademyExecutiveEducationCardProfile = [
@@ -3745,43 +3919,75 @@ export const crAcademyExecutiveEducationCardProfile = [
     id: 1,
     title: "Dr. Nisha Abu Bakar",
     description: "Tourism consultant and academic with 25+ years’ experience.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/nisha-abu-bakar.webp",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/nisha-abu-bakar.webp",
   },
   {
     id: 2,
     title: "Fazal Bahardeen",
-    description: "Founder of CrescentRating and HalalTrip, pioneer in the Muslim lifestyle and halal travel space.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/fazal-bahardeen.webp",
+    description:
+      "Founder of CrescentRating and HalalTrip, pioneer in the Muslim lifestyle and halal travel space.",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/fazal-bahardeen.webp",
   },
   {
     id: 3,
     title: "Cédomir Nestorovic",
-    description: "Professor of International Marketing and Geopolitics at ESSEC.",
-    imageUrl: "/image/crescentrating-academy/executive-education/cedomir-nestorovic.webp",
+    description:
+      "Professor of International Marketing and Geopolitics at ESSEC.",
+    imageUrl:
+      "/image/crescentrating-academy/executive-education/cedomir-nestorovic.webp",
   },
   {
     id: 4,
     title: "Nurhafihz Noor",
     description: "Marketing expert and director at CrescentRating Academy.",
-    imageUrl: "/image/crescentrating-academy/sector-immersion/nurhafihz-noor.webp",
+    imageUrl:
+      "/image/crescentrating-academy/sector-immersion/nurhafihz-noor.webp",
   },
   {
     id: 5,
     title: "Firdaus Yahya",
-    description: "Scholar in Islamic sciences and a Fatwa Committee member, with degrees from Al-Azhar, IIUM, and ISTAC.",
-    imageUrl: "/image/crescentrating-academy/executive-education/firdaus-yahya.webp",
+    description:
+      "Scholar in Islamic sciences and a Fatwa Committee member, with degrees from Al-Azhar, IIUM, and ISTAC.",
+    imageUrl:
+      "/image/crescentrating-academy/executive-education/firdaus-yahya.webp",
   },
   {
     id: 6,
     title: "Ali Akbar Sahiwala",
-    description: "Founder of Rehla Design, specializing in branding for the Islamic Economy.",
-    imageUrl: "/image/crescentrating-academy/executive-education/ali-akbar-sahiwala.webp",
+    description:
+      "Founder of Rehla Design, specializing in branding for the Islamic Economy.",
+    imageUrl:
+      "/image/crescentrating-academy/executive-education/ali-akbar-sahiwala.webp",
   },
   {
     id: 7,
     title: "Raudha Zaini",
-    description: "Marketing Manager of HalalTrip – a leading global community platform for Muslim travelers.",
-    imageUrl: "/image/crescentrating-academy/executive-education/raudha-zaini.webp",
-  }
+    description:
+      "Marketing Manager of HalalTrip – a leading global community platform for Muslim travelers.",
+    imageUrl:
+      "/image/crescentrating-academy/executive-education/raudha-zaini.webp",
+  },
 ];
 
+export const crDestinationMarketingVideos = [
+  {
+    id: 1,
+    title: "Things to Do in Bintan",
+    embedUrl: "https://www.youtube.com/embed/h4Ldxe6YcwI?si=umOha7xMEEJQV63d",
+    videoUrl: "https://www.youtube.com/watch?v=h4Ldxe6YcwI",
+  },
+  {
+    id: 2,
+    title: "Halal Food in Seoul",
+    embedUrl: "https://www.youtube.com/embed/Ob0Qd8N6xTs?si=QK5L-_RIj18AEqGN",
+    videoUrl: "https://www.youtube.com/watch?v=Ob0Qd8N6xTs",
+  },
+  {
+    id: 3,
+    title: "Halal BBQ Steamboat",
+    embedUrl: "https://www.youtube.com/embed/wOIP4gyEYQI?si=zbqf_0tuGdng6jAp",
+    videoUrl: "https://www.youtube.com/watch?v=wOIP4gyEYQI",
+  },
+];

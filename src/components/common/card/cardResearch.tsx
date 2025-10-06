@@ -60,7 +60,7 @@ export default function CardResearch({
   }
 
   return (
-    <div className="w-full border-gray-500/20 border-2 group flex flex-col h-full">
+    <div key={id} className="w-full border-gray-500/20 border-2 group flex flex-col h-full">
       {/* Image container */}
       <div
         className={clsx(

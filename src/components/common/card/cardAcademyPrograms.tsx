@@ -59,7 +59,7 @@ export default function CardAcademyPrograms({
   imageUrl,
   imageBorder = true,
 }: cardAcademyProgramsProps) {
-  let truncateddescription;
+  // let truncateddescription;
 
   const today = new Date();
 
@@ -67,9 +67,9 @@ export default function CardAcademyPrograms({
     "Select Your Training Location"
   );
   const locations = ["Singapore", "Malaysia", "Indonesia"];
-  if (description) {
-    truncateddescription = truncate(description, 100);
-  }
+  // if (description) {
+  //   truncateddescription = truncate(description, 100);
+  // }
 
   const [openFrom, setOpenFrom] = useState(false);
   const [openTo, setOpenTo] = useState(false);
@@ -342,7 +342,6 @@ export default function CardAcademyPrograms({
                               <PopoverTrigger>
                                 <Button
                                   variant="outline"
-                                  id="date-from"
                                   className="w-full justify-between font-normal"
                                   type="button"
                                   onClick={() => setOpenFrom((prev) => !prev)}
@@ -386,7 +385,6 @@ export default function CardAcademyPrograms({
                               <PopoverTrigger>
                                 <Button
                                   variant="outline"
-                                  id="date-to"
                                   className="w-full justify-between font-normal"
                                   type="button"
                                   onClick={() => setOpenTo((prev) => !prev)}
@@ -586,7 +584,6 @@ export default function CardAcademyPrograms({
                               <PopoverTrigger>
                                 <Button
                                   variant="outline"
-                                  id="date-from"
                                   className="w-full justify-between font-normal"
                                   type="button"
                                   onClick={() => setOpenFrom((prev) => !prev)}
@@ -630,7 +627,6 @@ export default function CardAcademyPrograms({
                               <PopoverTrigger>
                                 <Button
                                   variant="outline"
-                                  id="date-to"
                                   className="w-full justify-between font-normal"
                                   type="button"
                                   onClick={() => setOpenTo((prev) => !prev)}

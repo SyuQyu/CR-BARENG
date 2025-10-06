@@ -50,7 +50,7 @@ export default function InputCustom({
   button, // Added button prop
   onButtonClick, // Added button click handler
   labelStyle,
-  required = false, // Added required prop
+  required = true, // Added required prop
 }: InputCustomProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -94,7 +94,7 @@ export default function InputCustom({
             onFocus={() => setIsFocused(true)}
             className={clsx("w-full py-2 px-3 border-none outline-none bg-none resize-none", multilineHeight)}
             disabled={disabled}
-            required // Spread additional props for textarea
+            required={required}
           />
         ) : (
           <input
@@ -114,7 +114,7 @@ export default function InputCustom({
             onFocus={() => setIsFocused(true)}
             className="w-full py-2 px-3 border-none outline-none bg-none"
             disabled={disabled}
-            required // Spread additional props for textarea
+            required={required}
           />
         )}
         {type === "password" && !disabled && !multiline ? (

@@ -26,7 +26,7 @@ import {
 import Stepper from "@/components/ui/stepper";
 
 export default function Gmti() {
-  const csv2015 = "/csv/gmti-2024/2015.csv"
+  // const csv2015 = "/csv/gmti-2024/2015.csv"
    
 
   const [data, setData] = useState([]);

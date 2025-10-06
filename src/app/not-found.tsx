@@ -1,13 +1,21 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+
 import { Button } from '@/components/common';
 
 export default function NotFound() {
   const router = useRouter();
 
   return (
-    <section className='w-full flex flex-col items-center justify-center dark:bg-neutral-900 text-black dark:text-white'>
+    <section
+      className='w-full flex flex-col items-center justify-center dark:bg-neutral-900 text-black dark:text-white'
+      style={{
+        backgroundImage: 'url(/image/404image.png)', // Update with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <section className="w-full flex flex-col sm:px-6 lg:px-8 justify-center items-center max-w-[1440px] h-screen">
         <span
           style={{

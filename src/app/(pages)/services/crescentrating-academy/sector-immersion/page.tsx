@@ -111,7 +111,6 @@ export default function sectorImmersion() {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-9 grayscale">
               {crAcademySectorImmersionProgramsCardProfile.map((data, index) => (
                 <CardProfile
-                  id={data.id}
                   key={index}
                   title={data.title}
                   description={data.description}

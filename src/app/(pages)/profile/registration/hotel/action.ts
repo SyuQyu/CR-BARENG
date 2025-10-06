@@ -100,11 +100,12 @@ export async function createHotelAction(formData: FormData): Promise<ActionRespo
 // Update an existing hotel (all steps)
 export async function updateHotelAction(formData: FormData, state: any): Promise<ActionResponse> {
     try {
+        const stateData = state?.data || {};
         const id = formData.get('id') as string;
         const data = extractHotelData(formData);
 
         if (!data.hotelName || !data.address) {
-            return { success: false, error: 'Hotel name and address are required', data: null };
+            return { success: false, error: 'Hotel name and address are required', data: stateData };
         }
         if (!id) {
             return { success: false, error: 'Hotel ID is required', data: null };
@@ -126,7 +127,7 @@ export async function getHotelAction(id: string): Promise<ActionResponse> {
         if (!id) {
             return { success: false, error: 'Hotel ID is required', data: null };
         }
-        const hotel = await getHotel(id);
+        const hotel = await getHotel();
         return { success: true, error: null, data: hotel };
     } catch (error: any) {
         console.error('Failed to fetch hotel:', error);

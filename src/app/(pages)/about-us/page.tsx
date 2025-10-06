@@ -9,13 +9,6 @@ import {
   TestimonialCard,
 } from "@/components/common";
 import {
-  Carousel as Carousel2,
-  CarouselContent as CarouselContent2,
-  CarouselItemCustom as CarouselItem2,
-  CarouselNext as CarouselNext2,
-  CarouselPrevious as CarouselPrevious2,
-} from "@/components/ui/carouselCustom2";
-import {
   Carousel,
   CarouselContent,
   CarouselItem,

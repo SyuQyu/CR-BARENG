@@ -40,6 +40,7 @@ export default function cardTestimonials({
 
   return (
     <div
+      key={id}
       className="lg:w-full w-fit group flex flex-col self-stretch"
       rel="noopener noreferrer"
     >

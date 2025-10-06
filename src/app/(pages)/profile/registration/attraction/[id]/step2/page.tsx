@@ -116,8 +116,9 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
     const [hotelRestaurantHalalCertificateImages, setHotelRestaurantHalalCertificateImages] = useState<File[]>([]);
 
     // Form state
+    type FormState = { success: boolean; error: string | null; data: { id?: string } | null };
     const [state, formAction] = useFormState(
-        (prevState: any, formData: FormData) =>
+        (prevState: FormState, formData: FormData) =>
             params?.id
                 ? updateHotelAction(formData, prevState)
                 : createHotelAction(formData),
@@ -134,7 +135,7 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                 if (response.success && response.data) {
                     setFormData({
                         ...defaultStep2,
-                        ...response.data,
+                        ...response.data as typeof defaultStep2,
                     });
                 } else {
                     toast.error("Error", { description: "Failed to load hotel data" });
@@ -145,7 +146,7 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                 setIsLoading(false);
             }
         };
-        fetchHotel();
+    void fetchHotel();
     }, [params?.id]);
 
     // Handle form submission response
@@ -157,7 +158,7 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                     ? "Hotel updated successfully"
                     : "Hotel created successfully",
             });
-            router.push(`/profile/registration/hotel/${params?.id || state.data.id}/step3`);
+            router.push(`/profile/registration/hotel/${params?.id || state.data?.id}/step3`);
         } else if (state.error) {
             toast.error("Error", { description: state.error });
         }
@@ -177,12 +178,12 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
     };
 
     // File handler
-    const handleFileChange = (name: string, files: FileList | null) => {
-        setFormData((prev) => ({
-            ...prev,
-            [name]: files ? Array.from(files) : [],
-        }));
-    };
+    // const handleFileChange = (name: string, files: FileList | null) => {
+    //     setFormData((prev) => ({
+    //         ...prev,
+    //         [name]: files ? Array.from(files) : [],
+    //     }));
+    // };
 
     // RichText handler
     const handleRichText = (name: string, value: string) => {
@@ -243,8 +244,6 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                     onChange={handleCheckbox}
                 />
                 <SectionFile
-                    label="Guest Room Washroom Image"
-                    name="guestRoomWashroomImages"
                     data={guestRoomWashroomImages}
                     setData={setGuestRoomWashroomImages}
                 />
@@ -268,8 +267,6 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                     onChange={handleRichText}
                 />
                 <SectionFile
-                    label="Hotel Restaurant or Kitchen Halal Certificate Image"
-                    name="hotelRestaurantHalalCertificateImages"
                     data={hotelRestaurantHalalCertificateImages}
                     setData={setHotelRestaurantHalalCertificateImages}
                 />
@@ -287,8 +284,6 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                     onChange={handleCheckbox}
                 />
                 <SectionFile
-                    label="Guest Room Prayer Markings Image"
-                    name="guestRoomPrayerMarkingsImages"
                     data={guestRoomPrayerMarkingsImages}
                     setData={setGuestRoomPrayerMarkingsImages}
                 />
@@ -349,13 +344,14 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
                 {Object.entries(formData).map(([key, value]) => {
                     if (Array.isArray(value)) {
                         // For checkbox group and files
-                        return value.map((v: any, i) =>
-                            v instanceof File ? (
+                        return value.map((v, i) => {
+                            const isFile = typeof v === "object" && v !== null && "name" in v && "size" in v;
+                            return isFile ? (
                                 <input key={key + i} type="file" name={key} />
                             ) : (
-                                <input key={key + i} type="hidden" name={key} value={v} />
-                            )
-                        );
+                                <input key={key + i} type="hidden" name={key} value={v as string} />
+                            );
+                        });
                     }
                     return <input key={key} type="hidden" name={key} value={value || ""} />;
                 })}
@@ -415,16 +411,14 @@ function SectionRichText({ label, name, value, onChange }: {
 }
 
 // SectionFile component
-function SectionFile({ label, name, data, setData }: {
-    label: string;
-    name: string;
-    data: any;
-    setData: (data: any) => void;
+function SectionFile({ data, setData }: {
+    data: File[];
+    setData: (data: File[]) => void;
 }) {
     return (
         <FileUpload
-            label="Guest Room Washroom Image"
-            name="guestRoomWashroomImages"
+            label="Upload Files"
+            name="files"
             files={data}
             setFiles={setData}
         />

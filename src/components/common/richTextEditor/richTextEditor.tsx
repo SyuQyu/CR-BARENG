@@ -124,6 +124,7 @@ function InitialContentPlugin({ content }: { content: string }) {
         try {
             const contentState = JSON.parse(content);
             editor.setEditorState(editor.parseEditorState(contentState));
+        // eslint-disable-next-line unused-imports/no-unused-vars
         } catch (error) {
             // If content is not valid JSON, set as plain text
             editor.update(() => {

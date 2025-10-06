@@ -111,12 +111,13 @@ export async function createRestaurantAction(formData: FormData): Promise<Action
 // Update an existing restaurant (all steps)
 export async function updateRestaurantAction(formData: FormData, state: any): Promise<ActionResponse> {
     try {
+        const stateData = state?.data || {};
         const id = formData.get('id') as string;
         const data = extractRestaurantData(formData);
 
         // Validasi minimal step 1 - updated validation
         if (!data.restaurantName || !data.address) {
-            return { success: false, error: 'Restaurant name and address are required', data: null };
+            return { success: false, error: 'Restaurant name and address are required', data: stateData };
         }
 
         if (!id) {
@@ -148,7 +149,7 @@ export async function getRestaurantAction(id: string): Promise<ActionResponse> {
         if (!id) {
             return { success: false, error: 'Restaurant ID is required', data: null };
         }
-        const restaurant = await getRestaurant(id);
+        const restaurant = await getRestaurant();
         return { success: true, error: null, data: restaurant };
     } catch (error: any) {
         console.error('Failed to fetch restaurant:', error);

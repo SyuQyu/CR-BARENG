@@ -90,11 +90,12 @@ export async function createMiceAction(formData: FormData): Promise<ActionRespon
 // Update an existing mice (all steps)
 export async function updateMiceAction(formData: FormData, state: any): Promise<ActionResponse> {
     try {
+        const stateData = state?.data || {};
         const id = formData.get('id') as string;
         const data = extractMiceData(formData);
 
         if (!data.miceName || !data.address) {
-            return { success: false, error: 'Mice name and address are required', data: null };
+            return { success: false, error: 'Mice name and address are required', data: stateData };
         }
         if (!id) {
             return { success: false, error: 'Mice ID is required', data: null };
@@ -116,7 +117,7 @@ export async function getMiceAction(id: string): Promise<ActionResponse> {
         if (!id) {
             return { success: false, error: 'Mice ID is required', data: null };
         }
-        const mice = await getMice(id);
+        const mice = await getMice();
         return { success: true, error: null, data: mice };
     } catch (error: any) {
         console.error('Failed to fetch mice:', error);

@@ -119,7 +119,7 @@ export default function CertifiedProfessionalsDirectoryPage() {
                                             description={person.description}
                                             image={person.image}
                                             tags={person.tags}
-                                            linkedin={person.linkedin}
+                                            // linkedin={person.linkedin}
                                             className="shadow-none"
                                         />
                                     ))}

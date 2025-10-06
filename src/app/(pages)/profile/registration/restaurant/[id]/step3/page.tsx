@@ -8,39 +8,38 @@ import { toast } from "sonner";
 import { createRestaurantAction, getRestaurantAction,updateRestaurantAction } from "@/app/(pages)/profile/registration/restaurant/action";
 import { FileUpload } from "@/components/common";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 
 // Step 3 options
-const basicFacilitiesOptions = [
-    "Wifi (free)",
-    "Wifi (Paid)",
-    "Wired Internet (free)",
-    "Wired Internet (paid)",
-    "Fitness Centre (Common)",
-    "Spa and Wellness Center",
-    "Outdoor Pool (Common)",
-    "Children's Playground",
-    "Tennis Court",
-    "Sauna",
-    "Diving",
-    "Windsurfing",
-    "Squash",
-    "Skiing",
-    "Car parking (charges apply)",
-    "Free Car Parking",
-];
+// const basicFacilitiesOptions = [
+//     "Wifi (free)",
+//     "Wifi (Paid)",
+//     "Wired Internet (free)",
+//     "Wired Internet (paid)",
+//     "Fitness Centre (Common)",
+//     "Spa and Wellness Center",
+//     "Outdoor Pool (Common)",
+//     "Children's Playground",
+//     "Tennis Court",
+//     "Sauna",
+//     "Diving",
+//     "Windsurfing",
+//     "Squash",
+//     "Skiing",
+//     "Car parking (charges apply)",
+//     "Free Car Parking",
+// ];
 
-const defaultStep3 = {
-    basicFacilities: [],
-    bookNowUrl: "",
-    imageGallery: [],
-};
+// const defaultStep3 = {
+//     basicFacilities: [],
+//     bookNowUrl: "",
+//     imageGallery: [],
+// };
 
 export default function RestaurantStep3Page({ params }: { params?: { id: string } }) {
     const router = useRouter();
     const formRef = useRef<HTMLFormElement>(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [formData, setFormData] = useState(defaultStep3);
+    // const [formData, setFormData] = useState(defaultStep3);
     const [imageGallery, setImageGallery] = useState<File[]>([]);
 
     // Form state
@@ -60,10 +59,10 @@ export default function RestaurantStep3Page({ params }: { params?: { id: string 
             try {
                 const response = await getRestaurantAction(params.id);
                 if (response.success && response.data) {
-                    setFormData({
-                        ...defaultStep3,
-                        ...response.data,
-                    });
+                    // setFormData({
+                    //     ...defaultStep3,
+                    //     ...response.data,
+                    // });
                     setImageGallery(response.data.imageGallery || []);
                 } else {
                     toast.error("Error", { description: "Failed to load restaurant data" });
@@ -93,26 +92,26 @@ export default function RestaurantStep3Page({ params }: { params?: { id: string 
     }, [state, router, params?.id]);
 
     // Checkbox handler
-    const handleCheckbox = (name: string, value: string) => {
-        setFormData((prev) => {
-            const arr = prev[name as keyof typeof prev] as string[];
-            return {
-                ...prev,
-                [name]: arr.includes(value)
-                    ? arr.filter((v) => v !== value)
-                    : [...arr, value],
-            };
-        });
-    };
+    // const handleCheckbox = (name: string, value: string) => {
+    //     setFormData((prev) => {
+    //         const arr = prev[name as keyof typeof prev] as string[];
+    //         return {
+    //             ...prev,
+    //             [name]: arr.includes(value)
+    //                 ? arr.filter((v) => v !== value)
+    //                 : [...arr, value],
+    //         };
+    //     });
+    // };
 
-    // Input handler
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-    };
+    // // Input handler
+    // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    //     const { name, value } = e.target;
+    //     setFormData((prev) => ({
+    //         ...prev,
+    //         [name]: value,
+    //     }));
+    // };
 
     // Submit handler
     const handleSubmit = (e: React.FormEvent) => {
@@ -175,32 +174,32 @@ export default function RestaurantStep3Page({ params }: { params?: { id: string 
 }
 
 // SectionCheckbox component with shadcn/ui Checkbox
-function SectionCheckbox({
-    title,
-    options,
-    name,
-    values,
-    onChange,
-}: {
-    title: string;
-    options: string[];
-    name: string;
-    values: string[];
-    onChange: (name: string, value: string) => void;
-}) {
-    return (
-        <div className="border p-4 mb-4">
-            <div className="font-bold mb-2">{title}</div>
-            {options.map((opt) => (
-                <label key={opt} className="flex items-center gap-2 mb-1 cursor-pointer">
-                    <Checkbox
-                        checked={values.includes(opt)}
-                        onCheckedChange={() => onChange(name, opt)}
-                        id={`${name}-${opt}`}
-                    />
-                    <span>{opt}</span>
-                </label>
-            ))}
-        </div>
-    );
-}
+// function SectionCheckbox({
+//     title,
+//     options,
+//     name,
+//     values,
+//     onChange,
+// }: {
+//     title: string;
+//     options: string[];
+//     name: string;
+//     values: string[];
+//     onChange: (name: string, value: string) => void;
+// }) {
+//     return (
+//         <div className="border p-4 mb-4">
+//             <div className="font-bold mb-2">{title}</div>
+//             {options.map((opt) => (
+//                 <label key={opt} className="flex items-center gap-2 mb-1 cursor-pointer">
+//                     <Checkbox
+//                         checked={values.includes(opt)}
+//                         onCheckedChange={() => onChange(name, opt)}
+//                         id={`${name}-${opt}`}
+//                     />
+//                     <span>{opt}</span>
+//                 </label>
+//             ))}
+//         </div>
+//     );
+// }

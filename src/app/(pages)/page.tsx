@@ -92,7 +92,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <Button className="!rounded-full text-custom-purple-cr sm:!text-desktop-body-2 !text-mobile-body-3 px-10 font-bold border-custom-purple-cr">
+          <Button variant="outline">
             SEE MORE
           </Button>
         </div>
@@ -213,7 +213,7 @@ export default function Home() {
                     >
                       <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
                         {tab.content}
-                        <Button className="!rounded-full sm:!text-desktop-body-2 !text-mobile-body-3 !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">
+                        <Button variant="outline">
                           FIND OUT HOW
                         </Button>
                       </div>
@@ -255,7 +255,7 @@ export default function Home() {
                 <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#6666D3] m-0">Since 2008</p>
               </div>
               <p className="sm:text-desktop-body-2 text-mobile-body-2">We have used extensive insights, industry intelligence, lifestyle behaviour and research on the needs of the Muslim traveller to deliver authoritative guidance on all aspects of the market to destinations, organisations and businesses worldwide.</p>
-              <Button className="sm:!text-desktop-body-2 !text-mobile-body-3 mt-4 !rounded-full !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">ABOUT US</Button>
+              <Button variant="outline">ABOUT US</Button>
             </div>
           </div>
         </div>
@@ -315,7 +315,7 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center gap-4 z-10">
               <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-[#434343]">WORK WITH US</p>
               <p className="sm:text-desktop-body-1 text-mobile-body-1 text-[#484848] lg:w-[50%] w-full text-center">More than 50+ business, hotels, attractions, and clients around the world have tapped into the potential of the underserved Muslim market</p>
-              <Button className="sm:!text-desktop-body-2 !text-mobile-body-3 mt-4 !rounded-full !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">CONTACT US</Button>
+              <Button variant="outline">CONTACT US</Button>
             </div>
           </div>
         </div>

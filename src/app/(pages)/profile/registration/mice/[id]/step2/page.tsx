@@ -178,12 +178,12 @@ export default function HotelStep2Page({ params }: { params?: { id: string } }) 
     };
 
     // File handler
-    const handleFileChange = (name: string, files: FileList | null) => {
-        setFormData((prev) => ({
-            ...prev,
-            [name]: files ? Array.from(files) : [],
-        }));
-    };
+    // const handleFileChange = (name: string, files: FileList | null) => {
+    //     setFormData((prev) => ({
+    //         ...prev,
+    //         [name]: files ? Array.from(files) : [],
+    //     }));
+    // };
 
     // RichText handler
     const handleRichText = (name: string, value: string) => {
@@ -424,8 +424,8 @@ function SectionFile({ label, name, data, setData }: {
 }) {
     return (
         <FileUpload
-            label="Guest Room Washroom Image"
-            name="guestRoomWashroomImages"
+            label={label ? label : "Guest Room Washroom Image"}
+            name={name ? name : "guestRoomWashroomImages"}
             files={data}
             setFiles={setData}
         />

@@ -90,11 +90,12 @@ export async function createAttractionAction(formData: FormData): Promise<Action
 // Update an existing attraction (all steps)
 export async function updateAttractionAction(formData: FormData, state: any): Promise<ActionResponse> {
     try {
+        const stateData = state?.data || {};
         const id = formData.get('id') as string;
         const data = extractAttractionData(formData);
 
         if (!data.attractionName || !data.address) {
-            return { success: false, error: 'Attraction name and address are required', data: null };
+            return { success: false, error: 'Attraction name and address are required', data: stateData };
         }
         if (!id) {
             return { success: false, error: 'Attraction ID is required', data: null };
@@ -116,7 +117,7 @@ export async function getAttractionAction(id: string): Promise<ActionResponse> {
         if (!id) {
             return { success: false, error: 'Attraction ID is required', data: null };
         }
-        const attraction = await getAttraction(id);
+        const attraction = await getAttraction();
         return { success: true, error: null, data: attraction };
     } catch (error: any) {
         console.error('Failed to fetch attraction:', error);

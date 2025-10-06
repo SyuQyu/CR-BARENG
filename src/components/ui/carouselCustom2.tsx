@@ -1,3 +1,4 @@
+/* eslint-disable unused-imports/no-unused-vars */
 "use client"
 
 import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react"
@@ -513,6 +514,95 @@ const CarouselItemTestimonials = React.forwardRef<
 })
 CarouselItemTestimonials.displayName = "CarouselItemTestimonials"
 
+const CarouselItemYoutube = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & {
+    index: number;
+    image?: React.ReactNode;
+    setIsMobile?: boolean;
+    customType?: string;
+    visibleSlides?: number;
+  }
+>(
+  (
+    {
+      className,
+      index,
+      children,
+      image,
+      setIsMobile,
+      customType,
+      visibleSlides,
+      ...props
+    },
+    ref
+  ) => {
+    // ambil visibleSlides dari context/props, fallback ke 3
+    const { selectedIndex, visibleSlides: contextVisibleSlides } =
+      useCarousel();
+    const isActive = index === selectedIndex;
+    const isMobile = useIsMobile(900);
+    const count = visibleSlides ?? contextVisibleSlides ?? 3;
+
+    return isMobile ? (
+      <div
+        ref={ref}
+        role="group"
+        aria-roledescription="slide"
+        className={cn("min-w-0 shrink-0 grow-0 basis-full", className)}
+        {...props}
+      >
+        <div className="flex w-full px-2 flex-col items-center">
+          <div className="w-full flex">{image}</div>
+          <div className="mt-2 w-full">{children}</div>
+        </div>
+      </div>
+    ) : (
+      <div
+        ref={ref}
+        role="group"
+        aria-roledescription="slide"
+        className={cn(
+          "shrink-0 grow-0 flex justify-center items-stretch transition-transform duration-100 min-w-0",
+          {
+            1: "basis-full",
+            2: "basis-full md:basis-1/2",
+            3: "basis-full md:basis-1/3",
+            4: "basis-full md:basis-1/4",
+          }[count],
+          isActive ? "w-full z-10 md:basis-[596px] basis-72" : "w-[50%] opacity-50 z-0",
+          className
+        )}
+        {...props}
+      >
+        <div className="w-full flex flex-col items-center">
+          {image && (
+            <div
+              className={cn(
+                "w-full flex items-center justify-center",
+                isActive ? "min-h-[595px]" : "h-[511px]"
+              )}
+            >
+              {image}
+            </div>
+          )}
+          <div
+            className={cn(
+              "w-full flex gap-2",
+              isActive
+                ? "lg:w-[1216px] lg:min-h-[683px] md:w-[596px] md:min-h-[683px] min-w-72 min-h-80"
+                : "lg:h-[587px] md:h-72 h-32"
+            )}
+          >
+            {children}
+          </div>
+        </div>
+      </div>
+    );
+  }
+);
+CarouselItemYoutube.displayName = "CarouselItemYoutube";
+
 const CarouselPrevious = React.forwardRef<
     HTMLButtonElement,
     React.ComponentProps<typeof Button> & { customType?: string }
@@ -708,6 +798,7 @@ export {
     CarouselItemCustom,
     CarouselItemPodcasts,
     CarouselItemTestimonials,
+    CarouselItemYoutube,
     CarouselNext,
     CarouselNextCustom,
     CarouselPrevious,

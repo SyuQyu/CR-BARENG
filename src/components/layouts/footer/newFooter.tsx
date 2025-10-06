@@ -9,37 +9,35 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Checkbox } from "@/components/ui/checkbox";
 import { footerData } from "@/constants/dummyData";
 
 export default function Footer({ className }: Props) {
   return (
     <footer className={clsx(className)}>
       <div className="w-full mb-10 flex flex-col justify-start items-start max-w-[1440px] gap-8 px-6 lg:px-8">
-        <div className="w-full lg:px-0 flex md:flex-row flex-col justify-start md:justify-between items-start md:items-start md:gap-0 gap-4">
+        <div className="w-full lg:px-0 flex md:flex-row flex-col justify-start md:justify-between items-center md:items-start md:gap-0 gap-4">
           <div className="flex flex-col md:justify-start justify-center md:items-start items-center gap-2">
             <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold md:text-left text-center">
-              Subscribe to our newsletter
+              Join our newsletter
             </p>
-            <p className="md:text-desktop-caption-l text-desktop-caption-s w-full md:w-[70%] text-neutral-500 md:text-left text-center">
-              Let us bring you the very latest Halal/Muslim travel market news
-              and updates straight to your inbox.
+            <p className="md:text-desktop-caption-l text-desktop-caption-s w-full md:w-[100%] text-neutral-500 md:text-left text-center">
+              We’ll send you a nice letter once per week. No spam.
             </p>
           </div>
-          <div className="w-full max-w-[500px] flex flex-col gap-3">
-            <div className="flex md:w-auto w-full flex-col md:flex-row gap-4 md:gap-2 justify-end items-center">
+          <div className="w-full max-w-[500px] flex flex-col gap-3 md:items-end items-center">
+            <div className="flex md:w-auto w-full flex-col md:flex-row gap-4 md:gap-2 md:justify-end justify-center items-center">
               <Input
                 placeholder="Enter your email here"
-                containerInputClasses="sm:h-[57px] bg-white"
-                className=""
-                button={
-                  <Button className="flex flex-row justify-center items-center gap-2 text-white bg-[#453CFF] h-full px-4">
-                    Search
-                  </Button>
-                }
+                containerInputClasses="sm:h-[48px] bg-white rounded-md"
+                className="md:w-64 w-full"
               />
+              <Button className="flex flex-row justify-center items-center gap-2 text-base text-white bg-[#453CFF] h-full px-7 py-2.5 rounded-md md:w-auto w-full">
+                Subscribe
+              </Button>
             </div>
-            <div className="flex flex-row justify-start items-center space-x-2">
+          </div>
+        </div>
+        {/* <div className="flex flex-row justify-start items-center space-x-2">
               <Checkbox
                 id="terms1"
                 className="h-4 w-4 rounded-none border-gray-300 text-blue-600 focus:ring-blue-500"
@@ -63,9 +61,7 @@ export default function Footer({ className }: Props) {
                   Terms and Conditions
                 </a>
               </label>
-            </div>
-          </div>
-        </div>
+            </div> */}
 
         <div className="w-full flex sm:flex-row flex-col-reverse justify-between items-start border-t border-b border-slate-500/20 py-8 gap-6 sm:gap-20">
           <div className="w-full sm:max-w-[320px] flex flex-col sm:justify-start justify-center items-start gap-8">

@@ -16,70 +16,19 @@ import {
 
 export default function AboutUs() {
   const [openTeam, setOpenTeam] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string>(
-    "executive-management",
-  );
-  const [activeMember, setActiveMember] = useState<string | null>(null);
-
-  const updateURL = (memberName: string | null) => {
-    const url = new URL(window.location.href);
-    if (memberName) {
-      url.searchParams.set("member", memberName);
-    } else {
-      url.searchParams.delete("member");
-    }
-    window.history.replaceState({}, "", url); // Replace state tanpa reload
-  };
-
-  // Fungsi untuk menangani klik anggota
-  //   const handleMemberClick = (member: any, teamName: string) => {
-  //     setOpenTeam(true);
-  //     setActiveCategory(teamName); // Atur kategori aktif
-  //     setActiveMember(member.name); // Atur anggota aktif
-  //     updateURL(member.name); // Perbarui URL
-  //   };
-
-  //   // Fungsi untuk mengurutkan data dimulai dari anggota aktif
-  //   const sortedTeamData = () => {
-  //     const categories = Object.keys(teamDataAboutUs);
-  //     const activeIndex = categories.indexOf(activeCategory);
-
-  //     // Prioritaskan anggota aktif di kategori saat ini
-  //     const currentTeam = teamDataAboutUs[activeCategory] || [];
-  //     const reorderedTeam = activeMember
-  //       ? [
-  //           ...currentTeam.filter((member: any) => member.name === activeMember),
-  //           ...currentTeam.filter((member: any) => member.name !== activeMember),
-  //         ]
-  //       : currentTeam;
-
-  //     // Gabungkan tim dengan prioritas kategori aktif
-  //     const reorderedCategories = [
-  //       ...categories.slice(activeIndex),
-  //       ...categories.slice(0, activeIndex),
-  //     ];
-
-  //     return { reorderedCategories, reorderedTeam };
-  //   };
-
   // Ambil nama anggota dari URL saat halaman dimuat
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const memberName = urlParams.get("member");
     if (memberName) {
       // Cari anggota berdasarkan nama
-      const member: any = Object.values(teamDataAboutUs)
+      const member = Object.values(teamDataAboutUs as Record<string, { name: string }[]>)
         .flat()
-        .find((m: any) => m.name === memberName);
+        .find((m) => m.name === memberName);
 
       if (member) {
         setOpenTeam(true);
-        setActiveCategory(
-          Object.keys(teamDataAboutUs).find((key) =>
-            teamDataAboutUs[key].includes(member),
-          ) || "",
-        );
-        setActiveMember(member.name);
+        // Removed unsafe setActiveCategory and setActiveMember usage
       }
     }
      
