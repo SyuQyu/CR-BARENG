@@ -107,7 +107,7 @@ export default function AboutUs() {
         alignment="left"
         variant="image"
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
         <div className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <p className="lg:text-desktop-body-1 text-mobile-body-1 text-left w-full text-neutral-500">
             CrescentRating is the world&apos;s leading authority on

@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import {
@@ -22,7 +21,9 @@ export default function AboutUs() {
     const memberName = urlParams.get("member");
     if (memberName) {
       // Cari anggota berdasarkan nama
-      const member = Object.values(teamDataAboutUs as Record<string, { name: string }[]>)
+      const member = Object.values(
+        teamDataAboutUs as Record<string, { name: string }[]>
+      )
         .flat()
         .find((m) => m.name === memberName);
 
@@ -31,7 +32,6 @@ export default function AboutUs() {
         // Removed unsafe setActiveCategory and setActiveMember usage
       }
     }
-     
   }, [openTeam]);
 
   return (
@@ -44,7 +44,7 @@ export default function AboutUs() {
         alignment="left"
         variant="image"
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
             We Have Provided Services to More Than 300+ Clients
@@ -54,7 +54,7 @@ export default function AboutUs() {
             pulvinar vitae. Ultrices tempor interdum non consectetur nec platea
             gravida ac.
           </p>
-          <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1 bg-neutral-100">
+          <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1 px-6 py-10 bg-neutral-100">
             <div className="w-full flex flex-col justify-center items-center  gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
                 35+
@@ -143,11 +143,11 @@ export default function AboutUs() {
                   </div>
                 ))}
               </div>
-              <div className="w-full flex justify-center mt-6">
+              {/* <div className="w-full flex justify-center mt-6">
                 <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 text-blue-600 border-gray-600/20 border p-3 sm:p-4">
                   View More
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -174,7 +174,7 @@ export default function AboutUs() {
                 ))}
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 bg-primary-cr-600 text-white  border p-3 sm:p-4">
+                <Button variant="primary" className="px-8 py-6">
                   View More
                 </Button>
               </div>
@@ -204,7 +204,7 @@ export default function AboutUs() {
                 ))}
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 bg-primary-cr-600 text-white  border p-3 sm:p-4">
+                <Button variant="primary" className="px-8 py-6">
                   View More
                 </Button>
               </div>
@@ -273,7 +273,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 bg-primary-cr-600 text-white  border p-3 sm:p-4">
+                <Button variant="primary" className="px-8 py-6">
                   View More
                 </Button>
               </div>
@@ -304,7 +304,7 @@ export default function AboutUs() {
                 ))}
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 bg-primary-cr-600 text-white  border p-3 sm:p-4">
+                <Button variant="primary" className="px-8 py-6">
                   View More
                 </Button>
               </div>
@@ -333,33 +333,47 @@ export default function AboutUs() {
                 ))}
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 bg-primary-cr-600 text-white  border p-3 sm:p-4">
+                <Button variant="primary" className="px-8 py-6">
                   View More
                 </Button>
               </div>
             </div>
           </div>
         </section>
-        <div className="w-full flex flex-col bg-gradient-to-r from-blue-600 to-navy-blue-600 justify-center items-center">
-          <div className="max-w-[1440px] px-6 lg:px-8 w-full sm:py-16 py-12 flex sm:flex-row flex-col gap-5 justify-between items-end">
-            <div className="sm:w-[80%] w-full flex flex-col gap-4">
-              <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-white">
-                Let’s Have a Talk
-              </p>
-              <p className="text-white sm:text-desktop-body-2 text-mobile-body-2">
-                Lorem ipsum dolor sit amet consectetur. Risus vitae blandit
-                faucibus id urna quis nisl egestas. Ultrices aenean metus duis
-                mi nisi viverra nulla diam.
-              </p>
-            </div>
-            <Link
-              href="#"
-              className="inline-block p-3 text-blue-600 text-center font-bold bg-white border border-gray-500/20 w-full sm:w-[20%]"
-            >
-              Contact Us
-            </Link>
+        <section
+          className="
+                      w-screen
+                      -mx-[calc((100vw-100%)/2)]
+                      flex flex-col md:flex-row
+                      p-6 sm:p-8 md:p-14
+                      gap-6 md:gap-0
+                      md:justify-between items-end
+                      bg-gradient-to-br from-[#453CFF] to-[#217CFF]
+                    "
+        >
+          <div className="need-support flex flex-col items-start text-start gap-4 w-full md:w-[40%] text-white md:self-start">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight md:leading-[50.40px]">
+              Let&apos;s Have a Talk
+            </h1>
+            <p className="text-sm sm:text-base md:text-base">
+              Lorem ipsum dolor sit amet consectetur. Risus vitae blandit
+              faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi
+              nisi viverra nulla diam.
+            </p>
           </div>
-        </div>
+
+          <Button
+            variant="secondary"
+            className="
+                        w-full sm:w-full md:w-auto
+                        self-end md:self-auto
+                        px-8 py-4 md:px-16 md:py-6
+                        font-semibold
+                      "
+          >
+            Contact Us
+          </Button>
+        </section>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function InTheMediaPage() {
         alignment="left"
         variant="image"
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full">
           <div className="flex flex-col justify-center items-center w-full gap-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">

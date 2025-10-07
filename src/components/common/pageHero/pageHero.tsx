@@ -31,8 +31,8 @@ export default function PageHero({
         : {};
 
     const sectionClasses = hasBackgroundImage
-        ? "relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
-        : "relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-gradient-to-br from-blue-800 to-blue-600";
+        ? "relative w-full px-10 lg:px-16 flex justify-center items-center flex-row bg-center"
+        : "relative w-full px-10 lg:px-16 flex justify-center items-center flex-row bg-gradient-to-br from-blue-800 to-blue-600";
 
     const contentAlignment = isLeftAligned
         ? "justify-start items-start"
@@ -47,7 +47,7 @@ export default function PageHero({
             className={`${sectionClasses} ${containerClassName}`}
             style={sectionStyle}
         >
-            <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5">
+            <div className="max-w-[1440px] sm:py-16 py-8 sm:px-8 lg:px-16 w-full flex sm:flex-row flex-col-reverse gap-5">
                 <div className={`flex w-full flex-col gap-5 ${contentAlignment} ${marginTop} text-white ${contentClassName}`}>
                     {subtitle && (
                         <p className={`${textAlignment} text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl`}>

@@ -31,7 +31,7 @@ export default function Carrer() {
         alignment="left"
         variant="image"
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">
@@ -149,7 +149,7 @@ export default function Carrer() {
               ))}
             </div>
             <div className="w-full flex justify-center mt-6">
-              <Button className="lg:text-mobile-body-1 text-mobile-body-3 sm:max-w-[150px] w-full flex flex-row justify-center items-center gap-2 text-blue-600 border-gray-600/20 border p-3 sm:p-4">
+              <Button className="px-12 py-6">
                 View More
               </Button>
             </div>

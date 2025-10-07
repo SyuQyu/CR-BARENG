@@ -9,7 +9,7 @@ export default function GlossaryCategories() {
   const params = useParams<{ id: string }>();
   return (
     <div className="w-full flex flex-col justify-center items-center ">
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="w-full py-4 flex flex-col justify-start items-start gap-4">
             <div className="flex w-full sm:flex-row flex-col sm:gap-2 gap-5 justify-between sm:items-center">
@@ -26,7 +26,7 @@ export default function GlossaryCategories() {
                 </span>
               </div>
               <Link href={`/about-us/careers/form/${params.id}`}>
-                <Button className="lg:text-mobile-body-1 text-mobile-body-3 flex flex-row justify-center items-center gap-2 bg-primary-cr-500 text-white border p-3 sm:p-4">
+                <Button className="px-12 py-6">
                   Apply Now
                 </Button>
               </Link>

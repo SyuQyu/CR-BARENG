@@ -1,5 +1,4 @@
 import { CircleCheck } from "lucide-react";
-import Link from "next/link";
 
 import {
   BasicCard,
@@ -39,7 +38,7 @@ export default function OurServices() {
         alignment="left"
         variant="image"
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center gap-10">
           <div className="flex flex-col w-full gap-4 text-center items-center">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">
@@ -72,7 +71,7 @@ export default function OurServices() {
               </BasicCard>
             ))}
           </div>
-          <Button className="text-white md:px-[32px] md:py-[30px] rounded-none bg-[#453CFF] sm:!text-desktop-body-2 !text-mobile-body-3 hover:bg-primary-cr-600">
+          <Button variant="primary" className="px-12 py-10">
             See Our Member Directory
           </Button>
         </section>
@@ -259,23 +258,39 @@ export default function OurServices() {
             </div>
           </section>
         </section>
-        <section className="w-full flex flex-col lg:flex-row p-6 sm:p-8 lg:p-14 gap-6 lg:gap-0 lg:justify-between items-start bg-gradient-to-br from-[#453CFF] to-[#217CFF]">
-          <div className="need-support flex flex-col items-start text-start gap-4 w-full lg:w-[40%] text-white lg:self-start">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight lg:leading-[50.40px]">
+        <section
+          className="
+              w-screen
+              -mx-[calc((100vw-100%)/2)]
+              flex flex-col md:flex-row
+              p-6 sm:p-8 md:p-14
+              gap-6 md:gap-0
+              md:justify-between items-end
+              bg-gradient-to-br from-[#453CFF] to-[#217CFF]
+            "
+        >
+          <div className="need-support flex flex-col items-start text-start gap-4 w-full md:w-[40%] text-white md:self-start">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight md:leading-[50.40px]">
               Need Support For Our Services?
             </h1>
-            <p className="text-sm sm:text-base lg:text-base">
+            <p className="text-sm sm:text-base md:text-base">
               Lorem ipsum dolor sit amet consectetur. Risus vitae blandit
               faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi
               nisi viverra nulla diam.
             </p>
           </div>
-          <Link
-            href="/about-us/contact-us"
-            className="lg:self-end bg-white text-[#453CFF] border-2 border-white hover:bg-transparent hover:text-white hover:border-white py-3 px-6 sm:py-4 sm:px-8 lg:py-5 w-full md:w-[30%] lg:w-[20%] leading-none h-fit flex justify-center items-center text-center font-semibold cursor-pointer"
+
+          <Button
+            variant="secondary"
+            className="
+                w-full sm:w-full md:w-auto
+                self-end md:self-auto
+                px-8 py-4 md:px-16 md:py-6
+                font-semibold
+              "
           >
             Contact Us
-          </Link>
+          </Button>
         </section>
         {/* <section className="max-w-[1440px]  px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[35%]">

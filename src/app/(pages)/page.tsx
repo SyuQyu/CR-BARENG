@@ -2,32 +2,59 @@
 import { Award, CircleCheckBig, Globe, Map, Search } from "lucide-react";
 import React, { useState } from "react";
 
-import { Button, CardLandingPage, HeroCard, ImageWithFallback } from "@/components/common";
-import { Carousel, CarouselContent, CarouselItem, CarouselNextCustom, CarouselPreviousCustom } from "@/components/ui/defaultCarousel";
+import {
+  Button,
+  CardLandingPage,
+  HeroCard,
+  ImageWithFallback,
+} from "@/components/common";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNextCustom,
+  CarouselPreviousCustom,
+} from "@/components/ui/defaultCarousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { heroCardsData, medpart, servicesDataHomePage,testimonials } from "@/constants/dummyData";
+import {
+  heroCardsData,
+  medpart,
+  servicesDataHomePage,
+  testimonials,
+} from "@/constants/dummyData";
 
 export default function Home() {
-  const [selectedService, setSelectedService] = useState<keyof typeof servicesDataHomePage>("rating");
+  const [selectedService, setSelectedService] =
+    useState<keyof typeof servicesDataHomePage>("rating");
   return (
-    <div className="w-full gap-24 flex flex-col justify-center items-center">
+    <div className="w-full gap-24 flex flex-col justify-center items-center lg:px-32 sm:px-16 px-32">
       <section className="max-w-[1440px] px-6 lg:px-8 w-full">
         <div className="w-full flex md:flex-row flex-col lg:mt-0 mt-12 justify-between items-center">
           <div className="flex flex-col justify-center md:items-start items-center gap-5 max-w-[540px]">
-            <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  font-bold">SUPERCHARGE YOUR <span className="text-custom-purple-cr">BUSINESS</span></p>
+            <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  font-bold">
+              SUPERCHARGE YOUR{" "}
+              <span className="text-custom-purple-cr">BUSINESS</span>
+            </p>
             <p
-              className="md:text-left text-center sm:text-desktop-heading-2 text-mobile-heading-2 bg-clip-text text-transparent font-bold"
+              className="md:text-left text-center sm:text-desktop-heading-2 text-mobile-heading-2 font-bold bg-clip-text text-transparent"
               style={{
-                backgroundImage: "linear-gradient(94deg, #1502CD 20.68%, #5705CD 43.31%)"
+                backgroundImage:
+                  "linear-gradient(94deg, #1502CD 20.68%, #5705CD 43.31%)",
               }}
             >
               Unlock the Potential of USD 190 Billion Muslim Travel Market
             </p>
 
-            <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  leading-6 text-[#3A3A3A]">By 2028, the Muslim Traveler expenditure will reach $225 billion. Tap into this Halal travel market with CrescentRating. Our industry expertise and innovative insights help you offer world-class travel experiences for Muslim travelers worldwide.</p>
-            <Button className="!rounded-full bg-[#FAB805] sm:!text-desktop-body-2 !text-mobile-body-3 font-bold hover:bg-[#faf205]">
-              WORK WITH US
-            </Button>
+            <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  leading-6 text-[#3A3A3A]">
+              By 2028, the Muslim Traveler expenditure will reach $225 billion.
+              Tap into this Halal travel market with CrescentRating. Our
+              industry expertise and innovative insights help you offer
+              world-class travel experiences for Muslim travelers worldwide.
+            </p>
+            {/* <Button className="bg-primary-cr-600 sm:!text-desktop-body-2 !text-mobile-body-3 font-bold hover:bg-[#faf205]">
+              DOWNLOAD REPORT
+            </Button> */}
+            <Button className="px-10 py-8">DOWNLOAD REPORT</Button>
           </div>
           <ImageWithFallback
             width={0}
@@ -42,11 +69,16 @@ export default function Home() {
       </section>
       <section className="max-w-[1440px] px-6 lg:px-8 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
-          <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">FEATURED MEDIA PARTNERS AND CLIENTS</p>
+          <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">
+            FEATURED MEDIA PARTNERS AND CLIENTS
+          </p>
           <Carousel className="w-full">
             <CarouselContent>
               {medpart.map((item, index) => (
-                <CarouselItem key={index} className="md:basis-1/5 sm:basis-1/4 basis-1/3 flex justify-center items-center">
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/5 sm:basis-1/4 basis-1/3 flex justify-center items-center"
+                >
                   <ImageWithFallback
                     width={0}
                     height={0}
@@ -64,7 +96,9 @@ export default function Home() {
       </section>
       <section className="max-w-[1440px] px-6 lg:px-8 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
-          <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">HALAL TRAVEL TRENDS AND INSIGHTS</p>
+          <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
+            HALAL TRAVEL TRENDS AND INSIGHTS
+          </p>
           <div className="grid lg:grid-cols-2 grid-cols-1 justify-between items-start gap-12">
             <div className="flex flex-col justify-start items-start">
               <ImageWithFallback
@@ -76,8 +110,12 @@ export default function Home() {
                 src={"/image/landing-page/img.webp"}
                 alt={"hero"}
               />
-              <p className="text-desktop-caption-l text-custom-gray-cr font-bold">may 27, 2022</p>
-              <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-primary-cr-600">CR Nominated as ‘2022 Most Innovative Company In the World’</p>
+              <p className="text-desktop-caption-l text-custom-gray-cr font-bold">
+                MAY 27, 2022
+              </p>
+              <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-primary-cr-600">
+                CR Nominated as ‘2022 Most Innovative Company In the World’
+              </p>
             </div>
             <div className="w-full h-full flex flex-col justify-between items-start gap-5">
               {heroCardsData.map((card, index) => (
@@ -92,35 +130,67 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <Button variant="outline">
+          {/* <Button className="!rounded-full text-custom-purple-cr sm:!text-desktop-body-2 !text-mobile-body-3 px-10 font-bold border-custom-purple-cr">
             SEE MORE
+          </Button> */}
+          <Button variant="secondary" className="px-12 py-6">
+            See More
           </Button>
         </div>
       </section>
       <section className="max-w-[1440px] px-6 lg:px-8 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12">
           <div className="flex flex-col gap-3">
-            <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">WHAT WE DO</p>
-            <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#434343]">Our Services</p>
+            <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
+              WHAT WE DO
+            </p>
+            <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#434343]">
+              Our Services
+            </p>
           </div>
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 justify-center items-center w-full gap-6">
+          <div className="flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 md:justify-items-center lg:grid-cols-5 w-full">
             {[
-              { key: "rating", label: "Rating and Accreditation", icon: <CircleCheckBig className="sm:size-20 size-16" /> },
-              { key: "conference", label: "Halal-In-Travel Conferences", icon: <Globe className="sm:size-20 size-16" /> },
-              { key: "destination", label: "Destination Marketing", icon: <Map className="sm:size-20 size-16" /> },
-              { key: "report", label: "Reports, Research and Consultancy", icon: <Search className="sm:size-20 size-16" /> },
-              { key: "training", label: "Training and Certification", icon: <Award className="sm:size-20 size-16" /> },
+              {
+                key: "rating",
+                label: "Rating and Accreditation",
+                icon: <CircleCheckBig className="sm:size-20 size-16" />,
+              },
+              {
+                key: "conference",
+                label: "Halal-In-Travel Conferences",
+                icon: <Globe className="sm:size-20 size-16" />,
+              },
+              {
+                key: "destination",
+                label: "Destination Marketing",
+                icon: <Map className="sm:size-20 size-16" />,
+              },
+              {
+                key: "report",
+                label: "Reports, Research and Consultancy",
+                icon: <Search className="sm:size-20 size-16" />,
+              },
+              {
+                key: "training",
+                label: "Training and Certification",
+                icon: <Award className="sm:size-20 size-16" />,
+              },
             ].map((service) => (
               <div
                 key={service.key}
-                className={`flex flex-col p-10 justify-center items-center gap-5 rounded-[16px] shadow-[0px_2px_10px_0px_rgba(118,118,118,0.25)] backdrop-blur-[12.5px] cursor-pointer ${selectedService === service.key
-                  ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white"
-                  : "text-neutral-400 bg-white"
-                  }`}
-                onClick={() => setSelectedService(service.key as any)}
+                className={`
+                    w-1/3 md:w-auto
+                    flex flex-col p-10 justify-center items-center gap-5
+                    rounded-[16px] shadow-[0px_2px_10px_0px_rgba(118,118,118,0.25)]
+                    backdrop-blur-[12.5px] cursor-pointer
+                    ${selectedService === service.key ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white" : "text-neutral-400 bg-white"}
+                  `}
+                onClick={() => setSelectedService(service.key)}
               >
                 {service.icon}
-                <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-center">{service.label}</p>
+                <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-center">
+                  {service.label}
+                </p>
               </div>
             ))}
           </div>
@@ -173,16 +243,8 @@ export default function Home() {
                 gradientTransform="translate(391 390.62) rotate(90) scale(290.62 291)"
               >
                 <stop offset="0.59375" stopColor="#1502CD" />
-                <stop
-                  offset="1"
-                  stopColor="#1502CD40"
-                  stopOpacity="0.5"
-                />
-                <stop
-                  offset="1"
-                  stopColor="#1502CD40"
-                  stopOpacity="0.5"
-                />
+                <stop offset="1" stopColor="#1502CD40" stopOpacity="0.5" />
+                <stop offset="1" stopColor="#1502CD40" stopOpacity="0.5" />
               </radialGradient>
             </defs>
           </svg>
@@ -192,13 +254,18 @@ export default function Home() {
                 {servicesDataHomePage[selectedService].title}
               </p>
               <div className="w-full flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-44 gap-10">
-                <Tabs defaultValue={servicesDataHomePage[selectedService].tabs[0].key} className="lg:w-[70%] w-full z-10">
+                <Tabs
+                  defaultValue={
+                    servicesDataHomePage[selectedService].tabs[0].key
+                  }
+                  className="lg:w-[70%] w-full z-10"
+                >
                   <TabsList className="w-full">
                     {servicesDataHomePage[selectedService].tabs.map((tab) => (
                       <TabsTrigger
                         key={tab.key}
                         value={tab.key}
-                        className="w-full border !bg-white !shadow-xl !rounded-lg p-4 m-2"
+                        className="w-full"
                       >
                         {tab.label}
                       </TabsTrigger>
@@ -213,8 +280,11 @@ export default function Home() {
                     >
                       <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
                         {tab.content}
-                        <Button variant="outline">
-                          FIND OUT HOW
+                        <Button
+                          variant="secondary"
+                          className="px-12 py-6"
+                        >
+                          Find out How
                         </Button>
                       </div>
                     </TabsContent>
@@ -232,9 +302,8 @@ export default function Home() {
               </div>
             </>
           )}
-
         </div>
-      </section >
+      </section>
       <section className="max-w-[1440px] px-6 lg:px-8 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12">
           <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-44 gap-10">
@@ -251,11 +320,29 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-1 justify-start items-start">
               <div className="flex flex-col">
-                <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343] m-0">WHO WE ARE</p>
-                <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#6666D3] m-0">Since 2008</p>
+                <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343] m-0">
+                  WHO WE ARE
+                </p>
+                <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#6666D3] m-0">
+                  Since 2008
+                </p>
               </div>
-              <p className="sm:text-desktop-body-2 text-mobile-body-2">We have used extensive insights, industry intelligence, lifestyle behaviour and research on the needs of the Muslim traveller to deliver authoritative guidance on all aspects of the market to destinations, organisations and businesses worldwide.</p>
-              <Button variant="outline">ABOUT US</Button>
+              <p className="sm:text-desktop-body-2 text-mobile-body-2">
+                We have used extensive insights, industry intelligence,
+                lifestyle behaviour and research on the needs of the Muslim
+                traveller to deliver authoritative guidance on all aspects of
+                the market to destinations, organisations and businesses
+                worldwide.
+              </p>
+              {/* <Button className="sm:!text-desktop-body-2 !text-mobile-body-3 mt-4 !rounded-full !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">
+                ABOUT US
+              </Button> */}
+              <Button
+                variant="secondary"
+                className="mt-8 px-12 py-6"
+              >
+                About Us
+              </Button>
             </div>
           </div>
         </div>
@@ -264,8 +351,12 @@ export default function Home() {
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <div className="flex flex-col gap-1 justify-center items-center">
             <div className="flex flex-col justify-center items-center">
-              <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">AWARDS</p>
-              <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#6666D3]">Our Recognitions</p>
+              <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
+                AWARDS
+              </p>
+              <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#6666D3]">
+                Our Recognitions
+              </p>
             </div>
             <div className="grid md:grid-cols-2 grid-cols-1 md:px-52 px-0 w-full gap-6 mt-16">
               <div className="flex flex-col gap-4 justify-center items-center">
@@ -279,7 +370,9 @@ export default function Home() {
                   alt={"hero"}
                 />
                 <p className="text-center sm:text-desktop-body-2 text-mobile-body-2">
-                  CrescentRating wins Silver in &quot;Increasing Diversity in Tourism&quot; category at World Responsible Tourism Awards 2021, recognized for sustainable and responsible tourism.
+                  CrescentRating wins Silver in &quot;Increasing Diversity in
+                  Tourism&quot; category at World Responsible Tourism Awards
+                  2021, recognized for sustainable and responsible tourism.
                 </p>
               </div>
               <div className="flex flex-col gap-4 justify-center items-center">
@@ -293,7 +386,9 @@ export default function Home() {
                   alt={"hero"}
                 />
                 <p className="text-center sm:text-desktop-body-2 text-mobile-body-2">
-                  CrescentRating wins Silver in Govt. category at Meaningful Tourism Award 2022 for innovative tourism approach, recognized as tomorrow&apos;s tourism leader.
+                  CrescentRating wins Silver in Govt. category at Meaningful
+                  Tourism Award 2022 for innovative tourism approach, recognized
+                  as tomorrow&apos;s tourism leader.
                 </p>
               </div>
             </div>
@@ -313,22 +408,45 @@ export default function Home() {
               alt={"hero"}
             />
             <div className="flex flex-col justify-center items-center gap-4 z-10">
-              <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-[#434343]">WORK WITH US</p>
-              <p className="sm:text-desktop-body-1 text-mobile-body-1 text-[#484848] lg:w-[50%] w-full text-center">More than 50+ business, hotels, attractions, and clients around the world have tapped into the potential of the underserved Muslim market</p>
-              <Button variant="outline">CONTACT US</Button>
+              <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-[#434343]">
+                WORK WITH US
+              </p>
+              <p className="sm:text-desktop-body-1 text-mobile-body-1 text-[#484848] lg:w-[50%] w-full text-center">
+                More than 50+ business, hotels, attractions, and clients around
+                the world have tapped into the potential of the underserved
+                Muslim market
+              </p>
+              {/* <Button className="sm:!text-desktop-body-2 !text-mobile-body-3 mt-4 !rounded-full !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">
+                CONTACT US
+              </Button> */}
+              <Button variant="secondary" className="px-12 py-6">
+                Contact Us
+              </Button>
             </div>
           </div>
         </div>
         <div className="max-w-[1440px] px-6 lg:px-8 w-full min-h-[350px] mb-28">
           <div className="w-full flex flex-col justify-center items-center gap-12">
             <div className="flex flex-col justify-center items-center gap-4 z-10">
-              <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-[#434343]">WHAT THEY SAY</p>
-              <p className="sm:text-desktop-body-1 text-mobile-body-1 text-[#484848] w-[80%] text-center"> Hear about us from our <span className="font-bold text-primary-cr-700">clients</span> that have benefited from our solutions</p>
+              <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-[#434343]">
+                WHAT THEY SAY
+              </p>
+              <p className="sm:text-desktop-body-1 text-mobile-body-1 text-[#484848] w-[80%] text-center">
+                {" "}
+                Hear about us from our{" "}
+                <span className="font-bold text-primary-cr-700">
+                  clients
+                </span>{" "}
+                that have benefited from our solutions
+              </p>
             </div>
             <Carousel className="w-full">
               <CarouselContent className="mb-8">
                 {testimonials.map((item, index) => (
-                  <CarouselItem key={index} className="lg:basis-1/3 md:basis-1/2">
+                  <CarouselItem
+                    key={index}
+                    className="lg:basis-1/3 md:basis-1/2"
+                  >
                     <CardLandingPage data={item} />
                   </CarouselItem>
                 ))}
@@ -341,6 +459,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div >
+    </div>
   );
 }

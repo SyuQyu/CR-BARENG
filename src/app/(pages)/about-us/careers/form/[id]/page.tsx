@@ -3,7 +3,7 @@ import { Button, Input } from "@/components/common";
 export default function Submission() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <div className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <p className="lg:text-desktop-heading-5 text-mobile-heading-4 font-bold mb-4 text-center text-black">
             Job Application Submission -<br />
