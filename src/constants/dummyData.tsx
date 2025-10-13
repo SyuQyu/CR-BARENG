@@ -1333,24 +1333,19 @@ export const categoriesServices = [
 
 export const templateCarrers = [
   {
-    title: "lorem ipsum dolor sit amet",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+    title: "Inclusivity and Bridge-Building",
+    description: "We aim to raise awareness and build relationships across communities, valuing inclusivity and openness.",
+    icon: "thumbsup",
   },
   {
-    title: "lorem ipsum dolor sit amet",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+    title: "Empowerment and Responsible Exploration",
+    description: "The company empowers Muslims to travel responsibly, promoting exploration with purpose and compassion.",
+    icon: "travel",
   },
   {
-    title: "lorem ipsum dolor sit amet",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
-  },
-  {
-    title: "lorem ipsum dolor sit amet",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo morbi id curabitur. Luctus varius ipsum nisl enim tempor suspendisse fusce.",
+    title: "Sustainability and Growth",
+    description: "We promote a sustainable ecosystem that encourages personal and social growth.",
+    icon: "graphup",
   },
 ];
 
@@ -1389,7 +1384,7 @@ export const servicesData = [
     imageAlt: "Market Intelligence Research Reports",
     title: "Market Intelligence Research Reports",
     cta_title: "Learn More",
-    cta_link: "/insights/halal-muslim-travel-market-reports", 
+    cta_link: "/insights/halal-muslim-travel-market-reports",
     description:
       "Stay ahead with in-depth, data-backed reports on the global Muslim travel market.",
   },
@@ -3311,18 +3306,18 @@ export const awardsAboutUs = [
 
 export const testimonialsAboutUs = [
   {
-    text: "What sets CrescentRating apart is their unique commitment to providing specialized training for managers and service staff; tailored to meet the distinct demands of Halal or Muslim-friendly management. We haven't encountered any other establishment offering such customized training.",
-    imageSrc: "/image/about-us/wts.png",
-    imageAlt: "wts",
-    name: "Aksu Restaurant",
-    location: "Uzbekistan",
+    text: "As a Product Designer at CrescentRating, I’ve experienced a supportive culture that values innovation, continuous learning, and diversity. It has been an excellent environment for professional development.",
+    imageSrc: "/image/about-us/team/Zafira-Khairani.png",
+    imageAlt: "Zafira Khairani",
+    name: "Zafira Khairani",
+    position: "Product (UI/UX) Desinger",
   },
   {
-    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
-    imageSrc: "/image/about-us/wts.png",
-    imageAlt: "prof",
-    name: "Prof. Claudio Visentin",
-    location: "Università della Svizzera Italiana",
+    text: "Working at CrescentRating has been an empowering experience that has allowed me to connect with industry professionals. The team has established a collaborative environment where everyone’s input is valued, and it’s genuinely encouraging to be trusted with the ownership and leadership of my own work.",
+    imageSrc: "/image/about-us/team/Denny-Andriana-Wahyu.png",
+    imageAlt: "Denny Andriana Wahyu",
+    name: "Denny Andriana Wahyu",
+    position: "Data Analyst Lead",
   },
 ];
 
