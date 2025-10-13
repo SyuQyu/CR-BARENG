@@ -25,7 +25,7 @@ import {
 export default function AboutUs() {
   const [openTeam, setOpenTeam] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>(
-    "executive-management",
+    "executive-management"
   );
   const [activeMember, setActiveMember] = useState<string | null>(null);
 
@@ -57,10 +57,10 @@ export default function AboutUs() {
     const reorderedTeam = activeMember
       ? [
           ...currentTeam.filter(
-            (member: { name: string }) => member.name === activeMember,
+            (member: { name: string }) => member.name === activeMember
           ),
           ...currentTeam.filter(
-            (member: { name: string }) => member.name !== activeMember,
+            (member: { name: string }) => member.name !== activeMember
           ),
         ]
       : currentTeam;
@@ -88,13 +88,12 @@ export default function AboutUs() {
         setOpenTeam(true);
         setActiveCategory(
           Object.keys(teamDataAboutUs).find((key) =>
-            teamDataAboutUs[key].includes(member),
-          ) || "",
+            teamDataAboutUs[key].includes(member)
+          ) || ""
         );
         setActiveMember(member.name);
       }
     }
-     
   }, [openTeam]);
 
   return (
@@ -146,7 +145,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-        
+
         <div className="max-w-[1440px] px-6 lg:px-8 w-full">
           {openTeam ? (
             <>
@@ -229,7 +228,7 @@ export default function AboutUs() {
                           </div>
                         </div>
                       </CarouselItem>
-                    )),
+                    ))
                   )}
                 </CarouselContent>
                 <CarouselPrevious />
@@ -303,7 +302,7 @@ export default function AboutUs() {
                           ))}
                         </div>
                       </TabsContent>
-                    ),
+                    )
                   )}
                 </Tabs>
               </div>
@@ -398,7 +397,7 @@ export default function AboutUs() {
                     key={index}
                     text={testimonial.text}
                     name={testimonial.name}
-                    location={testimonial.location}
+                    location={testimonial.position}
                     imageSrc={testimonial.imageSrc}
                     imageAlt={testimonial.imageAlt}
                   />
@@ -415,26 +414,26 @@ export default function AboutUs() {
             Our awards reflect CrescentRating&apos;s dedication to innovation
             and quality in the halal tourism sector.
           </p>
-          <div className="mt-10 grid md:grid-cols-4 grid-cols-2 justify-center items-center w-full h-full gap-0">
+          <div className="mt-10 grid md:grid-cols-4 grid-cols-2 w-full gap-0">
             {awardsAboutUs.map((award: any, index: number) => (
               <div
                 key={index}
-                className="w-full flex flex-col justify-start items-start p-8 gap-0.5 min-h-[240px] border h-full"
+                className="flex flex-col justify-start items-start text-left p-8 border min-h-[240px] h-full"
               >
                 <ImageWithFallback
                   width={0}
                   height={0}
                   sizes="1000vw"
-                  className="w-[80px] object-contain"
+                  className="w-[80px] h-[80px] object-contain mb-4"
                   priority={false}
                   src={award.image}
                   alt={award.title}
                 />
-                <div className="flex flex-col justify-start items-start gap-1">
-                  <p className="lg:text-desktop-body-1 text-mobile-body-1 font-bold bg-clip-text text-left w-full">
+                <div className="flex flex-col justify-start items-start gap-1 w-full">
+                  <p className="lg:text-desktop-body-1 text-mobile-body-1 font-bold w-full">
                     {award.title}
                   </p>
-                  <p className="lg:text-desktop-body-2 text-mobile-body-1 text-left w-full text-neutral-500">
+                  <p className="lg:text-desktop-body-2 text-mobile-body-1 w-full text-neutral-500">
                     {award.subtitle}
                   </p>
                 </div>

@@ -126,7 +126,7 @@ export default function AboutUs() {
                         width={0}
                         height={0}
                         sizes="1000vw"
-                        className="w-[48px] object-contain"
+                        className="w-[48px] rounded-full object-cover"
                         priority={false}
                         src={testimonial.imageSrc}
                         alt={testimonial.imageAlt}
@@ -136,7 +136,7 @@ export default function AboutUs() {
                           {testimonial.name}
                         </p>
                         <p className="text-neutral-500 text-desktop-caption-l">
-                          {testimonial.location}
+                          {testimonial.position}
                         </p>
                       </div>
                     </div>
@@ -156,9 +156,8 @@ export default function AboutUs() {
             Global Muslim Travel Index
           </p>
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500 w-[80%] lg:w-[50%]">
-            Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci
-            pulvinar vitae. Ultrices tempor interdum non consectetur nec platea
-            gravida ac.
+            Explore the Global Muslim Travel Index – your gateway to impactful
+            insights and trends.
           </p>
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
@@ -170,6 +169,7 @@ export default function AboutUs() {
                     imageUrl={report.imageUrl}
                     downloadUrl={report.downloadUrl}
                     customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
+                    buttonContent={<>View Report</>}
                   />
                 ))}
               </div>
@@ -186,9 +186,8 @@ export default function AboutUs() {
             Muslim Visitor Guides
           </p>
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500 w-[80%] lg:w-[50%]">
-            Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci
-            pulvinar vitae. Ultrices tempor interdum non consectetur nec platea
-            gravida ac.
+            Our Muslim Visitor Guides empower destinations and travelers alike
+            with vital information.
           </p>
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
@@ -200,6 +199,7 @@ export default function AboutUs() {
                     imageUrl={report.imageUrl}
                     downloadUrl={report.downloadUrl}
                     customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
+                    buttonContent={<>View Guide</>}
                   />
                 ))}
               </div>
@@ -285,9 +285,8 @@ export default function AboutUs() {
             International Conferences Attended
           </p>
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500 w-[80%] lg:w-[50%]">
-            Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci
-            pulvinar vitae. Ultrices tempor interdum non consectetur nec platea
-            gravida ac.
+            From destination audits to tailored advisory, see how we support
+            growth and excellence.
           </p>
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
@@ -300,6 +299,7 @@ export default function AboutUs() {
                     downloadUrl={report.downloadUrl}
                     date={"Riyadh"}
                     customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    buttonContent={<>View Event</>}
                   />
                 ))}
               </div>

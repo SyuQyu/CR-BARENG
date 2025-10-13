@@ -71,7 +71,7 @@ export default function OurServices() {
               </BasicCard>
             ))}
           </div>
-          <Button variant="primary" className="px-12 py-10">
+          <Button variant="primary" className="px-12 py-8">
             See Our Member Directory
           </Button>
         </section>
