@@ -45,7 +45,7 @@ export default function BreadCrumb({ excludeSegment }: BreadCrumbProps) {
     const breadcrumbs = generateBreadcrumbsFromPath(currentPage, excludeSegment); // Generate breadcrumb data from the path
 
     return (
-        <Breadcrumb>
+        <Breadcrumb className='mb-16'>
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
@@ -56,11 +56,11 @@ export default function BreadCrumb({ excludeSegment }: BreadCrumbProps) {
 
                     return (
                         <React.Fragment key={breadcrumb.href}>
-                            <BreadcrumbSeparator className='text-primary-cr-600' />
+                            <BreadcrumbSeparator className='text-white' />
                             <BreadcrumbItem>
                                 {isLast ? (
                                     <BreadcrumbPage
-                                        className="text-primary-cr-600 sm:text-desktop-body-2 text-desktop-caption-l font-bold"
+                                        className="text-white font-bold"
                                     >
                                         {breadcrumb.label}
                                     </BreadcrumbPage>
