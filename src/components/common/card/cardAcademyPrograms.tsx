@@ -172,22 +172,14 @@ export default function CardAcademyPrograms({
                   <DialogTrigger asChild>
                     {program === "HalalChefWorld Training Program" ? (
                       <a href="/services/crescentrating-academy/halalchefworld" target="_self" rel="noopener noreferrer">
-                        <Button
-                          className={clsx(
-                            "w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 hover:bg-white hover:text-primary-cr-600 border-gray-500/20 rounded-none"
-                          )}
-                        >
+                        <Button variant="primary" className="px-8 py-6">
                           I&apos;m Interested
                         </Button>
                       </a>
                     ) : (
-                      <Button
-                        className={clsx(
-                          "w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 hover:bg-white hover:text-primary-cr-600 border-gray-500/20 rounded-none"
-                        )}
-                      >
-                        I&apos;m Interested
-                      </Button>
+                      <Button variant="primary" className="px-8 py-6">
+                          I&apos;m Interested
+                        </Button>
                     )}
                    
                   </DialogTrigger>
