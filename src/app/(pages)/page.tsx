@@ -27,22 +27,18 @@ export default function Home() {
   const [selectedService, setSelectedService] =
     useState<keyof typeof servicesDataHomePage>("rating");
   return (
-    <div className="w-full gap-24 flex flex-col justify-center items-center lg:px-32 sm:px-16 px-32">
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+    <div className="w-full gap-24 flex flex-col justify-center items-center">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex md:flex-row flex-col lg:mt-0 mt-12 justify-between items-center">
           <div className="flex flex-col justify-center md:items-start items-center gap-5 max-w-[540px]">
             <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  font-bold">
               SUPERCHARGE YOUR{" "}
               <span className="text-custom-purple-cr">BUSINESS</span>
             </p>
-            <p
-              className="md:text-left text-center sm:text-desktop-heading-2 text-mobile-heading-2 font-bold bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(94deg, #1502CD 20.68%, #5705CD 43.31%)",
-              }}
-            >
-              Unlock the Potential of USD 190 Billion Muslim Travel Market
+            <p className="md:text-left text-center sm:text-desktop-heading-2 text-mobile-heading-2 font-bold text-primary-cr-600">
+              Unlock the Potential of{" "}
+              <span className="bg-[#FAB80585]">USD 225 Billion</span> Muslim
+              Travel Market
             </p>
 
             <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  leading-6 text-[#3A3A3A]">
@@ -67,7 +63,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">
             FEATURED MEDIA PARTNERS AND CLIENTS
@@ -94,7 +90,7 @@ export default function Home() {
           </Carousel>
         </div>
       </section>
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
             HALAL TRAVEL TRENDS AND INSIGHTS
@@ -138,7 +134,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12">
           <div className="flex flex-col gap-3">
             <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
@@ -196,7 +192,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12 relative">
           <svg
             width="350"
@@ -280,10 +276,7 @@ export default function Home() {
                     >
                       <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
                         {tab.content}
-                        <Button
-                          variant="secondary"
-                          className="px-12 py-6"
-                        >
+                        <Button variant="secondary" className="px-12 py-6">
                           Find out How
                         </Button>
                       </div>
@@ -304,7 +297,7 @@ export default function Home() {
           )}
         </div>
       </section>
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12">
           <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-44 gap-10">
             <div className="border-r-[15px] border-r-[#6666D3] rounded-2xl lg:w-auto w-full">
@@ -337,17 +330,14 @@ export default function Home() {
               {/* <Button className="sm:!text-desktop-body-2 !text-mobile-body-3 mt-4 !rounded-full !py-5 !px-6 border-primary-cr-700 text-primary-cr-700">
                 ABOUT US
               </Button> */}
-              <Button
-                variant="secondary"
-                className="mt-8 px-12 py-6"
-              >
+              <Button variant="secondary" className="mt-8 px-12 py-6">
                 About Us
               </Button>
             </div>
           </div>
         </div>
       </section>
-      <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <div className="flex flex-col gap-1 justify-center items-center">
             <div className="flex flex-col justify-center items-center">
@@ -395,7 +385,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full flex flex-col  gap-24 justify-center items-center bg-gradient-to-b from-[#FBFBFE] to-[#F3F3FF]">
+      <section className="w-full flex flex-col gap-24 justify-center items-center bg-gradient-to-b from-[#FBFBFE] to-[#F3F3FF]">
         <div className="max-w-[1440px] px-6 lg:px-8 w-full min-h-[350px] pt-14">
           <div className="w-full flex flex-col justify-center items-center gap-12 relative">
             <ImageWithFallback
