@@ -1,79 +1,96 @@
-'use client';
-import { usePathname } from 'next/navigation';
-import React from 'react';
+"use client";
+import { usePathname } from "next/navigation";
+import React from "react";
 
 import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
 interface BreadcrumbData {
-    label: string;
-    href: string;
+  label: string;
+  href: string;
 }
 
-const generateBreadcrumbsFromPath = (pathname: string, excludeSegment?: string): BreadcrumbData[] => {
-    const pathSegments = pathname
-        .split('/')
-        .filter(Boolean)
-        .map(decodeURIComponent);
+const generateBreadcrumbsFromPath = (
+  pathname: string,
+  excludeSegment?: string
+): BreadcrumbData[] => {
+  const pathSegments = pathname
+    .split("/")
+    .filter(Boolean)
+    .map(decodeURIComponent);
 
-    return pathSegments
-        .filter(segment => segment.toLowerCase() !== excludeSegment?.toLowerCase())
-        .map((segment, index) => {
-            const href = `/${pathSegments.slice(0, index + 1).join('/')}`
+  return pathSegments
+    .filter(
+      (segment) => segment.toLowerCase() !== excludeSegment?.toLowerCase()
+    )
+    .map((segment, index) => {
+      const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
 
-            const label = segment
-                .split('-')
-                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ')
+      const label = segment
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 
-            return { label, href }
-        });
+      return { label, href };
+    });
 };
 
 interface BreadCrumbProps {
-    excludeSegment?: string; // Optional segment to exclude, e.g., "glossary"
+  excludeSegment?: string; // Optional segment to exclude, e.g., "glossary"
+  variant?: "light" | "dark";
 }
 
-export default function BreadCrumb({ excludeSegment }: BreadCrumbProps) {
-    const currentPage = usePathname(); // Get the current pathname from Next.js
-    const breadcrumbs = generateBreadcrumbsFromPath(currentPage, excludeSegment); // Generate breadcrumb data from the path
+export default function BreadCrumb({
+  excludeSegment,
+  variant = "dark",
+}: BreadCrumbProps) {
+  const currentPage = usePathname();
+  const breadcrumbs = generateBreadcrumbsFromPath(currentPage, excludeSegment);
 
-    return (
-        <Breadcrumb className='mb-16'>
-            <BreadcrumbList>
-                <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
-                </BreadcrumbItem>
+  const isLight = variant === "light";
+  const textColor = isLight ? "text-neutral-800" : "text-white";
+  const separatorColor = isLight ? "text-neutral-500" : "text-white";
+  const activeColor = isLight ? "text-primary-cr-700" : "text-white";
 
-                {breadcrumbs.map((breadcrumb, index) => {
-                    const isLast = index === breadcrumbs.length - 1;
+  return (
+    <Breadcrumb className="mb-8">
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink className={`${textColor}`} href="/">
+            Dashboard
+          </BreadcrumbLink>
+        </BreadcrumbItem>
 
-                    return (
-                        <React.Fragment key={breadcrumb.href}>
-                            <BreadcrumbSeparator className='text-white' />
-                            <BreadcrumbItem>
-                                {isLast ? (
-                                    <BreadcrumbPage
-                                        className="text-white font-bold"
-                                    >
-                                        {breadcrumb.label}
-                                    </BreadcrumbPage>
-                                ) : (
-                                    <BreadcrumbLink href={breadcrumb.href || ''}>
-                                        {breadcrumb.label}
-                                    </BreadcrumbLink>
-                                )}
-                            </BreadcrumbItem>
-                        </React.Fragment>
-                    );
-                })}
-            </BreadcrumbList>
-        </Breadcrumb>
-    );
+        {breadcrumbs.map((breadcrumb, index) => {
+          const isLast = index === breadcrumbs.length - 1;
+
+          return (
+            <React.Fragment key={breadcrumb.href}>
+              <BreadcrumbSeparator className={separatorColor} />
+              <BreadcrumbItem>
+                {isLast ? (
+                  <BreadcrumbPage className={`${activeColor} font-bold`}>
+                    {breadcrumb.label}
+                  </BreadcrumbPage>
+                ) : (
+                  <BreadcrumbLink
+                    className={`${textColor}`}
+                    href={breadcrumb.href || ""}
+                  >
+                    {breadcrumb.label}
+                  </BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+            </React.Fragment>
+          );
+        })}
+      </BreadcrumbList>
+    </Breadcrumb>
+  );
 }
