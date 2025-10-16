@@ -6,9 +6,10 @@ export default function PrivacyPolicyPage() {
       <PageHero
         title="Privacy Policy"
         description="By accessing CrescentRating's Website, Applications, or Platforms (the &quot;Services&quot;), you agree to be bound by these Terms of Use. If you disagree, please do not use the Services."
+        useBreadCrumbLinks={false}
       />
 
-      <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
+      <div className='mt-7 sm:mt-14 lg:px-32 md:px-16 sm:px:8 w-full flex flex-col gap-24 justify-center items-center'>
         <div className="max-w-[1440px] w-full px-6 lg:px-8">
           <div className="w-full space-y-12">
 
