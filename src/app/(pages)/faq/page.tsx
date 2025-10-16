@@ -82,7 +82,7 @@ export default function FaqPageOptimal() {
         title="Frequently Asked Questions"
         description="Explore our most frequently asked questions to better understand CrescentRating's mission, processes, and the value we bring to the halal travel world."
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <div className="max-w-[1440px] w-full px-6 lg:px-8">
           <Accordion type="single" collapsible className="w-full space-y-1">
             {faqData.map((faq) => (
