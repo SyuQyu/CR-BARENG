@@ -13,7 +13,7 @@ export default function GlossaryCategories() {
       <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="w-full py-4 flex flex-col justify-start items-start gap-4">
-            <BreadCrumb />
+            <BreadCrumb variant="light" />
             <div className="flex w-full sm:flex-row flex-col sm:gap-2 gap-5 justify-between sm:items-center mt-16">
               <div className="w-auto flex flex-col gap-1 justify-start items-start">
                 <p className="sm:text-desktop-body-2 text-mobile-body-3 text-primary-cr-500">
