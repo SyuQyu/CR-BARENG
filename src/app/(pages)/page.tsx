@@ -181,7 +181,7 @@ export default function Home() {
                     backdrop-blur-[12.5px] cursor-pointer
                     ${selectedService === service.key ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white" : "text-neutral-400 bg-white"}
                   `}
-                onClick={() => setSelectedService(service.key)}
+                onClick={() => setSelectedService(service.key as keyof typeof servicesDataHomePage)}
               >
                 {service.icon}
                 <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-center">
