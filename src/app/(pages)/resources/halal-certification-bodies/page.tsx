@@ -24,7 +24,7 @@ export default function HalalCertificationBodiesPage() {
         alignment="left"
         variant="image"
       />
-      <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
+      <div className='mt-7 sm:mt-14 px-8 md:px-16 lg:px-24 w-full flex flex-col gap-24 justify-center items-center'>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full">
           <div className="flex sm:flex-row flex-col justify-between sm:items-center items-start w-full">
             <div className="flex flex-col justify-start items-start">

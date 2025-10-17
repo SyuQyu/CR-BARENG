@@ -20,7 +20,7 @@ export default function CertifiedProfessionalsDirectoryPage() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
+        className="relative w-full px-8 md:px-16 lg:px-32 flex justify-center items-center flex-row bg-center"
         style={{
           backgroundImage: "url('/image/cr-member-directory/hero.jpg')",
           backgroundSize: "cover",
@@ -37,7 +37,7 @@ export default function CertifiedProfessionalsDirectoryPage() {
           </div>
         </div>
       </section>
-      <section className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center max-w-[1440px]">
+      <section className="mt-7 sm:mt-14 px-8 md:px-16 lg:px-32 w-full flex flex-col gap-24 justify-center items-center max-w-[1440px]">
         <section className="px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="w-full flex sm:flex-row flex-col justify-between gap-6 items-center mb-10">
             <div className="flex flex-row justify-center items-center w-full sm:w-[60%] gap-4">
@@ -88,7 +88,7 @@ export default function CertifiedProfessionalsDirectoryPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 button={
-                  <Button className="flex flex-row justify-center items-center gap-2 text-white bg-[#453CFF] h-full px-4">
+                  <Button variant="primary" className="flex h-full px-8">
                     Search
                   </Button>
                 }

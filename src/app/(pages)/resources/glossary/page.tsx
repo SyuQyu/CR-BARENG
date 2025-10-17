@@ -27,8 +27,8 @@ export default function Glossary() {
 
   return (
     <div className="w-full gap-10 sm:gap-32 flex flex-col justify-center items-center">
-      <div className="w-full max-w-[1440px] flex flex-col gap-14">
-        <div className="w-full px-6 lg:px-8 relative overflow-hidden">
+      <div className="w-full max-w-[1440px] flex flex-col gap-14 px-16 lg:px-32">
+        <div className="w-full relative overflow-hidden">
           {/* Overlay untuk efek putih transparan di bagian bawah */}
           <div className="absolute sm:hidden block bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white/50 via-white/70 to-transparent pointer-events-none"></div>
           <div className="flex flex-row w-full sm:pb-0 pb-8 gap-5 justify-center items-center flex-wrap max-h-[150px] sm:max-h-full sm:overflow-hidden overflow-x-scroll">

@@ -133,8 +133,8 @@ export default function CardReports({
                         <Dialog>
                             <DialogTrigger asChild>
                                 <Button
-                                    type="button"
-                                    className="flex flex-row w-full justify-center items-center gap-2 font-semibold text-blue-600 mt-4 border border-gray-500/20 p-3"
+                                variant="secondary"
+                                className="w-full py-4"
                                 >
                                     View Information
                                 </Button>

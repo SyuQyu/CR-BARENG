@@ -53,14 +53,14 @@ export default function PageHero({
       className={`${sectionClasses} ${containerClassName} ${className}`}
       style={sectionStyle}
     >
-      <div className="max-w-[1440px] pt-16 sm:pb-16 pb-8 sm:px-8 lg:px-16 w-full flex sm:flex-row flex-col-reverse gap-5">
+      <div className="max-w-[1440px] pb-32 sm:px-8 lg:px-16 w-full flex sm:flex-row flex-col-reverse gap-5">
         <div
           className={`flex w-full flex-col gap-5 ${contentAlignment} ${marginTop} text-white ${contentClassName}`}
         >
           {useBreadCrumbLinks && <BreadCrumb variant="dark" />}
           {subtitle && (
             <p
-              className={`${textAlignment} text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl`}
+              className={`${textAlignment} mt-16 text-mobile-body-3 md:text-mobile-body-2 lg:text-desktop-body-2 relative z-20 max-w-4xl`}
             >
               {subtitle}
             </p>

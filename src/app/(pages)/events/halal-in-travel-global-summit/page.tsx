@@ -27,6 +27,7 @@ export default function HalalMusimTravelGlobalSummit() {
 
     return (
         <div className="w-full gap-24 flex flex-col justify-center items-center">
+            {/* Hero Section */}
             <section
                 className="relative w-full px-6 lg:px-8 flex justify-center pb-24 items-center flex-row bg-center"
                 style={{ backgroundImage: "url('/image/hitgs/main.webp')", backgroundSize: "cover" }}
@@ -49,14 +50,15 @@ export default function HalalMusimTravelGlobalSummit() {
                             <Button variant="secondary" size="lg">
                                 Learn More
                             </Button>
-                            <Button className="bg-custom-blue" variant="primary" size="lg">
+                            <Button variant="primary" size="lg">
                                 Register Now
                             </Button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className='mt-7 sm:mt-14 w-full flex h-full md:pb-[150px] sm:pb-[380px] pb-[280px] flex-col gap-24 justify-center items-center relative'>
+            {/* About Section */}
+            <section className='w-full flex h-full md:pb-[150px] sm:pb-[380px] pb-[280px] flex-col gap-24 justify-center items-center relative'>
                 <div className="max-w-[1440px] flex justify-center items-center px-6 lg:px-8 w-full min-h-[327px] absolute md:top-[-250px] top-[-200px]">
                     <div className="w-full flex flex-row justify-between items-start gap-12 bg-white p-4 sm:p-10 shadow-md">
                         <ImageWithFallback
@@ -88,6 +90,7 @@ export default function HalalMusimTravelGlobalSummit() {
                     </div>
                 </div>
             </section>
+            {/* Our Milestone */}
             <section className="max-w-[1440px] px-6 lg:px-8 w-full">
                 <div className="w-full flex flex-col justify-start items-start gap-12">
                     <div className="flex flex-col gap-3 md:justify-start md:items-start justify-center items-center">
@@ -259,7 +262,7 @@ export default function HalalMusimTravelGlobalSummit() {
                     </div>
                 </div>
             </section>
-            <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+            <section className="mt-16 lg:px-32 sm:px-16 px-8 w-full">
                 <div className="w-full flex flex-col justify-center items-center gap-10">
                     <div className="flex flex-col gap-3 text-center w-full border-b border-gray-200 pb-12">
                         <p className="sm:text-desktop-body-1 text-mobile-body-2 font-semibold text-custom-blue">Sponsorship</p>
@@ -299,13 +302,13 @@ export default function HalalMusimTravelGlobalSummit() {
                             Enter your email below and we will contact you soon.</p>
                         <div className="flex flex-row justify-center items-center gap-4 w-full my-4">
                             <Input placeholder="Enter your email" className="w-full" />
-                            <Button className=" bg-white text-custom-blue">Send Me</Button>
+                            <Button variant="secondary">Send Me</Button>
                         </div>
                         <p className="sm:text-desktop-body-2 text-desktop-body-3">By entering your email you agree to CrescentRating’s Privacy Policy & Terms & Conditions</p>
                     </div>
                 </div>
             </section>
-            <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+            <section className="max-w-[1440px] mt-16 lg:px-32 sm:px-16 px-8 w-full">
                 <div className="w-full flex flex-col justify-center items-center gap-10">
                     <div className="flex flex-col gap-3 text-center justify-center items-center w-full">
                         <p className="sm:text-desktop-body-1 text-mobile-body-2 font-semibold text-custom-blue">Media & Press</p>
@@ -327,7 +330,7 @@ export default function HalalMusimTravelGlobalSummit() {
                             />
                         ))}
                     </div>
-                    <Button className=" text-custom-blue sm:!text-desktop-body-2 !text-mobile-body-3 px-10 py-3 font-bold border">
+                    <Button variant="primary" className="px-4 py-2">
                         View All
                     </Button>
                 </div>
@@ -368,7 +371,7 @@ export default function HalalMusimTravelGlobalSummit() {
                     </div>
                 </div>
             </section>
-            <section className="bg-[#0F205C] min-h-[100px] text-white w-full flex justify-center items-start py-10">
+            <section className="bg-[#0F205C] min-h-[100px] text-white w-full flex justify-center items-start mt-16 lg:px-32 sm:px-16 px-8 py-16">
                 <div className="max-w-[1440px] px-6 lg:px-8 w-full flex justify-center items-center text-center">
                     <div className="w-full">
                         <div className="flex flex-col gap-3 text-start justify-start items-start w-full">

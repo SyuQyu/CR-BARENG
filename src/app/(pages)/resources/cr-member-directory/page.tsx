@@ -15,8 +15,9 @@ export default function CertifiedProfessionalsDirectoryPage() {
         backgroundImage="/image/cr-member-directory/hero.jpg"
         alignment="left"
         variant="image"
+        useBreadCrumbLinks={false}
       />
-      <section className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center max-w-[1440px]">
+      <section className="mt-7 sm:mt-14 px:8 md:px-16 lg:px-24 w-full flex flex-col gap-24 justify-center items-center max-w-[1440px]">
         <section className="px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-center items-center text-center">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">

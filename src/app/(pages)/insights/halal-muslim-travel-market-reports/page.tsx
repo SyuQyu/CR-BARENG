@@ -18,11 +18,14 @@ export default function HalalMusimTravelMarketReports() {
     return (
         <div className="w-full flex flex-col justify-center items-center">
             <section
-                className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
+                className="relative w-full lg:px-32 sm:px-16 px-8 flex justify-center items-center flex-row bg-center"
                 style={{ backgroundImage: "url('/image/halal-muslim-travel-market-reports/hero.webp')", backgroundSize: "cover" }}
             >
                 <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
                     <div className="flex w-full flex-col gap-5 justify-start items-start">
+                        <p className="text-white text-left md:text-mobile-caption-l lg:text-mobile-body-3 sm:text-desktop-body-2 relative z-20 max-w-4xl">
+                            Muslim Travel, Tourism & Halal Food Market Research, Reports & Publications
+                        </p>
                         <h1 className="text-mobile-heading-3 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text text-white relative z-20 text-left">
                             MC-CR Muslim-Friendly Cruise Report 2024
                         </h1>
@@ -48,7 +51,7 @@ export default function HalalMusimTravelMarketReports() {
                 </div>
             </section>
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
-                <div className="max-w-[1440px] px-6 lg:px-8 w-full">
+                <div className="max-w-[1440px] lg:px-32 sm:px-16 px-8 w-full">
                     <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">Our Publications</p>
                     <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500">Access CrescentRating&apos;s full range of reports and publications to stay ahead in the muslim travel and halal food sectors</p>
                     <div className="mt-10 flex justify-center items-center w-full">
@@ -118,7 +121,7 @@ export default function HalalMusimTravelMarketReports() {
                         </Tabs>
                     </div>
                 </div>
-                <div className="max-w-[1440px] w-full px-6 lg:px-8">
+                <div className="max-w-[1440px] w-full lg:px-32 sm:px-16 px-8">
                     <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">Essential Reports for the Industry</p>
                     <p className="sm:text-desktop-body-2 text-mobile-body-2  text-left lg:w-[40%] w-full text-neutral-500">Explore the Global Muslim Travel Index (GMTI) and CrescentRating Insight Series for key data and trends</p>
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-9 w-full mt-10">
@@ -132,9 +135,9 @@ export default function HalalMusimTravelMarketReports() {
                             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-white">Let’s Connect</p>
                             <p className="text-white sm:text-desktop-body-2 text-mobile-body-2">Let’s start a conversation! Reach out to discuss how CrescentRating can support your journey in catering to Muslim travelers worldwide.</p>
                         </div>
-                        <Link href="#" className="inline-block p-3 text-blue-600 text-center font-bold bg-white border border-gray-500/20 w-full sm:w-[20%]">
+                        <Button variant="secondary" className="px-20 py-6">
                             Contact Us
-                        </Link>
+                        </Button>
                     </div>
                 </div>
             </div>
