@@ -39,7 +39,7 @@ export default function HalalMusimTravelMarketReports() {
           backgroundSize: "cover",
         }}
       >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col gap-5 ">
+        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex flex-col gap-5 ">
           <div className="flex w-full flex-col gap-5 text-center justify-center items-center sm:mt-20 mt-10">
             <ImageWithFallback
               src="/image/crescentrating-academy/cr-academy-logo.webp"
@@ -47,56 +47,59 @@ export default function HalalMusimTravelMarketReports() {
               sizes="100vw"
               width={154}
               height={40}
-              className="w-40 sm:w-52 object-cover"
+              className="w-40 object-cover"
             />
-            <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 w-full sm:w-[70%] text-primary-cr-800">
+            <h1 className="text-mobile-heading-1 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text relative z-20 w-full text-primary-cr-800">
               CrescentRating Academy
             </h1>
-            <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full text-custom-gray-cr">
+            <p className="sm:text-desktop-body-1 text-mobile-body-1 w-full text-custom-gray-cr">
               Advance your career & expertise in the Halal Travel market
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-[80%]">
-              <Link
-                href="#"
-                className="w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 border-gray-500/20 sm:w-[20%]"
-              >
-                Learn More
-              </Link>
-              <Link
-                href="#"
-                className="w-fit inline-block p-3 text-primary-cr-600 text-center font-semibold bg-white border border-gray-500/20 sm:w-[20%]"
-              >
+            <div className="flex flex-row justify-center items-center gap-3 w-full">
+              <Button variant="primary" className="w-48 py-2">
+                View More
+              </Button>
+              <Button variant="secondary" className="w-48 py-2">
                 Join Our Webinar
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
       <section className="w-full flex max-w-[1440px] justify-between items-center flex-col relative top-[-32px]">
-        <div className="max-w-[1216px] w-full flex justify-center md:flex-row gap-10 bg-primary-cr-50 px-6 lg:px-8 py-4 rounded-[20px]">
-          <div className="lg:min-w-64 w-full px-4 py-2 inline-flex flex-col justify-start items-center gap-1">
-            <div className="text-center justify-start text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
+        <div className="max-w-[70%] w-full flex flex-col md:flex-row justify-between items-center gap-6 bg-primary-cr-50 px-6 lg:px-8 py-4 rounded-[20px]">
+          {/* 1st Stat */}
+          <div className="flex-1 flex flex-col justify-center items-center gap-1">
+            <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
               1073+
             </div>
-            <div className="text-center justify-start text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
+            <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
               Participants
             </div>
           </div>
-          <div className="w-px h-20 relative bg-primary-cr-300 rounded-[100px]" />
-          <div className="lg:min-w-64  w-full px-4 py-2 inline-flex flex-col justify-center items-center gap-1">
-            <div className="text-center justify-start text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
+
+          {/* Divider */}
+          <div className="hidden md:block w-px h-16 bg-primary-cr-300 rounded-full" />
+
+          {/* 2nd Stat */}
+          <div className="flex-1 flex flex-col justify-center items-center gap-1">
+            <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
               29+
             </div>
-            <div className="text-center justify-start text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
-              Citites
+            <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
+              Cities
             </div>
           </div>
-          <div className="w-px h-20 relative bg-primary-cr-300 rounded-[100px]" />
-          <div className="lg:min-w-64  w-full px-4 py-2 inline-flex flex-col justify-start items-center gap-1">
-            <div className="text-center justify-start text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
+
+          {/* Divider */}
+          <div className="hidden md:block w-px h-16 bg-primary-cr-300 rounded-full" />
+
+          {/* 3rd Stat */}
+          <div className="flex-1 flex flex-col justify-center items-center gap-1">
+            <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
               17+
             </div>
-            <div className="text-center justify-start text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
+            <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
               Countries
             </div>
           </div>
@@ -520,7 +523,7 @@ export default function HalalMusimTravelMarketReports() {
                     </div>
                   </div>
                 </div>
-                <Button className="w-full h-12 !py-5 !px-6 bg-white text-primary-cr-700">
+                <Button variant="secondary" className="w-full py-2">
                   Get Access
                 </Button>
               </div>
@@ -546,7 +549,7 @@ export default function HalalMusimTravelMarketReports() {
                     </div>
                   </div>
                 </div>
-                <Button className="w-full h-12 !py-5 !px-6 bg-white text-primary-cr-700">
+                <Button variant="secondary" className="w-full py-2">
                   Get Access
                 </Button>
               </div>
@@ -650,24 +653,25 @@ export default function HalalMusimTravelMarketReports() {
             <div className="mt-10 mb-10 flex justify-center items-center w-full z-10 absolute">
               <div className="mt-10 flex flex-row justify-center items-start w-full gap-6 overflow-visible">
                 <Carousel
-                  className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-stretch"
+                  className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-stretch items-center"
                   showDots={false}
                   slideCount={3}
                 >
                   <CarouselContent className="w-full flex flex-row gap-2 items-center justify-stretch overflow-visible">
                     {crAcademyTestimonials.map((blog, index) => (
-                        <CarouselItemTestimonials
+                      <CarouselItemTestimonials
                         key={index}
                         index={index}
                         className={
                           index === 0 ? "lg:ml-2 md:ml-6  content-stretch" : ""
                         }
                         visibleSlides={
-                          typeof window !== "undefined" && window.innerWidth < 640
-                          ? 1
-                          : 3
+                          typeof window !== "undefined" &&
+                          window.innerWidth < 640
+                            ? 1
+                            : 3
                         }
-                        >
+                      >
                         <CardTestimonials
                           id={blog.id}
                           testimonials={blog.testimonials}
@@ -676,7 +680,7 @@ export default function HalalMusimTravelMarketReports() {
                           company={blog.company}
                           imageUrl={blog.imageUrl}
                         />
-                        </CarouselItemTestimonials>
+                      </CarouselItemTestimonials>
                     ))}
                   </CarouselContent>
                   <CarouselPreviousCustom />
@@ -686,7 +690,7 @@ export default function HalalMusimTravelMarketReports() {
             </div>
           </div>
         </div>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
+        <section className="max-w-[1440px] px-6 lg:px-32 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
           <div className="w-full flex flex-col gap-1 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">
               Frequently Asked Questions
@@ -736,7 +740,8 @@ export default function HalalMusimTravelMarketReports() {
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger className="no-underline text-left sm:text-desktop-body-1 text-mobile-body-1">
-                  I am a professional aspiring to build my skills and expertise in the travel space. Which training program should I register?
+                  I am a professional aspiring to build my skills and expertise
+                  in the travel space. Which training program should I register?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-2 justify-start items-start">
                   <p className="text-mobile-body-2 sm:text-desktop-body-2">
@@ -748,7 +753,8 @@ export default function HalalMusimTravelMarketReports() {
               </AccordionItem>
               <AccordionItem value="item-5">
                 <AccordionTrigger className="no-underline text-left sm:text-desktop-body-1 text-mobile-body-1">
-                  Is the Sector Immersion program similar to other customer service courses?
+                  Is the Sector Immersion program similar to other customer
+                  service courses?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-2 justify-start items-start">
                   <p className="text-mobile-body-2 sm:text-desktop-body-2">
@@ -760,7 +766,8 @@ export default function HalalMusimTravelMarketReports() {
               </AccordionItem>
               <AccordionItem value="item-6">
                 <AccordionTrigger className="no-underline text-left sm:text-desktop-body-1 text-mobile-body-1">
-                  I am a senior manager. Can I also take the Market Readiness and Sector Immersion Programs?
+                  I am a senior manager. Can I also take the Market Readiness
+                  and Sector Immersion Programs?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-2 justify-start items-start">
                   <p className="text-mobile-body-2 sm:text-desktop-body-2">
@@ -772,7 +779,8 @@ export default function HalalMusimTravelMarketReports() {
               </AccordionItem>
               <AccordionItem value="item-7">
                 <AccordionTrigger className="no-underline text-left sm:text-desktop-body-1 text-mobile-body-1">
-                  I require customized training for my organization. Which training program should I register?
+                  I require customized training for my organization. Which
+                  training program should I register?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-2 justify-start items-start">
                   <p className="text-mobile-body-2 sm:text-desktop-body-2">

@@ -1,7 +1,7 @@
 "use client";
-import Link from "next/link";
 
 import {
+  Button,
   CardAcademyPrograms,
   CardProfile,
   ImageWithFallback,
@@ -43,19 +43,13 @@ export default function sectorImmersion() {
             <p className="sm:text-desktop-body-1 text-mobile-body-1 sm:w-[80%] w-full text-custom-gray-cr">
               Create service excellence for your Muslim visitors & guests
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-[80%]">
-              <Link
-                href="#"
-                className="w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 border-gray-500/20 sm:w-[20%]"
-              >
+            <div className="flex flex-row justify-center items-center gap-3 w-full sm:w-[80%]">
+              <Button variant="primary" className="w-48 py-2">
                 Learn More
-              </Link>
-              <Link
-                href="#"
-                className="w-fit inline-block p-3 text-primary-cr-600 text-center font-semibold bg-white border border-gray-500/20 sm:w-[20%]"
-              >
+              </Button>
+              <Button variant="secondary" className="w-48 py-2">
                 Explore Our Programs
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -120,7 +114,7 @@ export default function sectorImmersion() {
             </div>
           </div>
         </div>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
+        <section className="max-w-[1440px] px-16 lg:px-32 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
           <div className="w-full flex flex-col gap-1 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">
               Frequently Asked Questions

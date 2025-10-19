@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import {
+  Button,
   CardResearch,
   PageHero,
   Pagination,
@@ -24,14 +25,14 @@ export default function HalalMusimTravelMarketReports() {
       <PageHero
         title="Research and Consultancy"
         description="Develop your Halal travel market with our leading experts"
-        subtitle="Our Service"
+        subtitle="Services"
         backgroundImage="/image/research-and-consultancy/hero.webp"
         alignment="left"
         variant="image"
       />
-      <section className="w-full bg-custom-white-cr px-6 lg:px-8 flex justify-center items-center flex-col gap-5 my-10">
+      <section className="w-full bg-custom-white-cr px-8 lg:px-32 flex justify-center items-center flex-col gap-5 my-10">
         <div className="max-w-[1440px] w-full flex flex-col gap-5">
-          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500">
+          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-start text-neutral-500">
             CrescentRating&apos;s consultants and industry experts continue to
             partner with destinations and services to unlock their potential and
             deliver solutions for long-term growth. Our extensive analysis and
@@ -43,7 +44,7 @@ export default function HalalMusimTravelMarketReports() {
         </div>
       </section>
       <div className="pt-7 sm:pt-14 w-full flex flex-col gap-24 justify-center items-center bg-white">
-        <div className="max-w-[1440px] px-6 lg:px-8 w-full">
+        <div className="max-w-[1440px] px-8 lg:px-32 w-full">
           <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
             Research
           </p>
@@ -71,7 +72,7 @@ export default function HalalMusimTravelMarketReports() {
             onPageChange={handlePageChange}
           />
         </div>
-        <div className="max-w-[1440px] px-5 md:px-28 lg:px-8 w-full">
+        <div className="max-w-[1440px] px-5 md:px-28 lg:px-32 w-full">
           <div className="mt-10 mb-10 flex w-full flex-col justify-start items-center gap-16 overflow-clip">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
               <div className="flex-1 inline-flex flex-col justify-center lg:justify-start items-center lg:items-start gap-6">
@@ -86,41 +87,29 @@ export default function HalalMusimTravelMarketReports() {
                   </div>
                 </div>
                 <div className="inline-flex justify-start items-start gap-3">
-                  <div
-                    data-icon-leading="false"
-                    data-icon-traling="true"
-                    data-show-text="true"
-                    data-size="xl"
-                    data-state="Default"
-                    data-variant="Secondary"
-                    className="px-8 py-4 bg-button-color-secondary-default-fill outline outline-1 outline-offset-[-1px] outline-gray-200 flex justify-center items-center gap-2"
-                  >
-                    <div className="justify-start text-custom-blue text-base font-semibold leading-normal">
-                      Enquire Now
-                    </div>
-                    <div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="19"
-                        height="13"
-                        viewBox="0 0 19 13"
-                        fill="none"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M17.5002 7.33341H0.833496V5.66675H17.5002V7.33341Z"
-                          fill="#453CFF"
-                        />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M16.5656 5.91077L12.7441 2.08928L13.9227 0.910767L17.7441 4.73225C17.7548 4.74295 17.7655 4.75364 17.7762 4.76432C18.0261 5.01415 18.269 5.25695 18.4424 5.48417C18.6378 5.74034 18.8216 6.07197 18.8216 6.50002C18.8216 6.92808 18.6378 7.25971 18.4424 7.51587C18.269 7.74309 18.0261 7.9859 17.7762 8.23573C17.7655 8.2464 17.7548 8.25709 17.7441 8.26779L13.9227 12.0893L12.7441 10.9108L16.5656 7.08928C16.8601 6.79484 17.0204 6.63204 17.1174 6.5049C17.1186 6.50324 17.1199 6.50162 17.1211 6.50002C17.1199 6.49843 17.1186 6.4968 17.1174 6.49514C17.0204 6.368 16.8601 6.2052 16.5656 5.91077Z"
-                          fill="#453CFF"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                  <Button variant="secondary" className="px-16 py-6 mt-7">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="19"
+                      height="13"
+                      viewBox="0 0 19 13"
+                      fill="none"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M17.5002 7.33341H0.833496V5.66675H17.5002V7.33341Z"
+                        fill="#453CFF"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M16.5656 5.91077L12.7441 2.08928L13.9227 0.910767L17.7441 4.73225C17.7548 4.74295 17.7655 4.75364 17.7762 4.76432C18.0261 5.01415 18.269 5.25695 18.4424 5.48417C18.6378 5.74034 18.8216 6.07197 18.8216 6.50002C18.8216 6.92808 18.6378 7.25971 18.4424 7.51587C18.269 7.74309 18.0261 7.9859 17.7762 8.23573C17.7655 8.2464 17.7548 8.25709 17.7441 8.26779L13.9227 12.0893L12.7441 10.9108L16.5656 7.08928C16.8601 6.79484 17.0204 6.63204 17.1174 6.5049C17.1186 6.50324 17.1199 6.50162 17.1211 6.50002C17.1199 6.49843 17.1186 6.4968 17.1174 6.49514C17.0204 6.368 16.8601 6.2052 16.5656 5.91077Z"
+                        fill="#453CFF"
+                      />
+                    </svg>
+                    Enquire Now
+                  </Button>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center content-center gap-6 flex-wrap ">
@@ -160,14 +149,14 @@ export default function HalalMusimTravelMarketReports() {
           </div>
         </div>
         <div className="w-full flex flex-col gap-24 justify-center items-center bg-white">
-          <div className="max-w-[1440px] px-6 lg:px-8 w-full">
+          <div className="max-w-[1440px] px-8 lg:px-32 w-full">
             <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
               Consultancy
             </p>
             <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500">
               Don&apos;t leave your project success to chance. Get ongoing
-              consultancy and insights on the Muslim market from the World&apos;s
-              leading authority on Halal travel.
+              consultancy and insights on the Muslim market from the
+              World&apos;s leading authority on Halal travel.
             </p>
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
@@ -329,7 +318,7 @@ export default function HalalMusimTravelMarketReports() {
           </div>
         </div>
         <div className="w-full flex flex-col bg-gradient-to-r from-blue-600 to-navy-blue-600 justify-center items-center">
-          <div className="max-w-[1440px] px-6 lg:px-8 w-full sm:py-16 py-12 flex sm:flex-row flex-col gap-5 justify-between items-end">
+          <div className="max-w-[1440px] px-8 lg:px-32 w-full sm:py-16 py-12 flex sm:flex-row flex-col gap-5 justify-between items-end">
             <div className="sm:w-[80%] w-full flex flex-col gap-4">
               <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-white">
                 Book a call with our experts
@@ -340,12 +329,9 @@ export default function HalalMusimTravelMarketReports() {
                 your goals
               </p>
             </div>
-            <Link
-              href="#"
-              className="inline-block p-3 text-blue-600 text-center font-bold bg-white border border-gray-500/20 w-full sm:w-[20%]"
-            >
+            <Button variant="secondary" className=" w-full sm:w-[20%]">
               Set up call
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

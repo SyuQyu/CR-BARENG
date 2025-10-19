@@ -294,7 +294,7 @@ export default function Gmti() {
   };
 
   return (
-    <div className="gmti-2024 w-full flex flex-col md:gap-48 gap-8 justify-center items-center md:mt-14 mt-8 overflow-hidden">
+    <div className="gmti-2024 w-full flex flex-col md:gap-48 gap-8 justify-center items-center md:mt-14 mt-8 lg:px-32 sm:px-16 px-8 overflow-hidden">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
@@ -346,7 +346,7 @@ export default function Gmti() {
                 target="_blank"
                 href={`${activeDownloadUrl}`} rel="noreferrer"
               >
-                <Button className="flex flex-row w-full text-lg gap-2 hover:bg-custom-blue mt-6 border-custom-blue text-custom-blue font-bold rounded-full max-w-[250px] md:p-8 p-6 hover:text-white ">
+                <Button variant="primary" className="px-8 py-6 mt-6">
                   <svg
                     width="24"
                     height="24"
@@ -393,7 +393,7 @@ export default function Gmti() {
               <CarouselNext className="relative shadow-lg -right-5 h-[40px] w-[40px]" />
             </div>
           </div>
-          <div className="xl:w-[56%] md:w-[53%] w-[100%] flex flex-row flex-wrap align-baseline lg:ml-10">
+          <div className="xl:w-[56%] md:w-[53%] lg:w-[55%] w-[100%] flex flex-row flex-wrap align-baseline lg:ml-24">
             <CarouselContent className="flex flex-nowrap -ml-1">
               {Array.from(reportSlides).map((_, index) => (
                 <CarouselItem
@@ -851,7 +851,7 @@ export default function Gmti() {
             <GmtiCard />
             <GmtiCard />
           </div>
-          <Button className="hover:bg-custom-blue border-custom-blue text-custom-blue font-bold rounded-full w-full max-w-[250px] md:p-8 p-2 hover:text-white">
+          <Button variant="primary" className="px-6 py-2">
             View All
           </Button>
         </section>

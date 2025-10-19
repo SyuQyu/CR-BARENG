@@ -1,7 +1,5 @@
 "use client";
 
-
-
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +32,6 @@ import {
   testimonialsRatingAndAccreditation,
 } from "@/constants/dummyData";
 
-
 export default function RatingAndAccreditation() {
   function Roadmap() {
     const firstSteps = [
@@ -42,26 +39,26 @@ export default function RatingAndAccreditation() {
         label: "Sign Up",
         description: "Register & create an account on CrescentRating",
         dot: "border-yellow-900",
-        bg: "bg-yellow-100",
+        bg: "bg-yellow-100 text-yellow-900",
       },
       {
         label: "Apply",
         description: "Submit Application Online",
         dot: "border-yellow-900",
-        bg: "bg-yellow-100",
+        bg: "bg-yellow-100 text-yellow-900",
       },
       {
         label: "Review",
         description:
           "CrescentRating will review the application & issue a tentative rating",
         dot: "border-indigo-800",
-        bg: "bg-indigo-100",
+        bg: "bg-indigo-100 text-indigo-800",
       },
       {
         label: "Audit",
         description: "Conduct in-person/virtual audit of the establishment",
         dot: "border-indigo-800",
-        bg: "bg-indigo-100",
+        bg: "bg-indigo-100 text-indigo-800",
       },
     ];
 
@@ -70,14 +67,14 @@ export default function RatingAndAccreditation() {
         label: "Pay",
         description: "Make payment for the annual rating services",
         dot: "border-yellow-900",
-        bg: "bg-yellow-100",
+        bg: "bg-yellow-100 text-yellow-900",
       },
       {
         label: "Display",
         description:
           "Download the rating collaterals and display them in the marketing channels",
         dot: "border-yellow-900",
-        bg: "bg-yellow-100",
+        bg: "bg-yellow-100 text-yellow-900",
       },
       {
         label: "Publish",
@@ -91,14 +88,14 @@ export default function RatingAndAccreditation() {
           </>
         ),
         dot: "border-indigo-800",
-        bg: "bg-indigo-100",
+        bg: "bg-indigo-100 text-indigo-800",
       },
       {
         label: "Confirm",
         description:
           "CrescentRating will review audit report & award the final rating",
         dot: "border-indigo-800",
-        bg: "bg-indigo-100",
+        bg: "bg-indigo-100 text-indigo-800",
       },
     ];
 
@@ -106,12 +103,12 @@ export default function RatingAndAccreditation() {
       label: "Promote",
       description: "HalalTrip will begin the promotion campaigns",
       dot: "border-green-800",
-      bg: "bg-green-100",
+      bg: "bg-green-100 text-green-800",
     };
 
     return (
-      <div className="w-full">
-        <div className="hidden lg:block relative w-full">
+      <div className="w-full px-32">
+        <div className="hidden lg:block relative w-full ">
           <div className="flex justify-between -mb-1.5 z-10 relative">
             {firstSteps.map((step, i) => (
               <div key={i} className="flex flex-col items-center">
@@ -127,7 +124,7 @@ export default function RatingAndAccreditation() {
             ))}
           </div>
 
-          <div className="w-[85rem] rounded-tr-[5rem] rounded-br-[5rem] h-[15rem] border-r-2 border-t-2 border-b relative translate-x-14" />
+          <div className="w-full rounded-tr-[5rem] rounded-br-[5rem] h-[15rem] border-r-2 border-t-2 border-b relative translate-x-14 px-32" />
 
           <div className="absolute top-[15rem] left-0 w-full flex justify-between z-10">
             {secondSteps.map((step, i) => (
@@ -228,14 +225,15 @@ export default function RatingAndAccreditation() {
     <div className="w-full flex flex-col justify-center items-center">
       <PageHero
         title="Rating and Accreditation"
-        description="Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci pulvinar vitae. Ultrices tempor interdum non consectetur nec platea gravida ac."
+        description="Our globally recognized rating system helps destinations and businesses align with the growing needs of Muslim travelers."
         subtitle="Our Service"
         backgroundImage="/image/rating-accreditation/main.webp"
         alignment="left"
         variant="image"
+        useBreadCrumbLinks={false}
       />
-      <div className="mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center">
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+      <div className="mt-7 sm:mt-14 px:8 lg:px-32 w-full flex flex-col gap-24 justify-center items-center">
+        <section className="max-w-[1440px] px-2 lg:px-6 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">
               Why you Should Become a Member of the Crescent Rated Services
@@ -267,7 +265,7 @@ export default function RatingAndAccreditation() {
             ))}
           </div>
         </section>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+        <section className="max-w-[1440px] px-2 lg:px-6 w-full flex flex-col justify-center items-center">
           <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">
             How to get Crescent Rated
           </p>

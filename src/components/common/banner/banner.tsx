@@ -16,14 +16,14 @@ export default function CrescentRatingBanner({ buttonNameBlue, buttonNameWhite }
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
                     {
                         buttonNameWhite && (
-                            <Button className="!py-5 !px-6 bg-white min-w-[280px] !border-white text-primary-cr-700">
+                            <Button variant="secondary" className="py-4 px-24">
                                 {buttonNameWhite}
                             </Button>
                         )
                     }
                     {
                         buttonNameBlue && (
-                            <Button className="!py-5 !px-6 bg-primary-cr-700 min-w-[280px] !border-primary-cr-700 text-white">
+                            <Button variant="primary" className="py-4 px-24">
                                 {buttonNameBlue}
                             </Button>
                         )

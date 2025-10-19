@@ -1,10 +1,9 @@
 "use client";
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import { CalendarIcon, ChevronDownIcon } from "lucide-react";
-import Link from "next/link";
 import React, { useState } from "react";
 
-import { Button,ImageWithFallback } from "@/components/common";
+import { Button, ImageWithFallback } from "@/components/common";
 import { Calendar } from "@/components/ui/calendar";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -48,13 +47,13 @@ export default function HalalChefWorld() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center"
+        className="relative w-full px-8 lg:px-32 flex justify-center items-center flex-row bg-center"
         style={{
           backgroundImage: "url('/image/crescentrating-academy/hero.webp')",
           backgroundSize: "cover",
         }}
       >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col gap-5 ">
+        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-8 lg:px-32 w-full flex sm:flex-row flex-col gap-5 ">
           <div className="flex w-full flex-col gap-5 text-center justify-center items-center sm:mt-20 mt-10">
             <ImageWithFallback
               src="/image/crescentrating-academy/sector-immersion/halalchefworld.webp"
@@ -68,23 +67,17 @@ export default function HalalChefWorld() {
               Chef Training & Accreditation Program
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-[80%]">
-              <Link
-                href="#"
-                className="w-fit inline-block p-3 text-white text-center font-semibold bg-primary-cr-600 border-gray-500/20 sm:w-[20%]"
-              >
+              <Button variant="primary" className="w-[200px] py-4">
                 Learn More
-              </Link>
-              <Link
-                href="#"
-                className="w-fit inline-block p-3 text-primary-cr-600 text-center font-semibold bg-white border border-gray-500/20 sm:w-[20%]"
-              >
+              </Button>
+              <Button variant="secondary" className="w-[200px] py-4">
                 Explore Our Programs
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
-      <section className="w-full flex py-5 sm:py-12 px-7 sm:px-14 bg-[#FAF9FA]">
+      <section className="w-full flex py-5 sm:py-12 lg:px-40 sm:px-16 bg-[#FAF9FA]">
         <div className="max-w-[1216px] w-full flex flex-col gap-3 justify-center items-center mx-auto">
           <p className="md:text-desktop-body-1 text-mobile-body-1 text-start text-[#69687A]">
             <span className="font-bold text-primary-cr-700">Give</span> your
@@ -99,7 +92,7 @@ export default function HalalChefWorld() {
       </section>
       <section className="w-full flex max-w-[1440px] justify-between items-center flex-col relative gap-12">
         <div className="max-w-[1216px] pt-7 sm:pt-14 w-full flex flex-col justify-center items-center bg-white">
-          <div className="flex flex-col px-8 lg:px-5 md:py-20 py-10 w-full md:gap-14 border border-[#E3E2E6]">
+          <div className="flex flex-col px-8 lg:px-32 md:py-20 py-10 w-full md:gap-14 border border-[#E3E2E6]">
             <div className="flex flex-col gap-2">
               <div className="md:text-desktop-heading-5 text-mobile-heading-5 font-bold bg-clip-text text-black text-center">
                 Hear from the Winners
@@ -135,8 +128,8 @@ export default function HalalChefWorld() {
               with targeted program benefits.
             </p>
           </div>
-          <div className="w-full grid lg:grid-cols-2 py-2 lg:px-0 sm:px-20 px-10 gap-6">
-            <div className="w-full flex flex-col bg-white py-8 px-6 gap-7">
+          <div className="w-full grid lg:grid-cols-2 py-2 sm:px-0 lg:px-32 px-16 gap-6">
+            <div className="w-full flex flex-col bg-white py-8 px-8 gap-7">
               <div className="md:text-desktop-heading-6 text-mobile-heading-6 text-center text-black font-bold ">
                 For Chefs
               </div>
@@ -240,7 +233,7 @@ export default function HalalChefWorld() {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-col bg-white py-8 px-6 gap-7">
+            <div className="w-full flex flex-col bg-white py-8 px-8 gap-7">
               <div className="md:text-desktop-heading-6 text-mobile-heading-6 text-center text-black font-bold ">
                 For Hotels & Restaurants
               </div>
@@ -350,7 +343,7 @@ export default function HalalChefWorld() {
             <Dialog modal={false}>
               <form>
                 <DialogTrigger asChild>
-                  <Button className="md:w-[280px] w-full md:h-14 h-8 inline-block px-10 text-white text-center font-semibold bg-primary-cr-600 hover:bg-white hover:text-primary-cr-600 border-gray-500/20 rounded-none">
+                  <Button variant="primary" className="px-16 py-6">
                     Enquire Now
                   </Button>
                 </DialogTrigger>
@@ -714,27 +707,23 @@ export default function HalalChefWorld() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1216px] w-full py-10 xl:px-0 lg:px-4 sm:px-20 px-10 sm:py-20 flex lg:flex-row flex-col justify-center items-center bg-white lg:gap-8 sm:gap-12 gap-6">
-          <div className="max-w-[600px] w-full flex-1 inline-flex flex-col justify-center items-start gap-2">
-            <div className="self-stretch justify-start md:text-desktop-heading-2 text-mobile-heading-2 font-bold bg-clip-text text-black">
+        <div className="max-w-[1216px] w-full py-10 px-6 sm:px-8 lg:px-4 xl:px-0 sm:py-20 flex flex-col lg:flex-row justify-center items-center bg-white gap-10 lg:gap-8">
+          {/* Text Section */}
+          <div className="max-w-[600px] w-full flex-1 flex flex-col justify-center lg:items-start items-center gap-2 text-center lg:text-left">
+            <div className="text-mobile-heading-2 md:text-desktop-heading-2 font-bold text-black">
               The Training
             </div>
-            <div className="self-stretch justify-start md:text-desktop-body-2 text-mobile-body-2 leading-normal text-[#69687A]">
+            <div className="text-mobile-body-2 md:text-desktop-body-2 leading-normal text-[#69687A]">
               Watch how we’re shaping the future of halal dining through chef
               education, practical workshops, and global certification.
             </div>
           </div>
-          <div className="w-[100vh] flex-1 inline-flex flex-col justify-center items-start gap-2">
+
+          {/* Video Section */}
+          <div className="w-full flex-1 flex justify-center items-center">
             <iframe
-              width="100%"
-              height="400"
-              style={{
-                maxWidth: "700px",
-                width: "100%",
-                height: "400px",
-              }}
-              className="lg:max-w-[700px] md:max-w-[600px] max-w-[300px] w-full h-[300px] md:h-[380px] lg:h-[380px]"
-              src={`https://www.youtube.com/embed/7YDgU3Fac-Y?si=e2tYakoJDFiBasV4`}
+              className="w-full max-w-[700px] h-[220px] sm:h-[300px] md:h-[360px] lg:h-[380px] rounded-none"
+              src="https://www.youtube.com/embed/7YDgU3Fac-Y?si=e2tYakoJDFiBasV4"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -743,7 +732,7 @@ export default function HalalChefWorld() {
             ></iframe>
           </div>
         </div>
-        <div className="max-w-[1216px] w-full py-10 lg:px-0 sm:px-20 px-10 sm:py-20 flex flex-col justify-center items-center bg-white lg:gap-2.5 sm:gap-4 gap-6">
+        <div className="max-w-[1216px] w-full py-10 lg:px-24 sm:px-8 md:px-16 sm:py-20 flex flex-col justify-center items-center bg-white lg:gap-2.5 sm:gap-4 gap-6">
           <div className="max-w-[800px] w-full flex-1 inline-flex flex-col justify-center items-start gap-2">
             <div className="self-stretch text-center justify-start md:text-desktop-heading-5 text-mobile-heading-5 font-bold bg-clip-text text-black">
               Participant Profile

@@ -96,7 +96,7 @@ export default function HitAwardsPage() {
                     </Carousel>
                 </div>
             </section>
-            <section className="w-full flex flex-col items-center justify-start bg-gradient-to-b from-[#312D57] to-[#27234F] min-h-screen">
+            <section className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col items-center justify-start bg-gradient-to-b from-[#312D57] to-[#27234F] min-h-screen">
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col items-center gap-8 relative">
                     <div className="w-full flex flex-col items-center justify-center gap-4 sm:gap-8 relative ">
                         <p className="font-bold text-mobile-body-3 sm:text-desktop-body-1 z-[2]">ABOUT HIT AWARDS</p>

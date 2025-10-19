@@ -11,7 +11,7 @@ export default function ContactUs() {
                 alignment="left"
                 variant="image"
             />
-            <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
+            <div className='mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center'>
                 <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center gap-10">
                     <div className="flex md:flex-row flex-col justify-between items-center w-full px-8 py-10 bg-[#FAF9FA] gap-6">
                         <ImageWithFallback

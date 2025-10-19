@@ -24,7 +24,7 @@ export default function OurEvents() {
                 variant="image"
             />
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
-                <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+                <section className="max-w-[1440px] px-8 lg:px-32 w-full">
                     <section className="mt-10 flex justify-start items-start w-full relative">
                         <Tabs defaultValue="all-events" className="w-full">
                             <TabsList className="w-full lg:overflow-hidden overflow-x-scroll !border-none">
@@ -66,8 +66,8 @@ export default function OurEvents() {
                                                             </div>
                                                             <p className="my-3 sm:text-desktop-body-3 text-mobile-body-3 !leading-loose">{event.description}</p>
                                                         </div>
-                                                        <Button className="font-semibold text-mobile-body-2 bg-custom-blue text-white py-2 sm:py-3 px-4 sm:px-5">
-                                                            Register Now
+                                                        <Button variant="primary" className="py-2 sm:py-3 px-4 sm:px-5">
+                                                            Read More
                                                         </Button>
                                                     </div>
                                                 </div>
@@ -92,7 +92,7 @@ export default function OurEvents() {
                     totalPages={totalPages}
                     onPageChange={handlePageChange}
                 />
-                <section className="max-w-[1440px] w-full px-6 lg:px-8">
+                <section className="max-w-[1440px] w-full px-8 lg:px-32">
                     <div
                         className="w-full flex flex-col justify-center items-center rounded-lg"
                         style={{ backgroundImage: "url('/image/our-events/bg-img2.jpg')", backgroundSize: "contain" }}
@@ -105,7 +105,7 @@ export default function OurEvents() {
                                 Invite CrescentRating & HalalTrip to speak, collaborate, or contribute to meaningful discussions.
                             </p>
                             <a href="mailto:info@crescentrating.com" className="mt-4">
-                                <Button className="!py-5 !px-6 bg-white sm:min-w-[280px] sm:text-desktop-body-2 text-mobile-body-3 text-primary-cr-700">
+                                <Button variant="secondary" className="px-8 py-2">
                                     Submit an Invitation
                                 </Button>
                             </a>

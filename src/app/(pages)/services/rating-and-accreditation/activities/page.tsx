@@ -13,23 +13,23 @@ export default function RatingAndAccreditationActivites() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center md:min-h-[380px] min-h-[200px]"
+        className="relative w-full px-8 lg:px-32 flex justify-center items-center flex-row bg-center md:min-h-[380px] min-h-[200px]"
         style={{
           backgroundImage:
             "linear-gradient(180deg, rgba(0, 0, 0, 0.40) 13.19%, rgba(0, 0, 0, 0.80) 56.41%), url('/image/rating-accreditation/activities.webp')",
           backgroundSize: "cover",
         }}
       >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
+        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-8 lg:px-32 w-full flex sm:flex-row flex-col-reverse gap-5 ">
           <div className="flex w-full flex-col gap-5 justify-center items-center sm:mt-20 mt-10 text-white">
             <h1 className="text-mobile-heading-2 md:text-mobile-heading-2 lg:text-desktop-heading-2 font-bold bg-clip-text relative z-20 text-center w-full">
               Get Your Activity’s Muslim Friendly services Rated
             </h1>
             <div className="flex flex-row justify-center items-center gap-4 mt-4">
-              <Button className="!py-5 !px-6 bg-white text-primary-cr-700 !border-none">
+              <Button variant="secondary" className="!py-5 !px-6">
                 Learn More
               </Button>
-              <Button className="!py-5 !px-6 bg-[#453CFF] text-white !border-none">
+              <Button variant="primary" className="!py-5 !px-6">
                 Register Now
               </Button>
             </div>
@@ -37,7 +37,7 @@ export default function RatingAndAccreditationActivites() {
         </div>
       </section>
       <div className="mt-24 w-full flex flex-col gap-24 justify-center items-center">
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+        <section className="max-w-[1440px] px-8 lg:px-32 w-full flex flex-col justify-center items-center">
           <div className="grid sm:grid-cols-4 grid-cols-2 gap-6 w-full">
             <div className="w-full relative lg:h-[286px] md:h-[200px] h-[150px]">
               <ImageWithFallback
@@ -105,7 +105,7 @@ export default function RatingAndAccreditationActivites() {
             </div>
           </div>
         </section>
-        <section className="w-full flex justify-center px-6 lg:px-8">
+        <section className="w-full flex justify-center px-8 lg:px-32">
           <div className="max-w-[1440px] w-full bg-[#FAF9FA] rounded-sm py-12 px-8">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-start text-center">
               <div className="flex flex-col items-center">
@@ -177,7 +177,7 @@ export default function RatingAndAccreditationActivites() {
           </div>
         </section>
         <section className="bg-[#FAF9FA] py-10 md:py-20 w-full flex flex-col justify-center items-center">
-          <div className="max-w-[1440px] px-6 lg:px-8 w-full flex md:gap-24 gap-12 flex-col mt-12 mb-12">
+          <div className="max-w-[1440px] px-8 lg:px-32 w-full flex md:gap-24 gap-12 flex-col mt-12 mb-12">
             <div className="flex md:flex-row flex-col-reverse justify-center items-start md:gap-24 gap-12">
               <div className="w-[80%] grid gap-6 justify-start items-start">
                 {hotelBenefits.map((item: string, index: number) => (
@@ -214,16 +214,16 @@ export default function RatingAndAccreditationActivites() {
               <p className="sm:text-desktop-body-2 text-mobile-body-2">
                 For more pricing information, contact us:
               </p>
-              <Button className="!py-5 !px-6 bg-primary-cr-700 min-w-[280px] text-white mt-4">
+              <Button variant="primary" className="!py-6 !px-24 mt-4">
                 Contact Us
               </Button>
             </section>
           </div>
         </section>
-        <section className="max-w-[1440px] w-full px-6 lg:px-8 ">
+        <section className="max-w-[1440px] w-full px-8 lg:px-32 ">
           <CrRatingBanner buttonNameWhite="Register Now" />
         </section>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+        <section className="max-w-[1440px] px-8 lg:px-32 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-center items-center">
             <p className="sm:text-desktop-heading-4 text-center text-mobile-heading-4 font-bold sm:w-[45%] w-full">
               Why you Should Become a Member of the Crescent Rated Services
@@ -255,7 +255,7 @@ export default function RatingAndAccreditationActivites() {
             ))}
           </div>
         </section>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full">
+        <section className="max-w-[1440px] px-8 lg:px-32 w-full">
           <div className="w-full">
             <div className="rounded-lg border border-neutral-200 bg-[#FAF9FA] p-6 md:p-8 shadow-sm">
               <div className="flex gap-4">

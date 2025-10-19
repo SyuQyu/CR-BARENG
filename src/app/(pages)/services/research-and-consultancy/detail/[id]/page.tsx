@@ -28,7 +28,7 @@ export default function HalalMusimTravelMarketReportsDetail() {
     return (
         <div className="w-full flex flex-col justify-center items-center">
             <section
-                className="relative w-full px-6 lg:px-8 max-w-[1440px] p-4 flex sm:flex-row flex-col-reverse gap-5 justify-center items-center bg-center"
+                className="relative w-full px-8 lg:px-32 max-w-[1440px] p-4 flex sm:flex-row flex-col-reverse gap-5 justify-center items-center bg-center"
             >
                 <div className="flex w-full max-w-[1440px] sm:py-16 py-8  lg:px-0 flex-col gap-4 justify-start items-start">
                     <h1 className="text-mobile-heading-3 md:text-mobile-heading-1 lg:text-desktop-heading-1 font-bold bg-clip-text text-black relative z-20 text-left">
@@ -233,7 +233,7 @@ export default function HalalMusimTravelMarketReportsDetail() {
                 />
             </section>
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>
-                <div className="max-w-[1440px] w-full px-6 lg:px-8">
+                <div className="max-w-[1440px] w-full px-8 lg:px-32">
                     <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">Related Publications</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 mt-10">
                         {reports.slice(0, 3).map((report, index) => (

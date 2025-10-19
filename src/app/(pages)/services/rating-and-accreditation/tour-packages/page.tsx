@@ -5,23 +5,23 @@ export default function TourPackagesPage() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <section
-        className="relative w-full px-6 lg:px-8 flex justify-center items-center flex-row bg-center md:min-h-[380px] min-h-[200px]"
+        className="relative w-full px-8 lg:px-32 flex justify-center items-center flex-row bg-center md:min-h-[380px] min-h-[200px]"
         style={{
           backgroundImage:
             "url('/image/rating-accreditation/tour-package/hero.jpg')",
           backgroundSize: "cover",
         }}
       >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex sm:flex-row flex-col-reverse gap-5 ">
+        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-8 lg:px-32 w-full flex sm:flex-row flex-col-reverse gap-5 ">
           <div className="flex w-full flex-col gap-5 justify-center items-center sm:mt-20 mt-10 text-white">
             <h1 className="text-mobile-heading-2 md:text-mobile-heading-2 lg:text-desktop-heading-2 font-bold bg-clip-text relative z-20 text-center w-full">
               Get Your Tour Package’s Muslim Friendly services Rated
             </h1>
             <div className="flex flex-row justify-center items-center gap-4 mt-4">
-              <Button className="!py-5 !px-6 bg-white text-primary-cr-700 !border-none">
+              <Button variant="secondary" className="!py-5 !px-6">
                 Learn More
               </Button>
-              <Button className="!py-5 !px-6 bg-[#453CFF] text-white !border-none">
+              <Button variant="primary" className="!py-5 !px-6">
                 Register Now
               </Button>
             </div>
@@ -29,13 +29,13 @@ export default function TourPackagesPage() {
         </div>
       </section>
       <div className="mt-24 w-full flex flex-col gap-24 justify-center items-center">
-        <section className="max-w-[1440px] w-full px-6 lg:px-8 ">
+        <section className="max-w-[1440px] w-full px-8 lg:px-32 ">
           <CrRatingBanner
             buttonNameBlue="Get Pricing Information"
             buttonNameWhite="Register Now"
           />
         </section>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
+        <section className="max-w-[1440px] px-8 lg:px-32 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-center items-center">
             <p className="sm:text-desktop-heading-4 text-center text-mobile-heading-4 font-bold sm:w-[45%] w-full">
               Why you Should Become a Member of the Crescent Rated Services

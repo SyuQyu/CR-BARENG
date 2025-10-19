@@ -2,7 +2,12 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { CardBlogs, ImageWithFallback, PageHero } from "@/components/common";
+import {
+  Button,
+  CardBlogs,
+  ImageWithFallback,
+  PageHero,
+} from "@/components/common";
 import CardYoutubeEmbed from "@/components/common/card/cardYouTubeEmbed";
 import {
   Carousel,
@@ -41,34 +46,22 @@ export default function HalalMusimTravelMarketReports() {
     <div className="w-full flex flex-col justify-center items-center">
       <PageHero
         title="Destination Marketing"
-        subtitle="Our Service"
-        description="Connecting you to Muslims globally"
+        subtitle="Services"
+        description="Strategic marketing solutions to help you connect meaningfully with the fast-growing global Muslim travel market."
         backgroundImage="/image/destination-marketing/hero.webp"
         variant="image"
         alignment="left"
       />
-      <section className="w-full bg-custom-white-cr px-6 py-10 lg:px-8 flex justify-center items-center flex-col mb-10">
-        <div className="max-w-[1440px] w-full flex flex-col gap-5">
-          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-neutral-500">
-            Since 2008, we have been offering a wide range of Destination
-            Marketing services to clients in the hospitality and tourism &
-            travel industry to effectively connect with the fast growing Muslim
-            travel market. Our in-depth understanding of the lifestyle, behavior
-            and specific needs of the Halal conscious traveler has enabled us to
-            ensure our clients identify the right approach to effectively appeal
-            to the hearts and minds and capture a significant share-of-wallet of
-            this segment.
-          </p>
-          <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-neutral-500">
-            We provide professional support and targeted solutions through
-            customized strategic marketing plans that address the needs of the
-            destination and businesses. Our dedicated team ensures that your
-            destination’s attractiveness is communicated to potential Muslim
-            visitors with the intended brand positioning.
+      <div className="pt-7 sm:pt-14 px-8 lg:px-16 w-full flex flex-col justify-center items-center bg-white">
+        <div className="flex flex-col max-w-[600px] items-center gap-4">
+          <h1 className="text-mobile-heading-3 lg:text-desktop-heading-3 text-center font-bold">
+            Reach and Resonate with Muslim Travelers
+          </h1>
+          <p className="text-mobile-body-1 lg:text-desktop-body-1 text-center">
+            We combine strategy and cultural insight to build stronger
+            connections between your destination and Muslim travelers worldwide.
           </p>
         </div>
-      </section>
-      <div className="pt-7 sm:pt-14 w-full flex flex-col justify-center items-center bg-white">
         <div className="max-w-[1440px] md:gap-12 gap-8 flex lg:flex-row flex-col py-3 md:py-20 px-6 lg:px-8 w-full">
           <div className="md:w-[65%] w-full self-stretch overflow-visible lg:pl-14 lg:pb-9 lg:pr-5  mx-auto">
             <ImageWithFallback
@@ -238,6 +231,9 @@ export default function HalalMusimTravelMarketReports() {
                     ></iframe>
                   </div>
                 </div>
+                <Button variant="primary" className="px-12 py-6 mt-7">
+                  Discover More Halal Travel Guides
+                </Button>
               </div>
             </div>
           </div>
@@ -329,12 +325,9 @@ export default function HalalMusimTravelMarketReports() {
               social content and work with influencers, creators, clients and
               partners to meet your marketing needs.
             </p>
-            <Link
-              href="#"
-              className="inline-block px-6 py-3 text-white font-bold bg-blue-600 border border-gray-500/20 w-full md:max-w-fit items-center text-center mt-6"
-            >
+            <Button variant="primary" className="px-10 py-4 mt-4">
               Enquire Now
-            </Link>
+            </Button>
           </div>
           <div className="w-full items-center">
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
@@ -401,12 +394,9 @@ export default function HalalMusimTravelMarketReports() {
               creator talent, and the opportunity to spotlight your destination
               through real, relatable narratives.
             </p>
-            <Link
-              href="#"
-              className="inline-block px-6 py-3 text-white font-bold bg-blue-600 border border-gray-500/20 w-full md:max-w-fit items-center text-center mt-6"
-            >
+            <Button variant="primary" className="px-10 py-4 mt-4">
               Enquire Now
-            </Link>
+            </Button>
           </div>
           <div className="w-full items-center">
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
@@ -448,12 +438,9 @@ export default function HalalMusimTravelMarketReports() {
               that the design of the microsite structures your content in an
               informative way and ultimately, aligns with your brand.
             </p>
-            <Link
-              href="#"
-              className="inline-block px-6 py-3 text-white font-bold bg-blue-600 border border-gray-500/20 w-full md:max-w-fit items-center text-center mt-6"
-            >
+            <Button variant="primary" className="px-10 py-4 mt-4">
               Enquire Now
-            </Link>
+            </Button>
           </div>
         </div>
         <div className="w-full flex flex-col gap-24 justify-center items-center bg-white md:pt-0 pt-10">
@@ -578,12 +565,9 @@ export default function HalalMusimTravelMarketReports() {
                 tailored marketing services.
               </p>
             </div>
-            <Link
-              href="#"
-              className="inline-block p-3 text-blue-600 text-center font-bold bg-white border border-gray-500/20 w-full sm:w-[20%]"
-            >
+            <Button variant="secondary" className="px-16 py-6">
               Contact Us
-            </Link>
+            </Button>
           </div>
         </div>
       </div>
