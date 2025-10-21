@@ -31,7 +31,7 @@ export default function ContactUs() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  src={`https://www.google.com/maps/embed/v1/place?q=indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
+                  src={`https://www.google.com/maps/embed/v1/place?q=80+Changi+Rd,+%2305-12+Centropod,+Singapore+419715&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
                   className="w-full h-full"
                 ></iframe>
               </div>

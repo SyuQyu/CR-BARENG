@@ -1,4 +1,5 @@
 import { CircleCheck } from "lucide-react";
+import Link from "next/link";
 
 import {
   BasicCard,
@@ -13,16 +14,10 @@ import {
 //   AccordionItem,
 //   AccordionTrigger,
 // } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/defaultCarousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   cardData,
   categoriesServices,
-  medpart,
   servicesData,
   servicesTabsConfig,
 } from "@/constants/dummyData";
@@ -38,7 +33,7 @@ export default function OurServices() {
         alignment="left"
         variant="image"
       />
-      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
+      <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col lg:gap-24 gap-16 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center gap-10">
           <div className="flex flex-col w-full gap-4 text-center items-center">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">
@@ -55,7 +50,7 @@ export default function OurServices() {
               <BasicCard
                 key={index}
                 useButton={false}
-                className="bg-neutral-100"
+                className="bg-neutral-100 !rounded-none"
               >
                 <div className="w-full flex flex-col gap-4 justify-start items-start">
                   <div className="bg-[#F1F3FF] p-2">{card.icon}</div>
@@ -71,9 +66,11 @@ export default function OurServices() {
               </BasicCard>
             ))}
           </div>
-          <Button variant="primary" className="px-12 py-8">
-            See Our Member Directory
-          </Button>
+          <Link href="/resources/cr-member-directory">
+            <Button variant="primary" className="px-12 py-8">
+              See Our Member Directory
+            </Button>
+          </Link>
         </section>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-[80%] lg:w-[40%]">
@@ -186,26 +183,42 @@ export default function OurServices() {
             <p className="text-desktop-body-2 md:text-2xl font-bold text-[#09090B]">
               Featured Clients
             </p>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {medpart.map((item, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="md:basis-1/5 sm:basis-1/4 basis-1/3 flex justify-center items-center"
-                  >
-                    <ImageWithFallback
-                      width={0}
-                      height={0}
-                      sizes="10vw"
-                      className="w-[50%] object-contain"
-                      priority={false}
-                      src={item.img}
-                      alt={item.alt}
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
+              {[
+                {
+                  src: "/image/our-services/feature/hk-fe.jpg",
+                  alt: "Hong Kong Feature"
+                },
+                {
+                  src: "/image/our-services/feature/ture-fe.jpg",
+                  alt: "Turkey Feature"
+                },
+                {
+                  src: "/image/our-services/feature/nyc-fe.png",
+                  alt: "New York City Feature"
+                },
+                {
+                  src: "/image/our-services/feature/third-fe.png",
+                  alt: "Third Feature"
+                },
+                {
+                  src: "/image/our-services/feature/germany-fe.svg",
+                  alt: "Germany Feature"
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex justify-center items-center">
+                  <ImageWithFallback
+                    width={0}
+                    height={0}
+                    sizes="20vw"
+                    className="w-full max-w-[200px] h-auto object-contain"
+                    priority={false}
+                    src={item.src}
+                    alt={item.alt}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
         <section className="w-full flex flex-col justify-center items-center gap-8 bg-white">
@@ -218,14 +231,14 @@ export default function OurServices() {
               and organizations in delivering exceptional experiences for Muslim
               travelers.
             </p>
-            <div className="w-full flex md:flex-row flex-col justify-center items-start md:gap-24 gap-12 mt-12">
+            <div className="w-full flex md:flex-row flex-col justify-center items-start md:gap-24 gap-9 mt-9">
               <ImageWithFallback
                 width={0}
                 height={0}
-                sizes="100vw"
-                className="w-full object-cover max-h-[411px] rounded-lg"
+                sizes="1000vw"
+                className="w-full object-cover max-h-[411px]"
                 priority={false}
-                src={"/image/our-services/our-service-benefits.png"}
+                src={"/image/our-services/our-service-benefits-new.jpg"}
                 alt={"imgrating"}
               />
               <div className="w-full md:w-[80%] flex flex-col gap-8 justify-start items-start">

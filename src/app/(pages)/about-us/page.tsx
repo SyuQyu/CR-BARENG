@@ -158,7 +158,8 @@ export default function AboutUs() {
                     setOpenTeam(false);
                     updateURL(null); // Hapus parameter dari URL
                   }}
-                  className="mt-4 px-4 py-2 text-white border"
+                  variant="outline"
+                  
                 >
                   <X className="w-5 h-5 text-blue-700" />
                 </Button>
@@ -400,6 +401,9 @@ export default function AboutUs() {
                     location={testimonial.position}
                     imageSrc={testimonial.imageSrc}
                     imageAlt={testimonial.imageAlt}
+                    onText={testimonial.onText}
+                    onLink={testimonial.onLink}
+                    onLinkText={testimonial.onLinkText}
                   />
                 ))}
               </div>

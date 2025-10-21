@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 
 import {
@@ -17,6 +16,11 @@ import {
   CarouselNextCustom,
   CarouselPreviousCustom,
 } from "@/components/ui/carouselCustom2";
+import {
+Carousel as DefaultCarousel,
+CarouselContent as DefaultCarouselContent,
+CarouselItem as DefaultCarouselItem,
+} from "@/components/ui/defaultCarousel";
 import {
   crDestinationMarketingBlogs,
   crDestinationMarketingVideos,
@@ -48,7 +52,7 @@ export default function HalalMusimTravelMarketReports() {
         title="Destination Marketing"
         subtitle="Services"
         description="Strategic marketing solutions to help you connect meaningfully with the fast-growing global Muslim travel market."
-        backgroundImage="/image/destination-marketing/hero.webp"
+        backgroundImage="/image/destination-marketing/hero-new.webp"
         variant="image"
         alignment="left"
       />
@@ -355,31 +359,40 @@ export default function HalalMusimTravelMarketReports() {
             </p>
           </div>
           <div className="max-w-[1440px] flex justify-center items-center gap-8 overflow-hidden">
-            {[
-              "/image/destination-marketing/instagram-mockup-1.webp",
-              "/image/destination-marketing/instagram-mockup-2.webp",
-              "/image/destination-marketing/instagram-mockup-3.webp",
-              "/image/destination-marketing/instagram-mockup-4.webp",
-              "/image/destination-marketing/instagram-mockup-5.webp",
-              "/image/destination-marketing/instagram-mockup-6.webp",
-            ].map((src, idx) => (
-              <div
-                key={src}
-                className="relative h-full lg:w-72 flex items-center justify-center"
-                style={{ clipPath: "inset(0 round 24px)" }}
-              >
-                <ImageWithFallback
-                  width={0}
-                  height={0}
-                  sizes="20vh"
-                  className="h-full w-full object-cover"
-                  priority={false}
-                  src={src}
-                  alt={`Influencer ${idx + 1}`}
-                  style={{ borderRadius: "24px" }}
-                />
-              </div>
-            ))}
+            <DefaultCarousel className="w-full mt-12">
+              <DefaultCarouselContent>
+              {[
+                "/image/destination-marketing/instagram-mockup-1.webp",
+                "/image/destination-marketing/instagram-mockup-2.webp",
+                "/image/destination-marketing/instagram-mockup-3.webp",
+                "/image/destination-marketing/instagram-mockup-4.webp",
+                "/image/destination-marketing/instagram-mockup-5.webp",
+                "/image/destination-marketing/instagram-mockup-6.webp",
+              ].map((src, idx) => (
+                  <DefaultCarouselItem
+                    key={idx}
+                    className="md:basis-1/5 flex justify-center items-center gap-12"
+                  >
+                  <div
+                    key={src}
+                    className="relative h-full lg:w-72 flex items-center justify-center"
+                    style={{ clipPath: "inset(0 round 24px)" }}
+                  >
+                  <ImageWithFallback
+                    width={0}
+                    height={0}
+                    sizes="100vh"
+                    className="h-full w-full object-cover"
+                    priority={false}
+                    src={src}
+                    alt={`Influencer ${idx + 1}`}
+                    style={{ borderRadius: "24px" }}
+                  />
+                </div>
+                  </DefaultCarouselItem>
+                ))}
+              </DefaultCarouselContent>
+            </DefaultCarousel>
           </div>
         </div>
         <div className="max-w-[1440px] w-full flex flex-col-reverse lg:flex-row px-5 md:px-28 py-3 md:py-20 md:gap-12 md:pt-0 pt-10 justify-start items-center bg-white mx-auto">

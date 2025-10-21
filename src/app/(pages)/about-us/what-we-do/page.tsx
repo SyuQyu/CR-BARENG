@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import {
@@ -6,9 +7,9 @@ import {
   CardReports,
   ImageWithFallback,
   PageHero,
+  TestimonialCard,
 } from "@/components/common";
 import {
-  reportsInsightSeries,
   teamDataAboutUs,
   testimonialsAboutUs,
 } from "@/constants/dummyData";
@@ -47,47 +48,45 @@ export default function AboutUs() {
       <div className="mt-16 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
-            We Have Provided Services to More Than 300+ Clients
+            Trusted by Leading Destinations and Organizations Worldwide
           </p>
           <p className="sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500 w-[80%] lg:w-[50%]">
-            Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci
-            pulvinar vitae. Ultrices tempor interdum non consectetur nec platea
-            gravida ac.
+            From strategic partners to acclaimed tourism boards, our global footprint speaks for itself.
           </p>
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1 px-6 py-10 bg-neutral-100">
             <div className="w-full flex flex-col justify-center items-center  gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                35+
+                20k+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Global partners & clients
+                Media mentions and features
               </p>
             </div>
             <div className="md:border-l border-b border-neutral-300 md:h-28 md:w-auto w-full my-2"></div>
             <div className="w-full flex flex-col justify-center items-center gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                10k+
+                300+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Media Mentions
+                CrescentRatings awarded globally
               </p>
             </div>
             <div className="md:border-l border-b border-neutral-300 md:h-28 md:w-auto w-full my-2"></div>
             <div className="w-full flex flex-col justify-center items-center gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                15+
+                70k+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Years of experience
+                Industry partners worldwide
               </p>
             </div>
             <div className="md:border-l border-b border-neutral-300 md:h-28 md:w-auto w-full my-2"></div>
             <div className="w-full flex flex-col justify-center items-center gap-.5">
               <p className="lg:text-desktop-heading-1 text-mobile-heading-1 font-bold mb-4 bg-clip-text text-primary-cr-600 text-center w-full">
-                25+
+                20+
               </p>
               <p className="lg:text-desktop-body-2 text-mobile-body-2 text-center w-full text-neutral-500">
-                Destinations services provided
+                Tourism agencies collaborations
               </p>
             </div>
           </div>
@@ -96,15 +95,43 @@ export default function AboutUs() {
               <p className="lg:text-desktop-heading-6 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-center w-full">
                 Global Partners
               </p>
-              <ImageWithFallback
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full object-contain"
-                priority={false}
-                src="/image/about-us/g-partners.png"
-                alt="g-partners"
-              />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
+              {[
+                {
+                  src: "/image/our-services/feature/hk-fe.jpg",
+                  alt: "Hong Kong Feature"
+                },
+                {
+                  src: "/image/our-services/feature/ture-fe.jpg",
+                  alt: "Turkey Feature"
+                },
+                {
+                  src: "/image/our-services/feature/nyc-fe.png",
+                  alt: "New York City Feature"
+                },
+                {
+                  src: "/image/our-services/feature/third-fe.png",
+                  alt: "Third Feature"
+                },
+                {
+                  src: "/image/our-services/feature/germany-fe.svg",
+                  alt: "Germany Feature"
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex justify-center items-center">     
+                  <ImageWithFallback
+                    key={index}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full object-contain"
+                    priority={false}
+                    src={item.src}
+                    alt={item.alt}
+                  />
+                </div>
+              ))}
+              </div>
             </div>
           </div>
           <div className="mt-10 flex flex-row justify-center items-center w-full gap-6">
@@ -114,33 +141,17 @@ export default function AboutUs() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {testimonialsAboutUs.map((testimonial, index) => (
-                  <div
+                  <TestimonialCard
                     key={index}
-                    className="border md:px-8 px-6 py-4 flex flex-col justify-between items-start gap-4"
-                  >
-                    <p className="lg:text-desktop-body-2 text-mobile-body-2 text-left">
-                      {testimonial.text}
-                    </p>
-                    <div className="flex flex-row w-full justify-start items-center gap-4">
-                      <ImageWithFallback
-                        width={0}
-                        height={0}
-                        sizes="1000vw"
-                        className="w-[48px] rounded-full object-cover"
-                        priority={false}
-                        src={testimonial.imageSrc}
-                        alt={testimonial.imageAlt}
-                      />
-                      <div className="flex flex-col justify-between items-start gap-1">
-                        <p className="text-desktop-body-2">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-neutral-500 text-desktop-caption-l">
-                          {testimonial.position}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    text={testimonial.text}
+                    name={testimonial.name}
+                    location={testimonial.position}
+                    imageSrc={testimonial.imageSrc}
+                    imageAlt={testimonial.imageAlt}
+                    onText={testimonial.onText}
+                    onLink={testimonial.onLink}
+                    onLinkText={testimonial.onLinkText}
+                  />
                 ))}
               </div>
               {/* <div className="w-full flex justify-center mt-6">
@@ -162,7 +173,7 @@ export default function AboutUs() {
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
-                {reportsInsightSeries.slice(0, 3).map((report, index) => (
+                {/* {reportsInsightSeries.slice(0, 3).map((report, index) => (
                   <CardReports
                     key={index}
                     title={report.title}
@@ -171,12 +182,35 @@ export default function AboutUs() {
                     customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
                     buttonContent={<>View Report</>}
                   />
-                ))}
+                ))} */}
+                  <CardReports
+                    title={'Global Muslim Travel Index 2024'}
+                    imageUrl={'/image/what-we-do/gmti-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
+                    buttonContent={<>View Report</>}
+                  />
+                  <CardReports
+                    title={'Global Muslim Travel Index 2024'}
+                    imageUrl={'/image/what-we-do/gmti-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
+                    buttonContent={<>View Report</>}
+                  />
+                  <CardReports
+                    title={'Global Muslim Travel Index 2024'}
+                    imageUrl={'/image/what-we-do/gmti-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
+                    buttonContent={<>View Report</>}
+                  />
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button variant="primary" className="px-8 py-6">
-                  View More
-                </Button>
+                <Link href="/insights/gmti">
+                  <Button variant="primary" className="px-8 py-6">
+                    View More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -192,7 +226,7 @@ export default function AboutUs() {
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
-                {reportsInsightSeries.slice(0, 3).map((report, index) => (
+                {/* {reportsInsightSeries.slice(0, 3).map((report, index) => (
                   <CardReports
                     key={index}
                     title={report.title}
@@ -201,7 +235,31 @@ export default function AboutUs() {
                     customImgHeight="lg:max-h-[350px] sm:max-h-[300px] max-h-[400px]"
                     buttonContent={<>View Guide</>}
                   />
-                ))}
+                ))} */}
+                <CardReports
+                    title={'Macao Halal Travel Guide'}
+                    imageUrl={'/image/what-we-do/visitor-guide-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[400px] sm:max-h-[350px] max-h-[450px]"
+                    description="The Macao Halal Travel Guide offers Muslim travelers curated insights into cultural landmarks, halal dining, prayer facilities, and seamless travel experiences, making it easy to explore Macao’s unique East-West fusion."
+                    buttonContent={<>View Guide</>}
+                  />
+                <CardReports
+                    title={'Macao Halal Travel Guide'}
+                    imageUrl={'/image/what-we-do/visitor-guide-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[400px] sm:max-h-[350px] max-h-[450px]"
+                    description="The Macao Halal Travel Guide offers Muslim travelers curated insights into cultural landmarks, halal dining, prayer facilities, and seamless travel experiences, making it easy to explore Macao’s unique East-West fusion."
+                    buttonContent={<>View Guide</>}
+                  />
+                <CardReports
+                    title={'Macao Halal Travel Guide'}
+                    imageUrl={'/image/what-we-do/visitor-guide-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[400px] sm:max-h-[350px] max-h-[450px]"
+                    description="The Macao Halal Travel Guide offers Muslim travelers curated insights into cultural landmarks, halal dining, prayer facilities, and seamless travel experiences, making it easy to explore Macao’s unique East-West fusion."
+                    buttonContent={<>View Guide</>}
+                  />
               </div>
               <div className="w-full flex justify-center mt-6">
                 <Button variant="primary" className="px-8 py-6">
@@ -223,7 +281,7 @@ export default function AboutUs() {
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
-                <div className="w-full relative">
+                <Link href="/resources/cr-member-directory/hotels-serviced-apartments/Hong%20Kong%20Sar" className="w-full relative block">
                   <ImageWithFallback
                     width={0}
                     height={0}
@@ -238,8 +296,8 @@ export default function AboutUs() {
                       Hong Kong Sar
                     </p>
                   </div>
-                </div>
-                <div className="w-full relative">
+                </Link>
+                <Link href="/resources/cr-member-directory/hotels-serviced-apartments/Sri%20Lanka" className="w-full relative block">
                   <ImageWithFallback
                     width={0}
                     height={0}
@@ -254,8 +312,8 @@ export default function AboutUs() {
                       Sri Lanka
                     </p>
                   </div>
-                </div>
-                <div className="w-full relative">
+                </Link>
+                <Link href="/resources/cr-member-directory/hotels-serviced-apartments/Singapore" className="w-full relative block">
                   <ImageWithFallback
                     width={0}
                     height={0}
@@ -270,12 +328,14 @@ export default function AboutUs() {
                       Singapore
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button variant="primary" className="px-8 py-6">
-                  View More
-                </Button>
+                <Link href="/resources/cr-member-directory">
+                  <Button variant="primary" className="px-8 py-6">
+                    View More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -291,7 +351,7 @@ export default function AboutUs() {
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-9">
-                {reportsInsightSeries.slice(0, 4).map((report, index) => (
+                {/* {reportsInsightSeries.slice(0, 4).map((report, index) => (
                   <CardReports
                     key={index}
                     title={"Global Labor Market Conference 2025"}
@@ -301,12 +361,46 @@ export default function AboutUs() {
                     customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
                     buttonContent={<>View Event</>}
                   />
-                ))}
+                ))} */}
+                  <CardReports
+                    title={"Global Labor Market Conference 2025"}
+                    imageUrl={'/image/what-we-do/international-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    date={"Riyadh"}
+                    buttonContent={<>View Event</>}
+                  />
+                  <CardReports
+                    title={"Global Labor Market Conference 2025"}
+                    imageUrl={'/image/what-we-do/international-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    date={"Riyadh"}
+                    buttonContent={<>View Event</>}
+                  />
+                  <CardReports
+                    title={"Global Labor Market Conference 2025"}
+                    imageUrl={'/image/what-we-do/international-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    date={"Riyadh"}
+                    buttonContent={<>View Event</>}
+                  />
+                  <CardReports
+                    title={"Global Labor Market Conference 2025"}
+                    imageUrl={'/image/what-we-do/international-what.webp'}
+                    downloadUrl={'https://www.crescentrating.com/reports/global-muslim-travel-index-2024.html'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    date={"Riyadh"}
+                    buttonContent={<>View Event</>}
+                  />
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button variant="primary" className="px-8 py-6">
-                  View More
-                </Button>
+                <Link href="/events/our-events">
+                  <Button variant="primary" className="px-8 py-6">
+                    View More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -323,19 +417,39 @@ export default function AboutUs() {
           <div className="mt-10 flex sm:flex-row flex-col justify-center items-start w-full gap-1">
             <div className="flex flex-col justify-center items-center w-full gap-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
-                {reportsInsightSeries.slice(0, 3).map((report, index) => (
+                {/* {reportsInsightSeries.slice(0, 3).map((report, index) => (
                   <CardReports
                     key={index}
                     title={"Global Labor Market Conference 2025"}
                     imageUrl={report.imageUrl}
                     customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
                   />
-                ))}
+                ))} */}
+                <CardReports
+                    title={`Samarkand receives "Best Islamic Destination of the Year" award`}
+                    imageUrl={'/image/what-we-do/media-what.webp'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    buttonContent={<>View Media</>}
+                  />
+                  <CardReports
+                    title={`Samarkand receives "Best Islamic Destination of the Year" award`}
+                    imageUrl={'/image/what-we-do/media-what.webp'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    buttonContent={<>View Media</>}
+                  />
+                  <CardReports
+                    title={`Samarkand receives "Best Islamic Destination of the Year" award`}
+                    imageUrl={'/image/what-we-do/media-what.webp'}
+                    customImgHeight="lg:max-h-[300px] sm:max-h-[200px] max-h-[350px]"
+                    buttonContent={<>View Media</>}
+                  />
               </div>
               <div className="w-full flex justify-center mt-6">
-                <Button variant="primary" className="px-8 py-6">
-                  View More
-                </Button>
+                <Link href="/about-us/in-the-media">
+                  <Button variant="primary" className="px-8 py-6">
+                    View More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
