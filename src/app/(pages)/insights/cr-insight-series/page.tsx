@@ -11,13 +11,13 @@ import {
   ImageWithFallback,
   Pagination,
 } from "@/components/common";
+import BreadCrumb from "@/components/common/breadcrumb/breadcrumb";
 import {
   cardDataInsightSeries,
   CardProfile1InsightSeries,
   CardProfile2InsightSeries,
   reportsInsightSeries,
 } from "@/constants/dummyData";
-import BreadCrumb from "@/components/common/breadcrumb/breadcrumb";
 
 export default function CardInsightsSeries() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,6 +25,13 @@ export default function CardInsightsSeries() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+  };
+
+  const scrollToInsightsSection = () => {
+    const element = document.getElementById('share-insights-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -110,9 +117,11 @@ export default function CardInsightsSeries() {
               </p>
               <div className="hidden lg:flex gap-6">
                 <Button variant="primary" className="px-6 py-4">
-                  Publish Now
+                  <Link href="/insights/cr-insight-series/submission">
+                    Publish Now
+                  </Link>
                 </Button>
-                <Button variant="secondary" className="px-6 py-4">
+                <Button variant="secondary" className="px-6 py-4" onClick={scrollToInsightsSection}>
                   Learn More
                 </Button>
               </div>
@@ -147,7 +156,7 @@ export default function CardInsightsSeries() {
             />
           </div>
         </div>
-        <div className="max-w-[1440px] w-full lg:px-32 sm:px-16 px-8">
+        <div id="share-insights-section" className="max-w-[1440px] w-full lg:px-32 sm:px-16 px-8">
           <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">
             Share Your Insights with CrescentRating
           </p>

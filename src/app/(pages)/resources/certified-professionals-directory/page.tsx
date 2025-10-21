@@ -17,7 +17,7 @@ export default function CertifiedProfessionalsDirectoryPage() {
         <div className="w-full flex flex-col justify-center items-center">
             <PageHero
                 title="CrescentRating Certified Market Readiness Professionals Directory"
-                description="Lorem ipsum dolor sit amet consectetur. Eget mattis adipiscing orci pulvinar vitae. Ultrices tempor interdum non consectetur nec platea gravida ac."
+                description="Find certified professionals, academics, and industry leaders dedicated to advancing the halal travel market and enhancing your Muslim-friendly travel experiences."
                 subtitle="Resources"
                 backgroundImage="/image/certified-professionals-directory/hero-new.jpg"
                 alignment="left"
@@ -25,7 +25,7 @@ export default function CertifiedProfessionalsDirectoryPage() {
             />
             <section className="max-w-[1440px] px-6 lg:px-8 w-full">
                 <section className="mt-10 flex justify-start items-start w-full relative">
-                    <Tabs defaultValue="certified-professionals" className="w-full">
+                    <Tabs defaultValue="all" className="w-full">
                         <TabsList className="w-full lg:overflow-hidden overflow-x-scroll !border-none">
                             <TabsTrigger className="w-full" value="all">All</TabsTrigger>
                             <TabsTrigger className="w-full" value="certified-professionals">Certified Professionals</TabsTrigger>

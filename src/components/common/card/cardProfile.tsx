@@ -54,7 +54,7 @@ export default function CardProfile({
         <div className="mt-auto w-full">
           <Link
             href={linkedinUrl}
-            className="flex flex-row w-full justify-center items-center gap-2 font-bold text-blue-600 border border-gray-500/20 p-3"
+            className="flex flex-row w-full justify-center items-center gap-2 font-semibold text-primary-cr-600 border border-gray-500/20 p-3"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

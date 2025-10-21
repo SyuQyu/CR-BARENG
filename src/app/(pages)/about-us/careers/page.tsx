@@ -6,18 +6,19 @@ import {
   Button,
   ImageWithFallback,
   PageHero,
+  TestimonialCard,
 } from "@/components/common";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/components/ui/accordion";
 import {
   availablePositions,
   cardData,
   templateCarrers,
-  testimonialsAboutUs,
+  testimonialsCarrer,
 } from "@/constants/dummyData";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -132,32 +133,15 @@ export default function Carrer() {
               rewarding workplace.
             </p>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-              {testimonialsAboutUs.map((testimonial, index) => (
-                <div
+              {testimonialsCarrer.map((testimonial, index) => (
+                <TestimonialCard
                   key={index}
-                  className="border md:px-8 px-6 py-4 flex flex-col justify-between items-start gap-4"
-                >
-                  <p className="lg:text-desktop-body-2 text-mobile-body-2 text-left">
-                    {testimonial.text}
-                  </p>
-                  <div className="flex flex-row w-full justify-start items-center gap-4">
-                    <ImageWithFallback
-                      width={0}
-                      height={0}
-                      sizes="1000vw"
-                      className="w-[48px] rounded-full object-cover"
-                      priority={false}
-                      src={testimonial.imageSrc}
-                      alt={testimonial.imageAlt}
-                    />
-                    <div className="flex flex-col justify-between items-start gap-1">
-                      <p className="text-desktop-body-2">{testimonial.name}</p>
-                      <p className="text-neutral-500 text-desktop-caption-l">
-                        {testimonial.position}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  text={testimonial.text}
+                  name={testimonial.name}
+                  location={testimonial.position}
+                  imageSrc={testimonial.imageSrc}
+                  imageAlt={testimonial.imageSrc}
+                />
               ))}
             </div>
           </div>
@@ -204,7 +188,7 @@ export default function Carrer() {
             </div>
           </div>
         </section>
-        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
+        {/* <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
           <div className="w-full flex flex-col gap-1 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">
               Frequently Asked Questions
@@ -255,7 +239,7 @@ export default function Carrer() {
               </AccordionItem>
             </Accordion>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );

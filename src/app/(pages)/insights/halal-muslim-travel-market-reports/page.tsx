@@ -1,6 +1,5 @@
 'use client'
 import { Download } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 
 import { Button, CardReports, CardReports2, ImageWithFallback, Pagination } from "@/components/common";
@@ -62,7 +61,7 @@ export default function HalalMusimTravelMarketReports() {
                                 <TabsTrigger className="w-full" value="other">Other Reports/Publication</TabsTrigger>
                             </TabsList>
                             <TabsContent key={'all'} value={'all'} activeValue={'all'} className="flex gap-6 flex-col">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 pt-10">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 md:mt-10 mt-3">
                                     {reports.map((report, index) => (
                                         <CardReports
                                             key={index}
@@ -125,8 +124,22 @@ export default function HalalMusimTravelMarketReports() {
                     <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">Essential Reports for the Industry</p>
                     <p className="sm:text-desktop-body-2 text-mobile-body-2  text-left lg:w-[40%] w-full text-neutral-500">Explore the Global Muslim Travel Index (GMTI) and CrescentRating Insight Series for key data and trends</p>
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-9 w-full mt-10">
-                        <CardReports2 />
-                        <CardReports2 />
+                        <CardReports2 
+                            headline="Global Muslim Travel Index Report"
+                            description="A comprehensive benchmark that ranks destinations based on their Muslim-friendly travel and tourism offerings in aspects of access, communication, environment, and services."
+                            imageSrc="/image/halal-muslim-travel-market-reports/report1.png"
+                            imageAlt="Global Muslim Travel Index Report"
+                            buttonText="View Report"
+                            buttonLink="#"
+                        />
+                        <CardReports2 
+                            headline="CrescentRating Insight Series"
+                            description="A series of studies that fosters insights to shape and inspire the global halal economy and lifestyle, functioning as a bridge between academia and industry."
+                            imageSrc="/image/halal-muslim-travel-market-reports/report2.png"
+                            imageAlt="CrescentRating Insight Series"
+                            buttonText="View Report"
+                            buttonLink="/insights/cr-insight-series"
+                        />
                     </div>
                 </div>
                 <div className="w-full flex flex-col bg-gradient-to-r from-blue-600 to-navy-blue-600 justify-center items-center">

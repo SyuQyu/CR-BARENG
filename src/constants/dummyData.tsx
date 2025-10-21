@@ -886,13 +886,13 @@ export const medpart = [
 
 export const cardData = [
   {
-    title: "Globally Recognised",
+    title: "Personal Growth and Development",
     description:
-      "An internationally trusted authority in Muslim-friendly travel ratings.",
+      "Enhance your expertise and grow within a supportive, dynamic team environment.",
     icon: (
       <ImageWithFallback
-        src="/image/rating-accreditation/earth.svg"
-        alt="Globally Recognised"
+        src="/image/careers/work/briefcase.svg"
+        alt="Personal Growth and Development"
         width={24}
         height={24}
         className="w-6 h-6"
@@ -902,13 +902,13 @@ export const cardData = [
     ),
   },
   {
-    title: "Trusted",
+    title: "We Reward High Performers",
     description:
-      "Relied upon by Halal-conscious travelers and businesses worldwide.",
+      "We recognize and nurture talent, helping you advance your career.",
     icon: (
       <ImageWithFallback
-        src="/image/rating-accreditation/stars.svg"
-        alt="Trusted"
+        src="/image/careers/work/badge.svg"
+        alt="We Reward High Performers"
         width={24}
         height={24}
         className="w-6 h-6"
@@ -918,14 +918,14 @@ export const cardData = [
     ),
   },
   {
-    title: "Autonomous",
+    title: "Innovate in a Growing Market",
     description:
-      "Independent and unbiased evaluations that drive service excellence.",
+      "Work at the forefront of the halal travel market, driving innovation and change.",
 
     icon: (
       <ImageWithFallback
-        src="/image/rating-accreditation/bar-chart.svg"
-        alt="Autonomous"
+        src="/image/careers/work/chart-up.svg"
+        alt="Innovate in a Growing Market"
         width={24}
         height={24}
         className="w-6 h-6"
@@ -935,13 +935,13 @@ export const cardData = [
     ),
   },
   {
-    title: "High Standards",
+    title: "A Diverse and Inclusive Workplace",
     description:
-      "Comprehensive ratings built on rigorous, faith-based criteria.",
+      "Join a team that values diversity, inclusivity, and equal opportunity.",
     icon: (
       <ImageWithFallback
-        src="/image/rating-accreditation/star-badge.svg"
-        alt="High Standards"
+        src="/image/careers/work/earth.svg"
+        alt="A Diverse and Inclusive Workplace"
         width={24}
         height={24}
         className="w-6 h-6"
@@ -1978,35 +1978,35 @@ export const cardDataInsightSeries = [
     number: "01",
     title: "Propose Idea",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Risus vitae blandit faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi nisi viverra nulla diam.",
+      "Submit an abstract to CrescentRating Insights submission form.",
     iconSrc: "/image/cr-insight-series/icon/document.svg",
   },
   {
     number: "02",
-    title: "Idea Approved",
+    title: "Idea Reviewed",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Risus vitae blandit faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi nisi viverra nulla diam.",
+      "The abstract will be reviewed internally by CrescentRating's Research team.",
     iconSrc: "/image/cr-insight-series/icon/option-done.svg",
   },
   {
     number: "03",
     title: "Submit Paper",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Risus vitae blandit faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi nisi viverra nulla diam.",
+      "Authors will be notified of their qualified abstract within four weeks. Upon qualification, authors may proceed to submit their full paper.",
     iconSrc: "/image/cr-insight-series/icon/file-word.svg",
   },
   {
     number: "04",
-    title: "Wait for Approval",
+    title: "Wait for Assessment",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Risus vitae blandit faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi nisi viverra nulla diam.",
+      "Full-length papers will be assessed by the Academic Advisory Council. Notifications regarding the outcome will be provided within three weeks.",
     iconSrc: "/image/cr-insight-series/icon/time.svg",
   },
   {
     number: "05",
     title: "Publication Uploaded",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Risus vitae blandit faucibus id urna quis nisl egestas. Ultrices aenean metus duis mi nisi viverra nulla diam.",
+      "Accepted papers will be assessed for appropriate publishing dates, following an agreement between CrescentRating and the authors.",
     iconSrc: "/image/cr-insight-series/icon/file-verified.svg",
   },
 ];
@@ -3252,6 +3252,29 @@ export const awardsAboutUs = [
 
 export const testimonialsAboutUs = [
   {
+    text: "What sets CrescentRating apart is their unique commitment to providing specialized training for managers and service staff, tailored to meet the distinct demands of Halal or Muslim-friendly management. We haven't encountered any other establishment offering such customized training.",
+    imageSrc: "/image/about-us/wts.png",
+    imageAlt: "Aksu Restaurant",
+    name: "Aksu Restaurant",
+    position: "Uzbekistan",
+    onText: "on",
+    onLink: "/services/rating-and-accreditation",
+    onLinkText: "CR Rating & Accreditation",
+  },
+  {
+    text: "The class was very pleased; they effectively applied all the deep knowledge they gained. CrescentRating provided a highly informative curriculum that exceeded our expectations.",
+    imageSrc: "/image/about-us/prof.png",
+    imageAlt: "Prof. Claudio Visentin",
+    name: "Prof. Claudio Visentin",
+    position: "Università della Svizzera italiana",
+    onText: "on",
+    onLink: "/services/crescentrating-academy",
+    onLinkText: "CR Academy",
+  },
+];
+
+export const testimonialsCarrer = [
+  {
     text: "As a Product Designer at CrescentRating, I’ve experienced a supportive culture that values innovation, continuous learning, and diversity. It has been an excellent environment for professional development.",
     imageSrc: "/image/about-us/team/Zafira-Khairani.png",
     imageAlt: "Zafira Khairani",
@@ -3300,13 +3323,13 @@ export const testimonialLogoRatingAndAccreditation = [
   },
   {
     imageSrc:
-      "/image/rating-accreditation/list-establishments/four-seasons.png",
+      "/image/rating-accreditation/list-establishments/four.jpg",
     imageAlt: "four-seasons",
     name: "Four Seasons",
     location: "Hong Kong",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/hyatt.png",
+    imageSrc: "/image/rating-accreditation/list-establishments/grand-hyatt.png",
     imageAlt: "grand-hyatt",
     name: "Grand Hyatt",
     location: "Hong Kong",
@@ -3319,13 +3342,13 @@ export const testimonialLogoRatingAndAccreditation = [
     location: "",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/marriott.png",
+    imageSrc: "/image/rating-accreditation/list-establishments/jw.png",
     imageAlt: "jw-marriott",
     name: "JW Marriott",
     location: "Hong Kong",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/kowloon.png",
+    imageSrc: "/image/rating-accreditation/list-establishments/kowloon.jpg",
     imageAlt: "kowloon",
     name: "Kowloon Shangri-La",
     location: "Hong Kong",
@@ -3349,7 +3372,7 @@ export const testimonialLogoRatingAndAccreditation = [
     location: "",
   },
   {
-    imageSrc: "/image/rating-accreditation/list-establishments/ocean-park.png",
+    imageSrc: "/image/rating-accreditation/list-establishments/ocean.png",
     imageAlt: "ocean-park",
     name: "Ocean Park",
     location: "Hong Kong",
