@@ -183,7 +183,7 @@ export default function RatingAndAccreditation() {
 
   function RatingAndAccreditationSection() {
     return (
-      <section className="w-full max-w-[1440px] px-6 lg:px-8 flex flex-col justify-center items-center mt-16">
+      <section id="rating-section" className="w-full max-w-[1440px] px-6 lg:px-8 flex flex-col justify-center items-center mt-16">
         <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 text-black text-center w-[90%] lg:w-[50%]">
           Get your Establishment Crescent Rated
         </p>
@@ -192,11 +192,11 @@ export default function RatingAndAccreditation() {
           demonstrate your commitment to inclusivity.
         </p>
 
-        <div className="mt-12 lg:grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 w-full">
+        <div className="lg:mt-12 md:mt-5 mt-3 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4 md:gap-12 w-full">
           {ratingItemsSubPages.map((item) => (
             <div
               key={item.key}
-              className="flex flex-col hover:shadow-lg transition rounded-md overflow-hidden"
+              className="flex flex-col transition overflow-hidden "
             >
               <Image
                 src={item.image}
@@ -205,7 +205,7 @@ export default function RatingAndAccreditation() {
                 height={190}
                 className="w-full h-40 object-cover"
               />
-              <div className="flex flex-col p-4 justify-between h-full">
+              <div className="flex flex-col py-4 justify-between h-full">
                 <p className="font-semibold text-black mb-2">{item.title}</p>
                 <Link
                   href={item.url}
@@ -233,22 +233,22 @@ export default function RatingAndAccreditation() {
         useBreadCrumbLinks={false}
       />
       <div className="mt-7 sm:mt-14 px:8 lg:px-32 w-full flex flex-col gap-24 justify-center items-center">
-        <section className="max-w-[1440px] px-2 lg:px-6 w-full flex flex-col justify-center items-center">
+        <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col w-full gap-4 justify-start items-start">
-            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold sm:w-[45%] w-full">
+            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold lg:w-[60%] w-full">
               Why you Should Become a Member of the Crescent Rated Services
             </p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 sm:w-[45%] w-full">
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 lg:w-[60%] w-full">
               Gain global recognition, trust, and strategic insights to attract
               Muslim travelers while upholding high industry standards.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 w-full mt-10 ">
+          <div className="grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 w-full mt-10 ">
             {cardData.map((card, index) => (
               <BasicCard
                 key={index}
                 useButton={false}
-                className="bg-neutral-100"
+                className="bg-neutral-100 !rounded-none"
               >
                 <div className="w-full flex flex-col gap-4 justify-start items-start">
                   <div className="bg-[#F1F3FF] p-2">{card.icon}</div>
@@ -367,11 +367,11 @@ export default function RatingAndAccreditation() {
         </section>
         <section className="max-w-[1440px] px-6 lg:px-8 w-full flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-start w-full">
-            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left w-[80%] lg:w-[40%]">
+            <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left w-[70%] lg:w-[35%]">
               Accredited with Purpose, Recognized for Results
             </p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500 w-[80%] lg:w-[50%]">
-              Discover how CrescentRating’s trusted standards are empowering
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500 w-[70%] lg:w-[45%]">
+              Discover how CrescentRating&apos;s trusted standards are empowering
               businesses—from attractions to accommodations—to better serve
               Muslim travelers and grow with confidence.
             </p>
@@ -394,9 +394,9 @@ export default function RatingAndAccreditation() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute flex items-center justify-center -top-12 right-0 gap-4">
-              <CarouselPreviousCustom className="!rounded-none text-primary-cr-700" />
-              <CarouselNextCustom className="!rounded-none text-primary-cr-700" />
+            <div className="absolute flex items-center justify-center -top-[84px] right-0 gap-4">
+              <CarouselPreviousCustom className="!rounded-none text-primary-cr-700 !shadow-none" />
+              <CarouselNextCustom className="!rounded-none text-primary-cr-700 !shadow-none" />
             </div>
           </Carousel>
         </section>
@@ -405,10 +405,8 @@ export default function RatingAndAccreditation() {
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">
               Frequently Asked Questions
             </p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-left text-gray-500">
-              Lorem ipsum dolor sit amet consectetur. Nulla cras nunc justo
-              morbi id curabitur. Luctus varius ipsum nisl enim tempor
-              suspendisse fusce.
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-gray-500 w-[70%] lg:w-[45%] text-center">
+            Find answers to your questions about CrescentRating’s services, programs, and how we can help your business thrive.
             </p>
           </div>
           <div className="w-full md:px-24">
@@ -433,6 +431,30 @@ export default function RatingAndAccreditation() {
           </div>
         </section>
       </div>
+      <section className="w-full flex flex-col bg-gradient-to-r from-blue-600 to-navy-blue-600 justify-center items-center lg:mt-10 mt-5">
+          <div className="max-w-[1440px] px-8 lg:px-32 w-full sm:py-16 py-12 flex sm:flex-row flex-col gap-5 justify-between items-end">
+            <div className="sm:w-[80%] w-full flex flex-col gap-4">
+              <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-white">
+                Ready to Get CrescentRated?
+              </p>
+              <p className="text-white sm:text-desktop-body-2 text-mobile-body-2">
+                Join leading establishments around the world in setting the standard for Muslim-friendly travel.
+              </p>
+            </div>
+             <Button 
+               variant="secondary" 
+               className="w-full sm:w-[20%] whitespace-normal"
+               onClick={() => {
+                 const element = document.getElementById('rating-section');
+                 if (element) {
+                   element.scrollIntoView({ behavior: 'smooth' });
+                 }
+               }}
+             >
+               Explore Eligible Establishments
+             </Button>
+          </div>
+        </section>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { ImageWithFallback } from "@/components/common";
+
 export const pricingPlans = [
   {
     title: "Assured",
@@ -884,124 +886,68 @@ export const medpart = [
 
 export const cardData = [
   {
-    title: "Expert Market Understanding",
+    title: "Globally Recognised",
     description:
-      "Gain deep insights into the Halal/Muslim travel industry to better cater to your target audience.",
+      "An internationally trusted authority in Muslim-friendly travel ratings.",
     icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M19 3V1H21V3H23V5H21V7H19V5H17V3H19ZM3 4.5V3H5V4.5H6.5V6.5H5V8H3V6.5H1.5V4.5H3ZM9.63296 5.09732C10.1644 3.92054 11.8356 3.92054 12.367 5.09732L14.556 9.94398L19.4027 12.133C20.5795 12.6644 20.5795 14.3356 19.4027 14.867L14.556 17.056L12.367 21.9027C11.8356 23.0795 10.1644 23.0795 9.63296 21.9027L7.44398 17.056L2.59732 14.867C1.42054 14.3356 1.42054 12.6644 2.59732 12.133L7.44398 9.94398L9.63296 5.09732ZM11 6.92947L9.18896 10.9393C9.03866 11.2721 8.77213 11.5387 8.43934 11.689L4.42947 13.5L8.43934 15.311C8.77213 15.4613 9.03866 15.7279 9.18896 16.0607L11 20.0705L12.811 16.0607C12.9613 15.7279 13.2279 15.4613 13.5607 15.311L17.5705 13.5L13.5607 11.689C13.2279 11.5387 12.9613 11.2721 12.811 10.9393L11 6.92947Z"
-          fill="#2D15FF"
-        />
-      </svg>
+      <ImageWithFallback
+        src="/image/rating-accreditation/earth.svg"
+        alt="Globally Recognised"
+        width={24}
+        height={24}
+        className="w-6 h-6"
+        sizes="24px"
+        priority={false}
+      />
     ),
   },
   {
-    title: "Strategic Business Growth",
+    title: "Trusted",
     description:
-      "Evaluate your offerings and develop a tailored strategy to attract Muslim travelers.",
+      "Relied upon by Halal-conscious travelers and businesses worldwide.",
     icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M9.92684 1H14.0732C15.8966 0.999973 17.3664 0.999951 18.5223 1.15537C19.7225 1.31672 20.733 1.66191 21.5355 2.46447C22.3381 3.26702 22.6833 4.27752 22.8446 5.47767C23.0001 6.63363 23 8.1034 23 9.92686V14.0731C23 15.8966 23.0001 17.3664 22.8446 18.5223C22.6833 19.7225 22.3381 20.733 21.5355 21.5355C20.733 22.3381 19.7225 22.6833 18.5223 22.8446C17.3664 23.0001 15.8966 23 14.0731 23H9.92686C8.1034 23 6.63363 23.0001 5.47767 22.8446C4.27752 22.6833 3.26702 22.3381 2.46447 21.5355C1.66191 20.733 1.31672 19.7225 1.15537 18.5223C0.999951 17.3664 0.999973 15.8966 1 14.0732V9.92684C0.999973 8.10338 0.999951 6.63362 1.15537 5.47767C1.31672 4.27752 1.66191 3.26702 2.46447 2.46447C3.26702 1.66191 4.27752 1.31672 5.47767 1.15537C6.63362 0.999951 8.10338 0.999973 9.92684 1ZM5.74416 3.13753C4.76579 3.26907 4.2477 3.50966 3.87868 3.87868C3.50966 4.2477 3.26907 4.76579 3.13753 5.74416C3.00213 6.7513 3 8.08611 3 10V14C3 15.9139 3.00213 17.2487 3.13753 18.2558C3.26907 19.2342 3.50966 19.7523 3.87868 20.1213C4.2477 20.4903 4.76579 20.7309 5.74416 20.8625C6.7513 20.9979 8.08611 21 10 21H14C15.9139 21 17.2487 20.9979 18.2558 20.8625C19.2342 20.7309 19.7523 20.4903 20.1213 20.1213C20.4903 19.7523 20.7309 19.2342 20.8625 18.2558C20.9979 17.2487 21 15.9139 21 14V10C21 8.08611 20.9979 6.7513 20.8625 5.74416C20.7309 4.76579 20.4903 4.2477 20.1213 3.87868C19.7523 3.50966 19.2342 3.26907 18.2558 3.13753C17.2487 3.00213 15.9139 3 14 3H10C8.08611 3 6.7513 3.00213 5.74416 3.13753ZM15.0858 10H13.5V8H17.5C18.0523 8 18.5 8.44772 18.5 9V13H16.5V11.4142L13.9142 14C13.1332 14.7811 11.8668 14.781 11.0858 14L9.5 12.4142L6.20711 15.7071L4.79289 14.2929L8.08579 11C8.86684 10.219 10.1332 10.219 10.9142 11L12.5 12.5858L15.0858 10Z"
-          fill="#2D15FF"
-        />
-      </svg>
+      <ImageWithFallback
+        src="/image/rating-accreditation/stars.svg"
+        alt="Trusted"
+        width={24}
+        height={24}
+        className="w-6 h-6"
+        sizes="24px"
+        priority={false}
+      />
     ),
   },
   {
-    title: "Optimized Products & Services",
+    title: "Autonomous",
     description:
-      "Build, adapt, and benchmark your services to align with industry standards and customer needs.",
+      "Independent and unbiased evaluations that drive service excellence.",
 
     icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M7 3C4.79086 3 3 4.79086 3 7C3 9.20914 4.79086 11 7 11C9.20914 11 11 9.20914 11 7C11 4.79086 9.20914 3 7 3ZM1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7Z"
-          fill="#2D15FF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M19.5858 8.00003L16.0904 8.00008L16.0903 6.00008L22 6C22.2652 6 22.5196 6.10535 22.7071 6.29289C22.8946 6.48042 23 6.73478 23 7V12.4117H21V9.41421L20.4735 9.94067C20.0366 10.3776 19.8047 10.6095 19.5745 10.8287C14.8991 15.2809 8.73445 17.8344 2.28022 17.9922C1.96245 18 1.63445 18 1.01646 18H1V16C1.63837 16 1.94088 15.9999 2.23133 15.9928C8.18908 15.8471 13.8795 13.4901 18.1953 9.38033C18.4057 9.17997 18.6197 8.96612 19.0711 8.51472L19.5858 8.00003Z"
-          fill="#2D15FF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M5 20V23H3V20H5Z"
-          fill="#2D15FF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M11 19V23H9V19H11Z"
-          fill="#2D15FF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M17 17V23H15V17H17Z"
-          fill="#2D15FF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M23 14V23H21V14H23Z"
-          fill="#2D15FF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M6 7V4H8V6H10V8H7C6.44772 8 6 7.55228 6 7Z"
-          fill="#2D15FF"
-        />
-      </svg>
+      <ImageWithFallback
+        src="/image/rating-accreditation/bar-chart.svg"
+        alt="Autonomous"
+        width={24}
+        height={24}
+        className="w-6 h-6"
+        sizes="24px"
+        priority={false}
+      />
     ),
   },
   {
-    title: "Targeted Marketing Solutions",
+    title: "High Standards",
     description:
-      "Implement effective marketing campaigns to engage and connect with Muslim travelers globally.",
+      "Comprehensive ratings built on rigorous, faith-based criteria.",
     icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9C5.55228 9 6 8.55228 6 8C6 7.44772 5.55228 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5C6.65685 5 8 6.34315 8 8C8 9.65685 6.65685 11 5 11C3.34315 11 2 9.65685 2 8ZM12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7ZM9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8ZM16 8C16 6.34315 17.3431 5 19 5C20.6569 5 22 6.34315 22 8C22 9.65685 20.6569 11 19 11C17.3431 11 16 9.65685 16 8ZM19 7C18.4477 7 18 7.44772 18 8C18 8.55228 18.4477 9 19 9C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7ZM1 15.7C1 13.6565 2.65655 12 4.7 12H6V14H4.7C3.76112 14 3 14.7611 3 15.7C3 16.1418 3.35817 16.5 3.8 16.5H6V18.5H3.8C2.2536 18.5 1 17.2464 1 15.7ZM7.5 15.7C7.5 13.6565 9.15655 12 11.2 12H12.8C14.8435 12 16.5 13.6565 16.5 15.7C16.5 17.2464 15.2464 18.5 13.7 18.5H10.3C8.7536 18.5 7.5 17.2464 7.5 15.7ZM11.2 14C10.2611 14 9.5 14.7611 9.5 15.7C9.5 16.1418 9.85817 16.5 10.3 16.5H13.7C14.1418 16.5 14.5 16.1418 14.5 15.7C14.5 14.7611 13.7389 14 12.8 14H11.2ZM18 12H19.3C21.3435 12 23 13.6565 23 15.7C23 17.2464 21.7464 18.5 20.2 18.5H18V16.5H20.2C20.6418 16.5 21 16.1418 21 15.7C21 14.7611 20.2389 14 19.3 14H18V12Z"
-          fill="#2D15FF"
-        />
-      </svg>
+      <ImageWithFallback
+        src="/image/rating-accreditation/star-badge.svg"
+        alt="High Standards"
+        width={24}
+        height={24}
+        className="w-6 h-6"
+        sizes="24px"
+        priority={false}
+      />
     ),
   },
 ];
