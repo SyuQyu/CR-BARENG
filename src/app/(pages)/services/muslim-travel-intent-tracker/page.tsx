@@ -287,20 +287,3 @@ export default function MuslimTravelIntentTrackerPage() {
   );
 }
 
-//
-// The MTIT score for December 2024 stands at 81.8, marking a noticeable increase from November's 78.3 as travel intent rises in tandem with the peak holiday season. This uptick reflects a surge in consumer behavior driven by the festive spirit, family vacations, and year-end travel opportunities. December's score is one of the highest recorded in 2024, highlighting the growing momentum of Muslim-friendly travel options during this period. The increase also underscores strong demand for both domestic and international trips as travelers capitalize on school holidays, winter breaks, and religious or cultural festivities to reconnect with loved ones and explore destinations.
-
-// Strategic Takeaways for "This Month" Travel:
-// Emphasize family-friendly destinations with tailored halal amenities and group packages to attract holiday travelers.
-// Highlight winter destinations offering unique experiences such as festive markets, snow activities, and cultural exploration.
-// Promote last-minute travel deals and year-end discounts to capture travelers planning spontaneous vacations.
-// Showcase religious tourism opportunities, such as Umrah, which often sees higher demand during the cooler winter months, making it a favorable time for pilgrimage.
-// Position December as the perfect time to enjoy extended vacations, blending cultural, recreational, and faith-based travel experiences.
-
-// Strategic Takeaways for Traveling in the Next 1-3 Months:
-// Promote packages and experiences aligned with early Ramadan travel and spring vacation trends by highlighting destinations with strong Muslim-friendly offerings and cultural immersion.
-// Showcase affordable and off-peak travel deals, emphasizing destinations with mild climates and budget-friendly options, leveraging off-season travel appeal.
-// Address the many festivals, events, and cultural celebrations during spring and early summer in many destinations as travelers interested in attending these events may plan trips accordingly.
-
-// Strategic Takeaways for Traveling in the Next 4-6 Months:
-// Focus on packages and experiences tailored for Ramadan and Eid-ul-Fitr celebrations and promotions, such as trips to Muslim-friendly destinations offering halal food, prayer facilities, and cultural experiences.
