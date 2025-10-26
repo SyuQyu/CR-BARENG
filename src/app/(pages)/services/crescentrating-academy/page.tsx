@@ -484,7 +484,7 @@ export default function HalalMusimTravelMarketReports() {
                   Limited Slots
                 </div>
               </div>
-              <Button className="h-14 w-full !py-5 !px-6 bg-white text-primary-cr-700">
+              <Button className="h-14 w-full !py-5 !px-6 bg-white text-primary-cr-700 hover:text-white">
                 Take the Test
               </Button>
             </div>
