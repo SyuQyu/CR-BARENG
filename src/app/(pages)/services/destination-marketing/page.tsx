@@ -351,7 +351,7 @@ export default function HalalMusimTravelMarketReports() {
         <div className="max-w-[1440px] flex flex-col gap-12 justify-center items-center bg-white md:px-28 md:py-20">
           <div className="py-3 w-full items-center">
             <p className="px-5 md:px-28  lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
-              Authentic Promotion via Muslim Travel Influencers
+              Authentic Promotion via <br/> Muslim Travel Influencers
             </p>
             <p className="px-5 max-w-[768px] sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500 mx-auto">
               We partner with Muslim travel influencers to promote your
