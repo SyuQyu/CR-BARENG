@@ -17,9 +17,9 @@ import {
   CarouselPreviousCustom,
 } from "@/components/ui/carouselCustom2";
 import {
-Carousel as DefaultCarousel,
-CarouselContent as DefaultCarouselContent,
-CarouselItem as DefaultCarouselItem,
+  Carousel as DefaultCarousel,
+  CarouselContent as DefaultCarouselContent,
+  CarouselItem as DefaultCarouselItem,
 } from "@/components/ui/defaultCarousel";
 import {
   crDestinationMarketingBlogs,
@@ -72,9 +72,9 @@ export default function HalalMusimTravelMarketReports() {
               width={0}
               height={0}
               sizes="100vh"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               priority={false}
-              src="/image/destination-marketing/set.png"
+              src="/image/destination-marketing/hijabi_1.webp"
               alt="Destination Marketing Hero Image"
             />
           </div>
@@ -289,7 +289,7 @@ export default function HalalMusimTravelMarketReports() {
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
               <div className="mt-10 flex flex-row justify-center items-start w-full gap-6 overflow-visible">
                 <Carousel
-                  className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible"
+                  className="w-full flex flex-col lg:gap-2 gap-2 overflow-visible"
                   showDots={false}
                   slideCount={6}
                 >
@@ -311,8 +311,9 @@ export default function HalalMusimTravelMarketReports() {
                       </CarouselItemBlogs>
                     ))}
                   </CarouselContent>
-                  <CarouselPreviousCustom className="rounded-none"/>
-                  <CarouselNextCustom className="rounded-none"/>
+
+                  <CarouselPreviousCustom className="rounded-none" />
+                  <CarouselNextCustom className="rounded-none" />
                 </Carousel>
               </div>
             </div>
@@ -336,22 +337,21 @@ export default function HalalMusimTravelMarketReports() {
           <div className="w-full items-center">
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
               <ImageWithFallback
+                src="/image/destination-marketing/phone.webp"
+                alt="Social Media Marketing Image"
                 width={592}
                 height={442}
                 sizes="(max-width: 600px) 100vw, 592px"
-                className="object-cover"
+                className="w-full h-auto object-contain"
                 priority={false}
-                src="/image/destination-marketing/phone.webp"
-                alt="Social Media Marketing Image"
-                style={{ width: "592px", height: "442px" }}
               />
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] flex flex-col gap-12 justify-center items-center bg-white md:px-28 md:py-20">
+        <div className="max-w-[1440px] mt-12 flex flex-col gap-12 justify-center items-center bg-white md:px-28 md:py-20">
           <div className="py-3 w-full items-center">
             <p className="px-5 md:px-28  lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
-              Authentic Promotion via <br/> Muslim Travel Influencers
+              Authentic Promotion via <br /> Muslim Travel Influencers
             </p>
             <p className="px-5 max-w-[768px] sm:text-desktop-body-2 text-mobile-body-2 text-center text-neutral-500 mx-auto">
               We partner with Muslim travel influencers to promote your
@@ -361,34 +361,34 @@ export default function HalalMusimTravelMarketReports() {
           <div className="max-w-[1440px] flex justify-center items-center gap-8 overflow-hidden">
             <DefaultCarousel className="w-full mt-12">
               <DefaultCarouselContent>
-              {[
-                "/image/destination-marketing/instagram-mockup-1.webp",
-                "/image/destination-marketing/instagram-mockup-2.webp",
-                "/image/destination-marketing/instagram-mockup-3.webp",
-                "/image/destination-marketing/instagram-mockup-4.webp",
-                "/image/destination-marketing/instagram-mockup-5.webp",
-                "/image/destination-marketing/instagram-mockup-6.webp",
-              ].map((src, idx) => (
+                {[
+                  "/image/destination-marketing/instagram-mockup-1.webp",
+                  "/image/destination-marketing/instagram-mockup-2.webp",
+                  "/image/destination-marketing/instagram-mockup-3.webp",
+                  "/image/destination-marketing/instagram-mockup-4.webp",
+                  "/image/destination-marketing/instagram-mockup-5.webp",
+                  "/image/destination-marketing/instagram-mockup-6.webp",
+                ].map((src, idx) => (
                   <DefaultCarouselItem
                     key={idx}
                     className="md:basis-1/5 flex justify-center items-center gap-12"
                   >
-                  <div
-                    key={src}
-                    className="relative h-full lg:w-72 flex items-center justify-center"
-                    style={{ clipPath: "inset(0 round 24px)" }}
-                  >
-                  <ImageWithFallback
-                    width={0}
-                    height={0}
-                    sizes="100vh"
-                    className="h-full w-full object-cover"
-                    priority={false}
-                    src={src}
-                    alt={`Influencer ${idx + 1}`}
-                    style={{ borderRadius: "24px" }}
-                  />
-                </div>
+                    <div
+                      key={src}
+                      className="relative h-full lg:w-72 flex items-center justify-center"
+                      style={{ clipPath: "inset(0 round 24px)" }}
+                    >
+                      <ImageWithFallback
+                        width={0}
+                        height={0}
+                        sizes="100vh"
+                        className="h-full w-full object-cover"
+                        priority={false}
+                        src={src}
+                        alt={`Influencer ${idx + 1}`}
+                        style={{ borderRadius: "24px" }}
+                      />
+                    </div>
                   </DefaultCarouselItem>
                 ))}
               </DefaultCarouselContent>
@@ -484,8 +484,8 @@ export default function HalalMusimTravelMarketReports() {
                       </CarouselItemYoutube>
                     ))}
                   </CarouselContent>
-                  <CarouselPreviousCustom />
-                  <CarouselNextCustom />
+                  <CarouselPreviousCustom className="rounded-none" />
+                  <CarouselNextCustom className="rounded-none" />
                 </Carousel>
               </div>
             </div>

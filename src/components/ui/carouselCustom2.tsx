@@ -668,7 +668,7 @@ const CarouselPreviousCustom = React.forwardRef<
             size={size}
             className={cn(
                 // absolute di bawah, sedikit kiri
-                "absolute bottom-[-65px] left-1/2 z-20  -translate-x-[120%] size-11 bg-white",
+                "absolute bottom-[-65px] left-1/2 z-20  -translate-x-[115%] size-11 bg-white",
                 className,
                 !canScrollPrev && "opacity-50 pointer-events-none"
             )}
@@ -696,7 +696,7 @@ const CarouselNextCustom = React.forwardRef<
             size={size}
             className={cn(
                 // absolute di bawah, sedikit kanan dari tengah
-                "absolute bottom-[-65px] left-1/2 z-20  translate-x-[20%] size-11 bg-white",
+                "absolute bottom-[-65px] left-1/2 z-20  translate-x-[15%] size-11 bg-white",
                 className,
                 !canScrollNext && "opacity-50 pointer-events-none"
             )}

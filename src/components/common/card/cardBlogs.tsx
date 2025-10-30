@@ -60,7 +60,7 @@ export default function CardBlogs({
         <div className="p-4 flex flex-col flex-wrap w-full text-white justify-end">
           <div className="flex flex-col flex-wrap w-fit gap-2 ">
             {title && (
-              <p className="font-bold lg:text-desktop-heading-6 text-mobile-heading-6 line-clamp-3">
+              <p className="font-bold lg:text-desktop-heading-3 text-mobile-heading-3 line-clamp-3">
                 {title}
               </p>
             )}
