@@ -311,8 +311,8 @@ export default function HalalMusimTravelMarketReports() {
                       </CarouselItemBlogs>
                     ))}
                   </CarouselContent>
-                  <CarouselPreviousCustom />
-                  <CarouselNextCustom />
+                  <CarouselPreviousCustom className="rounded-none"/>
+                  <CarouselNextCustom className="rounded-none"/>
                 </Carousel>
               </div>
             </div>
@@ -417,9 +417,9 @@ export default function HalalMusimTravelMarketReports() {
                 width={592}
                 height={442}
                 sizes="(max-width: 600px) 100vw, 592px"
-                className="object-cover"
+                className="object-contain"
                 priority={false}
-                src="/image/destination-marketing/collage.webp"
+                src="/image/destination-marketing/collage_1.webp"
                 alt="Social Media Marketing Image"
                 style={{ width: "592px", height: "442px" }}
               />
@@ -433,9 +433,9 @@ export default function HalalMusimTravelMarketReports() {
                 width={592}
                 height={442}
                 sizes="(max-width: 600px) 100vw, 592px"
-                className="object-cover"
+                className="object-contain"
                 priority={false}
-                src="/image/destination-marketing/desktop.webp"
+                src="/image/destination-marketing/desktop_1.webp"
                 alt="Social Media Marketing Image"
                 style={{ width: "592px", height: "442px" }}
               />
@@ -496,7 +496,7 @@ export default function HalalMusimTravelMarketReports() {
             <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black md:text-left text-center">
               The Halal Travel Podcast
             </p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-neutral-500 mx-auto md:text-left text-center">
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-neutral-500 mx-auto md:text-left text-center mb-6">
               Hosted by colleagues, friends and ‘tea’ buddies Hazirah, Nurul and
               Raudha, The Halal Travel Podcast is a space to let out their heart
               and soul as Muslim millennials. The trio invites inspiring Muslims
