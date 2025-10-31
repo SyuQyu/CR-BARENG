@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 import { Award, CircleCheckBig, Globe, Map, Search } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Button,
@@ -24,11 +25,21 @@ import {
 } from "@/constants/dummyData";
 
 export default function Home() {
-  const [selectedService, setSelectedService] =
-    useState<keyof typeof servicesDataHomePage>("rating");
+  const [selectedService, setSelectedService] = useState("rating");
+  const [activeTab, setActiveTab] = useState("");
+
+  useEffect(() => {
+    if (selectedService && servicesDataHomePage[selectedService]) {
+      setActiveTab(servicesDataHomePage[selectedService].tabs[0].key);
+    }
+  }, [selectedService]);
+
+  if (!servicesDataHomePage[selectedService]) return null;
+  const service = servicesDataHomePage[selectedService];
+
   return (
     <div className="w-full gap-24 flex flex-col justify-center items-center">
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex md:flex-row flex-col lg:mt-0 mt-12 justify-between items-center">
           <div className="flex flex-col justify-center md:items-start items-center gap-5 max-w-[540px]">
             <p className="md:text-left text-center sm:text-desktop-body-2 text-mobile-body-2  font-bold">
@@ -63,7 +74,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">
             FEATURED MEDIA PARTNERS AND CLIENTS
@@ -90,7 +101,7 @@ export default function Home() {
           </Carousel>
         </div>
       </section>
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
             HALAL TRAVEL TRENDS AND INSIGHTS
@@ -134,16 +145,17 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12">
           <div className="flex flex-col gap-3">
-            <p className="sm:text-desktop-body-2 text-mobile-body-2  font-bold text-[#434343]">
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">
               WHAT WE DO
             </p>
             <p className="sm:text-desktop-heading-3 text-mobile-heading-2 font-bold text-[#434343]">
               Our Services
             </p>
           </div>
+
           <div className="flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 md:justify-items-center lg:grid-cols-5 w-full">
             {[
               {
@@ -174,14 +186,8 @@ export default function Home() {
             ].map((service) => (
               <div
                 key={service.key}
-                className={`
-                    w-1/3 md:w-auto
-                    flex flex-col p-10 justify-center items-center gap-5
-                    rounded-[16px] shadow-[0px_2px_10px_0px_rgba(118,118,118,0.25)]
-                    backdrop-blur-[12.5px] cursor-pointer
-                    ${selectedService === service.key ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white" : "text-neutral-400 bg-white"}
-                  `}
-                onClick={() => setSelectedService(service.key as keyof typeof servicesDataHomePage)}
+                className={`w-1/3 md:w-auto flex flex-col p-10 justify-center items-center gap-5 rounded-[16px] shadow-[0px_2px_10px_0px_rgba(118,118,118,0.25)] backdrop-blur-[12.5px] cursor-pointer ${selectedService === service.key ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white" : "text-neutral-400 bg-white"}`}
+                onClick={() => setSelectedService(service.key)}
               >
                 {service.icon}
                 <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-center">
@@ -192,7 +198,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12 relative">
           <svg
             width="350"
@@ -247,17 +253,17 @@ export default function Home() {
           {selectedService && (
             <>
               <p className="sm:text-desktop-heading-3 text-mobile-heading-2 text-primary-cr-600 font-bold">
-                {servicesDataHomePage[selectedService].title}
+                {service.title}
               </p>
               <div className="w-full flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-44 gap-10">
                 <Tabs
-                  defaultValue={
-                    servicesDataHomePage[selectedService].tabs[0].key
-                  }
+                  key={`${selectedService}-${activeTab}`}
+                  value={activeTab}
+                  onValueChange={setActiveTab}
                   className="lg:w-[70%] w-full z-10"
                 >
                   <TabsList className="w-full">
-                    {servicesDataHomePage[selectedService].tabs.map((tab) => (
+                    {service.tabs.map((tab) => (
                       <TabsTrigger
                         key={tab.key}
                         value={tab.key}
@@ -267,29 +273,30 @@ export default function Home() {
                       </TabsTrigger>
                     ))}
                   </TabsList>
-                  {servicesDataHomePage[selectedService].tabs.map((tab) => (
-                    <TabsContent
-                      key={tab.key}
-                      value={tab.key}
-                      activeValue={tab.key}
-                      className="flex gap-6 flex-col p-6"
-                    >
-                      <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
-                        {tab.content}
-                        <Button variant="secondary" className="px-12 py-6">
-                          Find out How
-                        </Button>
-                      </div>
+
+                  {service.tabs.map((tab) => (
+                    <TabsContent key={tab.key} value={tab.key} forceMount>
+                      {activeTab === tab.key && (
+                        <div className="flex gap-6 flex-col p-6">
+                          <div className="flex flex-col justify-start items-start gap-6 text-[#484848]">
+                            {tab.content}
+                            <Button variant="secondary" className="px-12 py-6">
+                              Find out How
+                            </Button>
+                          </div>
+                        </div>
+                      )}
                     </TabsContent>
                   ))}
                 </Tabs>
+
                 <ImageWithFallback
                   width={0}
                   height={0}
                   sizes="100vw"
                   className="w-full max-h-[200px] lg:max-h-[500px] lg:w-[500px] xl:max-w-[500px] object-cover border-r-[15px] border-r-primary-cr-700 rounded-2xl"
                   priority={false}
-                  src={servicesDataHomePage[selectedService].image}
+                  src={service.image}
                   alt="service-image"
                 />
               </div>
@@ -297,7 +304,7 @@ export default function Home() {
           )}
         </div>
       </section>
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex flex-col justify-start items-start gap-12">
           <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-44 gap-10">
             <div className="border-r-[15px] border-r-[#6666D3] rounded-2xl lg:w-auto w-full">
@@ -337,7 +344,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1440px] lg:px-32 sm:px-16 px-32 w-full">
+      <section className="max-w-[1440px] lg:px-32 px-4 w-full">
         <div className="w-full flex flex-col justify-center items-center gap-12">
           <div className="flex flex-col gap-1 justify-center items-center">
             <div className="flex flex-col justify-center items-center">

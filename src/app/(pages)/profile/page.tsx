@@ -82,7 +82,7 @@ export default function Profile() {
               >
                 <div className="w-full flex flex-col gap-12 md:mt-0 mt-8">
                   <div className="flex flex-col w-full">
-                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold">
+                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold">
                       User Profile Information
                     </p>
                     <p className="md:text-desktop-body-2 text-mobile-body-2 text-neutral-500">
@@ -203,7 +203,7 @@ export default function Profile() {
               >
                 <div className="w-full flex flex-col gap-12 md:mt-0 mt-8">
                   <div className="flex flex-col w-full">
-                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold">
+                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold">
                       My Hotels
                     </p>
                     <p className="md:text-desktop-body-2 text-mobile-body-2 text-neutral-500">
@@ -245,8 +245,8 @@ export default function Profile() {
                     </div>
                   ) : (
                     <div className="w-full flex flex-col gap-4">
-                      <div className="flex md:flex-row flex-col md:gap-0 gap-3 w-full justify-between items-center pb-6">
-                        <p className="text-center md:text-desktop-heading-6 text-mobile-heading-4 font-bold">
+                      <div className="flex md:flex-row flex-col md:gap-0 gap-3 w-fit md:w-full justify-between items-start md:items-center pb-6 ">
+                        <p className="text-center md:text-desktop-heading-5 text-mobile-heading-5 font-bold">
                           Registered Hotel
                         </p>
                         <Button className="sm:max-w-[195px] w-full md:text-desktop-body-2 text-mobile-body-2 bg-primary-cr-700 hover:bg-primary-cr-800 hover:text-white font-semibold text-white md:h-[49px] h-[41px]">
@@ -341,7 +341,7 @@ export default function Profile() {
               >
                 <div className="w-full flex flex-col gap-12 md:mt-0 mt-8">
                   <div className="flex flex-col w-full">
-                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold">
+                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold">
                       My Restaurants
                     </p>
                     <p className="md:text-desktop-body-2 text-mobile-body-2 text-neutral-500">
@@ -396,7 +396,7 @@ export default function Profile() {
               >
                 <div className="w-full flex flex-col gap-12 md:mt-0 mt-8">
                   <div className="flex flex-col w-full">
-                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold">
+                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold">
                       My Attractions
                     </p>
                     <p className="md:text-desktop-body-2 text-mobile-body-2 text-neutral-500">
@@ -443,7 +443,7 @@ export default function Profile() {
               >
                 <div className="w-full flex flex-col gap-12 md:mt-0 mt-8">
                   <div className="flex flex-col w-full">
-                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold">
+                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold">
                       My Shopping Malls
                     </p>
                     <p className="md:text-desktop-body-2 text-mobile-body-2 text-neutral-500">
@@ -495,7 +495,7 @@ export default function Profile() {
               >
                 <div className="w-full flex flex-col gap-12 md:mt-0 mt-8">
                   <div className="flex flex-col w-full">
-                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold">
+                    <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold">
                       My MICE Venues
                     </p>
                     <p className="md:text-desktop-body-2 text-mobile-body-2 text-neutral-500">
