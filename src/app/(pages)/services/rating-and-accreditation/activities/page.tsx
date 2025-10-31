@@ -49,7 +49,7 @@ export default function RatingAndAccreditationActivites() {
                 src={"/image/rating-accreditation/activities/mount-fuji.jpg"}
                 alt={"hotels1"}
               />
-              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
+              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">
                   Mount Fuji and Hakone
                 </p>
@@ -65,7 +65,7 @@ export default function RatingAndAccreditationActivites() {
                 src={"/image/rating-accreditation/activities/nami-island.jpg"}
                 alt={"hotels2"}
               />
-              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
+              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">Nami Island</p>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function RatingAndAccreditationActivites() {
                 }
                 alt={"hotels3"}
               />
-              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
+              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">
                   Bali Waterfall
                 </p>
@@ -97,7 +97,7 @@ export default function RatingAndAccreditationActivites() {
                 src={"/image/rating-accreditation/activities/taipingshan.jpg"}
                 alt={"hotels4"}
               />
-              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
+              <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">
                   Taipingshan and Jiuzhize Hot Spring
                 </p>
