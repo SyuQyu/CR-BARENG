@@ -25,6 +25,13 @@ import {
   crDestinationMarketingBlogs,
   crDestinationMarketingVideos,
 } from "@/constants/dummyData";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDownIcon } from "lucide-react";
 
 export default function HalalMusimTravelMarketReports() {
   const [activeLang, setActiveLang] = useState("united-kingdom");
@@ -256,38 +263,94 @@ export default function HalalMusimTravelMarketReports() {
               creatives and advertisements designed are carefully curated to
               expose consumers to content that is relevant to their needs
             </p>
-            <div className="flex flex-row text-center justify-center items-center gap-2 mt-10 mb-10">
-              {languages.map((lang) => (
-                <div
-                  key={lang.key}
-                  onClick={() => setActiveLang(lang.key)}
-                  className={`cursor-pointer pl-3 pr-4 py-2 outline outline-1 -outline-offset-1 flex justify-center items-center gap-2 transition-colors
-              ${
-                activeLang === lang.key
-                  ? "bg-navy-blue-50 text-navy-blue-500 outline-navy-blue-500"
-                  : "bg-white text-[#69687A] outline-[#E3E2E6]"
-              }`}
-                >
+            <div className="mt-10 mb-10 text-center">
+              {/* Desktop / Tablet view */}
+              <div className="hidden md:flex flex-row justify-center items-center gap-2">
+                {languages.map((lang) => (
                   <div
-                    data-property={lang.key}
-                    className="w-6 h-6 relative overflow-hidden"
+                    key={lang.key}
+                    onClick={() => setActiveLang(lang.key)}
+                    className={`cursor-pointer pl-3 pr-4 py-2 outline outline-1 -outline-offset-1 flex justify-center items-center gap-2 transition-colors
+        ${
+          activeLang === lang.key
+            ? "bg-navy-blue-50 text-navy-blue-500 outline-navy-blue-500"
+            : "bg-white text-[#69687A] outline-[#E3E2E6]"
+        }`}
                   >
-                    <ImageWithFallback
-                      width={24}
-                      height={24}
-                      sizes="24px"
-                      className="object-cover"
-                      priority={false}
-                      src={lang.icon}
-                      alt={lang.label}
-                    />
+                    <div
+                      data-property={lang.key}
+                      className="w-6 h-6 relative overflow-hidden"
+                    >
+                      <ImageWithFallback
+                        width={24}
+                        height={24}
+                        sizes="24px"
+                        className="object-cover"
+                        priority={false}
+                        src={lang.icon}
+                        alt={lang.label}
+                      />
+                    </div>
+                    <span>{lang.label}</span>
                   </div>
-                  <span>{lang.label}</span>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Mobile view */}
+              <div className="block md:hidden">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="w-full">
+                    <Button
+                      variant="outline"
+                      className="w-full py-3 flex justify-between items-center rounded-none"
+                    >
+                      <div className="flex items-center gap-2">
+                        <ImageWithFallback
+                          width={24}
+                          height={24}
+                          sizes="24px"
+                          className="object-cover"
+                          priority={false}
+                          src={
+                            languages.find((l) => l.key === activeLang)?.icon ||
+                            languages[0].icon
+                          }
+                          alt="active language"
+                        />
+                        <span>
+                          {languages.find((l) => l.key === activeLang)?.label ||
+                            languages[0].label}
+                        </span>
+                      </div>
+                      <ChevronDownIcon className="w-4 h-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+
+                  <DropdownMenuContent className="w-[90vw] max-w-sm mx-auto">
+                    {languages.map((lang) => (
+                      <DropdownMenuItem
+                        key={lang.key}
+                        onClick={() => setActiveLang(lang.key)}
+                        className="flex items-center gap-2"
+                      >
+                        <ImageWithFallback
+                          width={24}
+                          height={24}
+                          sizes="24px"
+                          className="object-cover"
+                          priority={false}
+                          src={lang.icon}
+                          alt={lang.label}
+                        />
+                        {lang.label}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </div>
-            <div className="mt-10 mb-10 flex justify-center items-center w-full">
-              <div className="mt-10 flex flex-row justify-center items-start w-full gap-6 overflow-visible">
+            <div className="mt-5 mb-10 flex justify-center items-center w-full">
+              <div className="flex flex-row justify-center items-start w-full gap-6 overflow-visible">
                 <Carousel
                   className="w-full flex flex-col lg:gap-2 gap-2 overflow-visible"
                   showDots={false}
@@ -348,7 +411,7 @@ export default function HalalMusimTravelMarketReports() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] mt-12 flex flex-col gap-12 justify-center items-center bg-white md:px-28 md:py-20">
+        <div className="max-w-[1440px] mt-12 flex flex-col gap-8 justify-center items-center bg-white md:px-28 md:py-20">
           <div className="py-3 w-full items-center">
             <p className="px-5 md:px-28  lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center">
               Authentic Promotion via <br /> Muslim Travel Influencers
@@ -359,7 +422,7 @@ export default function HalalMusimTravelMarketReports() {
             </p>
           </div>
           <div className="max-w-[1440px] flex justify-center items-center gap-8 overflow-hidden">
-            <DefaultCarousel className="w-full mt-12">
+            <DefaultCarousel className="w-full">
               <DefaultCarouselContent>
                 {[
                   "/image/destination-marketing/instagram-mockup-1.webp",
@@ -416,12 +479,11 @@ export default function HalalMusimTravelMarketReports() {
               <ImageWithFallback
                 width={592}
                 height={442}
-                sizes="(max-width: 600px) 100vw, 592px"
+                sizes="(max-width: 600px) 100vw"
                 className="object-contain"
                 priority={false}
                 src="/image/destination-marketing/collage_1.webp"
                 alt="Social Media Marketing Image"
-                style={{ width: "592px", height: "442px" }}
               />
             </div>
           </div>
@@ -437,7 +499,6 @@ export default function HalalMusimTravelMarketReports() {
                 priority={false}
                 src="/image/destination-marketing/desktop_1.webp"
                 alt="Social Media Marketing Image"
-                style={{ width: "592px", height: "442px" }}
               />
             </div>
           </div>
@@ -466,9 +527,9 @@ export default function HalalMusimTravelMarketReports() {
               culture, offerings, and campaigns.
             </p>
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
-              <div className="mt-10 flex flex-row justify-center items-start w-full gap-6 overflow-visible">
+              <div className="flex flex-row justify-center items-start w-full gap-6 overflow-visible">
                 <Carousel
-                  className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible"
+                  className="w-full flex flex-colgap-2 overflow-visible"
                   showDots={false}
                   slideCount={5}
                 >
@@ -491,12 +552,12 @@ export default function HalalMusimTravelMarketReports() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] w-full flex flex-col-reverse lg:flex-row px-5 md:px-28 py-3 md:py-20 md:gap-12 md:pt-0 pt-10 justify-start items-center bg-white max-auto">
+        <div className="max-w-[1440px] w-full flex flex-col-reverse lg:flex-row px-5 md:px-28 py-3 md:py-20 md:gap-12 md:pt-0 pt-10 mt-8 justify-start items-center bg-white max-auto">
           <div className="w-full items-center">
-            <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black md:text-left text-center">
+            <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black md:text-left text-left">
               The Halal Travel Podcast
             </p>
-            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-neutral-500 mx-auto md:text-left text-center mb-6">
+            <p className="sm:text-desktop-body-2 text-mobile-body-2 text-neutral-500 mx-auto md:text-left text-left mb-6">
               Hosted by colleagues, friends and ‘tea’ buddies Hazirah, Nurul and
               Raudha, The Halal Travel Podcast is a space to let out their heart
               and soul as Muslim millennials. The trio invites inspiring Muslims
@@ -558,16 +619,15 @@ export default function HalalMusimTravelMarketReports() {
                 width={600}
                 height={533}
                 sizes="(max-width: 600px) 100vw, 592px"
-                className="object-cover"
+                className="object-contain"
                 priority={false}
                 src="/image/destination-marketing/podcast.webp"
                 alt="Social Media Marketing Image"
-                style={{ width: "600px", height: "533px" }}
               />
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col bg-gradient-to-r from-blue-600 to-navy-blue-600 justify-center items-center">
+        <div className="w-full mt-8 flex flex-col bg-gradient-to-r from-blue-600 to-navy-blue-600 justify-center items-center">
           <div className="max-w-[1440px] px-6 lg:px-8 w-full sm:py-16 py-12 flex flex-col gap-5 justify-between items-center">
             <div className="sm:w-[80%] w-full flex flex-col gap-4 mx-auto items-center">
               <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold text-white">
