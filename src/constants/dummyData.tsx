@@ -330,11 +330,7 @@ export const footerData = [
   {
     title: "Site",
     links: ["FAQs", "Privacy Policy", "Terms & Conditions"],
-  },
-  {
-    title: "Partner With Us",
-    links: ["Auditor Registration", "Channel Partners"],
-  },
+  }
 ];
 
 export const menuItems = [

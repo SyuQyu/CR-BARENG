@@ -17,7 +17,7 @@ export default function Footer({ className }: Props) {
       <div className="w-full mb-10 flex flex-col justify-start items-start max-w-[1440px] gap-8 px-6 lg:px-8">
         <div className="w-full lg:px-0 flex md:flex-row flex-col justify-start md:justify-between items-center md:items-start md:gap-0 gap-4">
           <div className="flex flex-col md:justify-start justify-center md:items-start items-center gap-2">
-            <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-semibold md:text-left text-center">
+            <p className="md:text-desktop-heading-5 text-mobile-heading-4 font-bold md:text-left text-center">
               Join our newsletter
             </p>
             <p className="md:text-desktop-caption-l text-desktop-caption-s w-full md:w-[100%] text-neutral-500 md:text-left text-center">
@@ -28,10 +28,10 @@ export default function Footer({ className }: Props) {
             <div className="flex md:w-auto w-full flex-col md:flex-row gap-4 md:gap-2 md:justify-end justify-center items-center">
               <Input
                 placeholder="Enter your email here"
-                containerInputClasses="sm:h-[48px] bg-white rounded-md"
+                containerInputClasses="sm:h-[48px] bg-white rounded-none"
                 className="md:w-64 w-full"
               />
-              <Button className="flex flex-row justify-center items-center gap-2 text-base text-white bg-[#453CFF] h-full px-7 py-2.5 rounded-md md:w-auto w-full">
+              <Button className="flex flex-row justify-center items-center gap-2 text-base text-white bg-[#453CFF] h-full px-7 py-2.5 rounded-none md:w-auto w-full">
                 Subscribe
               </Button>
             </div>
