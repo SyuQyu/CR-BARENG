@@ -103,7 +103,7 @@ export default function CardPodcasts({
           </div>
           <div className="flex flex-col flex-wrap w-fit gap-2">
             {title && (
-              <p className="font-bold lg:text-desktop-body-2 text-mobile-body-2 line-clamp-2">
+              <p className="font-bold lg:text-desktop-body-2 text-mobile-body-2 line-clamp-1">
                 {truncate(title, 35)}
               </p>
             )}

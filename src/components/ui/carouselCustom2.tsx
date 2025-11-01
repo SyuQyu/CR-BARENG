@@ -156,7 +156,7 @@ const CarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HT
             <div ref={carouselRef} className="overflow-hidden">
                 <div
                     ref={ref}
-                    className={cn("flex md:-ml-4 transition-transform duration-100", className)}
+                    className={cn("flex transition-transform duration-100", className)}
                     {...props}
                 />
             </div>

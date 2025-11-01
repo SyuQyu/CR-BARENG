@@ -39,7 +39,7 @@ export default function HalalMusimTravelMarketReports() {
           backgroundSize: "cover",
         }}
       >
-        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-6 lg:px-8 w-full flex flex-col gap-5 ">
+        <div className="max-w-[1440px] sm:py-16 py-8 sm:px-2 lg:px-8 w-full flex flex-col gap-5 ">
           <div className="flex w-full flex-col gap-5 text-center justify-center items-center sm:mt-20 mt-10">
             <ImageWithFallback
               src="/image/crescentrating-academy/cr-academy-logo.webp"
@@ -57,7 +57,7 @@ export default function HalalMusimTravelMarketReports() {
             </p>
             <div className="flex flex-row justify-center items-center gap-3 w-full">
               <Button variant="primary" className="w-48 py-2">
-                View More
+                Learn More
               </Button>
               <Button variant="secondary" className="w-48 py-2">
                 Join Our Webinar
@@ -67,43 +67,46 @@ export default function HalalMusimTravelMarketReports() {
         </div>
       </section>
       <section className="w-full flex max-w-[1440px] justify-between items-center flex-col relative top-[-32px]">
-        <div className="max-w-[70%] w-full flex flex-col md:flex-row justify-between items-center gap-6 bg-primary-cr-50 px-6 lg:px-8 py-4 rounded-[20px]">
-          {/* 1st Stat */}
-          <div className="flex-1 flex flex-col justify-center items-center gap-1">
-            <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
-              1073+
+        <div className="w-full px-8">
+          <div className="w-full flex flex-row justify-center items-center gap-2 bg-primary-cr-50 mt-6 py-4 rounded-[20px]">
+            {/* 1st Stat */}
+            <div className="flex-1 flex flex-col justify-center items-center gap-1">
+              <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold">
+                1073+
+              </div>
+              <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
+                Participants
+              </div>
             </div>
-            <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
-              Participants
-            </div>
-          </div>
 
-          {/* Divider */}
-          <div className="hidden md:block w-px h-16 bg-primary-cr-300 rounded-full" />
+            {/* Divider */}
+            <div className="hidden md:block w-px h-16 bg-primary-cr-300 rounded-full" />
 
-          {/* 2nd Stat */}
-          <div className="flex-1 flex flex-col justify-center items-center gap-1">
-            <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
-              29+
+            {/* 2nd Stat */}
+            <div className="flex-1 flex flex-col justify-center items-center gap-1">
+              <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold">
+                29+
+              </div>
+              <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
+                Cities
+              </div>
             </div>
-            <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
-              Cities
-            </div>
-          </div>
 
-          {/* Divider */}
-          <div className="hidden md:block w-px h-16 bg-primary-cr-300 rounded-full" />
+            {/* Divider */}
+            <div className="hidden md:block w-px h-16 bg-primary-cr-300 rounded-full" />
 
-          {/* 3rd Stat */}
-          <div className="flex-1 flex flex-col justify-center items-center gap-1">
-            <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold leading-[48px]">
-              17+
-            </div>
-            <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
-              Countries
+            {/* 3rd Stat */}
+            <div className="flex-1 flex flex-col justify-center items-center gap-1">
+              <div className="text-black md:text-desktop-heading-5 text-mobile-heading-5 font-bold">
+                17+
+              </div>
+              <div className="text-black md:text-desktop-body-1 text-mobile-body-1 font-normal leading-loose">
+                Countries
+              </div>
             </div>
           </div>
         </div>
+
         <div className="max-w-[1216px] pt-7 sm:pt-14 w-full flex flex-col gap-24 justify-center items-center bg-white">
           <div className="flex flex-col px-8 lg:px-10 md:py-14 w-full md:gap-8 gap-6 border border-[#E3E2E6]">
             <div className="md:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-primary-cr-800 text-center">
@@ -128,8 +131,8 @@ export default function HalalMusimTravelMarketReports() {
               competitiveness in new growth economies, CR Academy will enhance
               your knowledge and skills to better target Muslim travelers.
             </p>
-            <div className="flex flex-row justify-around items-center w-full ">
-              <div className="md:max-w-56 md:py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
+            <div className="w-full grid grid-cols-2 gap-4 md:flex md:flex-row md:justify-around md:items-center mb-8">
+              <div className="md:max-w-56 py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
                 <div className="p-2 bg-navy-blue-50 flex flex-col justify-start items-center">
                   <div
                     data-style="Outlined"
@@ -155,7 +158,7 @@ export default function HalalMusimTravelMarketReports() {
                   Learn from industry & academics experts
                 </p>
               </div>
-              <div className="md:max-w-56 md:py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
+              <div className="md:max-w-56 py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
                 <div className="p-2 bg-navy-blue-50 flex flex-col justify-start items-center">
                   <div
                     data-style="Outlined"
@@ -185,7 +188,7 @@ export default function HalalMusimTravelMarketReports() {
                   Access online & offline learning programs
                 </p>
               </div>
-              <div className="md:max-w-56 md:py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
+              <div className="md:max-w-56 py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
                 <div className="p-2 bg-navy-blue-50 flex flex-col justify-start items-center">
                   <div
                     data-style="Outlined"
@@ -211,7 +214,7 @@ export default function HalalMusimTravelMarketReports() {
                   Get holistic & executive insights
                 </p>
               </div>
-              <div className="md:max-w-56 md:py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
+              <div className="md:max-w-56 py-6 flex flex-col gap-5 justify-around text-center items-center bg-custom-white-cr">
                 <div className="p-2 bg-navy-blue-50 flex flex-col justify-start items-center">
                   <div
                     data-style="Outlined"
@@ -240,7 +243,7 @@ export default function HalalMusimTravelMarketReports() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] lg:px-28 px-14 lg:py-20 py-9 w-full flex flex-col justify-stretch items-center">
+        <div className="max-w-[1440px] lg:px-16 px-8 lg:py-20 py-9 w-full flex flex-col justify-stretch items-center">
           <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-center w-full md:max-w-[628px]">
             Our Programs
           </p>
@@ -291,6 +294,9 @@ export default function HalalMusimTravelMarketReports() {
                       alt={`img-${tab.value}`}
                     />
                     <div className="flex md:gap-4 gap-2 flex-col justify-start">
+                      <div className="text-white bg-gradient-to-b from-[#635D99] to-[#191630] rounded-xl w-fit px-6 py-1 flex items-center text-mobile-body-3 lg:text-desktop-body-3">
+                        For All Professionals
+                      </div>
                       <p className="md:text-desktop-heading-6 font-bold text-mobile-heading-5">
                         {tab.title}
                       </p>
@@ -311,8 +317,8 @@ export default function HalalMusimTravelMarketReports() {
             </Tabs>
           </div>
         </div>
-        <div className="max-w-[1440px] lg:px-28 px-14 lg:py-20 py-9 w-full flex xl:flex-row flex-col justify-center items-center gap-4">
-          <div className="xl:max-w-[700px] w-full flex flex-col justify-center self-stretch items-stretch bg-indigo-800 rounded-md md:py-10 md:px-14 gap-6">
+        <div className="max-w-[1440px] lg:px-12 px-4 lg:py-20 py-9 w-full flex xl:flex-row flex-col justify-center items-center gap-8">
+          <div className="xl:max-w-[700px] w-full h-[800px] lg:h-[600px] flex flex-col justify-center self-stretch items-stretch bg-indigo-800 rounded-md p-8 py-8 gap-6">
             <p className="md:text-desktop-heading-6 text-mobile-heading-6 text-white">
               Join Our Free Webinars
             </p>
@@ -332,7 +338,7 @@ export default function HalalMusimTravelMarketReports() {
             <p className="md:text-desktop-heading-4 text-mobile-heading-4 font-bold text-white">
               How to Tap into the Growing Muslim Travel Market
             </p>
-            <div className="flex flex-col md:flex-row max-w-max w-max justify-between items-center md:items-start lg:gap-15 gap-8">
+            <div className="flex flex-col md:flex-row w-full justify-between items-center md:items-start lg:gap-15 gap-8 flex-wrap">
               <div className="flex flex-col gap-3 justify-between items-stretch">
                 <div className="w-20 px-2 py-1 bg-colors-secondary-navy-blue-50 inline-flex justify-start items-end gap-2 bg-navy-blue-50">
                   <div
@@ -484,12 +490,12 @@ export default function HalalMusimTravelMarketReports() {
                   Limited Slots
                 </div>
               </div>
-              <Button className="h-14 w-full !py-5 !px-6 bg-white text-primary-cr-700 hover:text-white">
+              <Button variant="secondary" className="w-full h-full !py-5 !px-6">
                 Take the Test
               </Button>
             </div>
           </div>
-          <div className="relative w-full flex flex-col self-stretch items-stretch bg-custom-white-cr rounded-md md:py-10 md:px-6 gap-6 overflow-hidden">
+          <div className="relative w-full h-[850px] lg:h-[600px] flex flex-col self-stretch items-center bg-custom-white-cr rounded-md md:py-10 md:px-6 gap-6 overflow-hidden">
             <div className="z-0 w-[472px] h-[480px] left-[185px] top-[342px] absolute opacity-80 bg-gradient-to-l from-violet-400/5 to-violet-400/30 rounded-full blur-lg" />
             <div className="z-10 inline-flex flex-col justify-center items-start gap-2">
               <div className="self-stretch justify-start text-black md:text-desktop-heading-5 text-mobile-heading-5 font-semibold leading-10">
@@ -500,7 +506,7 @@ export default function HalalMusimTravelMarketReports() {
                 recording.
               </div>
             </div>
-            <div className="z-10 w-full h-fit inline-flex justify-start items-start xl:gap-8 lg:gap-36 md:gap-3">
+            <div className="z-10 w-full h-fit flex flex-col md:flex-row justify-start items-start xl:gap-8 lg:gap-36 md:gap-3">
               <div className="self-stretch px-3 py-2.5 bg-white rounded-lg inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
                 <div className="flex flex-col justify-center items-center gap-1.5">
                   <div className="justify-start text-black md:text-desktop-body-1 text-mobile-body-1 font-bold leading-loose">
@@ -577,7 +583,7 @@ export default function HalalMusimTravelMarketReports() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] lg:px-28 px-14 lg:py-20 py-9 w-full flex flex-col justify-center items-center">
+        <div className="max-w-[1440px] lg:px-16 px-8 lg:py-20 py-9 w-full flex flex-col justify-center items-center">
           <img
             className="w-72 h-72 z-0 xl:top-[2450px] lg:top-[3000px] md:top-[2800px] absolute left-[5%] opacity-25"
             src="/image/crescentrating-academy/microphone.webp"
@@ -604,40 +610,60 @@ export default function HalalMusimTravelMarketReports() {
             </div>
 
             <div className="mt-10 mb-10 flex justify-center items-center w-full">
-              <div className="mt-10 flex flex-row justify-center items-start w-full gap-6 overflow-visible">
-                <Carousel
-                  className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-stretch"
-                  showDots={false}
-                  slideCount={6}
-                >
-                  <CarouselContent className="w-full flex flex-row gap-2 items-center justify-stretch overflow-visible">
-                    {crAcademyPodcasts.map((blog, index) => (
-                      <CarouselItemPodcasts
-                        key={index}
-                        index={index}
-                        className={
-                          index === 0 ? " lg:ml-2 md:ml-2 content-stretch" : ""
-                        }
-                        visibleSlides={3}
-                      >
-                        <CardPodcasts
-                          id={blog.id}
-                          title={blog.title}
-                          imageUrl={blog.imageUrl}
-                          podcastUrl={blog.podcastUrl}
-                          date={blog.date}
-                        />
-                      </CarouselItemPodcasts>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPreviousCustom />
-                  <CarouselNextCustom />
-                </Carousel>
+              <div className="mt-10 flex flex-col md:flex-row justify-center items-start w-full gap-6 overflow-visible">
+                {/* ✅ Mobile view: simple flex-col layout with only 3 podcasts */}
+                <div className="flex flex-col md:hidden w-full gap-4 px-4">
+                  {crAcademyPodcasts.slice(0, 3).map((blog, index) => (
+                    <CardPodcasts
+                      key={index}
+                      id={blog.id}
+                      title={blog.title}
+                      imageUrl={blog.imageUrl}
+                      podcastUrl={blog.podcastUrl}
+                      date={blog.date}
+                    />
+                  ))}
+                </div>
+
+                {/* ✅ Desktop view: show carousel */}
+                <div className="hidden md:flex w-full">
+                  <Carousel
+                    className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-stretch"
+                    showDots={false}
+                    slideCount={6}
+                  >
+                    <CarouselContent className="w-full flex flex-row gap-2 items-center justify-stretch overflow-visible">
+                      {crAcademyPodcasts.map((blog, index) => (
+                        <CarouselItemPodcasts
+                          key={index}
+                          index={index}
+                          className={
+                            index === 0
+                              ? " lg:ml-2 md:ml-2 flex-shrink-0"
+                              : "flex-shrink-0"
+                          }
+                          visibleSlides={3}
+                        >
+                          <CardPodcasts
+                            id={blog.id}
+                            title={blog.title}
+                            imageUrl={blog.imageUrl}
+                            podcastUrl={blog.podcastUrl}
+                            date={blog.date}
+                          />
+                        </CarouselItemPodcasts>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPreviousCustom />
+                    <CarouselNextCustom />
+                  </Carousel>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] lg:px-28 px-14 lg:py-20 py-9 w-full flex flex-col justify-center items-center gap-8">
+
+        <div className="max-w-[1440px] lg:px-16 px-8 lg:py-20 py-9 w-full flex flex-col justify-center items-center gap-8">
           <div className="w-full flex flex-col justify-center items-center">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black w-full md:max-w-[628px] text-center">
               Testimonials
@@ -646,33 +672,16 @@ export default function HalalMusimTravelMarketReports() {
               See what our clients have said about our programs
             </p>
           </div>
+
           <div className="flex flex-col w-full items-center justify-between">
-            <div className="max-w-[95%] w-full h-[520px] flex flex-col justify-center items-center gap-1 z-0 bg-gray-100 rounded-lg shadow-md">
-              {/* Background goes here! */}
-            </div>
-            <div className="mt-10 mb-10 flex justify-center items-center w-full z-10 absolute">
-              <div className="mt-10 flex flex-row justify-center items-start w-full gap-6 overflow-visible">
-                <Carousel
-                  className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-stretch items-center"
-                  showDots={false}
-                  slideCount={3}
-                >
-                  <CarouselContent className="w-full flex flex-row gap-2 items-center justify-stretch overflow-visible">
-                    {crAcademyTestimonials.map((blog, index) => (
-                      <CarouselItemTestimonials
-                        key={index}
-                        index={index}
-                        className={
-                          index === 0 ? "lg:ml-2 md:ml-6  content-stretch" : ""
-                        }
-                        visibleSlides={
-                          typeof window !== "undefined" &&
-                          window.innerWidth < 640
-                            ? 1
-                            : 3
-                        }
-                      >
+            <div className="w-full flex justify-center">
+              <div className="w-[95%] h-auto md:h-[520px] flex flex-col justify-center items-center gap-1 z-0 bg-gray-100 rounded-lg shadow-md">
+                <div className="mt-10 mb-10 flex justify-center items-center w-full overflow-visible">
+                  <div className="mt-10 w-full overflow-visible">
+                    <div className="flex flex-col gap-4 px-4 md:!hidden">
+                      {crAcademyTestimonials.slice(0, 3).map((blog, index) => (
                         <CardTestimonials
+                          key={index}
                           id={blog.id}
                           testimonials={blog.testimonials}
                           person={blog.person}
@@ -680,16 +689,45 @@ export default function HalalMusimTravelMarketReports() {
                           company={blog.company}
                           imageUrl={blog.imageUrl}
                         />
-                      </CarouselItemTestimonials>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPreviousCustom />
-                  <CarouselNextCustom />
-                </Carousel>
+                      ))}
+                    </div>
+
+                    <div className="hidden md:!flex w-full justify-center">
+                      <Carousel
+                        className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-center items-center"
+                        showDots={false}
+                        slideCount={3}
+                      >
+                        <CarouselContent className="w-full flex flex-row gap-2 items-center justify-center overflow-visible">
+                          {crAcademyTestimonials.map((blog, index) => (
+                            <CarouselItemTestimonials
+                              key={index}
+                              index={index}
+                              visibleSlides={3}
+                            >
+                              <CardTestimonials
+                                id={blog.id}
+                                testimonials={blog.testimonials}
+                                person={blog.person}
+                                event={blog.event}
+                                company={blog.company}
+                                imageUrl={blog.imageUrl}
+                              />
+                            </CarouselItemTestimonials>
+                          ))}
+                        </CarouselContent>
+
+                        <CarouselPreviousCustom />
+                        <CarouselNextCustom />
+                      </Carousel>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <section className="max-w-[1440px] px-6 lg:px-32 w-full flex flex-col md:flex-row gap-12 justify-start items-start">
           <div className="w-full flex flex-col gap-1 justify-start items-start">
             <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-bold mb-4 bg-clip-text text-black text-left">

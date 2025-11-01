@@ -22,6 +22,7 @@ interface cardTestimonialsProps {
   badgeDate?: string; // e.g. "Jan 2025"
   imageBorder?: true | false; // e.g. "rounded-lg"
   imgType?: "1" | "2"; // e.g. "1" for image, "2" for video
+  className?: string;
 }
 
 export default function cardTestimonials({
@@ -32,6 +33,7 @@ export default function cardTestimonials({
   event,
   imageUrl,
   imageBorder = true,
+  className,
 }: cardTestimonialsProps) {
   // let truncatedtestimonials;
   // if (testimonials) {
@@ -41,7 +43,7 @@ export default function cardTestimonials({
   return (
     <div
       key={id}
-      className="lg:w-full w-fit group flex flex-col self-stretch"
+      className={`lg:w-full w-fit group flex flex-col ${className}`}
       rel="noopener noreferrer"
     >
       {/* Image container */}
