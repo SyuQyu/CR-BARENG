@@ -38,27 +38,27 @@ export default function RatingAndAccreditation() {
       {
         label: "Sign Up",
         description: "Register & create an account on CrescentRating",
-        dot: "border-yellow-900",
-        bg: "bg-yellow-100 text-yellow-900",
+        dot: "bg-yellow-900",
+        bg: "bg-yellow-100 text-yellow-900 hover:bg-yellow-200",
       },
       {
         label: "Apply",
         description: "Submit Application Online",
-        dot: "border-yellow-900",
-        bg: "bg-yellow-100 text-yellow-900",
+        dot: "bg-yellow-900",
+        bg: "bg-yellow-100 text-yellow-900 hover:bg-yellow-200",
       },
       {
         label: "Review",
         description:
           "CrescentRating will review the application & issue a tentative rating",
-        dot: "border-indigo-800",
-        bg: "bg-indigo-100 text-indigo-800",
+        dot: "bg-indigo-800",
+        bg: "bg-indigo-100 text-indigo-800 hover:bg-indigo-200",
       },
       {
         label: "Audit",
         description: "Conduct in-person/virtual audit of the establishment",
-        dot: "border-indigo-800",
-        bg: "bg-indigo-100 text-indigo-800",
+        dot: "bg-indigo-800",
+        bg: "bg-indigo-100 text-indigo-800 hover:bg-indigo-200",
       },
     ];
 
@@ -66,15 +66,15 @@ export default function RatingAndAccreditation() {
       {
         label: "Pay",
         description: "Make payment for the annual rating services",
-        dot: "border-yellow-900",
-        bg: "bg-yellow-100 text-yellow-900",
+        dot: "bg-yellow-900",
+        bg: "bg-yellow-100 text-yellow-900 hover:bg-yellow-200",
       },
       {
         label: "Display",
         description:
           "Download the rating collaterals and display them in the marketing channels",
-        dot: "border-yellow-900",
-        bg: "bg-yellow-100 text-yellow-900",
+        dot: "bg-yellow-900",
+        bg: "bg-yellow-100 text-yellow-900 hover:bg-yellow-200",
       },
       {
         label: "Publish",
@@ -87,23 +87,23 @@ export default function RatingAndAccreditation() {
             2. HalalTrip Member Directory Listing
           </>
         ),
-        dot: "border-indigo-800",
-        bg: "bg-indigo-100 text-indigo-800",
+        dot: "bg-indigo-800",
+        bg: "bg-indigo-100 text-indigo-800 hover:bg-indigo-200",
       },
       {
         label: "Confirm",
         description:
           "CrescentRating will review audit report & award the final rating",
-        dot: "border-indigo-800",
-        bg: "bg-indigo-100 text-indigo-800",
+        dot: "bg-indigo-800",
+        bg: "bg-indigo-100 text-indigo-800 hover:bg-indigo-200",
       },
     ];
 
     const thirdStep = {
       label: "Promote",
       description: "HalalTrip will begin the promotion campaigns",
-      dot: "border-green-800",
-      bg: "bg-green-100 text-green-800",
+      dot: "bg-green-800",
+      bg: "bg-green-100 text-green-800 hover:bg-green-200",
     };
 
     return (
@@ -286,7 +286,7 @@ export default function RatingAndAccreditation() {
                     cx="4.5"
                     cy="4.5"
                     r="3"
-                    fill="#FFFAC6"
+                    fill="#7A3F0D"
                     stroke="#7A3F0D"
                     strokeWidth="2"
                   />
@@ -307,7 +307,7 @@ export default function RatingAndAccreditation() {
                     cx="4.5"
                     cy="4.5"
                     r="3"
-                    fill="#F1F3FF"
+                    fill="#1504AE"
                     stroke="#1504AE"
                     strokeWidth="2"
                   />
@@ -328,7 +328,7 @@ export default function RatingAndAccreditation() {
                     cx="4.5"
                     cy="4.5"
                     r="3"
-                    fill="#EDFCF3"
+                    fill="#094B31"
                     stroke="#094B31"
                     strokeWidth="2"
                   />
