@@ -1,10 +1,26 @@
 "use client";
+import { useEffect, useState } from "react";
+
 import { Button, ImageWithFallback, Input } from "@/components/common";
 import BreadCrumb from "@/components/common/breadcrumb/breadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { dataRegisteredHotelUser } from "@/constants/dummyData";
 
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < breakpoint);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 export default function Profile() {
+  const isMobile = useIsMobile();
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-full max-w-[1440px] lg:px-32 sm:px-16 px-8 mt-16">
@@ -22,52 +38,57 @@ export default function Profile() {
               mobileMode="tabs"
             >
               {/* Tabs List */}
-              <TabsList className="!border-none lg:w-[20%] w-full md:overflow-hidden overflow-x-scroll">
+              <TabsList
+                className="!border-none lg:w-[20%] w-full md:overflow-hidden overflow-x-scroll"
+                isMobile={isMobile}
+                mobileMode="dropdown" value={"user-profile"} onValueChange={function (value: string): void {
+                  throw new Error("Function not implemented.");
+                } }              >
                 <TabsTrigger
-                  key={"user-profile"}
+                  key="user-profile"
+                  value="user-profile"
                   className="w-full !bg-none h-[41px] !justify-start !items-center !border-none"
                   customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                  value={"user-profile"}
                 >
                   User Profile
                 </TabsTrigger>
+
                 <TabsTrigger
-                  key={"my-hotels"}
+                  key="my-hotels"
+                  value="my-hotels"
                   className="w-full !bg-none h-[41px] !justify-start !items-center !border-none px-4 py-2"
-                  customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                  value={"my-hotels"}
                 >
                   My Hotels
                 </TabsTrigger>
+
                 <TabsTrigger
-                  key={"my-restaurants"}
+                  key="my-restaurants"
+                  value="my-restaurants"
                   className="w-full !bg-none h-[41px] !justify-start !items-center !border-none px-4 py-2"
-                  customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                  value={"my-restaurants"}
                 >
                   My Restaurants
                 </TabsTrigger>
+
                 <TabsTrigger
-                  key={"my-attractions"}
+                  key="my-attractions"
+                  value="my-attractions"
                   className="w-full !bg-none h-[41px] !justify-start !items-center !border-none px-4 py-2"
-                  customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                  value={"my-attractions"}
                 >
                   My Attractions
                 </TabsTrigger>
+
                 <TabsTrigger
-                  key={"my-shopping-malls"}
+                  key="my-shopping-malls"
+                  value="my-shopping-malls"
                   className="w-full !bg-none h-[41px] !justify-start !items-center !border-none px-4 py-2"
-                  customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                  value={"my-shopping-malls"}
                 >
                   My Shopping Malls
                 </TabsTrigger>
+
                 <TabsTrigger
-                  key={"my-mice-venues"}
+                  key="my-mice-venues"
+                  value="my-mice-venues"
                   className="w-full !bg-none h-[41px] !justify-start !items-center !border-none px-4 py-2"
-                  customColorActive="data-[state=active]:border-primary-cr-700 data-[state=active]:text-primary-cr-700 data-[state=active]:!bg-[#F1F3FF]"
-                  value={"my-mice-venues"}
                 >
                   My MICE Venues
                 </TabsTrigger>

@@ -1,12 +1,19 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import clsx from "clsx";
+import { ChevronDownIcon } from "lucide-react"
 import * as React from "react";
 
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu" // adjust import path as needed
 import { cn } from "@/lib/utils";
-
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
 
 interface TabsProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root> {
   defaultValue?: string;
@@ -16,6 +23,14 @@ interface TabsProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.
   responsiveTabPosition?: "top" | "left" | "right"; // Mobile tab position (default: "top")
   desktopTabPosition?: "top" | "left" | "right"; // Desktop tab position
   align?: "start" | "center" | "end";
+}
+
+type TabsListProps = React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> & {
+  value: string
+  onValueChange: (value: string) => void
+  isMobile?: boolean
+  mobileMode?: "dropdown" | "list"
+  tabPosition?: "top" | "left" | "right"
 }
 
 const Tabs = ({
@@ -79,50 +94,63 @@ const Tabs = ({
 interface TabsListProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> {
   onValueChange?: (value: string) => void;
   value?: string;
-  isMobile?: boolean;
   tabPosition?: "top" | "left" | "right";
-  mobileMode?: "select" | "tabs";
 }
+
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   TabsListProps
->(({ className, children, value, onValueChange, isMobile, tabPosition, mobileMode, ...props }, ref) => {
-  if (isMobile && mobileMode === "select") {
-    return (
-      <div className="relative w-full">
-        <Select value={value} onValueChange={onValueChange}>
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select a tab" />
-          </SelectTrigger>
-          <SelectContent>
-            {React.Children.map(children, (child: any) => (
-              <SelectItem key={child.props.value} value={child.props.value}>
-                {child.props.children}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-    );
-  }
+>(({ className, children, value, onValueChange, tabPosition = "top", ...props }, ref) => {
+  const activeLabel = React.Children.toArray(children).find(
+    (child: any) => child.props.value === value
+  )?.props.children
 
   return (
-    <TabsPrimitive.List
-      ref={ref}
-      className={cn(
-        "flex p-2 text-muted-foreground",
-        tabPosition === "top" && "flex-row border-b",
-        tabPosition === "left" && "flex-col border-r",
-        tabPosition === "right" && "flex-col border-l",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </TabsPrimitive.List>
-  );
-});
+    <>
+      {/* --- MOBILE DROPDOWN (visible below md) --- */}
+      <div className="relative w-full md:hidden">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="outline"
+              className="w-full py-3 flex justify-between items-center rounded-md"
+            >
+              <span>{activeLabel || "Select a tab"}</span>
+              <ChevronDownIcon className="w-4 h-4" />
+            </Button>
+          </DropdownMenuTrigger>
+
+          <DropdownMenuContent className="w-[90vw] max-w-sm mx-auto">
+            {React.Children.map(children, (child: any) => (
+              <DropdownMenuItem
+                key={child.props.value}
+                onClick={() => onValueChange(child.props.value)}
+              >
+                {child.props.children}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
+      {/* --- DESKTOP TAB LIST (hidden below md) --- */}
+      <TabsPrimitive.List
+        ref={ref}
+        className={cn(
+          "hidden md:flex p-2 text-muted-foreground",
+          tabPosition === "top" && "flex-row border-b",
+          tabPosition === "left" && "flex-col border-r",
+          tabPosition === "right" && "flex-col border-l",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </TabsPrimitive.List>
+    </>
+  )
+})
 TabsList.displayName = TabsPrimitive.List.displayName;
 
 type TabsTriggerProps = React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> & {
@@ -175,4 +203,4 @@ const TabsContent = ({
   );
 };
 
-export { Tabs, TabsContent,TabsList, TabsTrigger };
+export { Tabs, TabsContent, TabsList, TabsTrigger };
