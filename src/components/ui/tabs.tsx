@@ -95,21 +95,30 @@ interface TabsListProps extends React.ComponentPropsWithoutRef<typeof TabsPrimit
   onValueChange?: (value: string) => void;
   value?: string;
   tabPosition?: "top" | "left" | "right";
+  dropdownAble?: boolean;
 }
 
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   TabsListProps
->(({ className, children, value, onValueChange, tabPosition = "top", ...props }, ref) => {
+>(({ className, children, value, onValueChange, tabPosition = "top", dropdownAble = true, ...props }, ref) => {
   const activeLabel = React.Children.toArray(children).find(
     (child: any) => child.props.value === value
   )?.props.children
+  
+  let dropdownClass = "hidden";
+  let tabClass = "flex p-2 text-muted-foreground"
+
+  if (dropdownAble) {
+    dropdownClass = "relative w-full md:hidden"
+    tabClass = "hidden md:flex p-2 text-muted-foreground"
+  }
 
   return (
     <>
       {/* --- MOBILE DROPDOWN (visible below md) --- */}
-      <div className="relative w-full md:hidden">
+      <div className={dropdownClass}>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
@@ -138,7 +147,7 @@ const TabsList = React.forwardRef<
       <TabsPrimitive.List
         ref={ref}
         className={cn(
-          "hidden md:flex p-2 text-muted-foreground",
+          tabClass,
           tabPosition === "top" && "flex-row border-b",
           tabPosition === "left" && "flex-col border-r",
           tabPosition === "right" && "flex-col border-l",

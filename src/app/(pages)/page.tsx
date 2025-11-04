@@ -270,16 +270,14 @@ export default function Home() {
                 {service.title}
               </p>
 
-              {/* 🔁 Image on top for mobile/tablet, right side for desktop */}
               <div className="w-full flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-44 gap-10">
-                {/* Tabs and content */}
                 <Tabs
                   key={`${selectedService}-${activeTab}`}
                   value={activeTab}
                   onValueChange={setActiveTab}
                   className="lg:w-[70%] w-full z-10"
                 >
-                  <TabsList className="w-full">
+                  <TabsList className="w-full" dropdownAble={false}>
                     {service.tabs.map((tab) => (
                       <TabsTrigger
                         key={tab.key}
