@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
-import { Award, CircleCheckBig, Globe, Map, Search } from "lucide-react";
+import { Award, ChevronLeft, ChevronRight, CircleCheckBig, Globe, Map, Search } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import {
@@ -27,6 +27,39 @@ import {
 export default function Home() {
   const [selectedService, setSelectedService] = useState("rating");
   const [activeTab, setActiveTab] = useState("");
+
+  const services = [
+    {
+      id: 1,
+      key: "rating",
+      label: "Rating and Accreditation",
+      icon: <CircleCheckBig className="sm:size-20 size-16" />,
+    },
+    {
+      id: 2,
+      key: "conference",
+      label: "Halal-In-Travel Conferences",
+      icon: <Globe className="sm:size-20 size-16" />,
+    },
+    {
+      id: 3,
+      key: "destination",
+      label: "Destination Marketing",
+      icon: <Map className="sm:size-20 size-16" />,
+    },
+    {
+      id: 4,
+      key: "report",
+      label: "Reports, Research and Consultancy",
+      icon: <Search className="sm:size-20 size-16" />,
+    },
+    {
+      id: 5,
+      key: "training",
+      label: "Training and Certification",
+      icon: <Award className="sm:size-20 size-16" />,
+    },
+  ];
 
   useEffect(() => {
     if (selectedService && servicesDataHomePage[selectedService]) {
@@ -146,8 +179,8 @@ export default function Home() {
         </div>
       </section>
       <section className="max-w-[1440px] lg:px-32 px-4 w-full">
-        <div className="w-full flex flex-col justify-start items-start gap-12">
-          <div className="flex flex-col gap-3">
+        <div className="w-full flex flex-col justify-start items-center gap-12 relative">
+          <div className="flex flex-col gap-3 text-center md:text-left w-full">
             <p className="sm:text-desktop-body-2 text-mobile-body-2 font-bold text-[#434343]">
               WHAT WE DO
             </p>
@@ -156,46 +189,26 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 md:justify-items-center lg:grid-cols-5 w-full">
-            {[
-              {
-                key: "rating",
-                label: "Rating and Accreditation",
-                icon: <CircleCheckBig className="sm:size-20 size-16" />,
-              },
-              {
-                key: "conference",
-                label: "Halal-In-Travel Conferences",
-                icon: <Globe className="sm:size-20 size-16" />,
-              },
-              {
-                key: "destination",
-                label: "Destination Marketing",
-                icon: <Map className="sm:size-20 size-16" />,
-              },
-              {
-                key: "report",
-                label: "Reports, Research and Consultancy",
-                icon: <Search className="sm:size-20 size-16" />,
-              },
-              {
-                key: "training",
-                label: "Training and Certification",
-                icon: <Award className="sm:size-20 size-16" />,
-              },
-            ].map((service) => (
-              <div
-                key={service.key}
-                className={`w-1/3 md:w-auto flex flex-col p-10 justify-center items-center gap-5 rounded-[16px] shadow-[0px_2px_10px_0px_rgba(118,118,118,0.25)] backdrop-blur-[12.5px] cursor-pointer ${selectedService === service.key ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white" : "text-neutral-400 bg-white"}`}
-                onClick={() => setSelectedService(service.key)}
-              >
-                {service.icon}
-                <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-center">
-                  {service.label}
-                </p>
-              </div>
-            ))}
-          </div>
+          <div className="w-full flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-44 gap-10">
+            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 w-full justify-items-center">
+              {services.map((service) => (
+                <div
+                  key={service.key}
+                  className={`w-full flex flex-col p-10 justify-center items-center gap-5 rounded-[16px] shadow-[0px_2px_10px_0px_rgba(118,118,118,0.25)] backdrop-blur-[12.5px] cursor-pointer ${
+                    selectedService === service.key
+                      ? "bg-gradient-to-b from-[#1502CD] to-[#5705CD] text-white"
+                      : "text-neutral-400 bg-white"
+                  }`}
+                  onClick={() => setSelectedService(service.key)}
+                >
+                  {service.icon}
+                  <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-center">
+                    {service.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div> 
         </div>
       </section>
       <section className="max-w-[1440px] lg:px-32 px-4 w-full">
@@ -250,12 +263,16 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg>
+
           {selectedService && (
             <>
               <p className="sm:text-desktop-heading-3 text-mobile-heading-2 text-primary-cr-600 font-bold">
                 {service.title}
               </p>
+
+              {/* 🔁 Image on top for mobile/tablet, right side for desktop */}
               <div className="w-full flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-44 gap-10">
+                {/* Tabs and content */}
                 <Tabs
                   key={`${selectedService}-${activeTab}`}
                   value={activeTab}
@@ -283,6 +300,39 @@ export default function Home() {
                             <Button variant="secondary" className="px-12 py-6">
                               Find out How
                             </Button>
+
+                            {/* 🧭 Mobile navigation buttons under “Find out how” */}
+                            <div className="flex md:hidden justify-center items-center gap-6 mt-4 w-full">
+                              <Button
+                                variant="primary"
+                                size="icon"
+                                onClick={() => {
+                                  const currentIndex = services.findIndex(
+                                    (s) => s.key === selectedService
+                                  );
+                                  const prevIndex =
+                                    (currentIndex - 1 + services.length) %
+                                    services.length;
+                                  setSelectedService(services[prevIndex].key);
+                                }}
+                              >
+                                <ChevronLeft className="w-5 h-5" />
+                              </Button>
+                              <Button
+                                variant="primary"
+                                size="icon"
+                                onClick={() => {
+                                  const currentIndex = services.findIndex(
+                                    (s) => s.key === selectedService
+                                  );
+                                  const nextIndex =
+                                    (currentIndex + 1) % services.length;
+                                  setSelectedService(services[nextIndex].key);
+                                }}
+                              >
+                                <ChevronRight className="w-5 h-5" />
+                              </Button>
+                            </div>
                           </div>
                         </div>
                       )}
@@ -290,11 +340,12 @@ export default function Home() {
                   ))}
                 </Tabs>
 
+                {/* Image — hidden on mobile/tablet duplicate */}
                 <ImageWithFallback
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full max-h-[200px] lg:max-h-[500px] lg:w-[500px] xl:max-w-[500px] object-cover border-r-[15px] border-r-primary-cr-700 rounded-2xl"
+                  className="w-full lg:w-[500px] xl:max-w-[500px] max-h-[200px] lg:max-h-[500px] object-cover border-r-[15px] border-r-primary-cr-700 rounded-2xl"
                   priority={false}
                   src={service.image}
                   alt="service-image"
