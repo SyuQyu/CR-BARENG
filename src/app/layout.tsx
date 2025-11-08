@@ -5,13 +5,9 @@ import clsx from 'clsx';
 import {NProgress } from '@/components/common';
 import { Toaster } from "@/components/ui/sonner"
 import { INTER } from '@/constants/fonts';
+import { defaultMetadata } from '@/constants/seo';
 
-export const metadata = {
-    title: {
-        default: 'CRHT WEB TEST',
-        template: '%s | CRHT WEB TEST',
-    },
-};
+export const metadata = defaultMetadata;
 
 export default function RootLayout({ children }: Props) {
     return (

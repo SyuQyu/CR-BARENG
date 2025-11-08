@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "generate:seo-layouts": "node scripts/generate-seo-layouts.js"
   },
   "dependencies": {
     "@lexical/react": "^0.32.1",
