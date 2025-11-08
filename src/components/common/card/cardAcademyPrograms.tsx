@@ -187,7 +187,14 @@ export default function CardAcademyPrograms({
                     )}
                   </DialogTrigger>
                   {program === "Customer Service Training" && (
-                    <DialogContent className="max-h-[75vh] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[850px] overflow-scroll">
+                    <DialogContent
+                          className="
+                            w-screen max-w-none sm:w-[90vw] sm:rounded-lg
+                            md:max-w-[768px] lg:max-w-[850px]
+                            max-h-[90vh] overflow-y-auto
+                            px-4 sm:px-6
+                          "
+                        >
                       <DialogHeader className="gap-1 flex-col">
                         <DialogDescription className="text-center">
                           Registration form
@@ -455,7 +462,7 @@ export default function CardAcademyPrograms({
                           </div>
                         </div>
 
-                        <DialogFooter className="flex w-[100vh] pt-3">
+                        <DialogFooter className="flex w-full pt-3">
                           <Button
                             className="w-full bg-primary-cr-500"
                             type="submit"
@@ -469,12 +476,11 @@ export default function CardAcademyPrograms({
                   {program === "Customized Training Program" && (
                     <DialogContent
                       className="
-                            w-screen max-w-none sm:w-[90vw] sm:rounded-lg
-                            md:max-w-[768px] lg:max-w-[850px]
-                            max-h-[90vh] md:max-h-none
-                            overflow-y-auto md:overflow-y-scroll
-                            px-4 sm:px-6
-                          "
+                        w-screen max-w-none sm:w-[90vw] sm:rounded-lg
+                        md:max-w-[768px] lg:max-w-[850px]
+                        max-h-[90vh] overflow-y-auto
+                        px-4 sm:px-6
+                      "
                     >
                       <DialogHeader className="gap-1 flex-col">
                         <DialogDescription className="text-center">

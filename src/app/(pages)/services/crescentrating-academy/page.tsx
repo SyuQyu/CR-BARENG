@@ -262,7 +262,9 @@ export default function HalalMusimTravelMarketReports() {
               mobileMode="select"
             >
               {/* Tabs List */}
-              <TabsList className="!border-none w-[20%]">
+              <TabsList className="!border-none w-[20%]" value={""} onValueChange={function (value: string): void {
+                throw new Error("Function not implemented.");
+              } }>
                 {tabsDataCrescentRatingAcademy.map((tab) => (
                   <TabsTrigger
                     key={tab.value}
