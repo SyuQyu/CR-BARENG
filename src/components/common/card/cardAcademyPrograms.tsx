@@ -171,17 +171,20 @@ export default function CardAcademyPrograms({
                 <form>
                   <DialogTrigger asChild>
                     {program === "HalalChefWorld Training Program" ? (
-                      <a href="/services/crescentrating-academy/halalchefworld" target="_self" rel="noopener noreferrer">
+                      <a
+                        href="/services/crescentrating-academy/halalchefworld"
+                        target="_self"
+                        rel="noopener noreferrer"
+                      >
                         <Button variant="primary" className="px-8 py-6">
                           I&apos;m Interested
                         </Button>
                       </a>
                     ) : (
                       <Button variant="primary" className="px-8 py-6">
-                          I&apos;m Interested
-                        </Button>
+                        I&apos;m Interested
+                      </Button>
                     )}
-                   
                   </DialogTrigger>
                   {program === "Customer Service Training" && (
                     <DialogContent className="max-h-[75vh] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[850px] overflow-scroll">
@@ -244,7 +247,7 @@ export default function CardAcademyPrograms({
                                 }
                                 required
                               />
-                              <DropdownMenuContent className="w-[54vh]">
+                              <DropdownMenuContent className="w-full sm:w-[40vh]">
                                 {locations.map((loc) => (
                                   <DropdownMenuItem
                                     key={loc}
@@ -464,7 +467,15 @@ export default function CardAcademyPrograms({
                     </DialogContent>
                   )}
                   {program === "Customized Training Program" && (
-                    <DialogContent className="max-h-[75vh] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[850px] overflow-scroll">
+                    <DialogContent
+                      className="
+                            w-screen max-w-none sm:w-[90vw] sm:rounded-lg
+                            md:max-w-[768px] lg:max-w-[850px]
+                            max-h-[90vh] md:max-h-none
+                            overflow-y-auto md:overflow-y-scroll
+                            px-4 sm:px-6
+                          "
+                    >
                       <DialogHeader className="gap-1 flex-col">
                         <DialogDescription className="text-center">
                           Registration form
@@ -536,7 +547,7 @@ export default function CardAcademyPrograms({
                                 }
                                 required
                               />
-                              <DropdownMenuContent className="w-[54vh]">
+                              <DropdownMenuContent className="w-full sm:w-[40vh]">
                                 {locations.map((loc) => (
                                   <DropdownMenuItem
                                     key={loc}
@@ -567,7 +578,7 @@ export default function CardAcademyPrograms({
                           className="my-6"
                           style={{ backgroundColor: "#DEDEDE", height: "1px" }}
                         />
-                        <div className="grid grid-cols-2 gap-4 py-2">
+                        <div className="grid grid-rows-2 lg:grid-cols-2 gap-4 py-2">
                           <div className="grid gap-3">
                             <Label htmlFor="date-from">
                               Training Date From
@@ -730,7 +741,7 @@ export default function CardAcademyPrograms({
                           </div>
                         </div>
 
-                        <DialogFooter className="flex w-[100vh] pt-3">
+                        <DialogFooter className="flex w-full pt-3">
                           <Button
                             className="w-full bg-primary-cr-500"
                             type="submit"
@@ -741,7 +752,7 @@ export default function CardAcademyPrograms({
                       </div>
                     </DialogContent>
                   )}
-                  
+
                   {/* {program === "HalalChefWorld Training Program" && (
                     <DialogContent className="max-h-[75vh] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[850px] overflow-scroll">
                       <DialogHeader className="gap-1 flex-col">

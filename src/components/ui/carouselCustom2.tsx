@@ -473,7 +473,7 @@ const CarouselItemTestimonials = React.forwardRef<
                     {/* <div className="w-full flex">
                         {image}
                     </div> */}
-                    <div className="lg:w-full w-fit">
+                    <div className="w-fit">
                         {children}
                     </div>
                 </div>

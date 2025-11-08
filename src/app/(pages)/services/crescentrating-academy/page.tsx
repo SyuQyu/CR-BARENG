@@ -678,7 +678,7 @@ export default function HalalMusimTravelMarketReports() {
               <div className="w-[95%] h-auto md:h-[520px] flex flex-col justify-center items-center gap-1 z-0 bg-gray-100 rounded-lg shadow-md">
                 <div className="mt-10 mb-10 flex justify-center items-center w-full overflow-visible">
                   <div className="mt-10 w-full overflow-visible">
-                    <div className="flex flex-col gap-4 px-4 md:!hidden">
+                    {/* <div className="flex flex-col gap-4 px-4 md:!hidden">
                       {crAcademyTestimonials.slice(0, 3).map((blog, index) => (
                         <CardTestimonials
                           key={index}
@@ -690,15 +690,15 @@ export default function HalalMusimTravelMarketReports() {
                           imageUrl={blog.imageUrl}
                         />
                       ))}
-                    </div>
+                    </div> */}
 
-                    <div className="hidden md:!flex w-full justify-center">
+                    <div className="flex w-full justify-center">
                       <Carousel
                         className="w-full flex flex-col lg:gap-8 gap-2 overflow-visible justify-center items-center"
                         showDots={false}
                         slideCount={3}
                       >
-                        <CarouselContent className="w-full flex flex-row gap-2 items-center justify-center overflow-visible">
+                        <CarouselContent className="w-full flex flex-row gap-2 items-center justify-stretch overflow-visible">
                           {crAcademyTestimonials.map((blog, index) => (
                             <CarouselItemTestimonials
                               key={index}
