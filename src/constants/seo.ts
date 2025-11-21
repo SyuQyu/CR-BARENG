@@ -194,12 +194,16 @@ export function generateMetadata({
  * }
  * ```
  */
-export const PAGE_SEO_CONFIG: Record<string, {
+type PageSEOConfig = {
   title: string;
   description: string;
   keywords?: string[];
   image?: string;
-}> = {
+  noindex?: boolean;
+  nofollow?: boolean;
+};
+
+export const PAGE_SEO_CONFIG: Record<string, PageSEOConfig> = {
   // Home page
   '/': {
     title: 'Home',
@@ -345,6 +349,11 @@ export const PAGE_SEO_CONFIG: Record<string, {
     description: 'Explore the directory of Crescent Rated establishments including hotels, restaurants, and attractions.',
     keywords: ['Member directory', 'Crescent Rated establishments', 'Halal travel directory'],
   },
+  '/resources/cr-member-directory/hotels-serviced-apartments': {
+    title: 'Hotels & Serviced Apartments Directory',
+    description: 'Browse Crescent Rated hotels and serviced apartments around the world, complete with halal-friendly amenities.',
+    keywords: ['Halal hotels', 'Serviced apartments', 'Crescent Rated hotels'],
+  },
   '/resources/certified-professionals-directory': {
     title: 'Certified Professionals Directory',
     description: 'Find certified professionals trained in Muslim-friendly travel and hospitality services.',
@@ -354,6 +363,16 @@ export const PAGE_SEO_CONFIG: Record<string, {
     title: 'Glossary',
     description: 'Comprehensive glossary of terms related to Muslim travel, halal tourism, and CrescentRating services.',
     keywords: ['Travel glossary', 'Halal terminology', 'Muslim travel terms'],
+  },
+  '/resources/glossary/browse-by-category': {
+    title: 'Glossary by Category',
+    description: 'Explore glossary terms grouped by category to quickly find Muslim travel concepts you need.',
+    keywords: ['Halal glossary categories', 'Glossary filters'],
+  },
+  '/resources/glossary/term-detail': {
+    title: 'Glossary Term Detail',
+    description: 'Deep dive into specific Muslim travel and halal terminology with detailed explanations and context.',
+    keywords: ['Term definition', 'Halal terminology detail'],
   },
   '/resources/halal-certification-bodies': {
     title: 'Halal Certification Bodies',
@@ -367,9 +386,19 @@ export const PAGE_SEO_CONFIG: Record<string, {
     description: 'Read the latest blog posts and articles about Muslim travel, halal tourism, and industry insights.',
     keywords: ['Travel blog', 'Muslim travel articles', 'Industry insights'],
   },
+  '/insights/blogs/author': {
+    title: 'Author Profiles',
+    description: 'Meet the CrescentRating authors and subject-matter experts behind our Muslim travel insights.',
+    keywords: ['Blog authors', 'CrescentRating experts', 'Travel writers'],
+  },
   '/insights/cr-insight-series': {
     title: 'CR Insight Series',
     description: 'In-depth insights and analysis series on Muslim travel trends and market opportunities.',
+  },
+  '/insights/cr-insight-series/submission': {
+    title: 'Submit to CR Insight Series',
+    description: 'Share your data and thought leadership by submitting to the CrescentRating Insight Series.',
+    keywords: ['Submit insights', 'Thought leadership', 'CR Insight Series submission'],
   },
   '/insights/halal-muslim-travel-market-reports': {
     title: 'Halal Muslim Travel Market Reports',
@@ -404,6 +433,61 @@ export const PAGE_SEO_CONFIG: Record<string, {
     keywords: ['Travel awards', 'Industry recognition', 'Excellence awards'],
   },
 
+  // Profile & onboarding pages
+  '/profile': {
+    title: 'My Profile',
+    description: 'Manage your CrescentRating account, registrations, and published establishments.',
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/email-confirmation': {
+    title: 'Confirm Your Email',
+    description: 'Verify your CrescentRating account email to unlock the full registration experience.',
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/success': {
+    title: 'Registration Complete',
+    description: 'Confirmation page for successfully submitted CrescentRating applications.',
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/registration/hotel': {
+    title: 'Hotel Registration',
+    description: 'Step-by-step CrescentRating registration for hotels and serviced apartments.',
+    keywords: ['Hotel registration', 'CrescentRating application', 'Halal hotel onboarding'],
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/registration/restaurant': {
+    title: 'Restaurant Registration',
+    description: 'Register your restaurant with CrescentRating and showcase halal-friendly dining.',
+    keywords: ['Restaurant registration', 'Halal dining onboarding'],
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/registration/attraction': {
+    title: 'Attraction Registration',
+    description: 'Submit attraction details to begin the CrescentRating accreditation journey.',
+    keywords: ['Attraction registration', 'Tourism onboarding'],
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/registration/mice': {
+    title: 'MICE Registration',
+    description: 'Register meeting, incentive, convention, and exhibition venues for CrescentRating review.',
+    keywords: ['MICE registration', 'Venue onboarding'],
+    noindex: true,
+    nofollow: true,
+  },
+  '/profile/registration/shopping': {
+    title: 'Shopping Venue Registration',
+    description: 'Provide details about your shopping mall or retail space for CrescentRating accreditation.',
+    keywords: ['Shopping mall registration', 'Retail onboarding'],
+    noindex: true,
+    nofollow: true,
+  },
+
   // Other pages
   '/faq': {
     title: 'Frequently Asked Questions',
@@ -426,11 +510,32 @@ export const PAGE_SEO_CONFIG: Record<string, {
  * Helper to get SEO config for a specific page
  * This function can be easily modified to fetch from backend
  */
-export function getPageSEOConfig(pathname: string) {
-  // Normalize pathname (remove trailing slash, handle root)
-  const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
-  
-  return PAGE_SEO_CONFIG[normalizedPath] || {
+function normalizePathname(pathname: string) {
+  if (!pathname || pathname === '/') {
+    return '/';
+  }
+
+  const trimmed = pathname.trim();
+  const withoutTrailingSlash = trimmed.replace(/\/+$/, '');
+  const withoutLeadingSlash = withoutTrailingSlash.replace(/^\/+/, '');
+
+  return withoutLeadingSlash ? `/${withoutLeadingSlash}` : '/';
+}
+
+export function getPageSEOConfig(pathname: string): PageSEOConfig {
+  const normalizedPath = normalizePathname(pathname);
+  const segments = normalizedPath === '/' ? [] : normalizedPath.slice(1).split('/');
+
+  for (let i = segments.length; i >= 0; i -= 1) {
+    const candidate = i === 0 ? '/' : `/${segments.slice(0, i).join('/')}`;
+    const match = PAGE_SEO_CONFIG[candidate];
+
+    if (match) {
+      return match;
+    }
+  }
+
+  return {
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
   };
@@ -446,8 +551,9 @@ export function getPageSEOConfig(pathname: string) {
  * export const metadata = generatePageMetadata('/services/rating-and-accreditation');
  * ```
  */
-export function generatePageMetadata(pathname: string, overrides?: Partial<ReturnType<typeof getPageSEOConfig>>) {
-  const config = getPageSEOConfig(pathname);
+export function generatePageMetadata(pathname: string, overrides?: Partial<PageSEOConfig>) {
+  const normalizedPath = normalizePathname(pathname);
+  const config = getPageSEOConfig(normalizedPath);
   const finalConfig = { ...config, ...overrides };
   
   return generateMetadata({
@@ -455,9 +561,9 @@ export function generatePageMetadata(pathname: string, overrides?: Partial<Retur
     description: finalConfig.description,
     keywords: finalConfig.keywords,
     image: finalConfig.image,
-    url: pathname,
-    noindex: (finalConfig as { noindex?: boolean }).noindex,
-    nofollow: (finalConfig as { nofollow?: boolean }).nofollow,
+    url: normalizedPath,
+    noindex: finalConfig.noindex,
+    nofollow: finalConfig.nofollow,
   });
 }
 

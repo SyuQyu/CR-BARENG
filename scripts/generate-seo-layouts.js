@@ -1,43 +1,50 @@
 #!/usr/bin/env node
 
-/**
- * Script to generate layout.tsx files for pages that need SEO metadata
- * 
- * This script scans for page.tsx files and creates corresponding layout.tsx
- * files if they don't exist, using the SEO configuration.
- * 
- * Usage:
- *   node scripts/generate-seo-layouts.js
- * 
- * Or with a specific path:
- *   node scripts/generate-seo-layouts.js --path /services
- */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const fs = require('fs');
-const path = require('path');
-
-const PAGES_DIR = path.join(process.cwd(), 'src/app/(pages)');
+const __filename = fileURLToPath(import.meta.url);
+const PAGES_DIR = path.join(process.cwd(), 'src', 'app', '(pages)');
 
 function findPageFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+  const entries = fs.readdirSync(dir);
+
+  entries.forEach((entry) => {
+    const entryPath = path.join(dir, entry);
+    const stat = fs.statSync(entryPath);
+
     if (stat.isDirectory()) {
-      findPageFiles(filePath, fileList);
-    } else if (file === 'page.tsx') {
+      findPageFiles(entryPath, fileList);
+    } else if (entry === 'page.tsx') {
       fileList.push(dir);
     }
   });
-  
+
   return fileList;
+}
+
+function stripRouteGroups(relativePath) {
+  if (!relativePath) {
+    return '';
+  }
+
+  return relativePath
+    .split(path.sep)
+    .filter(Boolean)
+    .filter((segment) => !(segment.startsWith('(') && segment.endsWith(')')))
+    .join('/');
 }
 
 function getPathFromDirectory(dir) {
   const relativePath = path.relative(PAGES_DIR, dir);
-  return '/' + relativePath.replace(/\\/g, '/');
+  const cleanPath = stripRouteGroups(relativePath);
+
+  if (!cleanPath) {
+    return '/';
+  }
+
+  return `/${cleanPath}`;
 }
 
 function generateLayoutContent(pagePath) {
@@ -55,50 +62,97 @@ export default function PageLayout({
 `;
 }
 
-function main() {
+function parseArgs() {
   const args = process.argv.slice(2);
-  const pathArg = args.find(arg => arg.startsWith('--path='));
-  const filterPath = pathArg ? pathArg.split('=')[1] : null;
-  
-  console.log('🔍 Scanning for pages that need SEO layouts...\n');
-  
-  const pageDirs = findPageFiles(PAGES_DIR);
+  const options = {
+    filterPath: null,
+    dryRun: false,
+    force: false,
+  };
+
+  for (let i = 0; i < args.length; i += 1) {
+    const arg = args[i];
+
+    if (arg === '--path' && args[i + 1]) {
+      options.filterPath = args[i + 1];
+      i += 1;
+      continue;
+    }
+
+    if (arg.startsWith('--path=')) {
+      options.filterPath = arg.split('=')[1];
+      continue;
+    }
+
+    if (arg === '--dry-run') {
+      options.dryRun = true;
+      continue;
+    }
+
+    if (arg === '--force') {
+      options.force = true;
+    }
+  }
+
+  return options;
+}
+
+function main() {
+  const { filterPath, dryRun, force } = parseArgs();
+  console.log('🎯  Scanning for pages that need dedicated SEO layouts...\n');
+
+  const pageDirs = findPageFiles(PAGES_DIR).sort();
   let created = 0;
+  let updated = 0;
   let skipped = 0;
-  
-  pageDirs.forEach(pageDir => {
+
+  pageDirs.forEach((pageDir) => {
     const pagePath = getPathFromDirectory(pageDir);
-    
-    // Filter by path if specified
+
     if (filterPath && !pagePath.startsWith(filterPath)) {
       return;
     }
-    
+
     const layoutPath = path.join(pageDir, 'layout.tsx');
-    
-    // Skip if layout already exists
-    if (fs.existsSync(layoutPath)) {
-      skipped++;
+    const layoutContent = generateLayoutContent(pagePath);
+    const layoutRelativePath = path.relative(process.cwd(), layoutPath);
+    const exists = fs.existsSync(layoutPath);
+
+    if (exists && !force) {
+      skipped += 1;
       return;
     }
-    
-    // Generate layout file
-    const layoutContent = generateLayoutContent(pagePath);
-    fs.writeFileSync(layoutPath, layoutContent, 'utf8');
-    console.log(`✅ Created: ${layoutPath}`);
-    created++;
+
+    const action = exists ? 'updated' : 'created';
+    const logPrefix = dryRun ? '📝  [dry-run]' : exists ? '♻️  Updated' : '✅  Created';
+
+    if (!dryRun) {
+      fs.writeFileSync(layoutPath, layoutContent, 'utf8');
+    }
+
+    if (action === 'updated') {
+      updated += 1;
+    } else {
+      created += 1;
+    }
+
+    console.log(`${logPrefix}: ${layoutRelativePath} (${pagePath})`);
   });
-  
-  console.log(`\n✨ Done! Created ${created} layouts, skipped ${skipped} existing layouts.`);
-  console.log('\n📝 Next steps:');
-  console.log('   1. Review the generated layout files');
-  console.log('   2. Update SEO config in src/constants/seo.ts if needed');
-  console.log('   3. Customize layout component names if desired');
+
+  console.log('\n📊  Summary');
+  console.log(`   ✅ Created: ${created}`);
+  console.log(`   ♻️  Updated: ${updated}`);
+  console.log(`   ⏭️  Skipped: ${skipped}`);
+
+  if (dryRun) {
+    console.log('\nℹ️  Dry run mode enabled — no files were written.');
+  } else {
+    console.log('\n✨  All done! Review the generated layouts and adjust SEO copy in src/constants/seo.ts as needed.');
+  }
 }
 
-if (require.main === module) {
+if (path.resolve(process.argv[1] || '') === __filename) {
   main();
 }
 
-module.exports = { generateLayoutContent, getPathFromDirectory };
-
+export { generateLayoutContent, getPathFromDirectory };
