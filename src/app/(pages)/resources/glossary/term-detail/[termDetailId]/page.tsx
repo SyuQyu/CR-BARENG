@@ -110,7 +110,7 @@ export default function GlossaryDetail() {
                     className="w-full max-h-[151px] sm:max-h-[250px] lg:max-h-[400px] xl:w-[400px] xl:max-w-[400px] object-cover bg-center rounded-lg"
                     priority={false}
                     src="/image/mosque.webp"
-                    alt="logo"
+                    alt="Mosque"
                   />
                 </div>
               ))}

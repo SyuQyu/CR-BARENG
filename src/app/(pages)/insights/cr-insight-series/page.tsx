@@ -84,7 +84,7 @@ export default function CardInsightsSeries() {
                 className="w-full sm:w-1/2 max-w-full object-contain max-h-[300px] sm:max-h-[400px]"
                 priority={false}
                 src="/image/cr-insight-series/Image.png"
-                alt="logo"
+                alt="CR Insights Series"
               />
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function CardInsightsSeries() {
               className="md:max-w-[260px] w-full max-h-[300px] sm:max-h-[400px] md:max-h-[400px] lg:max-h-[400px] lg:w-[400px] xl:max-w-[400px] object-contain"
               priority={false}
               src="/image/cr-insight-series/Images-1.png"
-              alt="logo"
+              alt="CR Insights Series"
             />
             <div className="flex flex-col gap-5 w-full">
               <p className="lg:text-desktop-heading-4 text-mobile-heading-4 font-bold text-left">

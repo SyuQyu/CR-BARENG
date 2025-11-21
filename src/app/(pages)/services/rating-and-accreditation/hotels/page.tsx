@@ -126,7 +126,7 @@ export default function RatingAndAccreditationHotels() {
                 className="w-full object-contain md:hidden block"
                 priority={false}
                 src={"/image/rating-accreditation/accrediations-phone.svg"}
-                alt={"roadmap"}
+                alt={"accrediations-phone"}
               />
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function RatingAndAccreditationHotels() {
               className="w-full object-cover max-h-[310px] rounded-lg"
               priority={false}
               src={"/image/rating-accreditation/new/hotel-rating.jpg"}
-              alt={"restaurants"}
+              alt={"hotel-rating"}
             />
           </div>
 

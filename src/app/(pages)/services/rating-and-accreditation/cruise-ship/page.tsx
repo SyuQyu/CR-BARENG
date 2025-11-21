@@ -46,7 +46,7 @@ export default function RatingAndAccreditationHotels() {
                 className="w-full object-contain min-w-[1216px] md:block hidden"
                 priority={false}
                 src={"/image/rating-accreditation/top.png"}
-                alt={"accrediations"}
+                alt={"cruise-ship-rating-image"}
               />
             </div>
 
@@ -58,7 +58,7 @@ export default function RatingAndAccreditationHotels() {
                 className="w-full object-contain md:hidden block"
                 priority={false}
                 src={"/image/rating-accreditation/accrediations-phone.svg"}
-                alt={"roadmap"}
+                alt={"accrediations-phone"}
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function RatingAndAccreditationHotels() {
                 className="w-full object-cover max-h-[310px] rounded-lg"
                 priority={false}
                 src={"/image/rating-accreditation/new/cruise-rating.jpg"}
-                alt={"restaurants"}
+                alt={"cruise-rating"}
               />
             </div>
             <div className="w-full h-full min-h-[300px] p-8 text-black flex flex-col  gap-4 justify-center items-center bg-gradient-to-r from-[var(--colors-primary-50,#F1F3FF)] via-[var(--colors-primary-100,#E0E3FF)] to-[var(--colors-primary-200,#CED2FF)]">

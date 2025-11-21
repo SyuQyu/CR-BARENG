@@ -156,7 +156,7 @@ export default function CRInsightSeriesDetail() {
                   className="w-[50%] md:block hidden object-cover bg-center"
                   priority={false}
                   src="/image/cr-insight-series/Image2.webp"
-                  alt="logo"
+                  alt="CR Insight Series Download"
                 />
               </DialogContent>
             </Dialog>
@@ -314,7 +314,7 @@ export default function CRInsightSeriesDetail() {
           className="w-full max-h-[300px] sm:max-h-[400px] md:max-h-[400px] lg:max-h-[400px] xl:w-[400px] xl:max-w-[400px] object-contain"
           priority={false}
           src="/image/cr-insight-series/Image2.webp"
-          alt="logo"
+          alt="CR Insight Series Download"
         />
       </section>
       <div className="mt-7 sm:mt-14 lg:px-32 sm:px-16 px-8 w-full flex flex-col gap-24 justify-center items-center">

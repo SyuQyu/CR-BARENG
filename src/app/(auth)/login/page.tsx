@@ -15,7 +15,7 @@ export default function Login() {
               sizes="100vw"
               className="w-full md:max-h-[500px] sm:max-h-[300px] max-h-[200px] lg:max-h-[800px] object-cover h-full md:rounded-lg rounded-t-lg"
               src="/image/auth/login.jpg"
-              alt="logo-hit"
+              alt="login"
             />
             <div className="w-full flex flex-col justify-start items-start lg:p-10 md:p-6 md:px-0 px-8 md:pb-0 pb-5">
               <p className="md:text-desktop-heading-5 text-desktop-heading-6 font-semibold">

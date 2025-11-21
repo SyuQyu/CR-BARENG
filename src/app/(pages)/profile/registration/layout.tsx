@@ -158,7 +158,7 @@ export default function UserRegistrationLayout({ children }: Props) {
           className="w-full max-h-[74px] object-contain sticky top-8"
           priority={false}
           src={"/image/user-registration-accomondation/cr-logo.jpg"}
-          alt={"bronze"}
+          alt={"CR Logo"}
         />
       </div>
     </div>

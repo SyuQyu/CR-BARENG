@@ -560,7 +560,7 @@ export default function Gmti() {
                 className="lg:w-[400px] md:w-[320px] w-[240px] object-contain rounded-lg select-none pointer-events-none"
                 priority={false}
                 src={journeySteps[currentStep - 1].imageUrl}
-                alt="gmti"
+                alt="gmti journey image"
               />
               <div className="relative flex flex-col items-center gap-4 max-w-[717px] z-0">
                 <p className="absolute z-20 text-black lg:text-2xl md:text-xl text-lg leading-[157%] font-bold md:-mt-12 -mt-6">

@@ -346,7 +346,7 @@ export default function Home() {
                   className="w-full lg:w-[500px] xl:max-w-[500px] max-h-[200px] lg:max-h-[500px] object-cover border-r-[15px] border-r-primary-cr-700 rounded-2xl"
                   priority={false}
                   src={service.image}
-                  alt="service-image"
+                  alt="Service illustration"
                 />
               </div>
             </>
@@ -413,7 +413,7 @@ export default function Home() {
                   className="w-full sm:max-w-[120px] sm:min-h-[120px] max-w-[100px] min-h-[100px] object-contain"
                   priority={false}
                   src={"/image/landing-page/silver-winner.png"}
-                  alt={"hero"}
+                  alt="Silver winner"
                 />
                 <p className="text-center sm:text-desktop-body-2 text-mobile-body-2">
                   CrescentRating wins Silver in &quot;Increasing Diversity in
@@ -429,7 +429,7 @@ export default function Home() {
                   className="w-full sm:max-w-[120px] sm:min-h-[120px] max-w-[100px] min-h-[100px] object-contain"
                   priority={false}
                   src={"/image/landing-page/award-winner.png"}
-                  alt={"hero"}
+                  alt="Award winner"
                 />
                 <p className="text-center sm:text-desktop-body-2 text-mobile-body-2">
                   CrescentRating wins Silver in Govt. category at Meaningful
@@ -451,7 +451,7 @@ export default function Home() {
               className="w-full max-w-[700px] -top-7 object-contain absolute -z-[-2]"
               priority={false}
               src={"/image/landing-page/continents.png"}
-              alt={"hero"}
+              alt="Continents illustration"
             />
             <div className="flex flex-col justify-center items-center gap-4 z-10">
               <p className="sm:text-desktop-body-1 text-mobile-body-1 font-bold text-[#434343]">

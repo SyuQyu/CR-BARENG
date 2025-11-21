@@ -126,7 +126,7 @@ export default function HalalMusimTravelMarketReportsDetail() {
                                     className="w-[50%] md:block hidden object-cover bg-center"
                                     priority={false}
                                     src="/image/halal-muslim-travel-market-reports/image-cover-1.webp"
-                                    alt="logo"
+                                    alt="Halal Muslim Travel Market Report Cover"
                                 />
                             </DialogContent>
                         </Dialog>
@@ -229,7 +229,7 @@ export default function HalalMusimTravelMarketReportsDetail() {
                     className="w-full max-h-[300px] sm:max-h-[400px] md:max-h-[400px] lg:max-h-[400px] xl:w-[400px] xl:max-w-[400px] object-contain"
                     priority={false}
                     src="/image/halal-muslim-travel-market-reports/image-cover-1.webp"
-                    alt="logo"
+                    alt="Halal Muslim Travel Market Report Cover"
                 />
             </section>
             <div className='mt-7 sm:mt-14 w-full flex flex-col gap-24 justify-center items-center'>

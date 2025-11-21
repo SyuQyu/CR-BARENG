@@ -47,7 +47,7 @@ export default function RatingAndAccreditationActivites() {
                 className="w-full object-cover rounded-lg h-full"
                 priority={false}
                 src={"/image/rating-accreditation/activities/mount-fuji.jpg"}
-                alt={"hotels1"}
+                alt={"activities1"}
               />
               <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">
@@ -63,7 +63,7 @@ export default function RatingAndAccreditationActivites() {
                 className="w-full object-cover rounded-lg h-full"
                 priority={false}
                 src={"/image/rating-accreditation/activities/nami-island.jpg"}
-                alt={"hotels2"}
+                alt={"activities2"}
               />
               <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">Nami Island</p>
@@ -79,7 +79,7 @@ export default function RatingAndAccreditationActivites() {
                 src={
                   "/image/rating-accreditation/activities/bali-waterfall.jpg"
                 }
-                alt={"hotels3"}
+                alt={"activities3"}
               />
               <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">
@@ -95,7 +95,7 @@ export default function RatingAndAccreditationActivites() {
                 className="w-full object-cover rounded-lg h-full"
                 priority={false}
                 src={"/image/rating-accreditation/activities/taipingshan.jpg"}
-                alt={"hotels4"}
+                alt={"activities4"}
               />
               <div className="absolute rounded-bl-lg rounded-br-lg text-center bottom-0 w-full h-[80px] py-[10px] border border-white/[0.01] bg-white/55 backdrop-blur-[2.4px] rounded-none">
                 <p className="text-desktop-body-2 font-semibold">
@@ -201,7 +201,7 @@ export default function RatingAndAccreditationActivites() {
                 className="w-full object-cover max-h-[310px] rounded-lg"
                 priority={false}
                 src={"/image/rating-accreditation/activities.webp"}
-                alt={"restaurants"}
+                alt={"activities-image"}
               />
             </div>
             <section className="w-full flex flex-col justify-center items-center  bg-[#F1F3FF] py-20">

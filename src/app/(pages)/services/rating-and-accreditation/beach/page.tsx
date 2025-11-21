@@ -68,7 +68,7 @@ export default function BeachPage() {
             className="w-full object-cover max-h-[310px] rounded-lg"
             priority={false}
             src={"/image/rating-accreditation/new/beach-rating.jpg"}
-            alt={"restaurants"}
+            alt={"beach-rating"}
           />
         </div>
       </section>

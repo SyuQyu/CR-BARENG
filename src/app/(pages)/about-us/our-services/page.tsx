@@ -239,7 +239,7 @@ export default function OurServices() {
                 className="w-full object-cover max-h-[411px]"
                 priority={false}
                 src={"/image/our-services/our-service-benefits-new.jpg"}
-                alt={"imgrating"}
+                alt={"Service Benefits"}
               />
               <div className="w-full md:w-[80%] flex flex-col gap-8 justify-start items-start">
                 <div className="flex flex-col gap-2 justify-start items-start">

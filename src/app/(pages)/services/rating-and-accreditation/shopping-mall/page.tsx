@@ -139,7 +139,7 @@ export default function RatingAndAccreditationShoppingMall() {
             className="w-full object-cover max-h-[310px] rounded-lg"
             priority={false}
             src={"/image/rating-accreditation/new/shopping-malls-rating.jpg"}
-            alt={"restaurants"}
+            alt={"shopping-malls-rating"}
           />
         </div>
       </section>

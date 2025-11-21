@@ -67,7 +67,7 @@ export default function HospitalPage() {
             className="w-full object-cover max-h-[310px] rounded-lg"
             priority={false}
             src={"/image/rating-accreditation/new/hospital-rating.jpg"}
-            alt={"restaurants"}
+            alt={"hospital-rating"}
           />
         </div>
       </section>

@@ -138,7 +138,7 @@ export default function RatingAndAccreditationAttractions() {
               className="w-full object-cover max-h-[310px] rounded-lg"
               priority={false}
               src={"/image/rating-accreditation/new/attraction-rating.jpg"}
-              alt={"restaurants"}
+              alt={"attractions-image"}
             />
           </div>
           <section className="w-full flex flex-col justify-center items-center  bg-[#F1F3FF] py-20">

@@ -622,7 +622,7 @@ export default function HalalMusimTravelMarketReports() {
                 className="object-contain"
                 priority={false}
                 src="/image/destination-marketing/podcast.webp"
-                alt="Social Media Marketing Image"
+                alt="Podcast Image"
               />
             </div>
           </div>

@@ -321,7 +321,7 @@ export default function AboutUs() {
                     className="w-full object-cover h-full"
                     priority={false}
                     src={"/image/what-we-do/sg.jpeg"}
-                    alt={"sg"}
+                    alt={"Singapore"}
                   />
                   <div className="absolute flex justify-center items-center rounded-bl-lg rounded-br-lg text-center bottom-0 w-full py-[10px] border h-full border-white/[0.01] bg-black/40 rounded-none">
                     <p className="sm:text-desktop-heading-4 text-mobile-heading-4 font-semibold text-white">

@@ -81,7 +81,7 @@ export default function Carrer() {
               className="h-full w-full object-cover"
               priority={false}
               src={"/image/careers/career.jpg"}
-              alt={"imgrating"}
+              alt={"career-image"}
             />
             <div className=" flex flex-col gap-8 justify-start items-start">
               <div className="flex flex-col gap-2 justify-start items-start">

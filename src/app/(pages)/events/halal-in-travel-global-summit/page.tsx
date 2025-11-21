@@ -40,7 +40,7 @@ export default function HalalMusimTravelGlobalSummit() {
                         className="w-full max-h-[180px] sm:max-h-[250px] md:max-h-[300px] lg:max-h-[450px] xl:w-[450px] xl:max-w-[450px] object-contain"
                         priority={false}
                         src="/image/hitgs/hitgs-logo.png"
-                        alt="logo"
+                        alt="Halal in travel global summit logo"
                     />
                     <div className="flex w-full flex-col justify-center items-center mt-6">
                         <p className="text-white text-center sm:text-desktop-body-1 text-mobile-body-2 font-semibold relative z-20 max-w-4xl">
@@ -68,7 +68,7 @@ export default function HalalMusimTravelGlobalSummit() {
                             className="w-full max-w-[450px] md:w-[450px] object-contain md:block hidden"
                             priority={false}
                             src="/image/hitgs/img1.webp"
-                            alt="logo"
+                            alt="About Halal in Travel Global Summit"
                         />
                         <div className="flex flex-col gap-4 md:justify-start justify-center items-center md:items-start">
                             <p className="sm:text-desktop-heading-5 text-mobile-heading-5 font-bold md:text-left text-center">
@@ -81,7 +81,7 @@ export default function HalalMusimTravelGlobalSummit() {
                                 className="w-full max-h-[230px] object-cover md:hidden block"
                                 priority={false}
                                 src="/image/hitgs/img1.webp"
-                                alt="logo"
+                                alt="About Halal in Travel Global Summit"
                             />
                             <p className="sm:text-desktop-body-1 text-mobile-body-2 md:text-left text-center">
                                 The Halal In Travel Global Summit (HITGS), established in 2016, is the leading annual event in the Halal travel industry. Held each year, it features virtual panels discussing the latest innovations and responsible tourism practices, culminating in a hybrid event in Singapore. Highlights include the Mastercard-CrescentRating Global Muslim Travel Index 2025, the Halal In Travel Awards, and the HalalTrip 40, celebrating industry excellence.
@@ -148,7 +148,7 @@ export default function HalalMusimTravelGlobalSummit() {
                                                 className="w-full object-cover sm:h-[578px] h-[357px]"
                                                 priority={false}
                                                 src="/image/hitgs/contact.webp"
-                                                alt="logo"
+                                                alt="Halal in Travel Global Summit Contact"
                                             />
                                             <div className="absolute bottom-10 flex justify-end items-center p-3 text-white md:w-[80%] w-full border border-[rgba(14,32,92,0.06)] bg-[rgba(14,32,92,0.57)] backdrop-blur-[5.4px]">
                                                 <div className="flex flex-col md:justify-start md:items-start justify-center items-center gap-1 md:w-[90%] w-full">
@@ -195,7 +195,7 @@ export default function HalalMusimTravelGlobalSummit() {
                         className="w-full max-w-[600px] md:max-h-[260px] object-contain"
                         priority={false}
                         src="/image/hitgs/gmti-img.png"
-                        alt="logo"
+                        alt="Gllobal Muslim Travel Index"
                     />
                 </div>
             </section>
@@ -237,7 +237,7 @@ export default function HalalMusimTravelGlobalSummit() {
                     className="w-full max-w-[1600px]  object-contain absolute z-0 max-h-[1050px] top-[200px]"
                     priority={false}
                     src="/image/hitgs/city-bg.png"
-                    alt="logo"
+                    alt="City"
                 />
                 <div className="max-w-[1440px] px-6 lg:px-8 w-full z-10">
                     <div className="w-full flex flex-col justify-center items-center gap-12 py-10">
@@ -277,7 +277,7 @@ export default function HalalMusimTravelGlobalSummit() {
                                 className="w-full lg:max-w-[450px] h-full object-contain"
                                 priority={false}
                                 src="/image/hitgs/past-sponsors-1.png"
-                                alt="logo"
+                                alt="Past Sponsors"
                             />
                         </div>
                         <div className="w-full sm:h-auto h-[220px] max-h-[300px] sm:max-h-[450px] md:max-h-[450px] lg:max-h-[450px] flex justify-center items-center bg-white shadow-md rounded-md p-7">
@@ -288,7 +288,7 @@ export default function HalalMusimTravelGlobalSummit() {
                                 className="w-full lg:max-w-[450px] h-full object-contain"
                                 priority={false}
                                 src="/image/hitgs/past-sponsors-2.png"
-                                alt="logo"
+                                alt="Past Sponsors"
                             />
                         </div>
                     </div>
@@ -413,7 +413,7 @@ export default function HalalMusimTravelGlobalSummit() {
                                 className="w-full object-cover md:h-auto h-[200px]"
                                 priority={false}
                                 src="/image/hitgs/contact.png"
-                                alt="logo"
+                                alt="Halal in Travel Global Summit Contact"
                             />
                         </div>
                     </div>

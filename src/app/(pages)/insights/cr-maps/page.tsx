@@ -19,7 +19,7 @@ export default function ContactUs() {
                             height={0}
                             sizes="100vw"
                             className="w-full max-w-[398px]"
-                            src="/image/cr-maps/logo-cr-maps.png" alt="logo-hit" />
+                            src="/image/cr-maps/logo-cr-maps.png" alt="CR Maps Logo" />
                         <div className="flex flex-col justify-start items-start gap-2">
                             <p className="md:text-desktop-heading-4 text-mobile-heading-3 font-bold">About CR MAPS</p>
                             <p className="md:text-desktop-body-2 text-mobile-body-2 text-justify text-neutral-500">CrescentRating Market Analytics Performance Solutions (CR MAPS) is your premier source for business intelligence on the global Muslim market. We&apos;re here to help you navigate and thrive in this dynamic segment. At CrescentRating, we believe in the power of data to unlock potential, and our team is committed to delivering the precise insights you need to make informed, impactful decisions. Our journey began by recognizing the Muslim market&apos;s significant and growing influence, and the challenge organizations faced in finding actionable data. We built CR MAPS to be a comprehensive platform that not only captures the latest worldwide trends but also transforms raw data into deep analytical insights crucial for strategic growth.</p>

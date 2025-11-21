@@ -57,7 +57,7 @@ export default function HalalChefWorld() {
           <div className="flex w-full flex-col gap-5 text-center justify-center items-center sm:mt-20 mt-10">
             <ImageWithFallback
               src="/image/crescentrating-academy/sector-immersion/halalchefworld.webp"
-              alt="CrescentRating Academy Logo"
+              alt="Halal Chef World"
               sizes="100%"
               width={1200}
               height={168}
